@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cashier
 
 // MARK: - Custom Operators -
 
@@ -406,7 +407,7 @@ public struct Date: StringInitializable {
         }
     }
 }
-/*
+
 public extension NOCache {
     
     /**
@@ -506,4 +507,3 @@ public extension NOCache {
         }
     }
 }
-*/
