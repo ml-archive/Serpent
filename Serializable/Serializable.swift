@@ -506,4 +506,36 @@ public extension NOCache {
             BridgingBox.sharedBoxCache.removeAll()
         }
     }
+	
+	/**
+	Removes a serializable value from saved disk, and optionally the memory cache.
+	
+	- parameter key: `Key` for `BridgingBox` as `String`.
+	- parameter purgeMemoryCache: If set to `true`, it will also purge the memory cache.
+	*/
+	public func deleteSerializableForKey(key: String, purgeMemoryCache purge: Bool = true) {
+		if purge {
+			BridgingBox.sharedBoxCache.removeValueForKey(key)
+		}
+		self.deleteObjectForKey(key)
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
