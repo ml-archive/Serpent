@@ -16,7 +16,6 @@
 		272D92761C6DFB7300BCD3B6 /* EnumsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */; };
 		272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */; };
 		272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */; };
-		272D92801C6DFF7900BCD3B6 /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */; };
 		272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
 		272F1DCA1C6A392A0098F620 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
@@ -96,8 +95,8 @@
 		272D927D1C6DFF7900BCD3B6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */,
 				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
+				272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -260,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */,
-				272D92801C6DFF7900BCD3B6 /* CashierExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
