@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */; };
+		272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */; };
+		272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */; };
+		272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */; };
+		272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */; };
+		272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */; };
+		272D92761C6DFB7300BCD3B6 /* EnumsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */; };
+		272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */; };
+		272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */; };
 		272F1DCA1C6A392A0098F620 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
-		272F1DD61C6A392A0098F620 /* SerializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F1DD51C6A392A0098F620 /* SerializableTests.swift */; };
 		272F1DE11C6A39800098F620 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F1DE01C6A39800098F620 /* Serializable.swift */; };
-		272F1E641C6A51E40098F620 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1E631C6A51E40098F620 /* Cashier.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,14 +32,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTests.swift; sourceTree = "<group>"; };
+		272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEnumsTests.swift; sourceTree = "<group>"; };
+		272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializablePrimitivesTests.swift; sourceTree = "<group>"; };
+		272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CustomOperatorsTest.json; sourceTree = "<group>"; };
+		272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTestModel.swift; sourceTree = "<group>"; };
+		272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EnumsTest.json; sourceTree = "<group>"; };
+		272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumsTestModel.swift; sourceTree = "<group>"; };
+		272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimitivesTest.json; sourceTree = "<group>"; };
+		272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesTestModel.swift; sourceTree = "<group>"; };
+		272D92791C6DFCB100BCD3B6 /* CashierExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtension.swift; sourceTree = "<group>"; };
 		272F1DC61C6A392A0098F620 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1DC91C6A392A0098F620 /* Serializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializable.h; sourceTree = "<group>"; };
 		272F1DCB1C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272F1DD01C6A392A0098F620 /* SerializableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerializableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		272F1DD51C6A392A0098F620 /* SerializableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableTests.swift; sourceTree = "<group>"; };
 		272F1DD71C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272F1DE01C6A39800098F620 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
-		272F1E631C6A51E40098F620 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272F1E641C6A51E40098F620 /* Cashier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272D926C1C6DFB7300BCD3B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */,
+				272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */,
+				272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */,
+				272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */,
+				272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */,
+				272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		272F1DBC1C6A392A0098F620 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				272F1DE01C6A39800098F620 /* Serializable.swift */,
+				272D92791C6DFCB100BCD3B6 /* CashierExtension.swift */,
 				272F1DC91C6A392A0098F620 /* Serializable.h */,
 				272F1DCB1C6A392A0098F620 /* Info.plist */,
 			);
@@ -87,7 +115,10 @@
 		272F1DD41C6A392A0098F620 /* SerializableTests */ = {
 			isa = PBXGroup;
 			children = (
-				272F1DD51C6A392A0098F620 /* SerializableTests.swift */,
+				272D926C1C6DFB7300BCD3B6 /* Models */,
+				272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */,
+				272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */,
+				272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */,
 				272F1DD71C6A392A0098F620 /* Info.plist */,
 			);
 			path = SerializableTests;
@@ -96,7 +127,6 @@
 		272F1E581C6A4F9D0098F620 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				272F1E631C6A51E40098F620 /* Cashier.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,6 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */,
+				272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */,
+				272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272F1DD61C6A392A0098F620 /* SerializableTests.swift in Sources */,
+				272D92761C6DFB7300BCD3B6 /* EnumsTestModel.swift in Sources */,
+				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
+				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
+				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
+				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
+				272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
