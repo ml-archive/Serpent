@@ -16,9 +16,9 @@ github "nodes-ios/Serializable"
 ~~~
 
 ### Cocoa Pods
-
-> **TODO:** Coming soon
-
+~~~
+pod 'Serializable', '~> 0.0.1'
+~~~
 
 ### Swit Package Manager
 > **TODO:** Coming soon
