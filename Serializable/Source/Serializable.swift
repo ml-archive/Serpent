@@ -251,6 +251,37 @@ public extension Keymappable {
 
         return T(rawValue: source)
 	}
+    
+    /**
+     A generic mapping function that will try to parse an array of enumerations with raw value from the
+     array contained in the provided dictionary.
+     
+     The `key` parameter will be first used to check value in custom input key mappings and if
+     no value is found, then `key` is used as the key to get the value stored in `dictionary`.
+     
+     - parameter dictionary: An optional dictionary containing the array which should be parsed.
+     - parameter key: The key which will be used to get the actual key from input key mappings
+     or as the actual key for the value being parsed from the dictionary.
+     
+     - returns: An array of enum type `T` or an empty array if parsing was unsuccessful.
+     */
+    public func mapped<T where T:_ArrayType, T:CollectionType, T.Generator.Element: RawRepresentable>(dictionary: NSDictionary?, key: String) -> T? {
+        
+        guard let dict = dictionary else {
+            return T()
+        }
+        
+        let newKey = inputKeyMappings()[key] ?? key
+        let sourceOpt = dict[newKey]
+        
+        if sourceOpt is [T.Generator.Element.RawValue] {
+            let source = (sourceOpt as! [T.Generator.Element.RawValue])
+            let finalArray = source.map { T.Generator.Element.init(rawValue: $0) } as? T
+            return finalArray ?? T()
+        }
+        
+        return T()
+    }
 }
 
 public protocol StringInitializable {
