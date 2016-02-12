@@ -22,7 +22,21 @@ pod 'Serializable', '~> 0.0.1'
 ~~~
 
 ### Swit Package Manager
-> **TODO:** Coming soon
+To use KeyboardHelper as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following to your `Package.swift` file.  
+
+~~~swift
+import PackageDescription
+
+let package = Package(
+    name: "YourPackage",
+    dependencies: [
+        .Package(url: "https://github.com/nodes-ios/Serializable.git", majorVersion: 0)
+    ]
+)
+~~~
+
+**NOTE:** This doesn't currently work as SPM doens't support iOS, but once it will we will already be supporting it! :)
+
 
 ## 🔧 Setup
 > **TODO:** Add instructions
