@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import NOCoreBase
+import Serializable
 
 struct PrimitivesTestModel {
     var integer: Int = 0

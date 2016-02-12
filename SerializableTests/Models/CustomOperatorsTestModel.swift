@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import NOCoreBase
+import Serializable
 
 struct CustomOperatorsTestModel {
     var string: String = ""

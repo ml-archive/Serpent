@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import NOCoreBase
+import Serializable
 
 enum StringEnum: String {
     case Value1 = "value1"
