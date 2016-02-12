@@ -16,9 +16,10 @@
 		272D92761C6DFB7300BCD3B6 /* EnumsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */; };
 		272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */; };
 		272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */; };
+		272D92801C6DFF7900BCD3B6 /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */; };
+		272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
 		272F1DCA1C6A392A0098F620 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
-		272F1DE11C6A39800098F620 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F1DE01C6A39800098F620 /* Serializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +42,13 @@
 		272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumsTestModel.swift; sourceTree = "<group>"; };
 		272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimitivesTest.json; sourceTree = "<group>"; };
 		272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesTestModel.swift; sourceTree = "<group>"; };
-		272D92791C6DFCB100BCD3B6 /* CashierExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtension.swift; sourceTree = "<group>"; };
+		272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtension.swift; sourceTree = "<group>"; };
+		272D927F1C6DFF7900BCD3B6 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		272F1DC61C6A392A0098F620 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1DC91C6A392A0098F620 /* Serializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializable.h; sourceTree = "<group>"; };
 		272F1DCB1C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272F1DD01C6A392A0098F620 /* SerializableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerializableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1DD71C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		272F1DE01C6A39800098F620 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		272D927B1C6DFF2A00BCD3B6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */,
+				272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */,
+				272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		272D927D1C6DFF7900BCD3B6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */,
+				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		272F1DBC1C6A392A0098F620 = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +124,7 @@
 		272F1DC81C6A392A0098F620 /* Serializable */ = {
 			isa = PBXGroup;
 			children = (
-				272F1DE01C6A39800098F620 /* Serializable.swift */,
-				272D92791C6DFCB100BCD3B6 /* CashierExtension.swift */,
+				272D927D1C6DFF7900BCD3B6 /* Source */,
 				272F1DC91C6A392A0098F620 /* Serializable.h */,
 				272F1DCB1C6A392A0098F620 /* Info.plist */,
 			);
@@ -116,9 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				272D926C1C6DFB7300BCD3B6 /* Models */,
-				272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */,
-				272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */,
-				272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */,
+				272D927B1C6DFF2A00BCD3B6 /* Tests */,
 				272F1DD71C6A392A0098F620 /* Info.plist */,
 			);
 			path = SerializableTests;
@@ -242,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272F1DE11C6A39800098F620 /* Serializable.swift in Sources */,
+				272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */,
+				272D92801C6DFF7900BCD3B6 /* CashierExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
