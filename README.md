@@ -4,6 +4,7 @@
 
 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable)
 ![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/nstack-translations-generator/blob/master/LICENSE)
 
@@ -15,9 +16,9 @@ github "nodes-ios/Serializable"
 ~~~
 
 ### Cocoa Pods
-
-> **TODO:** Coming soon
-
+~~~
+pod 'Serializable', '~> 0.0.1'
+~~~
 
 ### Swit Package Manager
 > **TODO:** Coming soon
