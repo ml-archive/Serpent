@@ -1,1 +1,0 @@
-../Serializable/Source/CashierExtension.swift
