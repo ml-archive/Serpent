@@ -43,6 +43,16 @@ public func <==<T, S where T: Decodable, S: Keymappable>(inout left: T, right: (
 	left = value ?? left
 }
 
+public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
+	let value: T? = right.instance.mapped(right.dict, key: right.key)
+	left = value ?? left
+}
+
+public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: T, right: (instance: S, dict: NSDictionary?, key: String)) {
+	let value: T? = right.instance.mapped(right.dict, key: right.key)
+	left = value ?? left
+}
+
 
 //MARK: - Extensions
 

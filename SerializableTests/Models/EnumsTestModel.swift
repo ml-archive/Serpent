@@ -37,30 +37,33 @@ struct EnumsTestModel {
 
 extension EnumsTestModel:Serializable {
     init(dictionary: NSDictionary?) {
-        stringEnum                         = self.mapped(dictionary, key: "string_enum") ?? stringEnum
-        optionalStringEnum                 = self.mapped(dictionary, key: "optional_string_enum")
-        optionalStringEnumWithDefaultValue = self.mapped(dictionary, key: "optional_string_enum_with_default_value") ?? optionalStringEnumWithDefaultValue!
-        nonExistentStringEnum              = self.mapped(dictionary, key: "non_existent_string_enum")
-        wrongTypeStringEnum                = self.mapped(dictionary, key: "wrong_type_string_enum")
-        doubleEnum                         = self.mapped(dictionary, key: "double_enum") ?? doubleEnum
-        optionalDoubleEnum                 = self.mapped(dictionary, key: "optional_double_enum")
-        optionalDoubleEnumWithDefaultValue = self.mapped(dictionary, key: "optional_double_enum_with_default_value") ?? optionalDoubleEnumWithDefaultValue!
-        nonExistentDoubleEnum              = self.mapped(dictionary, key: "non_existent_double_enum")
-        wrongTypeDoubleEnum                = self.mapped(dictionary, key: "wrong_type_double_enum")
+        stringEnum							<== (self, dictionary, key: "string_enum")
+        optionalStringEnum					<== (self, dictionary, key: "optional_string_enum")
+        optionalStringEnumWithDefaultValue	<== (self, dictionary, key: "optional_string_enum_with_default_value")
+        nonExistentStringEnum				<== (self, dictionary, key: "non_existent_string_enum")
+        wrongTypeStringEnum					<== (self, dictionary, key: "wrong_type_string_enum")
+        doubleEnum							<== (self, dictionary, key: "double_enum")
+        optionalDoubleEnum					<== (self, dictionary, key: "optional_double_enum")
+        optionalDoubleEnumWithDefaultValue	<== (self, dictionary, key: "optional_double_enum_with_default_value")
+        nonExistentDoubleEnum				<== (self, dictionary, key: "non_existent_double_enum")
+        wrongTypeDoubleEnum					<== (self, dictionary, key: "wrong_type_double_enum")
     }
 
     func encodableRepresentation() -> NSCoding {
         let dict = NSMutableDictionary()
-        dict["string_enum"]                             = stringEnum.rawValue
-        dict["optional_string_enum"]                    = optionalStringEnum?.rawValue
-        dict["optional_string_enum_with_default_value"] = optionalStringEnumWithDefaultValue?.rawValue
-        dict["non_existent_string_enum"]                = nonExistentStringEnum?.rawValue
-        dict["wrong_type_string_enum"]                  = wrongTypeStringEnum?.rawValue
-        dict["double_enum"]                             = doubleEnum.rawValue
-        dict["optional_double_enum"]                    = optionalDoubleEnum?.rawValue
-        dict["optional_double_enum_with_default_value"] = optionalDoubleEnumWithDefaultValue?.rawValue
-        dict["non_existent_double_enum"]                = nonExistentDoubleEnum?.rawValue
-        dict["wrong_type_double_enum"]                  = wrongTypeDoubleEnum?.rawValue
+        (dict, "string_enum")								<== stringEnum.rawValue
+        (dict, "optional_string_enum")						<== optionalStringEnum?.rawValue
+        (dict, "optional_string_enum_with_default_value")	<== optionalStringEnumWithDefaultValue?.rawValue
+        (dict, "non_existent_string_enum")					<== nonExistentStringEnum?.rawValue
+        (dict, "wrong_type_string_enum")					<== wrongTypeStringEnum?.rawValue
+        (dict, "double_enum")								<== doubleEnum.rawValue
+        (dict, "optional_double_enum")						<== optionalDoubleEnum?.rawValue
+        (dict, "optional_double_enum_with_default_value")	<== optionalDoubleEnumWithDefaultValue?.rawValue
+        (dict, "non_existent_double_enum")					<== nonExistentDoubleEnum?.rawValue
+        (dict, "wrong_type_double_enum")					<== wrongTypeDoubleEnum?.rawValue
         return dict
     }
 }
+
+
+
