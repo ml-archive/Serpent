@@ -17,7 +17,7 @@
 github "nodes-ios/Serializable"
 ~~~
 
-### Cocoa Pods
+### CocoaPods
 ~~~
 pod 'Serializable', '~> 0.0.1'
 ~~~
