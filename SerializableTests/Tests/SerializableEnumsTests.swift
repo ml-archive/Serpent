@@ -32,21 +32,29 @@ class SerializableEnumsTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 
     func testStringEnumParsing() {
-        XCTAssertEqual(testModel.stringEnum, StringEnum.Value1, "Integer parsing test failed!")
-        XCTAssertEqual(testModel.optionalStringEnum, StringEnum.DifferentValue, "Optional integer parsing test failed!")
-        XCTAssertEqual(testModel.optionalStringEnumWithDefaultValue, StringEnum.Value1, "Optional integer with default value parsing test failed!")
-        XCTAssertEqual(testModel.nonExistentStringEnum, nil, "Optional integer with default value parsing test failed!")
+        XCTAssertEqual(testModel.stringEnum, StringEnum.Value1, "String parsing test failed!")
+        XCTAssertEqual(testModel.optionalStringEnum, StringEnum.DifferentValue, "Optional String parsing test failed!")
+        XCTAssertEqual(testModel.optionalStringEnumWithDefaultValue, StringEnum.Value1, "Optional String with default value parsing test failed!")
+        XCTAssertEqual(testModel.nonExistentStringEnum, nil, "Optional String with default value parsing test failed!")
+    }
+    
+    func testStringEnumArrayParsing() {
+        XCTAssertEqual(testModel.stringEnumArray, [StringEnum.Value1, StringEnum.DifferentValue], "String enum array test failed!")
+        XCTAssertEqual(testModel.optionalStringEnumArray!, [StringEnum.Value1, StringEnum.DifferentValue], "Optional string enum array test failed!")
+        XCTAssertEqual(testModel.optionalStringEnumArrayWithDefaultValue!, [StringEnum.Value1, StringEnum.DifferentValue], "Optional string enum array with default value test failed!")
+        XCTAssertEqual(testModel.nonExistentStringEnumArray!, [StringEnum](), "Optional string enum array with non existent value test failed!")
+        XCTAssertEqual(testModel.wrongTypeStringEnumArray!, [StringEnum](), "Wrong type string enum array test failed!")
     }
 
-    func testDoubleEnumParsing() {
-        XCTAssertEqual(testModel.doubleEnum, DoubleEnum.Value1, "Double parsing test failed!")
-        XCTAssertEqual(testModel.optionalDoubleEnum, DoubleEnum.NoneValue, "Optional double parsing test failed!")
-        XCTAssertEqual(testModel.optionalDoubleEnumWithDefaultValue, .DifferentValue, "Optional double with default value parsing test failed!")
-        XCTAssertEqual(testModel.nonExistentDoubleEnum, nil, "Optional integer with default value parsing test failed!")
+    func testDoubleEnumArrayParsing() {
+        XCTAssertEqual(testModel.doubleEnumArray, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Double enum array test failed!")
+        XCTAssertEqual(testModel.optionalDoubleEnumArray!, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Optional double enum array test failed!")
+        XCTAssertEqual(testModel.optionalDoubleEnumArrayWithDefaultValue!, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Optional double enum array with default value test failed!")
+        XCTAssertEqual(testModel.nonExistentDoubleEnumArray!, [DoubleEnum](), "Optional double enum array with non existent value test failed!")
+        XCTAssertEqual(testModel.wrongTypeDoubleEnumArray!, [DoubleEnum](),"Wrong type double enum array test failed!")
     }
 }

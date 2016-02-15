@@ -53,6 +53,15 @@ public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: T, r
 	left = value ?? left
 }
 
+public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: [T]?, right: (instance: S, dict: NSDictionary?, key: String)) {
+    let value: [T]? = right.instance.mapped(right.dict, key: right.key)
+    left = value ?? left
+}
+
+public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: [T], right: (instance: S, dict: NSDictionary?, key: String)) {
+    let value: [T]? = right.instance.mapped(right.dict, key: right.key)
+    left = value ?? left
+}
 
 //MARK: - Extensions
 
@@ -95,25 +104,25 @@ private struct DefaultKeyMappings {
     private static let mappings = [String : String]()
 }
 
-public protocol Keymappable {
-	func inputKeyMappings() -> [String : String]
-}
+public protocol Keymappable {}
 
 public extension Keymappable {
 
-	public func inputKeyMappings() -> [String : String] {
-		return DefaultKeyMappings.mappings
-	}
-	
-	///Used for objects conforming to 'Serializable' protocol
+	/**
+    Maps the content of value for **key** in **dictionary** to generic type **T**, conforming to **Serializable** protocol.
+     
+     - parameter dictionary: An optional dictionary containing values which should be parsed.
+     - parameter key: ValueForKey will be called on the dictionary to extract the value to be parsed
+     
+     - returns: A mapped object conforming to *Serializable*, or nil if parsing failed
+     */
 	public func mapped<T where T:Decodable>(dictionary: NSDictionary?, key: String) -> T? {
 		
 		guard let dict = dictionary else {
 			return nil
 		}
 		
-		let newKey = inputKeyMappings()[key] ?? key
-		let sourceOpt = dict[newKey]
+		let sourceOpt = dict[key]
 
         if sourceOpt != nil && sourceOpt is NSDictionary {
             return T(dictionary: (sourceOpt as! NSDictionary))
@@ -122,15 +131,21 @@ public extension Keymappable {
         return nil
 	}
 	
-	///Used for arrays containing Serializable objects
+    /**
+     Maps the content of value for **key** in **dictionary** to an array containing where elements is of generic type **T**, conforming to **Serializable** protocol.
+     
+     - parameter dictionary: An optional dictionary containing values which should be parsed.
+     - parameter key: ValueForKey will be called on the dictionary to extract the value to be parsed.
+     
+     - returns: An array of mapped objects conforming to *Serializable*, or an empty array if parsing failed.
+     */
 	public func mapped<T where T:_ArrayType, T:CollectionType, T.Generator.Element: Decodable>(dictionary: NSDictionary?, key: String) -> T? {
 		
 		guard let dict = dictionary else {
 			return T()
 		}
 		
-		let newKey = inputKeyMappings()[key] ?? key
-		let sourceOpt = dict[newKey]
+		let sourceOpt = dict[key]
 
         if sourceOpt is [NSDictionary] {
             let source = (sourceOpt as! [NSDictionary])
@@ -161,12 +176,8 @@ public extension Keymappable {
             return nil
 		}
 
-        // Check the input key mappings for a different key, 
-        // fallback to the one provided as a parameter if nothing found
-		let newKey = inputKeyMappings()[key] ?? key
-
         // Get the value from the dictionary for our key
-		let sourceOpt = dict[newKey]
+		let sourceOpt = dict[key]
 
         // Figure out what type is the value we got and parse accordingly
         switch sourceOpt {
@@ -215,8 +226,7 @@ public extension Keymappable {
             return nil
         }
         
-        let newKey = inputKeyMappings()[key] ?? key
-        let sourceOpt = dict[newKey]
+        let sourceOpt = dict[key]
         
         if let source = sourceOpt as? T {
             return source
@@ -271,13 +281,11 @@ public extension Keymappable {
             return T()
         }
         
-        let newKey = inputKeyMappings()[key] ?? key
-        let sourceOpt = dict[newKey]
+        let sourceOpt = dict[key]
         
-        if sourceOpt is [T.Generator.Element.RawValue] {
-            let source = (sourceOpt as! [T.Generator.Element.RawValue])
-            let finalArray = source.map { T.Generator.Element.init(rawValue: $0) } as? T
-            return finalArray ?? T()
+        if let source = sourceOpt as? [T.Generator.Element.RawValue] {
+            let finalArray = source.map { T.Generator.Element.init(rawValue: $0)! }
+            return (finalArray as! T)
         }
         
         return T()
