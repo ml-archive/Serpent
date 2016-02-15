@@ -1,6 +1,12 @@
 # Serializable
 
+Serializable is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's implemented using protocol extensions, which makes it easily expandable.
 
+It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects.
+
+It's designed to be used together with our helper app, the Model Boiler, making model creation a breeze.
+
+The Serializable framework uses static typing, exhibiting superior performance compared to frameworks using reflection eliminate boilerplate code.
 
 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
