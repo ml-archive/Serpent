@@ -8,7 +8,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
 ![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/nstack-translations-generator/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)
 
 ## 📦 Installation
 
@@ -47,4 +47,4 @@ let package = Package(
 Made with ❤️ at [Nodes](http://nodesagency.com).
 
 ## 📄 License
-**Serializable** is available under the MIT license. See the [LICENSE](https://github.com/nodes-ios/KeyboardHelper/blob/master/LICENSE) file for more info.
+**Serializable** is available under the MIT license. See the [LICENSE](https://github.com/nodes-ios/Serializable/blob/master/LICENSE) file for more info.
