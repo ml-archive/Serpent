@@ -1,0 +1,30 @@
+{
+	"models" : [
+	 {
+	   "id" : 1,
+	   "name" : "Hello",
+	   "text" : "some text"
+	 },
+	 {
+	   "id" : 2,
+	   "name" : "Hello2",
+	   "text" : "some text2"
+	 },
+	 {
+	   "id" : 3,
+	   "name" : "Hello3",
+	   "text" : "some text3"
+	 },
+	 {
+	   "id" : 4,
+	   "name" : "Hello4",
+	   "text" : "some text4"
+	 }
+  ],
+	"model" :
+	{
+		"id" : 5,
+		"name" : "Hello5",
+		"text" : "some text5"
+	}
+}
