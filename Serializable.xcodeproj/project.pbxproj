@@ -25,6 +25,12 @@
 		276FB5411C7361670055EC7C /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5401C7361670055EC7C /* DecodableTests.swift */; };
 		276FB5431C73622D0055EC7C /* DecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5421C73622D0055EC7C /* DecodableModel.swift */; };
 		276FB5451C7362EA0055EC7C /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB5441C7362EA0055EC7C /* DecodableTest.json */; };
+		276FB5471C736F3D0055EC7C /* SerializableNilEntitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5461C736F3D0055EC7C /* SerializableNilEntitiesTests.swift */; };
+		276FB5491C7375DA0055EC7C /* SimpleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5481C7375DA0055EC7C /* SimpleModel.swift */; };
+		276FB54B1C7376260055EC7C /* SimpleModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB54A1C7376260055EC7C /* SimpleModel.json */; };
+		276FB54D1C7376F40055EC7C /* SerializableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */; };
+		276FB54F1C7377070055EC7C /* SerializableEntityTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB54E1C7377070055EC7C /* SerializableEntityTestModel.swift */; };
+		276FB5511C7377B50055EC7C /* SerializableEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB5501C7377B50055EC7C /* SerializableEntityTest.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,12 @@
 		276FB5401C7361670055EC7C /* DecodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableTests.swift; sourceTree = "<group>"; };
 		276FB5421C73622D0055EC7C /* DecodableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableModel.swift; sourceTree = "<group>"; };
 		276FB5441C7362EA0055EC7C /* DecodableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DecodableTest.json; sourceTree = "<group>"; };
+		276FB5461C736F3D0055EC7C /* SerializableNilEntitiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableNilEntitiesTests.swift; sourceTree = "<group>"; };
+		276FB5481C7375DA0055EC7C /* SimpleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleModel.swift; sourceTree = "<group>"; };
+		276FB54A1C7376260055EC7C /* SimpleModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SimpleModel.json; sourceTree = "<group>"; };
+		276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEntityTests.swift; sourceTree = "<group>"; };
+		276FB54E1C7377070055EC7C /* SerializableEntityTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEntityTestModel.swift; sourceTree = "<group>"; };
+		276FB5501C7377B50055EC7C /* SerializableEntityTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SerializableEntityTest.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,8 @@
 		272D926C1C6DFB7300BCD3B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				276FB5481C7375DA0055EC7C /* SimpleModel.swift */,
+				276FB54A1C7376260055EC7C /* SimpleModel.json */,
 				272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */,
 				272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */,
 				272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */,
@@ -92,6 +106,8 @@
 				272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */,
 				276FB5421C73622D0055EC7C /* DecodableModel.swift */,
 				276FB5441C7362EA0055EC7C /* DecodableTest.json */,
+				276FB54E1C7377070055EC7C /* SerializableEntityTestModel.swift */,
+				276FB5501C7377B50055EC7C /* SerializableEntityTest.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +119,8 @@
 				272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */,
 				272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */,
 				276FB5401C7361670055EC7C /* DecodableTests.swift */,
+				276FB5461C736F3D0055EC7C /* SerializableNilEntitiesTests.swift */,
+				276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -271,6 +289,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276FB54B1C7376260055EC7C /* SimpleModel.json in Resources */,
+				276FB5511C7377B50055EC7C /* SerializableEntityTest.json in Resources */,
 				272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */,
 				276FB5451C7362EA0055EC7C /* DecodableTest.json in Resources */,
 				272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */,
@@ -296,10 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276FB5471C736F3D0055EC7C /* SerializableNilEntitiesTests.swift in Sources */,
+				276FB5491C7375DA0055EC7C /* SimpleModel.swift in Sources */,
 				272D92761C6DFB7300BCD3B6 /* EnumsTestModel.swift in Sources */,
+				276FB54F1C7377070055EC7C /* SerializableEntityTestModel.swift in Sources */,
 				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
 				276FB5431C73622D0055EC7C /* DecodableModel.swift in Sources */,
+				276FB54D1C7376F40055EC7C /* SerializableEntityTests.swift in Sources */,
 				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
 				276FB5411C7361670055EC7C /* DecodableTests.swift in Sources */,
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
