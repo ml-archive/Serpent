@@ -25,5 +25,14 @@
 
     "string" : "success",
     "optional_string" : "optional success",
-    "optional_string_with_default_value" : "optional default success"
+    "optional_string_with_default_value" : "optional default success",
+	
+	"intString" : "1",
+	"doubleString" : "1.5",
+	"boolString" : "true",
+	"boolIntString" : "1",
+	
+	"stringInt" : 1,
+	"stringDouble" : 1.5,
+	"stringBool" : true
 }

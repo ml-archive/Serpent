@@ -67,3 +67,13 @@ public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: [T],
     left = value ?? left
 }
 
+// [Serializable]
+public func <==<T, S where T:_ArrayType, T:CollectionType, T.Generator.Element: Decodable, S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
+	let value: T? = right.instance.mapped(right.dict, key: right.key)
+	left = value ?? left
+}
+
+public func <==<T, S where T:_ArrayType, T:CollectionType, T.Generator.Element: Decodable, S: Keymappable>(inout left: T, right: (instance: S, dict: NSDictionary?, key: String)) {
+	let value: T? = right.instance.mapped(right.dict, key: right.key)
+	left = value ?? left
+}
