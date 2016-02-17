@@ -31,6 +31,9 @@
 		276FB54D1C7376F40055EC7C /* SerializableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */; };
 		276FB54F1C7377070055EC7C /* SerializableEntityTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB54E1C7377070055EC7C /* SerializableEntityTestModel.swift */; };
 		276FB5511C7377B50055EC7C /* SerializableEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB5501C7377B50055EC7C /* SerializableEntityTest.json */; };
+		276FB5531C74947D0055EC7C /* StringInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5521C74947D0055EC7C /* StringInitializableTestModel.swift */; };
+		276FB5551C7494A30055EC7C /* StringInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB5541C7494A30055EC7C /* StringInitializableTest.json */; };
+		276FB5571C7495560055EC7C /* StringInitializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5561C7495560055EC7C /* StringInitializableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEntityTests.swift; sourceTree = "<group>"; };
 		276FB54E1C7377070055EC7C /* SerializableEntityTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEntityTestModel.swift; sourceTree = "<group>"; };
 		276FB5501C7377B50055EC7C /* SerializableEntityTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SerializableEntityTest.json; sourceTree = "<group>"; };
+		276FB5521C74947D0055EC7C /* StringInitializableTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializableTestModel.swift; sourceTree = "<group>"; };
+		276FB5541C7494A30055EC7C /* StringInitializableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StringInitializableTest.json; sourceTree = "<group>"; };
+		276FB5561C7495560055EC7C /* StringInitializableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 				276FB5441C7362EA0055EC7C /* DecodableTest.json */,
 				276FB54E1C7377070055EC7C /* SerializableEntityTestModel.swift */,
 				276FB5501C7377B50055EC7C /* SerializableEntityTest.json */,
+				276FB5521C74947D0055EC7C /* StringInitializableTestModel.swift */,
+				276FB5541C7494A30055EC7C /* StringInitializableTest.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 				276FB5401C7361670055EC7C /* DecodableTests.swift */,
 				276FB5461C736F3D0055EC7C /* SerializableNilEntitiesTests.swift */,
 				276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */,
+				276FB5561C7495560055EC7C /* StringInitializableTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				276FB54B1C7376260055EC7C /* SimpleModel.json in Resources */,
+				276FB5551C7494A30055EC7C /* StringInitializableTest.json in Resources */,
 				276FB5511C7377B50055EC7C /* SerializableEntityTest.json in Resources */,
 				272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */,
 				276FB5451C7362EA0055EC7C /* DecodableTest.json in Resources */,
@@ -324,8 +334,10 @@
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
 				276FB5431C73622D0055EC7C /* DecodableModel.swift in Sources */,
 				276FB54D1C7376F40055EC7C /* SerializableEntityTests.swift in Sources */,
+				276FB5571C7495560055EC7C /* StringInitializableTests.swift in Sources */,
 				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
 				276FB5411C7361670055EC7C /* DecodableTests.swift in Sources */,
+				276FB5531C74947D0055EC7C /* StringInitializableTestModel.swift in Sources */,
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
 				272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */,
 			);

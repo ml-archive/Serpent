@@ -25,9 +25,8 @@ public protocol StringInitializable {
 	init?(string: String)
 }
 
-extension NSURL:StringInitializable {
-	
-}
+extension NSURL:StringInitializable {}
+
 
 public struct Date: StringInitializable {
 	
@@ -50,22 +49,17 @@ public struct Date: StringInitializable {
 		if let dateObject = Date.dateFromString(string, format: "yyyy-MM-dd'T'HH:mm:ssZZZZZ") {
 			value = dateObject
 			dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-			
 		}
-		else
-			if let dateObject = Date.dateFromString(string, format: "yyyy-MM-dd'T'HH:mm:ss") {
-				value = dateObject
-				dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-				
-			}
-			else
-				if let dateObject = Date.dateFromString(string, format: "yyyy-MM-dd") {
-					value = dateObject
-					dateFormat = "yyyy-MM-dd"
-					
-				}
-				else {
-					return nil
+		else if let dateObject = Date.dateFromString(string, format: "yyyy-MM-dd'T'HH:mm:ss") {
+			value = dateObject
+			dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+		}
+		else if let dateObject = Date.dateFromString(string, format: "yyyy-MM-dd") {
+			value = dateObject
+			dateFormat = "yyyy-MM-dd"
+		}
+		else {
+			return nil
 		}
 	}
 	
@@ -145,4 +139,12 @@ public struct Date: StringInitializable {
 		Date.internalISOFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
 		return Date.internalISOFormatter
 	}
+}
+
+extension Date: Equatable {
+	
+}
+
+public func ==(lhs: Date, rhs: Date) -> Bool {
+	return lhs.stringRepresentation() == rhs.stringRepresentation()
 }

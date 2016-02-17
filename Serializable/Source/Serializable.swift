@@ -113,10 +113,6 @@ public extension Keymappable {
         // Get the value from the dictionary for our key
 		let sourceOpt = dict[key]
 		
-		print("******")
-		print(key)
-		print(sourceOpt)
-		
         // Figure out what type is the value we got and parse accordingly
         switch sourceOpt {
 			
@@ -157,10 +153,19 @@ public extension Keymappable {
         }
         
         let sourceOpt = dict[key]
-        
+		
+	/*
+		TODO: - I don't think this will ever actually be called. StringInitializable
+				is only implemented by NSURL and Date at the moment, neither of which
+				can be cast directly from a String. This can be re-added later if a 
+				case comes up that can allow casting.
+		
         if let source = sourceOpt as? T {
             return source
-        } else if let source = sourceOpt as? String where source.characters.count > 0 {
+        } else
+		
+	*/
+		if let source = sourceOpt as? String where source.characters.count > 0 {
             return T(string: source)
         }
         
