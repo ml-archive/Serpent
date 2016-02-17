@@ -23,6 +23,8 @@ public func <==<T: Encodable>(left: (dict: NSMutableDictionary, key: String), ri
 }
 
 // For Decodable
+
+// Primitive
 public func <==<T, S where S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
@@ -33,6 +35,7 @@ public func <==<T, S where S: Keymappable>(inout left: T, right: (instance: S, d
     left = value ?? left
 }
 
+// Serializable
 public func <==<T, S where T: Decodable, S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
@@ -43,6 +46,7 @@ public func <==<T, S where T: Decodable, S: Keymappable>(inout left: T, right: (
     left = value ?? left
 }
 
+// Enum
 public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
@@ -62,3 +66,4 @@ public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: [T],
     let value: [T]? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
+

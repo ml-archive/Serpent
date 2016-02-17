@@ -83,7 +83,7 @@ public extension Keymappable {
         if sourceOpt is [NSDictionary] {
             let source = (sourceOpt as! [NSDictionary])
             let finalArray = source.map { T.Generator.Element.init(dictionary: $0) } as? T
-            return finalArray ?? T()
+            return finalArray
         }
 
         return T()
@@ -109,12 +109,14 @@ public extension Keymappable {
             return nil
 		}
 
+
         // Get the value from the dictionary for our key
 		let sourceOpt = dict[key]
 
+
         // Figure out what type is the value we got and parse accordingly
         switch sourceOpt {
-
+			
         case (is T):
             return (sourceOpt as! T)
 
