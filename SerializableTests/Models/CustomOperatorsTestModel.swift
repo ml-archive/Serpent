@@ -63,15 +63,15 @@ extension CustomOperatorsTestNestedModel:Serializable {
 
     func encodableRepresentation() -> NSCoding {
         let dict = NSMutableDictionary()
-        (dict, "integer")                         <== integer
-        (dict, "optional_integer")                 <== optionalInteger
-        (dict, "optional_integer_with_default_value") <== optionalIntegerWithDefaultValue
-        (dict, "double")                          <== double
-        (dict, "optional_double")                  <== optionalDouble
-        (dict, "optional_doubleWithDefaultValue")  <== optionalDoubleWithDefaultValue
-        (dict, "string")                          <== string
-        (dict, "optional_string")                  <== optionalString
-        (dict, "optional_string_with_default_value")  <== optionalStringWithDefaultValue
+        (dict, "integer")                               <== integer
+        (dict, "optional_integer")                      <== optionalInteger
+        (dict, "optional_integer_with_default_value")   <== optionalIntegerWithDefaultValue
+        (dict, "double")                                <== double
+        (dict, "optional_double")                       <== optionalDouble
+        (dict, "optional_doubleWithDefaultValue")       <== optionalDoubleWithDefaultValue
+        (dict, "string")                                <== string
+        (dict, "optional_string")                       <== optionalString
+        (dict, "optional_string_with_default_value")    <== optionalStringWithDefaultValue
         return dict
     }
 }

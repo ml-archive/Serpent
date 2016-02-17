@@ -8,4 +8,14 @@
     "optional_double_enum" : 0,
     "optional_double_enum_with_default_value" : -9453.5147684,
     "wrong_type_double_enum" : "someval",
+    
+    "string_enum_array" : [ "value1", "DifferentValue"],
+    "optional_string_enum_array" : [ "value1", "DifferentValue"],
+    "optional_string_enum_array_with_default_value" : [ "value1", "DifferentValue"],
+    "wrong_type_string_enum_array" : [ 1, "LOL"],
+    
+    "double_enum_array" : [ 123.456, -9453.5147684],
+    "optional_double_enum_array" : [ 123.456, -9453.5147684],
+    "optional_double_enum_array_with_default_value" : [ 123.456, -9453.5147684],
+    "wrong_type_double_enum_array" : [ 1.456, "LOL"],
 }

@@ -1,9 +1,14 @@
 # Serializable
 
+Serializable is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's implemented using protocol extensions, which makes it easily expandable.
+
+It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects.
+
+It's designed to be used together with our helper app, the Model Boiler, making model creation a breeze.
+
+The Serializable framework uses static typing, exhibiting superior performance compared to frameworks using reflection eliminate boilerplate code.
 
 
-[![Travis](https://img.shields.io/travis/nodes-ios/Serializable.svg)](https://travis-ci.org/nodes-ios/Serializable)
-[![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serializable.svg)](https://codecov.io/github/nodes-ios/Serializable)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
