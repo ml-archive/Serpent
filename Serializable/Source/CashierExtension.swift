@@ -40,7 +40,7 @@ public extension NOCache {
 	Check first if an object with the `key` from `BridgingBox sharedBoxCache` exists and if the `key` is valid.
 	If an object for that `key` exisits and the `key` is valid, return the onject of `BridgingBox sharedBoxCache` for that key, if not return nil.
 	
-	If the object for that `key` of `BridgingBox sharedBoxCache` does not exists check if an `objectForKey` as `BridgingBox` with that `key` exists. Else return nil.
+	If the object for that `key` of `BridgingBox sharedBoxCache` does not exist check if an `objectForKey` as `BridgingBox` with that `key` exists. Else return nil.
 	If the object exisits get the value of that `BridgingBox` and assign it to `BridgingBox.sharedBoxCache` and return the object.
 	
 	- Parameter key: `Key` for `BridgingBox` or `objectForKey` as `String`.
