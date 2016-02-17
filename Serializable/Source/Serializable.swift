@@ -112,8 +112,11 @@ public extension Keymappable {
 
         // Get the value from the dictionary for our key
 		let sourceOpt = dict[key]
-
-
+		
+		print("******")
+		print(key)
+		print(sourceOpt)
+		
         // Figure out what type is the value we got and parse accordingly
         switch sourceOpt {
 			
@@ -132,22 +135,14 @@ public extension Keymappable {
             let source = (sourceOpt as! NSString)
             return source.boolValue as? T
 
-        case (is Int) where T.self is String.Type:
-            let source = (sourceOpt as! Int)
-            return String(source) as? T
-
         case (is String) where T.self is Character.Type:
             let source = (sourceOpt as! String)
             return Character(source) as? T
-
-        case (is Double) where T.self is String.Type:
-            let source = (sourceOpt as! Double)
-            return String(source) as? T
-
-        case (is Bool) where T.self is String.Type:
-            let source = (sourceOpt as! Bool)
-            return String(source) as? T
-
+			
+		case (is NSNumber) where T.self is String.Type:
+			let source = (sourceOpt as! NSNumber)
+			return String(source) as? T
+			
         default:
 			return nil
 
