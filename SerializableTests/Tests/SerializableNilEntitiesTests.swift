@@ -28,25 +28,44 @@ class SerializableNilEntitiesTests: XCTestCase {
 		XCTAssertNil(testModel.name, "Guard statement failed for Serializable with nil Dictionary")
 		XCTAssertNotNil(testModel.names, "Guard statement failed for Serializable array with nil Dictionary")
 		XCTAssertEqual(testModel.names?.count, 0, "Guard statement failed for Serializable array with nil Dictionary")
+		XCTAssertNil(testModel.url, "Guard statement failed for StringInitializable with nil dictionary")
+		XCTAssertNil(testModel.someEnum, "Guard statement failed for Enum with nil dictionary")
+		XCTAssertNotNil(testModel.someEnumArray, "Guard statement failed for Enum array with nil dictionary")
+		XCTAssertEqual(testModel.someEnumArray?.count, 0, "Guard statement failed for Enum array with nil dictionary")
 	}
 }
 
 struct NilModel {
+	
+	enum Type: Int {
+		case First
+		case Second
+	}
+	
 	var id: Int?
 	var name: SimpleModel?
 	var names: [SimpleModel]?
+	var url: NSURL?
+	var someEnum: Type?
+	var someEnumArray: [Type]?
 }
 extension NilModel:Serializable {
 	init(dictionary: NSDictionary?) {
 		id    <== (self, dictionary, key: "id")
 		name  <== (self, dictionary, key: "name")
 		names <== (self, dictionary, key: "names")
+		url   <== (self, dictionary, key: "url")
+		someEnum <== (self, dictionary, key: "someEnum")
+		someEnumArray <== (self, dictionary, key: "someEnumArray")
 	}
 	func encodableRepresentation() -> NSCoding {
 		let dict = NSMutableDictionary()
 		(dict, "id")    <== id
-		(dict ,"name")  <== name
-		(dict ,"names") <== names
+		(dict, "name")  <== name
+		(dict, "names") <== names
+		(dict, "url")   <== url
+		(dict, "someEnum") <== someEnum
+		(dict, "someEnumArray") <== someEnumArray
 		return dict
 	}
 }

@@ -1,0 +1,6 @@
+{
+    "someUrl" : "http://www.google.com",
+	"someDate" : "2000-01-01T11:22:33",
+	"someNSDate" : "2010-11-01T11:22:33",
+	"someEmptyURL" : ""
+}
