@@ -83,7 +83,7 @@ public extension Keymappable {
         if sourceOpt is [NSDictionary] {
             let source = (sourceOpt as! [NSDictionary])
             let finalArray = source.map { T.Generator.Element.init(dictionary: $0) } as? T
-            return finalArray ?? T()
+            return finalArray
         }
 
         return T()
@@ -109,12 +109,13 @@ public extension Keymappable {
             return nil
 		}
 
+
         // Get the value from the dictionary for our key
 		let sourceOpt = dict[key]
-
+		
         // Figure out what type is the value we got and parse accordingly
         switch sourceOpt {
-
+			
         case (is T):
             return (sourceOpt as! T)
 
@@ -130,22 +131,14 @@ public extension Keymappable {
             let source = (sourceOpt as! NSString)
             return source.boolValue as? T
 
-        case (is Int) where T.self is String.Type:
-            let source = (sourceOpt as! Int)
-            return String(source) as? T
-
         case (is String) where T.self is Character.Type:
             let source = (sourceOpt as! String)
             return Character(source) as? T
-
-        case (is Double) where T.self is String.Type:
-            let source = (sourceOpt as! Double)
-            return String(source) as? T
-
-        case (is Bool) where T.self is String.Type:
-            let source = (sourceOpt as! Bool)
-            return String(source) as? T
-
+			
+		case (is NSNumber) where T.self is String.Type:
+			let source = (sourceOpt as! NSNumber)
+			return String(source) as? T
+			
         default:
 			return nil
 
@@ -160,10 +153,19 @@ public extension Keymappable {
         }
         
         let sourceOpt = dict[key]
-        
+		
+	/*
+		TODO: - I don't think this will ever actually be called. StringInitializable
+				is only implemented by NSURL and Date at the moment, neither of which
+				can be cast directly from a String. This can be re-added later if a 
+				case comes up that can allow casting.
+		
         if let source = sourceOpt as? T {
             return source
-        } else if let source = sourceOpt as? String where source.characters.count > 0 {
+        } else
+		
+	*/
+		if let source = sourceOpt as? String where source.characters.count > 0 {
             return T(string: source)
         }
         

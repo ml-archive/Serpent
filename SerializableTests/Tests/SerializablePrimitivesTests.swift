@@ -40,6 +40,7 @@ class SerializablePrimitivesTests: XCTestCase {
         XCTAssertEqual(testModel.integer, 1, "Integer parsing test failed!")
         XCTAssertEqual(testModel.optionalInteger, 2, "Optional integer parsing test failed!")
         XCTAssertEqual(testModel.optionalIntegerWithDefaultValue, 3, "Optional integer with default value parsing test failed!")
+		XCTAssertEqual(testModel.intString, 1, "Integer parsing from string failed")
     }
 
     func testNegativeIntegerParsing() {
@@ -52,6 +53,7 @@ class SerializablePrimitivesTests: XCTestCase {
         XCTAssertEqual(testModel.double, 123.1234567, "Double parsing test failed!")
         XCTAssertEqual(testModel.optionalDouble, 234.2345678, "Optional double parsing test failed!")
         XCTAssertEqual(testModel.optionalDoubleWithDefaultValue, 345.3456789, "Optional double with default value parsing test failed!")
+		XCTAssertEqual(testModel.doubleString, 1.5, "Double parsing from string failed")
     }
 
     func testFloatParsing() {
@@ -64,6 +66,8 @@ class SerializablePrimitivesTests: XCTestCase {
         XCTAssertTrue(testModel.bool, "Bool parsing test failed!")
         XCTAssertTrue(testModel.optionalBool ?? false, "Optional bool parsing test failed!")
         XCTAssertTrue(testModel.optionalBoolWithDefaultValue ?? false, "Optional bool with default value parsing test failed!")
+		XCTAssertEqual(testModel.boolString, true, "Bool parsing from string failed")
+		XCTAssertEqual(testModel.boolIntString, true, "Bool parsing from integer string failed")
     }
 
     func testCharParsing() {
@@ -76,5 +80,7 @@ class SerializablePrimitivesTests: XCTestCase {
         XCTAssertEqual(testModel.string, "success", "String parsing test failed!")
         XCTAssertEqual(testModel.optionalString, "optional success", "Optional string parsing test failed!")
         XCTAssertEqual(testModel.optionalStringWithDefaultValue, "optional default success", "Optional string with default value parsing test failed!")
+		XCTAssertEqual(testModel.stringDouble, "1.5", "String parsing from double failed")
+		XCTAssertEqual(testModel.stringBool, "1", "String parsing from bool failed")
     }
 }
