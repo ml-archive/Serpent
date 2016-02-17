@@ -34,6 +34,7 @@
 		276FB5531C74947D0055EC7C /* StringInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5521C74947D0055EC7C /* StringInitializableTestModel.swift */; };
 		276FB5551C7494A30055EC7C /* StringInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB5541C7494A30055EC7C /* StringInitializableTest.json */; };
 		276FB5571C7495560055EC7C /* StringInitializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5561C7495560055EC7C /* StringInitializableTests.swift */; };
+		276FB55B1C74D1480055EC7C /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB55A1C74D1480055EC7C /* ExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		276FB5521C74947D0055EC7C /* StringInitializableTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializableTestModel.swift; sourceTree = "<group>"; };
 		276FB5541C7494A30055EC7C /* StringInitializableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StringInitializableTest.json; sourceTree = "<group>"; };
 		276FB5561C7495560055EC7C /* StringInitializableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializableTests.swift; sourceTree = "<group>"; };
+		276FB55A1C74D1480055EC7C /* ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				276FB5461C736F3D0055EC7C /* SerializableNilEntitiesTests.swift */,
 				276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */,
 				276FB5561C7495560055EC7C /* StringInitializableTests.swift */,
+				276FB55A1C74D1480055EC7C /* ExtensionsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				276FB54D1C7376F40055EC7C /* SerializableEntityTests.swift in Sources */,
 				276FB5571C7495560055EC7C /* StringInitializableTests.swift in Sources */,
 				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
+				276FB55B1C74D1480055EC7C /* ExtensionsTests.swift in Sources */,
 				276FB5411C7361670055EC7C /* DecodableTests.swift in Sources */,
 				276FB5531C74947D0055EC7C /* StringInitializableTestModel.swift in Sources */,
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
