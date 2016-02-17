@@ -33,3 +33,4 @@ extension StringInitializableTestModel:Serializable {
 		return dict
 	}
 }
+
