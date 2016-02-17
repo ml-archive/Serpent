@@ -10,80 +10,16 @@ import Foundation
 
 public protocol Serializable: Decodable, Encodable, Keymappable {}
 
-// MARK: - Custom Operators -
-
-infix operator <== { associativity left precedence 90 }
-
-// For Encodable
-public func <==<T>(left: (dict: NSMutableDictionary, key: String), right: T?) {
-    left.dict.setValue(right as? AnyObject, forKey: left.key)
-}
-
-public func <==<T: Encodable>(left: (dict: NSMutableDictionary, key: String), right: T?) {
-    left.dict.setValue(right?.encodableRepresentation(), forKey: left.key)
-}
-
-// For Decodable
-public func <==<T, S where S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
-    let value: T? = right.instance.mapped(right.dict, key: right.key)
-    left = value ?? left
-}
-
-public func <==<T, S where S: Keymappable>(inout left: T, right: (instance: S, dict: NSDictionary?, key: String)) {
-    let value: T? = right.instance.mapped(right.dict, key: right.key)
-    left = value ?? left
-}
-
-public func <==<T, S where T: Decodable, S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
-	let value: T? = right.instance.mapped(right.dict, key: right.key)
-	left = value ?? left
-}
-
-public func <==<T, S where T: Decodable, S: Keymappable>(inout left: T, right: (instance: S, dict: NSDictionary?, key: String)) {
-	let value: T? = right.instance.mapped(right.dict, key: right.key)
-	left = value ?? left
-}
-
-public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
-	let value: T? = right.instance.mapped(right.dict, key: right.key)
-	left = value ?? left
-}
-
-public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: T, right: (instance: S, dict: NSDictionary?, key: String)) {
-	let value: T? = right.instance.mapped(right.dict, key: right.key)
-	left = value ?? left
-}
-
-public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: [T]?, right: (instance: S, dict: NSDictionary?, key: String)) {
-    let value: [T]? = right.instance.mapped(right.dict, key: right.key)
-    left = value ?? left
-}
-
-public func <==<T, S where T: RawRepresentable, S: Keymappable>(inout left: [T], right: (instance: S, dict: NSDictionary?, key: String)) {
-    let value: [T]? = right.instance.mapped(right.dict, key: right.key)
-    left = value ?? left
-}
-
 //MARK: - Extensions
-
-public extension Array where Element:Encodable {
-    func encodableRepresentation() -> [NSCoding] {
-        return self.map { element in return element.encodableRepresentation() }
-    }
-}
-
-public extension RawRepresentable {
-	public func encodableRepresentation() -> RawValue {
-		return self.rawValue
-	}
-}
-
-public protocol Serializable: Decodable, Encodable, Keymappable {
-}
 
 public protocol Decodable {
 	init(dictionary:NSDictionary?)
 	static func array(source: AnyObject?) -> [Self]
+}
+
+
+public protocol Encodable {
+    func encodableRepresentation() -> NSCoding
 }
 
 public extension Decodable {
