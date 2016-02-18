@@ -19,6 +19,7 @@ The Serializable framework uses static typing, exhibiting superior performance c
 ## 📝 Requirements
 
 * iOS 8.0+
+* Swift 2.0+
 
 ## 📦 Installation
 
@@ -51,15 +52,20 @@ let package = Package(
 
 ## 🔧 Setup
 
-We **highly** recommend you use our ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) to assist with generating the boilerplate code needed to conform to Serializable. Instructions for installation and usage can be found at the [Model Boiler github repository](https://github.com/nodes-ios/ModelBoiler). 
+We **highly** recommend you use our ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) to assist with generating the code needed to conform to Serializable. Instructions for installation and usage can be found at the [Model Boiler github repository](https://github.com/nodes-ios/ModelBoiler). 
 
 ## 💻 Usage
 
 ### Getting started
 
-Serializable supports Primitive types, Enums, other Serializables, and Arrays of all of the aforementioned types. Your variable declarations can have a default value or be optional. 
+Serializable supports Primitive types, Enum, NSURL, other Serializables, and Arrays of all of the aforementioned types. Your variable declarations can have a default value or be optional. 
 
-1. Create your model struct or class:
+Primitive types do not need to have an explicit type, if Swift is able to infer it normally. `var name: String = ""` works just as well as `var name = ""`. Optionals will of course need an explicit type. 
+
+**Note:** Enums you create must conform to RawRepresentable, meaning they must have an explicit type. Otherwise, the parser won't know what to do with the incoming data it receives. 
+
+
+#### Create your model struct or class:
 
 ~~~
 struct Foo {
@@ -71,7 +77,7 @@ struct Foo {
 
 **NOTE:** Classes must be marked `final`
 
-2. Add the required methods for `Encodable` and `Decodable`: 
+####Add the required methods for `Encodable` and `Decodable`: 
 
 ~~~
 extension Foo: Serializable {
@@ -92,6 +98,96 @@ extension Foo: Serializable {
 ~~~
 
 And thats it! If you're using the ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), this extension will be generated for you, so that you don't need to type it all out for every model you have. 
+
+###Using Serializable models
+
+New instances of your model can be created with a dictionary, e.g. from parsed JSON. 
+
+~~~
+let dictionary = try NSJSONSerialization.JSONObjectWithData(someData, options: .AllowFragments) as? NSDictionary
+let newModel = Foo(dictionary: dictionary)
+~~~
+
+You can generate a dictionary version of your model by calling `encodableRepresentation()`:
+
+~~~
+let encodedDictionary = newModel.encodableRepresentation()
+~~~
+
+###More complex examples
+
+In this example, we have two models, Student and School. 
+
+~~~
+struct Student {
+	enum Gender: String {
+		case Male = "male"
+		case Female = "female"
+		case Unspecified = "unspecified"
+	}
+	
+	var name = ""
+	var age: Int = 0
+	var gender: Gender?
+}
+
+struct School {
+	enum Sport: Int {
+		case Football
+		case Basketball
+		case Tennis
+		case Swimming
+	}
+	
+	var name = ""
+	var location = ""
+	var website: NSURL?
+	var students: [Student] = []
+	var sports: [Sport]?
+}
+~~~
+
+
+You can get as complicated as you like, and the syntax will always remain the same. The extensions will be:
+
+~~~
+extension Student: Serializable {
+	init(dictionary: NSDictionary?) {
+		name   <== (self, dictionary, "name")
+		age    <== (self, dictionary, "age")
+		gender <== (self, dictionary, "gender")
+	}
+	
+	func encodableRepresentation() -> NSCoding {
+		let dict = NSMutableDictionary()
+		(dict, "name")   <== name
+		(dict, "age")    <== age
+		(dict, "gender") <== gender
+		return dict
+	}
+}
+
+extension School: Serializable {
+	init(dictionary: NSDictionary?) {
+		name     <== (self, dictionary, "name")
+		location <== (self, dictionary, "location")
+		website  <== (self, dictionary, "website")
+		students <== (self, dictionary, "students")
+		sports   <== (self, dictionary, "sports")
+	}
+	
+	func encodableRepresentation() -> NSCoding {
+		let dict = NSMutableDictionary()
+		(dict, "name")     <== name
+		(dict, "location") <== location
+		(dict, "website")  <== website
+		(dict, "students") <== students
+		(dict, "sports")   <== sports
+		return dict
+	}
+}
+~~~
+Again, the ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates all of this code for you in less than a second!
 
 ## 👥 Credits
 Made with ❤️ at [Nodes](http://nodesagency.com).
