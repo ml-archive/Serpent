@@ -67,7 +67,7 @@ Primitive types do not need to have an explicit type, if Swift is able to infer 
 
 #### Create your model struct or class:
 
-~~~
+~~~swift
 struct Foo {
 	var id = 0
 	var name = ""
@@ -79,7 +79,7 @@ struct Foo {
 
 ####Add the required methods for `Encodable` and `Decodable`: 
 
-~~~
+~~~swift
 extension Foo: Serializable {
     init(dictionary: NSDictionary?) {
         id      <== (self, dictionary, "id")
@@ -103,14 +103,14 @@ And thats it! If you're using the ![ModelBoiler](http://i.imgur.com/V5UzMVk.png)
 
 New instances of your model can be created with a dictionary, e.g. from parsed JSON. 
 
-~~~
+~~~swift
 let dictionary = try NSJSONSerialization.JSONObjectWithData(someData, options: .AllowFragments) as? NSDictionary
 let newModel = Foo(dictionary: dictionary)
 ~~~
 
 You can generate a dictionary version of your model by calling `encodableRepresentation()`:
 
-~~~
+~~~swift
 let encodedDictionary = newModel.encodableRepresentation()
 ~~~
 
@@ -118,7 +118,7 @@ let encodedDictionary = newModel.encodableRepresentation()
 
 In this example, we have two models, Student and School. 
 
-~~~
+~~~swift
 struct Student {
 	enum Gender: String {
 		case Male = "male"
@@ -150,7 +150,7 @@ struct School {
 
 You can get as complicated as you like, and the syntax will always remain the same. The extensions will be:
 
-~~~
+~~~swift
 extension Student: Serializable {
 	init(dictionary: NSDictionary?) {
 		name   <== (self, dictionary, "name")
