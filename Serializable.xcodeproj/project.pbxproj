@@ -21,7 +21,6 @@
 		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
 		276FB53A1C7354960055EC7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		276FB53C1C7354E40055EC7C /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
-		276FB53E1C73558A0055EC7C /* Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53D1C73558A0055EC7C /* Bridging.swift */; };
 		276FB5411C7361670055EC7C /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5401C7361670055EC7C /* DecodableTests.swift */; };
 		276FB5431C73622D0055EC7C /* DecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5421C73622D0055EC7C /* DecodableModel.swift */; };
 		276FB5451C7362EA0055EC7C /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB5441C7362EA0055EC7C /* DecodableTest.json */; };
@@ -144,7 +143,6 @@
 				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
 				276FB5391C7354960055EC7C /* Extensions.swift */,
 				276FB53B1C7354E40055EC7C /* Operator.swift */,
-				276FB53D1C73558A0055EC7C /* Bridging.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -198,6 +196,7 @@
 		276FB53F1C73559E0055EC7C /* CashierExtension */ = {
 			isa = PBXGroup;
 			children = (
+				276FB53D1C73558A0055EC7C /* Bridging.swift */,
 				272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */,
 			);
 			name = CashierExtension;
@@ -321,7 +320,6 @@
 				272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */,
 				276FB53C1C7354E40055EC7C /* Operator.swift in Sources */,
 				276FB53A1C7354960055EC7C /* Extensions.swift in Sources */,
-				276FB53E1C73558A0055EC7C /* Bridging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
