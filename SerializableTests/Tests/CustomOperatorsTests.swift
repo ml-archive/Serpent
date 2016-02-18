@@ -44,10 +44,20 @@ class CustomOperatorsTests: XCTestCase {
 
     func testCustomOperatorNestedSerializable() {
 
-        XCTAssertNotNil(testModel.otherSerializable, "Parsing a nested serializable failed.")
+        XCTAssertNotNil(testModel.otherSerializable, "Parsing a nested optional serializable failed.")
 
-        XCTAssertEqual(testModel.otherSerializable?.optionalInteger, 2, "Optional integer parsing with custom operator in nested serializable failed.")
-        XCTAssertEqual(testModel.otherSerializable?.optionalStringWithDefaultValue, "optional default success", "String (optional, w/ default val) parsing in nested serializable with custom operator failed.")
-        XCTAssertNil(testModel.otherSerializable?.optionalDouble, "Optional double in nested serializable expected to be nil.")
+        XCTAssertEqual(testModel.otherSerializable?.optionalInteger, 2, "Optional integer parsing with custom operator in nested optional serializable failed.")
+        XCTAssertEqual(testModel.otherSerializable?.optionalStringWithDefaultValue, "optional default success", "String (optional, w/ default val) parsing in nested optional serializable with custom operator failed.")
+        XCTAssertNil(testModel.otherSerializable?.optionalDouble, "Optional double in nested optional serializable expected to be nil.")
+		
+		XCTAssertNotNil(testModel.someSerializable, "Parsing a nested serializable failed.")
+		
+		XCTAssertEqual(testModel.someSerializable.optionalInteger, 2, "Optional integer parsing with custom operator in nested serializable failed.")
+		XCTAssertEqual(testModel.someSerializable.optionalStringWithDefaultValue, "optional default success", "String (optional, w/ default val) parsing in nested serializable with custom operator failed.")
+		XCTAssertNil(testModel.someSerializable.optionalDouble, "Optional double in nested serializable expected to be nil.")
     }
+	
+	func testCustomOperatorStringInitializable() {
+		XCTAssertEqual(testModel.someUrl, NSURL(string: "http://www.google.com"), "StringInitializable parsing failed in custom operator")
+	}
 }
