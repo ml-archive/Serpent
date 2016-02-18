@@ -14,24 +14,30 @@ struct CustomOperatorsTestModel {
     var secondString = ""
     var nilString: String?
     var otherSerializable: CustomOperatorsTestNestedModel?
+	var someSerializable = CustomOperatorsTestNestedModel()
+	var someUrl = NSURL()
 }
 
 extension CustomOperatorsTestModel: Serializable {
-    init(dictionary: NSDictionary?) {
-        string            <== (self, dictionary, "string")
-        secondString      <== (self, dictionary, "second_string")
-        nilString         <== (self, dictionary, "nil_string")
-        otherSerializable <== (self, dictionary, "other_serializable")
-    }
-
-    func encodableRepresentation() -> NSCoding {
-        let dict = NSMutableDictionary()
-        (dict, "string")        <== string
-        (dict, "second_string") <== secondString
-        (dict, "nil_string")    <== nilString
-        (dict, "other_serializable") <== otherSerializable
-        return dict
-    }
+	init(dictionary: NSDictionary?) {
+		string            <== (self, dictionary, "string")
+		secondString      <== (self, dictionary, "second_string")
+		nilString         <== (self, dictionary, "nil_string")
+		otherSerializable <== (self, dictionary, "other_serializable")
+		someSerializable  <== (self, dictionary, "some_serializable")
+		someUrl           <== (self, dictionary, "some_url")
+	}
+	
+	func encodableRepresentation() -> NSCoding {
+		let dict = NSMutableDictionary()
+		(dict, "string")             <== string
+		(dict, "second_string")      <== secondString
+		(dict, "nil_string")         <== nilString
+		(dict, "other_serializable") <== otherSerializable
+		(dict, "some_serializable")  <== someSerializable
+		(dict, "some_url")           <== someUrl
+		return dict
+	}
 }
 
 struct CustomOperatorsTestNestedModel {
