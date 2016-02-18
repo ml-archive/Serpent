@@ -188,7 +188,7 @@ extension School: Serializable {
 	}
 }
 ~~~
-Again, the ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates all of this code for you in less than a second!
+Again, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates all of this code for you in less than a second!
 
 ## 👥 Credits
 Made with ❤️ at [Nodes](http://nodesagency.com).
