@@ -46,15 +46,15 @@ class SerializableEnumsTests: XCTestCase {
         XCTAssertEqual(testModel.stringEnumArray, [StringEnum.Value1, StringEnum.DifferentValue], "String enum array test failed!")
         XCTAssertEqual(testModel.optionalStringEnumArray!, [StringEnum.Value1, StringEnum.DifferentValue], "Optional string enum array test failed!")
         XCTAssertEqual(testModel.optionalStringEnumArrayWithDefaultValue!, [StringEnum.Value1, StringEnum.DifferentValue], "Optional string enum array with default value test failed!")
-        XCTAssertEqual(testModel.nonExistentStringEnumArray!, [StringEnum](), "Optional string enum array with non existent value test failed!")
-        XCTAssertEqual(testModel.wrongTypeStringEnumArray!, [StringEnum](), "Wrong type string enum array test failed!")
+        XCTAssertNil(testModel.nonExistentStringEnumArray, "Optional string enum array with non existent value test failed!")
+        XCTAssertNil(testModel.wrongTypeStringEnumArray, "Wrong type string enum array test failed!")
     }
 
     func testDoubleEnumArrayParsing() {
         XCTAssertEqual(testModel.doubleEnumArray, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Double enum array test failed!")
         XCTAssertEqual(testModel.optionalDoubleEnumArray!, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Optional double enum array test failed!")
         XCTAssertEqual(testModel.optionalDoubleEnumArrayWithDefaultValue!, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Optional double enum array with default value test failed!")
-        XCTAssertEqual(testModel.nonExistentDoubleEnumArray!, [DoubleEnum](), "Optional double enum array with non existent value test failed!")
-        XCTAssertEqual(testModel.wrongTypeDoubleEnumArray!, [DoubleEnum](),"Wrong type double enum array test failed!")
+        XCTAssertNil(testModel.nonExistentDoubleEnumArray, "Optional double enum array with non existent value test failed!")
+        XCTAssertNil(testModel.wrongTypeDoubleEnumArray,"Wrong type double enum array test failed!")
     }
 }

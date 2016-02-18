@@ -75,7 +75,7 @@ public extension Keymappable {
 	public func mapped<T where T:_ArrayType, T:CollectionType, T.Generator.Element: Decodable>(dictionary: NSDictionary?, key: String) -> T? {
 		
 		guard let dict = dictionary else {
-			return T()
+			return nil
 		}
 		
 		let sourceOpt = dict[key]
@@ -86,7 +86,7 @@ public extension Keymappable {
             return finalArray
         }
 
-        return T()
+        return nil
 	}
 	
     /**
@@ -213,7 +213,7 @@ public extension Keymappable {
     public func mapped<T where T:_ArrayType, T:CollectionType, T.Generator.Element: RawRepresentable>(dictionary: NSDictionary?, key: String) -> T? {
         
         guard let dict = dictionary else {
-            return T()
+            return nil
         }
         
         let sourceOpt = dict[key]
@@ -223,6 +223,6 @@ public extension Keymappable {
             return (finalArray as! T)
         }
         
-        return T()
+        return nil
     }
 }

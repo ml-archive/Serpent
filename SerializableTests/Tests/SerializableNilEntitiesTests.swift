@@ -31,8 +31,8 @@ class SerializableNilEntitiesTests: XCTestCase {
 		XCTAssertNotNil(testModel.names, "Guard statement failed for Serializable array with nil Dictionary")
 		XCTAssertEqual(testModel.names.count, 0, "Guard statement failed for Serializable array with nil Dictionary")
 		XCTAssertNil(testModel.optionalName, "Guard statement failed for optional Serializable with nil Dictionary")
-		XCTAssertNotNil(testModel.optionalNames, "Guard statement failed for optional Serializable array with nil Dictionary")
-		XCTAssertEqual(testModel.optionalNames?.count, 0, "Guard statement failed for optional Serializable array with nil Dictionary")
+		XCTAssertNil(testModel.optionalNames, "Guard statement failed for optional Serializable array with nil Dictionary")
+		
 	}
 	
 	func testNilEnums() {
@@ -40,8 +40,7 @@ class SerializableNilEntitiesTests: XCTestCase {
 		XCTAssertNotNil(testModel.someEnumArray, "Guard statement failed for Enum array with nil dictionary")
 		XCTAssertEqual(testModel.someEnumArray.count, 0, "Guard statement failed for Enum array with nil dictionary")
 		XCTAssertNil(testModel.optionalEnum, "Guard statement failed for optional Enum with nil dictionary")
-		XCTAssertNotNil(testModel.optionalEnumArray, "Guard statement failed for optional Enum array with nil dictionary")
-		XCTAssertEqual(testModel.optionalEnumArray?.count, 0, "Guard statement failed for optional Enum array with nil dictionary")
+		XCTAssertNil(testModel.optionalEnumArray, "Guard statement failed for optional Enum array with nil dictionary")
 	}
 	
 	func testNilStringInitializables() {
