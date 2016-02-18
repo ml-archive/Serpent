@@ -8,5 +8,15 @@
         "string": "success",
         "optional_string": "optional success",
         "optional_string_with_default_value": "optional default success"
-    }
+    },
+	"some_serializable": {
+		"integer": 1,
+		"optional_integer": 2,
+		"optional_integer_with_default_value": 3,
+		"string": "success",
+		"optional_string": "optional success",
+		"optional_string_with_default_value": "optional default success"
+	},
+	"some_url" : "http://www.google.com"
+	
 }
