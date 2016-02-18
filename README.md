@@ -15,6 +15,7 @@ The Serializable framework uses static typing, exhibiting superior performance c
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
 ![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)
+[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/serializable)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/serializable)
 
 ## 📝 Requirements
 
