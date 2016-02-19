@@ -47,7 +47,7 @@ let package = Package(
 )
 ~~~
 
-**NOTE:** This doesn't currently work as SPM doens't support iOS, but once it will we will already be supporting it! :)
+**NOTE:** This doesn't currently work as SPM doens't support UIKit, but once it will we will already be supporting it! :)
 
 
 ## 🔧 Setup
