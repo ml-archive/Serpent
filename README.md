@@ -53,7 +53,7 @@ let package = Package(
 
 ## 🔧 Setup
 
-We **highly** recommend you use our ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) to assist with generating the code needed to conform to Serializable. Instructions for installation and usage can be found at the [Model Boiler github repository](https://github.com/nodes-ios/ModelBoiler). 
+We **highly** recommend you use our [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) to assist with generating the code needed to conform to Serializable. Instructions for installation and usage can be found at the [Model Boiler github repository](https://github.com/nodes-ios/ModelBoiler). 
 
 ## 💻 Usage
 
@@ -98,7 +98,7 @@ extension Foo: Serializable {
 }
 ~~~
 
-And thats it! If you're using the ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), this extension will be generated for you, so that you don't need to type it all out for every model you have. 
+And thats it! If you're using the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), this extension will be generated for you, so that you don't need to type it all out for every model you have. 
 
 ###Using Serializable models
 
@@ -188,7 +188,7 @@ extension School: Serializable {
 	}
 }
 ~~~
-Again, the ![ModelBoiler](http://i.imgur.com/V5UzMVk.png) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates all of this code for you in less than a second!
+Again, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates all of this code for you in less than a second!
 
 ## 👥 Credits
 Made with ❤️ at [Nodes](http://nodesagency.com).
