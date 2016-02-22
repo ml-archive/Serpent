@@ -56,7 +56,6 @@
 		272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumsTestModel.swift; sourceTree = "<group>"; };
 		272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimitivesTest.json; sourceTree = "<group>"; };
 		272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesTestModel.swift; sourceTree = "<group>"; };
-		272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtension.swift; sourceTree = "<group>"; };
 		272D927F1C6DFF7900BCD3B6 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		272F1DC61C6A392A0098F620 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1DC91C6A392A0098F620 /* Serializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializable.h; sourceTree = "<group>"; };
@@ -65,7 +64,6 @@
 		272F1DD71C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276FB5391C7354960055EC7C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
-		276FB53D1C73558A0055EC7C /* Bridging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridging.swift; sourceTree = "<group>"; };
 		276FB5401C7361670055EC7C /* DecodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableTests.swift; sourceTree = "<group>"; };
 		276FB5421C73622D0055EC7C /* DecodableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableModel.swift; sourceTree = "<group>"; };
 		276FB5441C7362EA0055EC7C /* DecodableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DecodableTest.json; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 		272D927D1C6DFF7900BCD3B6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				276FB53F1C73559E0055EC7C /* CashierExtension */,
 				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
 				276FB5391C7354960055EC7C /* Extensions.swift */,
 				276FB53B1C7354E40055EC7C /* Operator.swift */,
@@ -191,15 +188,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		276FB53F1C73559E0055EC7C /* CashierExtension */ = {
-			isa = PBXGroup;
-			children = (
-				276FB53D1C73558A0055EC7C /* Bridging.swift */,
-				272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */,
-			);
-			name = CashierExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
