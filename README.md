@@ -18,7 +18,7 @@ The Serializable framework uses static typing, exhibiting superior performance c
 [![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/serializable)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/serializable)
 
 
-## ⚖ Why Serializable?
+## Why Serializable?
 There are plenty of other Encoding and Decoding frameworks available. Why should you use Serializable? 
 
 * [Performance](https://github.com/nodes-ios/Serializable/wiki/Performance-tests). Serializable is fast, up to 4x faster than similar frameworks
