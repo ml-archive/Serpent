@@ -17,12 +17,15 @@ The Serializable framework uses static typing, exhibiting superior performance c
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)
 [![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/serializable)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/serializable)
 
+
 ## 🤔 Why Serializable?
 There are plenty of other Encoding and Decoding frameworks available. Why should you use Serializable? 
 
 * [Performance](https://github.com/nodes-ios/Serializable/wiki/Performance-tests). Serializable is fast, up to 4x faster than similar frameworks
 * [Features](https://github.com/nodes-ios/Serializable/wiki/Performance-tests#feature-comparison). Serializable can parse anything you throw at it. Nested objects, Enums, NSURL, you name it!
 * [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write, [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates it for you instantly. 
+
+
 ## 📝 Requirements
 
 * iOS 8.0+
