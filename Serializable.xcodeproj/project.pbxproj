@@ -22,6 +22,8 @@
 		276FB53A1C7354960055EC7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		276FB53C1C7354E40055EC7C /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
 		276FB53E1C73558A0055EC7C /* Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53D1C73558A0055EC7C /* Bridging.swift */; };
+		303C3ADE1C8F6FC000C1D5B4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C3ADC1C8F6FC000C1D5B4 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		303C3ADF1C8F6FC000C1D5B4 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C3ADD1C8F6FC000C1D5B4 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		276FB5391C7354960055EC7C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		276FB53D1C73558A0055EC7C /* Bridging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridging.swift; sourceTree = "<group>"; };
+		303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
+		303C3ADC1C8F6FC000C1D5B4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		303C3ADD1C8F6FC000C1D5B4 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cashier.framework; path = Carthage/Build/iOS/Cashier.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303C3ADF1C8F6FC000C1D5B4 /* Cashier.framework in Frameworks */,
+				303C3ADE1C8F6FC000C1D5B4 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +108,7 @@
 		272D927D1C6DFF7900BCD3B6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				303C3AD91C8F69B900C1D5B4 /* AlamofireExtension */,
 				276FB53F1C73559E0055EC7C /* CashierExtension */,
 				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
 				276FB5391C7354960055EC7C /* Extensions.swift */,
@@ -152,6 +160,8 @@
 		272F1E581C6A4F9D0098F620 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				303C3ADC1C8F6FC000C1D5B4 /* Alamofire.framework */,
+				303C3ADD1C8F6FC000C1D5B4 /* Cashier.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +172,14 @@
 				272D927E1C6DFF7900BCD3B6 /* CashierExtension.swift */,
 			);
 			name = CashierExtension;
+			sourceTree = "<group>";
+		};
+		303C3AD91C8F69B900C1D5B4 /* AlamofireExtension */ = {
+			isa = PBXGroup;
+			children = (
+				303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */,
+			);
+			name = AlamofireExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +424,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -428,6 +447,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
