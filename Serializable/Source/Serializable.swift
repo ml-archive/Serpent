@@ -225,4 +225,22 @@ public extension Keymappable {
         
         return nil
     }
+    
+    //Used for UIColor
+    public func mapped<T:HexInitializable>(dictionary: NSDictionary?, key: String) -> T? {
+        
+        guard let dict = dictionary else {
+            return nil
+        }
+        let sourceOpt = dict[key]
+        
+        if let source = sourceOpt as? String where source.characters.count > 0 {
+            return UIColor.colorWithHexString(source) as? T
+        }
+        
+        return nil
+        
+        
+    }
+
 }
