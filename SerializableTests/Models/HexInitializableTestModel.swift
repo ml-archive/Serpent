@@ -14,6 +14,7 @@ struct HexInitializableTestModel {
 	var shortColor: UIColor?
 	var fullColor: UIColor?
 	var badColor: UIColor?
+	var notColor: UIColor?
 }
 
 extension HexInitializableTestModel: Serializable {
@@ -21,6 +22,7 @@ extension HexInitializableTestModel: Serializable {
 		shortColor <== (self, dictionary, "short_color")
 		fullColor  <== (self, dictionary, "full_color")
 		badColor   <== (self, dictionary, "bad_color")
+		notColor   <== (self, dictionary, "not_color")
 	}
 	
 	func encodableRepresentation() -> NSCoding {
@@ -28,6 +30,7 @@ extension HexInitializableTestModel: Serializable {
 		(dict, "short_color") <== shortColor
 		(dict, "full_color")  <== fullColor
 		(dict, "bad_color")   <== badColor
+		(dict, "not_color")   <== notColor
 		return dict
 	}
 }
