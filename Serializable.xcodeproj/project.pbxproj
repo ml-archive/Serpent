@@ -22,8 +22,14 @@
 		276FB53A1C7354960055EC7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		276FB53C1C7354E40055EC7C /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
 		276FB53E1C73558A0055EC7C /* Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53D1C73558A0055EC7C /* Bridging.swift */; };
-		303C3ADE1C8F6FC000C1D5B4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C3ADC1C8F6FC000C1D5B4 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		303C3ADF1C8F6FC000C1D5B4 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C3ADD1C8F6FC000C1D5B4 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		30C8984B1C921B84004A25E2 /* 06AC31E2-4A01-3F45-BBDC-F4D2D62A25DF.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = 30C898431C921B84004A25E2 /* 06AC31E2-4A01-3F45-BBDC-F4D2D62A25DF.bcsymbolmap */; };
+		30C8984C1C921B84004A25E2 /* AA2BACB8-C37B-3EB6-A0D5-E46DE68FC4ED.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = 30C898441C921B84004A25E2 /* AA2BACB8-C37B-3EB6-A0D5-E46DE68FC4ED.bcsymbolmap */; };
+		30C8984D1C921B84004A25E2 /* AC0758EA-ED13-32AB-A4CA-B0C633BF1E62.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = 30C898451C921B84004A25E2 /* AC0758EA-ED13-32AB-A4CA-B0C633BF1E62.bcsymbolmap */; };
+		30C8984E1C921B84004A25E2 /* AC12CC16-B9B5-3027-B5DE-0AFDD892B44F.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = 30C898461C921B84004A25E2 /* AC12CC16-B9B5-3027-B5DE-0AFDD892B44F.bcsymbolmap */; };
+		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		30C898501C921B84004A25E2 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 30C898481C921B84004A25E2 /* Alamofire.framework.dSYM */; };
+		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		30C898521C921B84004A25E2 /* Cashier.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 30C8984A1C921B84004A25E2 /* Cashier.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +63,14 @@
 		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		276FB53D1C73558A0055EC7C /* Bridging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridging.swift; sourceTree = "<group>"; };
 		303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
-		303C3ADC1C8F6FC000C1D5B4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		303C3ADD1C8F6FC000C1D5B4 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cashier.framework; path = Carthage/Build/iOS/Cashier.framework; sourceTree = "<group>"; };
+		30C898431C921B84004A25E2 /* 06AC31E2-4A01-3F45-BBDC-F4D2D62A25DF.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "06AC31E2-4A01-3F45-BBDC-F4D2D62A25DF.bcsymbolmap"; sourceTree = "<group>"; };
+		30C898441C921B84004A25E2 /* AA2BACB8-C37B-3EB6-A0D5-E46DE68FC4ED.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AA2BACB8-C37B-3EB6-A0D5-E46DE68FC4ED.bcsymbolmap"; sourceTree = "<group>"; };
+		30C898451C921B84004A25E2 /* AC0758EA-ED13-32AB-A4CA-B0C633BF1E62.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AC0758EA-ED13-32AB-A4CA-B0C633BF1E62.bcsymbolmap"; sourceTree = "<group>"; };
+		30C898461C921B84004A25E2 /* AC12CC16-B9B5-3027-B5DE-0AFDD892B44F.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AC12CC16-B9B5-3027-B5DE-0AFDD892B44F.bcsymbolmap"; sourceTree = "<group>"; };
+		30C898471C921B84004A25E2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		30C898481C921B84004A25E2 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		30C898491C921B84004A25E2 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
+		30C8984A1C921B84004A25E2 /* Cashier.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Cashier.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				303C3ADF1C8F6FC000C1D5B4 /* Cashier.framework in Frameworks */,
-				303C3ADE1C8F6FC000C1D5B4 /* Alamofire.framework in Frameworks */,
+				30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */,
+				30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,8 +172,7 @@
 		272F1E581C6A4F9D0098F620 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				303C3ADC1C8F6FC000C1D5B4 /* Alamofire.framework */,
-				303C3ADD1C8F6FC000C1D5B4 /* Cashier.framework */,
+				30C898411C921B84004A25E2 /* Prebuilt */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +191,29 @@
 				303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */,
 			);
 			name = AlamofireExtension;
+			sourceTree = "<group>";
+		};
+		30C898411C921B84004A25E2 /* Prebuilt */ = {
+			isa = PBXGroup;
+			children = (
+				30C898421C921B84004A25E2 /* iOS */,
+			);
+			path = Prebuilt;
+			sourceTree = "<group>";
+		};
+		30C898421C921B84004A25E2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				30C898431C921B84004A25E2 /* 06AC31E2-4A01-3F45-BBDC-F4D2D62A25DF.bcsymbolmap */,
+				30C898441C921B84004A25E2 /* AA2BACB8-C37B-3EB6-A0D5-E46DE68FC4ED.bcsymbolmap */,
+				30C898451C921B84004A25E2 /* AC0758EA-ED13-32AB-A4CA-B0C633BF1E62.bcsymbolmap */,
+				30C898461C921B84004A25E2 /* AC12CC16-B9B5-3027-B5DE-0AFDD892B44F.bcsymbolmap */,
+				30C898471C921B84004A25E2 /* Alamofire.framework */,
+				30C898481C921B84004A25E2 /* Alamofire.framework.dSYM */,
+				30C898491C921B84004A25E2 /* Cashier.framework */,
+				30C8984A1C921B84004A25E2 /* Cashier.framework.dSYM */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +307,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C8984D1C921B84004A25E2 /* AC0758EA-ED13-32AB-A4CA-B0C633BF1E62.bcsymbolmap in Resources */,
+				30C8984C1C921B84004A25E2 /* AA2BACB8-C37B-3EB6-A0D5-E46DE68FC4ED.bcsymbolmap in Resources */,
+				30C898501C921B84004A25E2 /* Alamofire.framework.dSYM in Resources */,
+				30C8984B1C921B84004A25E2 /* 06AC31E2-4A01-3F45-BBDC-F4D2D62A25DF.bcsymbolmap in Resources */,
+				30C898521C921B84004A25E2 /* Cashier.framework.dSYM in Resources */,
+				30C8984E1C921B84004A25E2 /* AC12CC16-B9B5-3027-B5DE-0AFDD892B44F.bcsymbolmap in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +465,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -448,6 +489,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
