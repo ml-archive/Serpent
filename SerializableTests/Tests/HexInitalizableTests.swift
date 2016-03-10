@@ -31,7 +31,7 @@ class HexInitalizableTests: XCTestCase {
 		XCTAssertEqual(testModel.shortColor, color, "Error parsing short form color in HexInitializable")
 		XCTAssertEqual(testModel.fullColor, color, "Error parsing long form color in HexInitializable")
 		XCTAssertNil(testModel.badColor, "Error returning nil for malformed color hex")
-		
+		XCTAssertNil(testModel.badColor, "Error returning nil for non hex value")
 	}
 
 }
