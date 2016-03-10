@@ -17,8 +17,6 @@ public struct Parser {
         public let response:NSHTTPURLResponse?
         public let rawResponse:String
         public let request:NSURLRequest?
-        
-        public func errorCode() -> Int {return 0}
     }
 }
 
@@ -178,7 +176,7 @@ public extension Alamofire.Request
                 if let data = data {
                     rawResponse = NSString(data: data, encoding: NSUTF8StringEncoding) as? String ?? ""
                 } else {
-                    rawResponse = ""
+                    rawResponse = "-"
                 }
                 
                 completionHandler(ApiResult.Error(error:Parser.Error.init(error: error, response: response, rawResponse: rawResponse, request: request))
