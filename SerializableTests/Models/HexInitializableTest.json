@@ -4,5 +4,7 @@
 	"bad_color" : "0066",
 	"not_color" : {
 		"color" : "asdf"
-	}
+	},
+    "invalid_hex_color" : "SSg12F"
+    
 }
