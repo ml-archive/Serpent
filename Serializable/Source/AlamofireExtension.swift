@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public struct Harbor {
+public struct Parser {
     public static let APICallSucceededNotification = "APICallSucceededNotification"
     public struct Error {
         
@@ -22,13 +22,14 @@ public struct Harbor {
     }
 }
 
+/* Unfortunately, this has to be in global scope since Swift currently (v2.2) does not support nested generic types */
 public enum ApiResult<T> {
     case Success(data:T)
-    case Error(error:Harbor.Error)
+    case Error(error:Parser.Error)
 }
 
 public extension Alamofire.Response {
-    func harborError() -> Harbor.Error {
+    func serializableParserError() -> Parser.Error {
         switch self.result {
         case .Failure(let error):
             var rawResponse:AnyObject?
@@ -38,33 +39,33 @@ public extension Alamofire.Response {
                 rawResponse = nil
             }
             let unwrappedError = error as NSError ?? NSError(domain: "Harbor", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Nodes parsing block failed!"])
-            return Harbor.Error.init(error: unwrappedError, response: self.response, rawResponse: rawResponse, request: self.request)
+            return Parser.Error.init(error: unwrappedError, response: self.response, rawResponse: rawResponse, request: self.request)
         default:
-            return Harbor.Error.init(error: nil, response: nil, rawResponse: nil, request: nil)
+            return Parser.Error.init(error: nil, response: nil, rawResponse: nil, request: nil)
         }
     }
 }
 
-public extension Harbor {
+public extension Parser {
     
-    public static func nodesParse<T,S>(response response:Response<S, NSError>, completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) {
+    public static func parse<T,S>(response response:Response<S, NSError>, completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) {
         switch response.result {
         case let Result.Success(value):
             if let parsedObject: T = parsingHandler?( data: value as? AnyObject ) {
                 NSNotificationCenter.defaultCenter().postNotificationName(APICallSucceededNotification, object: nil)
                 completionHandler(ApiResult.Success(data: parsedObject));
             } else {
-                completionHandler(ApiResult.Error(error:response.harborError()))
+                completionHandler(ApiResult.Error(error:response.serializableParserError()))
             }
             
         case Result.Failure:
-            completionHandler(ApiResult.Error(error:response.harborError()))
+            completionHandler(ApiResult.Error(error:response.serializableParserError()))
             break;
         }
     }
     
-    public static func nodesParse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<T> -> Void) {
-        nodesParse(response:response, completionHandler: completionHandler, parsingHandler: {
+    public static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<T> -> Void) {
+        parse(response:response, completionHandler: completionHandler, parsingHandler: {
             ( data: AnyObject? ) -> T? in
             
             if let sourceDictionary = data as? [String : AnyObject] {
@@ -78,8 +79,8 @@ public extension Harbor {
         })
     }
     
-    public static func nodesParse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<[T]> -> Void) {
-        nodesParse(response:response, completionHandler: completionHandler, parsingHandler: {
+    public static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<[T]> -> Void) {
+        Parser.parse(response:response, completionHandler: completionHandler, parsingHandler: {
             ( data: AnyObject? ) -> [T]? in
             
             var finalArray:AnyObject? = data
@@ -102,14 +103,14 @@ public extension Harbor {
         })
     }
     
-    public static func nodesParse<S>(response response:Response<S, NSError>, completionHandler: ApiResult<Void> -> Void) {
+    public static func parse<S>(response response:Response<S, NSError>, completionHandler: ApiResult<Void> -> Void) {
         switch response.result {
         case Result.Success:
             NSNotificationCenter.defaultCenter().postNotificationName(APICallSucceededNotification, object: nil)
             completionHandler(ApiResult.Success(data: ()))
             
         case Result.Failure:
-            completionHandler(ApiResult.Error(error:response.harborError()))
+            completionHandler(ApiResult.Error(error:response.serializableParserError()))
             break;
         }
     }
@@ -139,32 +140,32 @@ public extension Harbor {
 
 //MARK: - NOParsing stuff
 
-public extension Request
+public extension Alamofire.Request
 {
     
-    public func JSONParse<T>(completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) -> Self {
+    public func respnseSerializable<T>(completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
-            Harbor.nodesParse(response: response, completionHandler: completionHandler, parsingHandler: parsingHandler)
+            Parser.parse(response: response, completionHandler: completionHandler, parsingHandler: parsingHandler)
         })
     }
     
-    public func JSONParse<T:Serializable>(completionHandler: ApiResult<T> -> Void) -> Self {
+    public func respnseSerializable<T:Serializable>(completionHandler: ApiResult<T> -> Void) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
-            Harbor.nodesParse(response: response, completionHandler: completionHandler)
+            Parser.parse(response: response, completionHandler: completionHandler)
         })
     }
     
-    public func JSONParse<T:Serializable>(completionHandler: ApiResult<[T]> -> Void) -> Self {
+    public func respnseSerializable<T:Serializable>(completionHandler: ApiResult<[T]> -> Void) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
-            Harbor.nodesParse(response: response, completionHandler: completionHandler)
+            Parser.parse(response: response, completionHandler: completionHandler)
         })
     }
     
-    public func JSONParse(completionHandler: ApiResult<Void> -> Void) -> Self {
-        return validate().voidParse(completionHandler)
+    public func respnseSerializable(completionHandler: ApiResult<Void> -> Void) -> Self {
+        return validate().responseVoid(completionHandler)
     }
     
-    internal func voidParse(completionHandler: ApiResult<Void> -> Void) -> Self {
+    public func responseVoid(completionHandler: ApiResult<Void> -> Void) -> Self {
         return validate().response(completionHandler: { (request, response, data, error) -> Void in
             
             if error == nil {
@@ -173,7 +174,7 @@ public extension Request
                 
                 let error = error ?? NSError(domain: "Harbor", code: -1, userInfo: nil)
                 
-                completionHandler(ApiResult.Error(error:Harbor.Error.init(error: error, response: response, rawResponse: nil, request: request))
+                completionHandler(ApiResult.Error(error:Parser.Error.init(error: error, response: response, rawResponse: nil, request: request))
                 )
             }
         })
