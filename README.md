@@ -68,7 +68,7 @@ We **highly** recommend you use our [![ModelBoiler](http://i.imgur.com/V5UzMVk.p
 
 ### Getting started
 
-Serializable supports Primitive types, Enum, NSURL, other Serializables, and Arrays of all of the aforementioned types. Your variable declarations can have a default value or be optional. 
+Serializable supports Primitive types, Enum, NSURL, UIColor, other Serializables, and Arrays of all of the aforementioned types. Your variable declarations can have a default value or be optional. 
 
 Primitive types do not need to have an explicit type, if Swift is able to infer it normally. `var name: String = ""` works just as well as `var name = ""`. Optionals will of course need an explicit type. 
 
