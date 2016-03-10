@@ -11,7 +11,7 @@ import UIKit
 import Serializable
 
 struct HexInitializableTestModel {
-	var shortColor: UIColor?
+	var shortColor = UIColor.redColor()
 	var fullColor: UIColor?
 	var badColor: UIColor?
 	var notColor: UIColor?
