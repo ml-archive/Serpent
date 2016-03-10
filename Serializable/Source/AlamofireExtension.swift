@@ -18,7 +18,7 @@ public struct Parser {
         public let rawResponse:String
         public let request:NSURLRequest?
         
-        func errorCode() -> Int {return 0}
+        public func errorCode() -> Int {return 0}
     }
 }
 
@@ -138,7 +138,7 @@ public extension Parser {
 }
 
 
-//MARK: - NOParsing stuff
+//MARK: - Wrapper methods
 
 public extension Alamofire.Request
 {
