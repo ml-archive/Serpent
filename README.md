@@ -22,7 +22,7 @@ The Serializable framework uses static typing, exhibiting superior performance c
 There are plenty of other Encoding and Decoding frameworks available. Why should you use Serializable? 
 
 * [Performance](https://github.com/nodes-ios/Serializable/wiki/Performance-tests). Serializable is fast, up to 4x faster than similar frameworks
-* [Features](https://github.com/nodes-ios/Serializable/wiki/Performance-tests#feature-comparison). Serializable can parse anything you throw at it. Nested objects, Enums, NSURL, you name it!
+* [Features](https://github.com/nodes-ios/Serializable/wiki/Performance-tests#feature-comparison). Serializable can parse anything you throw at it. Nested objects, Enums, NSURL, UIColor, you name it!
 * [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write, [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates it for you instantly. 
 
 
@@ -68,7 +68,7 @@ We **highly** recommend you use our [![ModelBoiler](http://i.imgur.com/V5UzMVk.p
 
 ### Getting started
 
-Serializable supports Primitive types, Enum, NSURL, other Serializables, and Arrays of all of the aforementioned types. Your variable declarations can have a default value or be optional. 
+Serializable supports Primitive types, Enum, NSURL, UIColor, other Serializables, and Arrays of all of the aforementioned types. Your variable declarations can have a default value or be optional. 
 
 Primitive types do not need to have an explicit type, if Swift is able to infer it normally. `var name: String = ""` works just as well as `var name = ""`. Optionals will of course need an explicit type. 
 

@@ -16,6 +16,7 @@ struct CustomOperatorsTestModel {
     var otherSerializable: CustomOperatorsTestNestedModel?
 	var someSerializable = CustomOperatorsTestNestedModel()
 	var someUrl = NSURL()
+	var someColor: UIColor?
 }
 
 extension CustomOperatorsTestModel: Serializable {
@@ -26,6 +27,7 @@ extension CustomOperatorsTestModel: Serializable {
 		otherSerializable <== (self, dictionary, "other_serializable")
 		someSerializable  <== (self, dictionary, "some_serializable")
 		someUrl           <== (self, dictionary, "some_url")
+		someColor         <== (self, dictionary, "some_color")
 	}
 	
 	func encodableRepresentation() -> NSCoding {
@@ -36,6 +38,7 @@ extension CustomOperatorsTestModel: Serializable {
 		(dict, "other_serializable") <== otherSerializable
 		(dict, "some_serializable")  <== someSerializable
 		(dict, "some_url")           <== someUrl
+		(dict, "some_color")         <== someColor
 		return dict
 	}
 }
