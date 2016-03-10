@@ -30,6 +30,7 @@
 		30C898501C921B84004A25E2 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 30C898481C921B84004A25E2 /* Alamofire.framework.dSYM */; };
 		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898521C921B84004A25E2 /* Cashier.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 30C8984A1C921B84004A25E2 /* Cashier.framework.dSYM */; };
+		30C898571C921DFC004A25E2 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */,
+				30C898571C921DFC004A25E2 /* AlamofireExtension.swift in Sources */,
 				276FB53C1C7354E40055EC7C /* Operator.swift in Sources */,
 				276FB53A1C7354960055EC7C /* Extensions.swift in Sources */,
 				276FB53E1C73558A0055EC7C /* Bridging.swift in Sources */,
