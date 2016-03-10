@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /*
 	I don't think these are needed anymore?
@@ -30,6 +31,36 @@ public protocol StringInitializable {
 
 extension NSURL:StringInitializable {}
 
+public protocol HexInitializable {
+    static func colorWithHexString (hex:String) -> UIColor?
+}
+
+extension UIColor:HexInitializable {
+    
+    public static func colorWithHexString (hex:String) -> UIColor? {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if cString.characters.count != 6 {
+            return nil
+        }
+        
+        let rString = cString.substringToIndex(cString.startIndex.advancedBy(2))
+        let gString = cString.substringWithRange(Range<String.Index>(cString.startIndex.advancedBy(2)..<cString.startIndex.advancedBy(4)))
+        let bString = cString.substringWithRange(Range<String.Index>(cString.startIndex.advancedBy(4)..<cString.startIndex.advancedBy(6)))
+        
+        
+        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        NSScanner(string: rString).scanHexInt(&r)
+        NSScanner(string: gString).scanHexInt(&g)
+        NSScanner(string: bString).scanHexInt(&b)
+        
+        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1.0)
+    }
+}
 
 public struct Date: StringInitializable {
 	
