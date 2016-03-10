@@ -17,6 +17,7 @@
 		"optional_string": "optional success",
 		"optional_string_with_default_value": "optional default success"
 	},
-	"some_url" : "http://www.google.com"
+	"some_url" : "http://www.google.com",
+	"some_color" : "55AACC"
 	
 }
