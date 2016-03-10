@@ -50,6 +50,7 @@ class SerializableNilEntitiesTests: XCTestCase {
 	
 	func testNilHexInitializable() {
 		XCTAssertNil(testModel.someColor, "Guard statement failed for optional HexInitializable with nil dictionary")
+		XCTAssertEqual(testModel.someDefaultColor, UIColor.redColor(), "Default value failed for optional HexInitializable with nil dictionary")
 	}
 }
 
@@ -68,6 +69,7 @@ public struct NilModel {
 	var someEnumArray: [Type] = []
 	var somePrimitiveArray: [String] = []
 	var someColor: UIColor?
+	var someDefaultColor: UIColor = UIColor.redColor()
 	
 	var optionalId: Int?
 	var optionalName: SimpleModel?
@@ -77,7 +79,6 @@ public struct NilModel {
 	var optionalEnumArray: [Type]?
 	var optionalPrimitiveArray: [String]?
 }
-
 extension NilModel: Serializable {
 	public init(dictionary: NSDictionary?) {
 		id                     <== (self, dictionary, "id")
@@ -88,6 +89,7 @@ extension NilModel: Serializable {
 		someEnumArray          <== (self, dictionary, "some_enum_array")
 		somePrimitiveArray     <== (self, dictionary, "some_primitive_array")
 		someColor              <== (self, dictionary, "some_color")
+		someDefaultColor       <== (self, dictionary, "some_default_color")
 		optionalId             <== (self, dictionary, "optional_id")
 		optionalName           <== (self, dictionary, "optional_name")
 		optionalNames          <== (self, dictionary, "optional_names")
@@ -107,6 +109,7 @@ extension NilModel: Serializable {
 		(dict, "some_enum_array")          <== someEnumArray
 		(dict, "some_primitive_array")     <== somePrimitiveArray
 		(dict, "some_color")               <== someColor
+		(dict, "some_default_color")       <== someDefaultColor
 		(dict, "optional_id")              <== optionalId
 		(dict, "optional_name")            <== optionalName
 		(dict, "optional_names")           <== optionalNames
