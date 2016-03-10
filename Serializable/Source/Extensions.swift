@@ -48,9 +48,12 @@ extension UIColor:HexInitializable {
             return nil
         }
         
-        let regex = "[0-9a-fA-F]+"
+        let regexString = "[0-9A-F]{6}"
         
-        if nil == cString.rangeOfString(regex, options: .RegularExpressionSearch, range: nil, locale: nil) {
+        let regex = try! NSRegularExpression(pattern: regexString, options: NSRegularExpressionOptions(rawValue: 0))
+        let range = NSMakeRange(0, 6)
+        
+        if regex.numberOfMatchesInString(cString, options: NSMatchingOptions(rawValue:0), range: range) != 1 {
             return nil
         }
         
