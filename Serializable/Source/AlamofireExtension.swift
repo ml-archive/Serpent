@@ -143,25 +143,25 @@ public extension Parser {
 public extension Alamofire.Request
 {
     
-    public func respnseSerializable<T>(completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) -> Self {
+    public func responseSerializable<T>(completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
             Parser.parse(response: response, completionHandler: completionHandler, parsingHandler: parsingHandler)
         })
     }
     
-    public func respnseSerializable<T:Serializable>(completionHandler: ApiResult<T> -> Void) -> Self {
+    public func responseSerializable<T:Serializable>(completionHandler: ApiResult<T> -> Void) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
             Parser.parse(response: response, completionHandler: completionHandler)
         })
     }
     
-    public func respnseSerializable<T:Serializable>(completionHandler: ApiResult<[T]> -> Void) -> Self {
+    public func responseSerializable<T:Serializable>(completionHandler: ApiResult<[T]> -> Void) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
             Parser.parse(response: response, completionHandler: completionHandler)
         })
     }
     
-    public func respnseSerializable(completionHandler: ApiResult<Void> -> Void) -> Self {
+    public func responseSerializable(completionHandler: ApiResult<Void> -> Void) -> Self {
         return validate().responseVoid(completionHandler)
     }
     
