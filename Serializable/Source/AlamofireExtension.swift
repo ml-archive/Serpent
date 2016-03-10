@@ -13,10 +13,10 @@ public struct Parser {
     public static let APICallSucceededNotification = "APICallSucceededNotification"
     public struct Error {
         
-        let error:NSError?
-        let response:NSHTTPURLResponse?
-        let rawResponse:AnyObject?
-        let request:NSURLRequest?
+        public let error:NSError?
+        public let response:NSHTTPURLResponse?
+        public let rawResponse:String
+        public let request:NSURLRequest?
         
         func errorCode() -> Int {return 0}
     }
@@ -32,16 +32,16 @@ public extension Alamofire.Response {
     func serializableParserError() -> Parser.Error {
         switch self.result {
         case .Failure(let error):
-            var rawResponse:AnyObject?
+            let rawResponse:String
             if let data = self.data {
                 rawResponse = NSString(data: data, encoding: NSUTF8StringEncoding) as? String ?? ""
             } else {
-                rawResponse = nil
+                rawResponse = ""
             }
-            let unwrappedError = error as NSError ?? NSError(domain: "Harbor", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Nodes parsing block failed!"])
+            let unwrappedError = error as NSError ?? NSError(domain: "Serializable.Parser", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Parsing block failed!"])
             return Parser.Error.init(error: unwrappedError, response: self.response, rawResponse: rawResponse, request: self.request)
         default:
-            return Parser.Error.init(error: nil, response: nil, rawResponse: nil, request: nil)
+            return Parser.Error.init(error: nil, response: nil, rawResponse: "", request: nil)
         }
     }
 }
@@ -172,9 +172,16 @@ public extension Alamofire.Request
                 completionHandler(ApiResult.Success(data: ()))
             } else {
                 
-                let error = error ?? NSError(domain: "Harbor", code: -1, userInfo: nil)
+                let error = error ?? NSError(domain: "Serializable.Parser", code: -1, userInfo: nil)
                 
-                completionHandler(ApiResult.Error(error:Parser.Error.init(error: error, response: response, rawResponse: nil, request: request))
+                let rawResponse:String
+                if let data = data {
+                    rawResponse = NSString(data: data, encoding: NSUTF8StringEncoding) as? String ?? ""
+                } else {
+                    rawResponse = ""
+                }
+                
+                completionHandler(ApiResult.Error(error:Parser.Error.init(error: error, response: response, rawResponse: rawResponse, request: request))
                 )
             }
         })
