@@ -48,6 +48,12 @@ extension UIColor:HexInitializable {
             return nil
         }
         
+        let regex = "[0-9a-fA-F]+"
+        
+        if nil == cString.rangeOfString(regex, options: .RegularExpressionSearch, range: nil, locale: nil) {
+            return nil
+        }
+        
         let rString = cString.substringToIndex(cString.startIndex.advancedBy(2))
         let gString = cString.substringWithRange(Range<String.Index>(cString.startIndex.advancedBy(2)..<cString.startIndex.advancedBy(4)))
         let bString = cString.substringWithRange(Range<String.Index>(cString.startIndex.advancedBy(4)..<cString.startIndex.advancedBy(6)))
