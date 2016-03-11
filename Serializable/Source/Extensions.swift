@@ -35,6 +35,8 @@ public protocol HexInitializable {
     static func colorWithHexString (hex:String) -> UIColor?
 }
 
+let validHexRegex = try! NSRegularExpression(pattern: "[0-9A-F]{6}", options: NSRegularExpressionOptions(rawValue: 0))
+
 extension UIColor:HexInitializable {
     
     public static func colorWithHexString (hex:String) -> UIColor? {
@@ -48,12 +50,9 @@ extension UIColor:HexInitializable {
             return nil
         }
         
-        let regexString = "[0-9A-F]{6}"
-        
-        let regex = try! NSRegularExpression(pattern: regexString, options: NSRegularExpressionOptions(rawValue: 0))
         let range = NSMakeRange(0, 6)
         
-        if regex.numberOfMatchesInString(cString, options: NSMatchingOptions(rawValue:0), range: range) != 1 {
+        if validHexRegex.numberOfMatchesInString(cString, options: NSMatchingOptions(rawValue:0), range: range) != 1 {
             return nil
         }
         
