@@ -34,6 +34,9 @@
 		276FB5551C7494A30055EC7C /* StringInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 276FB5541C7494A30055EC7C /* StringInitializableTest.json */; };
 		276FB5571C7495560055EC7C /* StringInitializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5561C7495560055EC7C /* StringInitializableTests.swift */; };
 		276FB55B1C74D1480055EC7C /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB55A1C74D1480055EC7C /* ExtensionsTests.swift */; };
+		27C1F4DF1C9182980030EFE2 /* HexInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1F4DE1C9182980030EFE2 /* HexInitializableTestModel.swift */; };
+		27C1F4E11C9182C10030EFE2 /* HexInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 27C1F4E01C9182C10030EFE2 /* HexInitializableTest.json */; };
+		27C1F4E31C9183240030EFE2 /* HexInitalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1F4E21C9183240030EFE2 /* HexInitalizableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		276FB5541C7494A30055EC7C /* StringInitializableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StringInitializableTest.json; sourceTree = "<group>"; };
 		276FB5561C7495560055EC7C /* StringInitializableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializableTests.swift; sourceTree = "<group>"; };
 		276FB55A1C74D1480055EC7C /* ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
+		27C1F4DE1C9182980030EFE2 /* HexInitializableTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexInitializableTestModel.swift; sourceTree = "<group>"; };
+		27C1F4E01C9182C10030EFE2 /* HexInitializableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HexInitializableTest.json; sourceTree = "<group>"; };
+		27C1F4E21C9183240030EFE2 /* HexInitalizableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexInitalizableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 				276FB5501C7377B50055EC7C /* SerializableEntityTest.json */,
 				276FB5521C74947D0055EC7C /* StringInitializableTestModel.swift */,
 				276FB5541C7494A30055EC7C /* StringInitializableTest.json */,
+				27C1F4DE1C9182980030EFE2 /* HexInitializableTestModel.swift */,
+				27C1F4E01C9182C10030EFE2 /* HexInitializableTest.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 				276FB54C1C7376F40055EC7C /* SerializableEntityTests.swift */,
 				276FB5561C7495560055EC7C /* StringInitializableTests.swift */,
 				276FB55A1C74D1480055EC7C /* ExtensionsTests.swift */,
+				27C1F4E21C9183240030EFE2 /* HexInitalizableTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 				276FB5451C7362EA0055EC7C /* DecodableTest.json in Resources */,
 				272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */,
 				272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */,
+				27C1F4E11C9182C10030EFE2 /* HexInitializableTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +331,13 @@
 				276FB54F1C7377070055EC7C /* SerializableEntityTestModel.swift in Sources */,
 				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
+				27C1F4E31C9183240030EFE2 /* HexInitalizableTests.swift in Sources */,
 				276FB5431C73622D0055EC7C /* DecodableModel.swift in Sources */,
 				276FB54D1C7376F40055EC7C /* SerializableEntityTests.swift in Sources */,
 				276FB5571C7495560055EC7C /* StringInitializableTests.swift in Sources */,
 				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
 				276FB55B1C74D1480055EC7C /* ExtensionsTests.swift in Sources */,
+				27C1F4DF1C9182980030EFE2 /* HexInitializableTestModel.swift in Sources */,
 				276FB5411C7361670055EC7C /* DecodableTests.swift in Sources */,
 				276FB5531C74947D0055EC7C /* StringInitializableTestModel.swift in Sources */,
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
