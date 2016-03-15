@@ -36,10 +36,19 @@ class CustomOperatorsTests: XCTestCase {
 
     func testCustomOperatorsEncode() {
         let rep = testModel.encodableRepresentation() as! NSDictionary
+		let subArray = testModel.someArray
 
         XCTAssertEqual(rep.valueForKey("string") as? String, "success", "String encode with custom operator failed.")
         XCTAssertEqual(rep.valueForKey("second_string") as? String, "haha", "String encode with custom operator failed.")
         XCTAssertNil(rep.valueForKey("nil_string"), "Nil string encode with custom operator failed.")
+		
+		if let type = rep.valueForKey("some_enum") as? Int {
+			XCTAssertEqual(Type(rawValue: type), .Second, "Enum encode with custom operator failed.")
+		}
+		else {
+			XCTFail("Enum encode with custom operator failed.")
+		}
+		XCTAssertEqual(CustomOperatorsTestNestedModel.array(rep.valueForKey("some_array")), subArray, "Array encode with custom operator failed.")
     }
 
     func testCustomOperatorNestedSerializable() {
