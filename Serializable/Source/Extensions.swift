@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-/*
-	I don't think these are needed anymore?
 
 public extension Array where Element:Encodable {
 	func encodableRepresentation() -> [NSCoding] {
@@ -23,7 +21,7 @@ public extension RawRepresentable {
 		return self.rawValue
 	}
 }
-*/
+
 
 public protocol StringInitializable {
 	init?(string: String)
