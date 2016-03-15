@@ -45,12 +45,6 @@ public extension RawRepresentable {
 
 // MARK: UIColor
 
-extension UIColor {
-    public convenience init?(hexString: String) {
-        self.init(red: 0, green: 0, blue: 0, alpha: 0)
-    }
-}
-
 extension UIColor: HexInitializable {
     public static func fromHexString<T>(hexString: String) -> T? {
         let charSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
@@ -81,7 +75,7 @@ extension UIColor: HexInitializable {
         NSScanner(string: gString).scanHexInt(&g)
         NSScanner(string: bString).scanHexInt(&b)
 
-        return UIColor(
+        return self.init(
             red: CGFloat(r) / 255.0,
             green: CGFloat(g) / 255.0,
             blue: CGFloat(b) / 255.0,
