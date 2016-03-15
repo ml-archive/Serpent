@@ -9,6 +9,11 @@
 import Foundation
 import Serializable
 
+enum Type: Int {
+	case First = 0
+	case Second = 1
+}
+
 struct CustomOperatorsTestModel {
     var string: String = ""
     var secondString = ""
@@ -17,6 +22,8 @@ struct CustomOperatorsTestModel {
 	var someSerializable = CustomOperatorsTestNestedModel()
 	var someUrl = NSURL()
 	var someColor: UIColor?
+	var someEnum: Type = .First
+	var someArray: [CustomOperatorsTestNestedModel] = []
 }
 
 extension CustomOperatorsTestModel: Serializable {
@@ -28,6 +35,8 @@ extension CustomOperatorsTestModel: Serializable {
 		someSerializable  <== (self, dictionary, "some_serializable")
 		someUrl           <== (self, dictionary, "some_url")
 		someColor         <== (self, dictionary, "some_color")
+		someEnum          <== (self, dictionary, "some_enum")
+		someArray         <== (self, dictionary, "some_array")
 	}
 	
 	func encodableRepresentation() -> NSCoding {
@@ -39,6 +48,8 @@ extension CustomOperatorsTestModel: Serializable {
 		(dict, "some_serializable")  <== someSerializable
 		(dict, "some_url")           <== someUrl
 		(dict, "some_color")         <== someColor
+		(dict, "some_enum")          <== someEnum
+		(dict, "some_array")         <== someArray
 		return dict
 	}
 }
@@ -55,6 +66,12 @@ struct CustomOperatorsTestNestedModel {
     var string: String = ""
     var optionalString: String?
     var optionalStringWithDefaultValue: String? = ""
+}
+
+extension CustomOperatorsTestNestedModel: Equatable {}
+
+func ==(lhs: CustomOperatorsTestNestedModel, rhs: CustomOperatorsTestNestedModel) -> Bool {
+	return lhs.string == rhs.string
 }
 
 extension CustomOperatorsTestNestedModel:Serializable {
