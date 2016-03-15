@@ -72,7 +72,7 @@ public extension Keymappable {
      
      - returns: An array of mapped objects conforming to *Serializable*, or an empty array if parsing failed.
      */
-	public func mapped<T where T:_ArrayType, T:CollectionType, T.Generator.Element: Decodable>(dictionary: NSDictionary?, key: String) -> T? {
+	public func mapped<T where T:SequenceType, T.Generator.Element: Decodable>(dictionary: NSDictionary?, key: String) -> T? {
 		
 		guard let dict = dictionary else {
 			return nil
@@ -210,7 +210,7 @@ public extension Keymappable {
      
      - returns: An array of enum type `T` or an empty array if parsing was unsuccessful.
      */
-    public func mapped<T where T:_ArrayType, T:CollectionType, T.Generator.Element: RawRepresentable>(dictionary: NSDictionary?, key: String) -> T? {
+    public func mapped<T where T:SequenceType, T.Generator.Element: RawRepresentable>(dictionary: NSDictionary?, key: String) -> T? {
         
         guard let dict = dictionary else {
             return nil

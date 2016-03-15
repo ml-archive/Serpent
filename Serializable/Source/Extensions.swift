@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public extension _ArrayType where Generator.Element:Encodable {
+public extension SequenceType where Generator.Element:Encodable {
 	func encodableRepresentation() -> [NSCoding] {
 		return self.map { element in return element.encodableRepresentation() }
 	}
