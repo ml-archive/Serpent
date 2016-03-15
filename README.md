@@ -35,12 +35,12 @@ There are plenty of other Encoding and Decoding frameworks available. Why should
 
 ### Carthage
 ~~~
-github "nodes-ios/Serializable"
+github "nodes-ios/Serializable" 
 ~~~
 
 ### CocoaPods
 ~~~
-pod 'Serializable', '~> 0.0.1'
+pod 'Serializable', '~> 0.1.0'
 ~~~
 
 ### Swift Package Manager
