@@ -26,7 +26,11 @@ public enum ApiResult<T> {
     case Error(error:Parser.Error)
 }
 
-public extension Alamofire.Response {
+    /**
+    Creates an error object used by the Serializable framework from a Alamofire Response
+     */
+
+extension Alamofire.Response {
     func serializableParserError() -> Parser.Error {
         switch self.result {
         case .Failure(let error):
@@ -46,6 +50,10 @@ public extension Alamofire.Response {
 
 public extension Parser {
     
+    /**
+    Parse any generic object using the parsing handler.
+     */
+    
     internal static func parse<T,S>(response response:Response<S, NSError>, completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) {
         switch response.result {
         case let Result.Success(value):
@@ -62,6 +70,10 @@ public extension Parser {
         }
     }
     
+    /**
+     Parse a single Serializable from a dictionary.
+     */
+    
     internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<T> -> Void, unwrapper:Unwrapper) {
         parse(response:response, completionHandler: completionHandler, parsingHandler: {
             ( data: AnyObject? ) -> T? in
@@ -76,6 +88,10 @@ public extension Parser {
             return nil
         })
     }
+    
+    /**
+     Parse an array of Serializable from an array of dictionaries.
+     */
     
     internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<[T]> -> Void, unwrapper:Unwrapper) {
         Parser.parse(response:response, completionHandler: completionHandler, parsingHandler: {
@@ -95,6 +111,10 @@ public extension Parser {
             return nil
         })
     }
+    
+    /**
+     Parse nothing, but return a Serializable.ApiResult.
+     */
     
     internal static func parse<S>(response response:Response<S, NSError>, completionHandler: ApiResult<Void> -> Void) {
         switch response.result {
@@ -121,6 +141,10 @@ public extension Parser {
      */
     
     typealias Unwrapper = ((sourceDictionary: NSDictionary, expectedType:Any) -> AnyObject?)
+    
+    /** 
+    The default unwrapper. First checks for field with name of model, then a "data" field, then lastly passing the source dictionary straight through.
+     */
     
     public static let defaultUnwrapper:Unwrapper = { (sourceDictionary, type) in
         // Seriously, Swift? This is how you have to do this? All I want is the class of the generic type as a string
