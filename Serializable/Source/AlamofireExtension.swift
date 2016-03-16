@@ -46,7 +46,7 @@ public extension Alamofire.Response {
 
 public extension Parser {
     
-    public static func parse<T,S>(response response:Response<S, NSError>, completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) {
+    internal static func parse<T,S>(response response:Response<S, NSError>, completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) {
         switch response.result {
         case let Result.Success(value):
             if let parsedObject: T = parsingHandler?( data: value as? AnyObject ) {
@@ -62,7 +62,7 @@ public extension Parser {
         }
     }
     
-    public static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<T> -> Void) {
+    internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<T> -> Void) {
         parse(response:response, completionHandler: completionHandler, parsingHandler: {
             ( data: AnyObject? ) -> T? in
             
@@ -77,7 +77,7 @@ public extension Parser {
         })
     }
     
-    public static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<[T]> -> Void) {
+    internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<[T]> -> Void) {
         Parser.parse(response:response, completionHandler: completionHandler, parsingHandler: {
             ( data: AnyObject? ) -> [T]? in
             
@@ -101,7 +101,7 @@ public extension Parser {
         })
     }
     
-    public static func parse<S>(response response:Response<S, NSError>, completionHandler: ApiResult<Void> -> Void) {
+    internal static func parse<S>(response response:Response<S, NSError>, completionHandler: ApiResult<Void> -> Void) {
         switch response.result {
         case Result.Success:
             NSNotificationCenter.defaultCenter().postNotificationName(APICallSucceededNotification, object: nil)
@@ -113,7 +113,7 @@ public extension Parser {
         }
     }
     
-    public static func unwrappedSource(sourceDictionary: NSDictionary, type:Any) -> AnyObject {
+    internal static func unwrappedSource(sourceDictionary: NSDictionary, type:Any) -> AnyObject {
         // Seriously, Swift? This is how you have to do this? All I want is the class of the generic type as a string
         let mirrorString = Mirror(reflecting: type).description
         var typeString:String = ""
@@ -140,12 +140,28 @@ public extension Parser {
 
 public extension Alamofire.Request
 {
+    /**
+     Adds a handler that attempts to parse the result of the request into type **T** using **parsingHandler**
+     
+     - parameter completionHandler:A closure that is invoked when the request is finished and *parsingHandler* has been executed
+     - parameter parsingHandler:A closure takes the JSON data as input and outputs the parsed data of type **T**
+     
+     - returns: The request
+     */
     
-    public func responseSerializable<T>(completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) -> Self {
+    public func response<T>(completionHandler: (ApiResult<T>) -> Void, parsingHandler: (( data: AnyObject? ) -> T?)?) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
             Parser.parse(response: response, completionHandler: completionHandler, parsingHandler: parsingHandler)
         })
     }
+    
+    /**
+     Adds a handler that attempts to parse the result of the request into a **Serializable**
+     
+     - parameter completionHandler:A closure that is invoked when the request is finished
+     
+     - returns: The request
+     */
     
     public func responseSerializable<T:Serializable>(completionHandler: ApiResult<T> -> Void) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
@@ -153,17 +169,34 @@ public extension Alamofire.Request
         })
     }
     
+    /**
+     Adds a handler that attempts to parse the result of the request into an array of **Serializable**
+     
+     - parameter completionHandler:A closure that is invoked when the request is finished
+     
+     - returns: The request
+     */
+    
     public func responseSerializable<T:Serializable>(completionHandler: ApiResult<[T]> -> Void) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
             Parser.parse(response: response, completionHandler: completionHandler)
         })
     }
     
-    public func responseSerializable(completionHandler: ApiResult<Void> -> Void) -> Self {
+    /**
+     Adds a handler that ignores the response data of the request, invoking the completion handler with 
+     a ApiResult without associated success data.
+     
+     - parameter completionHandler:A closure that is invoked when the request is finished
+     
+     - returns: The request
+     */
+    
+    public func response(completionHandler: ApiResult<Void> -> Void) -> Self {
         return validate().responseVoid(completionHandler)
     }
     
-    public func responseVoid(completionHandler: ApiResult<Void> -> Void) -> Self {
+    private func responseVoid(completionHandler: ApiResult<Void> -> Void) -> Self {
         return validate().response(completionHandler: { (request, response, data, error) -> Void in
             
             if error == nil {
