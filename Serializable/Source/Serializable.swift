@@ -158,7 +158,7 @@ public extension Keymappable {
      */
     public func mapped<T:StringInitializable>(dictionary: NSDictionary?, key: String) -> T? {
         if let dict = dictionary, source = dict[key] as? String where source.isEmpty == false {
-            return T(string: source)
+            return T.fromString(source)
         }
 
         return nil
