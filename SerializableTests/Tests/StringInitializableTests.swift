@@ -37,7 +37,7 @@ class StringInitializableTests: XCTestCase {
         XCTAssertEqual(testModel.someDate, NSDate(timeIntervalSince1970: 145811834), "Failed to parse NSDate")
         XCTAssertNil(testModel.someEmptyDate, "Failed to return nil when parsing empty date")
         XCTAssertNil(testModel.someBadDate, "Failed to return nil when parsing bad date")
-        XCTAssertEqual(testModel.someDate?.stringRepresentation(), "1974-08-15T16:17:14+01:00", "String representation of URL differs.")
+        XCTAssertEqual(NSDate.fromString(testModel.someDate?.stringRepresentation() ?? ""), testModel.someDate, "String representation of URL differs.")
     }
 }
 
