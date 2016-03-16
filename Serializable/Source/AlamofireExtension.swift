@@ -62,13 +62,13 @@ public extension Parser {
         }
     }
     
-    internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<T> -> Void) {
+    internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<T> -> Void, unwrapper:Unwrapper) {
         parse(response:response, completionHandler: completionHandler, parsingHandler: {
             ( data: AnyObject? ) -> T? in
             
             if let sourceDictionary = data as? [String : AnyObject] {
                 
-                let unwrappedDictionary = unwrappedSource(sourceDictionary, type:T.self) as? [String : AnyObject] ?? sourceDictionary
+                let unwrappedDictionary = unwrapper(sourceDictionary: sourceDictionary, expectedType:T.self) as? [String : AnyObject] ?? sourceDictionary
                 
                 return T(dictionary: unwrappedDictionary) as T?
             }
@@ -77,25 +77,20 @@ public extension Parser {
         })
     }
     
-    internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<[T]> -> Void) {
+    internal static func parse<T:Serializable,S>(response response:Response<S, NSError>, completionHandler: ApiResult<[T]> -> Void, unwrapper:Unwrapper) {
         Parser.parse(response:response, completionHandler: completionHandler, parsingHandler: {
             ( data: AnyObject? ) -> [T]? in
             
             var finalArray:AnyObject? = data
             
             if let dataDict = data as? NSDictionary {
-                if let unwrappedArray = unwrappedSource(dataDict, type:T.self) as? [AnyObject] {
+                if let unwrappedArray = unwrapper(sourceDictionary: dataDict, expectedType:T.self) as? NSArray {
                     finalArray = unwrappedArray
                 }
             }
             
-            if let sourceArray = finalArray as? [AnyObject] {
-                
-                var returnArray:[T] = []
-                for dict in sourceArray {
-                    returnArray.append(T(dictionary: dict as? [String : AnyObject]))
-                }
-                return returnArray
+            if let sourceArray = finalArray as? NSArray {
+                return T.array(sourceArray)
             }
             return nil
         })
@@ -113,7 +108,21 @@ public extension Parser {
         }
     }
     
-    internal static func unwrappedSource(sourceDictionary: NSDictionary, type:Any) -> AnyObject {
+    /**
+     A closure that unwraps data in JSON response. If your data is encapsulated in a **data** field, for example, you can use 
+     this closure to extract it.
+     
+     - parameter sourceDictionary: The input JSON data
+     - parameter expectedType: This is the type the parser is planning to parse into. It is used if you want to dynamically resolve
+     the name of an encapsulating object using reflection. If for example, the desired target object is of the type *User*, you could
+     use this to check if *sourceDictionary["User"]* returns a value
+     
+     - returns: The data to be parsed
+     */
+    
+    typealias Unwrapper = ((sourceDictionary: NSDictionary, expectedType:Any) -> AnyObject?)
+    
+    public static let defaultUnwrapper:Unwrapper = { (sourceDictionary, type) in
         // Seriously, Swift? This is how you have to do this? All I want is the class of the generic type as a string
         let mirrorString = Mirror(reflecting: type).description
         var typeString:String = ""
@@ -160,12 +169,16 @@ public extension Alamofire.Request
      
      - parameter completionHandler:A closure that is invoked when the request is finished
      
+     - parameter unwrapper: A closure that extracts the data to be parsed from the JSON response data.
+     The default implementation checks for a "data" field in the JSON response, then checks for a field
+     with the same name as the target model. If not found, it passes the JSON response straight through.
+     
      - returns: The request
      */
     
-    public func responseSerializable<T:Serializable>(completionHandler: ApiResult<T> -> Void) -> Self {
+    public func responseSerializable<T:Serializable>(completionHandler: ApiResult<T> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
-            Parser.parse(response: response, completionHandler: completionHandler)
+            Parser.parse(response: response, completionHandler: completionHandler, unwrapper: unwrapper)
         })
     }
     
@@ -174,12 +187,16 @@ public extension Alamofire.Request
      
      - parameter completionHandler:A closure that is invoked when the request is finished
      
+     - parameter unwrapper: A closure that extracts the data to be parsed from the JSON response data.
+     The default implementation checks for a "data" field in the JSON response, then checks for a field
+     with the same name as the target model. If not found, it passes the JSON response straight through.
+     
      - returns: The request
      */
     
-    public func responseSerializable<T:Serializable>(completionHandler: ApiResult<[T]> -> Void) -> Self {
+    public func responseSerializable<T:Serializable>(completionHandler: ApiResult<[T]> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         return validate().responseJSON(completionHandler: { (response) -> Void in
-            Parser.parse(response: response, completionHandler: completionHandler)
+            Parser.parse(response: response, completionHandler: completionHandler, unwrapper: unwrapper)
         })
     }
     
