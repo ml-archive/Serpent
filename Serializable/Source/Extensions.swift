@@ -14,11 +14,16 @@ import UIKit
 
 public protocol StringInitializable {
     static func fromString<T>(string: String) -> T?
+    func stringRepresentation() -> String
 }
 
 extension NSURL: StringInitializable {
     public static func fromString<T>(string: String) -> T? {
         return self.init(string: string) as? T
+    }
+
+    public func stringRepresentation() -> String {
+        return self.absoluteString
     }
 }
 
@@ -35,6 +40,11 @@ extension NSDate: StringInitializable {
         }
 
         return nil
+    }
+
+    public func stringRepresentation() -> String {
+        NSDate.internalDateFormatter.dateFormat = NSDate.allowedDateFormats.first
+        return NSDate.internalDateFormatter.stringFromDate(self)
     }
 }
 
