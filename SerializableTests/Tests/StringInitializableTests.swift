@@ -30,9 +30,10 @@ class StringInitializableTests: XCTestCase {
 		XCTAssertNotNil(testModel.someUrl, "Failed to create NSURL from string")
 		XCTAssertEqual(testModel.someUrl, NSURL(string: "http://www.google.com"), "Failed to parse URL")
 		XCTAssertNotNil(testModel.someDate, "Failed to create Date from string")
-		XCTAssertEqual(testModel.someDate, Date(string: "2000-01-01T11:22:33"), "Failed to parse Date")
-		XCTAssertNil(testModel.someNSDate, "Apparently you fixed NSDate native parsing, so update this test case")
+		XCTAssertEqual(testModel.someDate, NSDate(timeIntervalSince1970: 145811834), "Failed to parse NSDate")
 		XCTAssertNil(testModel.someEmptyURL, "Failed to return nil when parsing empty string")
+		XCTAssertNil(testModel.someEmptyDate, "Failed to return nil when parsing empty date")
+		XCTAssertNil(testModel.someBadDate, "Failed to return nil when parsing bad date")
 	}
 	
 }
