@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01640DC01C98B62400449F9F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01640DBF1C98B62400449F9F /* Date.swift */; };
 		272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */; };
 		272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */; };
 		272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01640DBF1C98B62400449F9F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTests.swift; sourceTree = "<group>"; };
 		272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEnumsTests.swift; sourceTree = "<group>"; };
 		272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializablePrimitivesTests.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
 				276FB5391C7354960055EC7C /* Extensions.swift */,
 				276FB53B1C7354E40055EC7C /* Operator.swift */,
+				01640DBF1C98B62400449F9F /* Date.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */,
 				276FB53C1C7354E40055EC7C /* Operator.swift in Sources */,
 				276FB53A1C7354960055EC7C /* Extensions.swift in Sources */,
+				01640DC01C98B62400449F9F /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
