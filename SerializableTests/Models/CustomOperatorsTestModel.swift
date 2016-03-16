@@ -9,29 +9,49 @@
 import Foundation
 import Serializable
 
+enum Type: Int {
+	case First = 0
+	case Second = 1
+}
+
 struct CustomOperatorsTestModel {
     var string: String = ""
     var secondString = ""
     var nilString: String?
     var otherSerializable: CustomOperatorsTestNestedModel?
+	var someSerializable = CustomOperatorsTestNestedModel()
+	var someUrl = NSURL()
+	var someColor: UIColor?
+	var someEnum: Type = .First
+	var someArray: [CustomOperatorsTestNestedModel] = []
 }
 
 extension CustomOperatorsTestModel: Serializable {
-    init(dictionary: NSDictionary?) {
-        string            <== (self, dictionary, "string")
-        secondString      <== (self, dictionary, "second_string")
-        nilString         <== (self, dictionary, "nil_string")
-        otherSerializable <== (self, dictionary, "other_serializable")
-    }
-
-    func encodableRepresentation() -> NSCoding {
-        let dict = NSMutableDictionary()
-        (dict, "string")        <== string
-        (dict, "second_string") <== secondString
-        (dict, "nil_string")    <== nilString
-        (dict, "other_serializable") <== otherSerializable
-        return dict
-    }
+	init(dictionary: NSDictionary?) {
+		string            <== (self, dictionary, "string")
+		secondString      <== (self, dictionary, "second_string")
+		nilString         <== (self, dictionary, "nil_string")
+		otherSerializable <== (self, dictionary, "other_serializable")
+		someSerializable  <== (self, dictionary, "some_serializable")
+		someUrl           <== (self, dictionary, "some_url")
+		someColor         <== (self, dictionary, "some_color")
+		someEnum          <== (self, dictionary, "some_enum")
+		someArray         <== (self, dictionary, "some_array")
+	}
+	
+	func encodableRepresentation() -> NSCoding {
+		let dict = NSMutableDictionary()
+		(dict, "string")             <== string
+		(dict, "second_string")      <== secondString
+		(dict, "nil_string")         <== nilString
+		(dict, "other_serializable") <== otherSerializable
+		(dict, "some_serializable")  <== someSerializable
+		(dict, "some_url")           <== someUrl
+		(dict, "some_color")         <== someColor
+		(dict, "some_enum")          <== someEnum
+		(dict, "some_array")         <== someArray
+		return dict
+	}
 }
 
 struct CustomOperatorsTestNestedModel {
@@ -46,6 +66,12 @@ struct CustomOperatorsTestNestedModel {
     var string: String = ""
     var optionalString: String?
     var optionalStringWithDefaultValue: String? = ""
+}
+
+extension CustomOperatorsTestNestedModel: Equatable {}
+
+func ==(lhs: CustomOperatorsTestNestedModel, rhs: CustomOperatorsTestNestedModel) -> Bool {
+	return lhs.string == rhs.string
 }
 
 extension CustomOperatorsTestNestedModel:Serializable {

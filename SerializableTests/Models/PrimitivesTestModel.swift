@@ -37,6 +37,14 @@ struct PrimitivesTestModel {
     var string: String = ""
     var optionalString: String?
     var optionalStringWithDefaultValue: String? = ""
+	
+	var intString: Int = 0
+	var doubleString: Double = 0.0
+	var boolString: Bool = false
+	var boolIntString: Bool = false
+	
+	var stringDouble: String = ""
+	var stringBool: String = ""
 }
 
 extension PrimitivesTestModel:Serializable {
@@ -62,6 +70,12 @@ extension PrimitivesTestModel:Serializable {
         string                                  = self.mapped(dictionary, key: "string") ?? string
         optionalString                          = self.mapped(dictionary, key: "optional_string")
         optionalStringWithDefaultValue          = self.mapped(dictionary, key: "optional_string_with_default_value")
+		intString								= self.mapped(dictionary, key: "intString") ?? intString
+		doubleString							= self.mapped(dictionary, key: "doubleString") ?? doubleString
+		boolString								= self.mapped(dictionary, key: "boolString") ?? boolString
+		boolIntString							= self.mapped(dictionary, key: "boolIntString") ?? boolIntString
+		stringDouble							= self.mapped(dictionary, key: "stringDouble") ?? stringDouble
+		stringBool								= self.mapped(dictionary, key: "stringBool") ?? stringBool
     }
 
     func encodableRepresentation() -> NSCoding {
@@ -87,6 +101,11 @@ extension PrimitivesTestModel:Serializable {
         dict["string"]                                       = string
         dict["optional_string"]                              = optionalString
         dict["optional_string_with_default_value"]           = optionalStringWithDefaultValue
+		dict["intString"]									 = intString
+		dict["doubleString"]								 = doubleString
+		dict["boolString"]									 = boolString
+		dict["boolIntString"]								 = boolIntString
+		dict["stringBool"]									 = stringBool
         return dict
     }
 }
