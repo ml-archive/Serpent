@@ -13,10 +13,30 @@ import UIKit
 // MARK: String Initializable
 
 public protocol StringInitializable {
-    init?(string: String)
+    static func fromString<T>(string: String) -> T?
 }
 
-extension NSURL:StringInitializable {}
+extension NSURL: StringInitializable {
+    public static func fromString<T>(string: String) -> T? {
+        return self.init(string: string) as? T
+    }
+}
+
+extension NSDate: StringInitializable {
+    static private let internalDateFormatter = NSDateFormatter()
+    static private let allowedDateFormats = ["yyyy-MM-dd'T'HH:mm:ssZZZZZ", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd"]
+
+    public static func fromString<T>(string: String) -> T? {
+        for format in allowedDateFormats {
+            internalDateFormatter.dateFormat = format
+            if let date = internalDateFormatter.dateFromString(string) as? T {
+                return date
+            }
+        }
+
+        return nil
+    }
+}
 
 // MARK: Hex Initializable
 
