@@ -11,7 +11,14 @@ import Alamofire
 
 public struct Parser {
     public static let APICallSucceededNotification = "APICallSucceededNotification"
-    public struct Error {
+    public class Error {
+        
+        required public init(error: NSError?, response: NSHTTPURLResponse?, rawResponse:String, request:NSURLRequest?) {
+            self.error = error
+            self.response = response
+            self.rawResponse = rawResponse
+            self.request = request
+        }
         
         public let error:NSError?
         public let response:NSHTTPURLResponse?
