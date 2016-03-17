@@ -85,7 +85,7 @@ public extension Alamofire.Request
      - returns: The request
      */
   
-    public func responseSerializable<T:Serializable>(completionHandler: Response<T, NSError> -> Void, unwrapper:Parser.Unwrapper) -> Self {
+    public func responseSerializable<T:Serializable>(completionHandler: Response<T, NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         let serializer = Parser.serializer(parsingHandler: {
             ( data: AnyObject? ) -> T? in
             
