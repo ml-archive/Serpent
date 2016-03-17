@@ -31,10 +31,17 @@ public extension Parser {
                     NSNotificationCenter.defaultCenter().postNotificationName(APICallSucceededNotification, object: nil)
                     return .Success(parsedObject)
                 } else {
-                    return .Failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Parsing block failed!"]))
+                    return .Failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Parsing block failed!", "JSONResponse" : value]))
                 }
                 
             case let .Failure(error):
+                if let data = data {
+                    var userInfo = error.userInfo
+                    userInfo["ResponseString"] = String(data: data, encoding: NSUTF8StringEncoding)
+                    let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
+                    return .Failure(newError)
+                }
+
                 return .Failure(error)
             }
         }
