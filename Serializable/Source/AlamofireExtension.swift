@@ -53,21 +53,12 @@ public extension Parser {
      The default unwrapper. First checks for field with name of model, then a "data" field, then lastly passing the source dictionary straight through.
      */
     
-    public static let defaultUnwrapper:Unwrapper = { (sourceDictionary, type) in
-        // Seriously, Swift? This is how you have to do this? All I want is the class of the generic type as a string
-        let mirrorString = Mirror(reflecting: type).description
-        var typeString:String = ""
-        if let dotStartIndex = mirrorString.rangeOfString("for ")?.endIndex {
-            typeString = mirrorString.substringFromIndex(dotStartIndex)
-            if let nextDotStartIndex = typeString.rangeOfString(".")?.startIndex {
-                typeString = typeString.substringToIndex(nextDotStartIndex)
-            }
-        }
-        
-        if let nestedObject: AnyObject = sourceDictionary[typeString] {
+    public static let defaultUnwrapper: Unwrapper = { (sourceDictionary, type) in
+        if let nestedObject: AnyObject = sourceDictionary["data"] {
             return nestedObject
         }
-        if let nestedObject: AnyObject = sourceDictionary["data"] {
+
+        if let nestedObject: AnyObject = sourceDictionary[String(type.dynamicType)] {
             return nestedObject
         }
         
