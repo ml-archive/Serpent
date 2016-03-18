@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C706BA1C9BEAF50024E94A /* StringInitializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B51C9BEAF50024E94A /* StringInitializableTests.swift */; };
+		01C706BB1C9BEAF50024E94A /* HexInitalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B61C9BEAF50024E94A /* HexInitalizableTests.swift */; };
+		01C706BC1C9BEAF50024E94A /* SerializableNilEntitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B71C9BEAF50024E94A /* SerializableNilEntitiesTests.swift */; };
+		01C706BD1C9BEAF50024E94A /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B81C9BEAF50024E94A /* DecodableTests.swift */; };
+		01C706BE1C9BEAF50024E94A /* SerializableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */; };
+		01C706C91C9BEB0C0024E94A /* StringInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706BF1C9BEB0C0024E94A /* StringInitializableTest.json */; };
+		01C706CA1C9BEB0C0024E94A /* StringInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C01C9BEB0C0024E94A /* StringInitializableTestModel.swift */; };
+		01C706CB1C9BEB0C0024E94A /* HexInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */; };
+		01C706CC1C9BEB0C0024E94A /* HexInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C21C9BEB0C0024E94A /* HexInitializableTestModel.swift */; };
+		01C706CD1C9BEB0C0024E94A /* SerializableEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C31C9BEB0C0024E94A /* SerializableEntityTest.json */; };
+		01C706CE1C9BEB0C0024E94A /* SerializableEntityTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C41C9BEB0C0024E94A /* SerializableEntityTestModel.swift */; };
+		01C706CF1C9BEB0C0024E94A /* SimpleModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C51C9BEB0C0024E94A /* SimpleModel.json */; };
+		01C706D01C9BEB0C0024E94A /* SimpleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C61C9BEB0C0024E94A /* SimpleModel.swift */; };
+		01C706D11C9BEB0C0024E94A /* DecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C71C9BEB0C0024E94A /* DecodableModel.swift */; };
+		01C706D21C9BEB0C0024E94A /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C81C9BEB0C0024E94A /* DecodableTest.json */; };
 		272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */; };
 		272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */; };
 		272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */; };
@@ -37,6 +52,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C706B51C9BEAF50024E94A /* StringInitializableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializableTests.swift; sourceTree = "<group>"; };
+		01C706B61C9BEAF50024E94A /* HexInitalizableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexInitalizableTests.swift; sourceTree = "<group>"; };
+		01C706B71C9BEAF50024E94A /* SerializableNilEntitiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableNilEntitiesTests.swift; sourceTree = "<group>"; };
+		01C706B81C9BEAF50024E94A /* DecodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableTests.swift; sourceTree = "<group>"; };
+		01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEntityTests.swift; sourceTree = "<group>"; };
+		01C706BF1C9BEB0C0024E94A /* StringInitializableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StringInitializableTest.json; sourceTree = "<group>"; };
+		01C706C01C9BEB0C0024E94A /* StringInitializableTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializableTestModel.swift; sourceTree = "<group>"; };
+		01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HexInitializableTest.json; sourceTree = "<group>"; };
+		01C706C21C9BEB0C0024E94A /* HexInitializableTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexInitializableTestModel.swift; sourceTree = "<group>"; };
+		01C706C31C9BEB0C0024E94A /* SerializableEntityTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SerializableEntityTest.json; sourceTree = "<group>"; };
+		01C706C41C9BEB0C0024E94A /* SerializableEntityTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEntityTestModel.swift; sourceTree = "<group>"; };
+		01C706C51C9BEB0C0024E94A /* SimpleModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SimpleModel.json; sourceTree = "<group>"; };
+		01C706C61C9BEB0C0024E94A /* SimpleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleModel.swift; sourceTree = "<group>"; };
+		01C706C71C9BEB0C0024E94A /* DecodableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableModel.swift; sourceTree = "<group>"; };
+		01C706C81C9BEB0C0024E94A /* DecodableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DecodableTest.json; sourceTree = "<group>"; };
 		272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTests.swift; sourceTree = "<group>"; };
 		272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEnumsTests.swift; sourceTree = "<group>"; };
 		272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializablePrimitivesTests.swift; sourceTree = "<group>"; };
@@ -89,6 +119,16 @@
 				272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */,
 				272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */,
 				272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */,
+				01C706BF1C9BEB0C0024E94A /* StringInitializableTest.json */,
+				01C706C01C9BEB0C0024E94A /* StringInitializableTestModel.swift */,
+				01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */,
+				01C706C21C9BEB0C0024E94A /* HexInitializableTestModel.swift */,
+				01C706C31C9BEB0C0024E94A /* SerializableEntityTest.json */,
+				01C706C41C9BEB0C0024E94A /* SerializableEntityTestModel.swift */,
+				01C706C51C9BEB0C0024E94A /* SimpleModel.json */,
+				01C706C61C9BEB0C0024E94A /* SimpleModel.swift */,
+				01C706C71C9BEB0C0024E94A /* DecodableModel.swift */,
+				01C706C81C9BEB0C0024E94A /* DecodableTest.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +139,11 @@
 				272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */,
 				272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */,
 				272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */,
+				01C706B51C9BEAF50024E94A /* StringInitializableTests.swift */,
+				01C706B61C9BEAF50024E94A /* HexInitalizableTests.swift */,
+				01C706B71C9BEAF50024E94A /* SerializableNilEntitiesTests.swift */,
+				01C706B81C9BEAF50024E94A /* DecodableTests.swift */,
+				01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -292,8 +337,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C706C91C9BEB0C0024E94A /* StringInitializableTest.json in Resources */,
+				01C706CD1C9BEB0C0024E94A /* SerializableEntityTest.json in Resources */,
+				01C706CB1C9BEB0C0024E94A /* HexInitializableTest.json in Resources */,
 				272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */,
 				272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */,
+				01C706D21C9BEB0C0024E94A /* DecodableTest.json in Resources */,
+				01C706CF1C9BEB0C0024E94A /* SimpleModel.json in Resources */,
 				272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,12 +366,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C706BC1C9BEAF50024E94A /* SerializableNilEntitiesTests.swift in Sources */,
 				272D92761C6DFB7300BCD3B6 /* EnumsTestModel.swift in Sources */,
+				01C706CA1C9BEB0C0024E94A /* StringInitializableTestModel.swift in Sources */,
+				01C706D11C9BEB0C0024E94A /* DecodableModel.swift in Sources */,
+				01C706BA1C9BEAF50024E94A /* StringInitializableTests.swift in Sources */,
+				01C706BD1C9BEAF50024E94A /* DecodableTests.swift in Sources */,
 				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
+				01C706D01C9BEB0C0024E94A /* SimpleModel.swift in Sources */,
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
+				01C706BE1C9BEAF50024E94A /* SerializableEntityTests.swift in Sources */,
+				01C706CC1C9BEB0C0024E94A /* HexInitializableTestModel.swift in Sources */,
 				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
+				01C706BB1C9BEAF50024E94A /* HexInitalizableTests.swift in Sources */,
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
 				272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */,
+				01C706CE1C9BEB0C0024E94A /* SerializableEntityTestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
