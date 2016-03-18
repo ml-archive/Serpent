@@ -50,20 +50,10 @@ public extension Parser {
     typealias Unwrapper = ((sourceDictionary: NSDictionary, expectedType:Any) -> AnyObject?)
     
     /**
-     The default unwrapper. First checks for field with name of model, then a "data" field, then lastly passing the source dictionary straight through.
+     The default unwrapper. Default implementation just passes data straight through. 
      */
     
-    public static var defaultUnwrapper: Unwrapper = { (sourceDictionary, type) in
-        if let nestedObject: AnyObject = sourceDictionary["data"] {
-            return nestedObject
-        }
-
-        if let nestedObject: AnyObject = sourceDictionary[String(type.dynamicType)] {
-            return nestedObject
-        }
-        
-        return sourceDictionary
-    }
+    public static var defaultUnwrapper: Unwrapper = { $0.0 }
 }
 
 
