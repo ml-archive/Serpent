@@ -225,10 +225,12 @@ public extension Keymappable {
      - returns: The value of type `T` or `nil` if parsing was unsuccessful.
      */
     public func mapped<T: HexInitializable>(dictionary: NSDictionary?, key: String) -> T? {
-        if let dict = dictionary, source = dict[key] as? String where source.isEmpty == false {
-            return T.fromHexString(source)
+        guard let dict = dictionary, source = dict[key] else { return nil }
+
+        if let hexString = source as? String where hexString.isEmpty == false {
+            return T.fromHexString(hexString)
         }
-        
-        return nil
+
+        return source as? T
     }
 }
