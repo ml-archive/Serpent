@@ -1,4 +1,7 @@
-# Serializable
+<p align="center">
+  <img src="./Serializable_icon.png?raw=true" alt="Serializable"/>
+</p>
+
 
 Serializable is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's implemented using protocol extensions, which makes it easily expandable.
 
