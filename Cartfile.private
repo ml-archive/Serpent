@@ -1,0 +1,2 @@
+github "Alamofire/Alamofire" ~> 3.0
+github "nodes-ios/Cashier"
