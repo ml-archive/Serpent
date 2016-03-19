@@ -8,6 +8,7 @@
 
 import XCTest
 import Serializable
+import UIKit
 
 class HexInitalizableTests: XCTestCase {
 
