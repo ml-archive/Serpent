@@ -49,20 +49,7 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET, "http://httpbin.org/deny").responseSerializable(handler)
 		waitForExpectationsWithTimeout(1, handler: nil)
 	}
-//
-//	func testAlamofireExtensionNoData() {
-//		let expectation = expectationWithDescription("Expected no data from response")
-//		let handler:(Alamofire.Response<NetworkTestModel, NSError>) -> Void = { result in
-//			switch result.result {
-//			case .Failure(let error):
-//				expectation.fulfill()
-//			default:
-//				break
-//			}
-//		}
-//		manager.request(.GET, "http://www.google.com").responseSerializable(handler)
-//		waitForExpectationsWithTimeout(1, handler: nil)
-//	}
+
 	
 	func testAlamofireExtensionBadJSONObject() {
 		let expectation = expectationWithDescription("Expected bad object from response")
@@ -77,4 +64,31 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET, "http://httpbin.org/get").responseSerializable(handler)
 		waitForExpectationsWithTimeout(1, handler: nil)
 	}
+	func testAlamofireExtensionUnexpectedArrayJSON() {
+		let expectation = expectationWithDescription("Expected array data to single object from response")
+		let handler:(Alamofire.Response<[DecodableModel], NSError>) -> Void = { result in
+			switch result.result {
+			case .Failure:
+				expectation.fulfill()
+			default:
+				break
+			}
+		}
+		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/ArrayTest.json").responseSerializable(handler)
+		waitForExpectationsWithTimeout(1, handler: nil)
+	}
+	func testAlamofireExtensionEmptyJSON() {
+		let expectation = expectationWithDescription("Expected empty response")
+		let handler:(Alamofire.Response<NetworkTestModel, NSError>) -> Void = { result in
+			switch result.result {
+			case .Failure:
+				expectation.fulfill()
+			default:
+				break
+			}
+		}
+		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/ArrayTest.json").responseSerializable(handler)
+		waitForExpectationsWithTimeout(1, handler: nil)
+	}
+	
 }
