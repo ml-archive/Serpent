@@ -36,6 +36,37 @@
 		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
 		276FB53A1C7354960055EC7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		276FB53C1C7354E40055EC7C /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
+		2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B52D1C9DE72E00E40605 /* Serializable.framework */; };
+		2785B5461C9DE90000E40605 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2785B5481C9DE92900E40605 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
+		2785B5491C9DE92900E40605 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
+		2785B54A1C9DE92900E40605 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
+		2785B54C1C9DE98000E40605 /* EnumsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */; };
+		2785B54D1C9DE98000E40605 /* PrimitivesTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */; };
+		2785B54E1C9DE98000E40605 /* StringInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C01C9BEB0C0024E94A /* StringInitializableTestModel.swift */; };
+		2785B5501C9DE98000E40605 /* SerializableEntityTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C41C9BEB0C0024E94A /* SerializableEntityTestModel.swift */; };
+		2785B5511C9DE98000E40605 /* SimpleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C61C9BEB0C0024E94A /* SimpleModel.swift */; };
+		2785B5521C9DE98000E40605 /* DecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C71C9BEB0C0024E94A /* DecodableModel.swift */; };
+		2785B5531C9DE98000E40605 /* NetworkTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */; };
+		2785B5541C9DE98000E40605 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */; };
+		2785B5551C9DE98000E40605 /* SerializableEnumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */; };
+		2785B5561C9DE98000E40605 /* SerializablePrimitivesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */; };
+		2785B5571C9DE98000E40605 /* StringInitializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B51C9BEAF50024E94A /* StringInitializableTests.swift */; };
+		2785B5581C9DE98000E40605 /* HexInitalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B61C9BEAF50024E94A /* HexInitalizableTests.swift */; };
+		2785B5591C9DE98000E40605 /* SerializableNilEntitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B71C9BEAF50024E94A /* SerializableNilEntitiesTests.swift */; };
+		2785B55A1C9DE98000E40605 /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B81C9BEAF50024E94A /* DecodableTests.swift */; };
+		2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */; };
+		2785B55D1C9DE98B00E40605 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
+		2785B55F1C9DE99900E40605 /* Cashier.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
+		2785B5601C9DE9A400E40605 /* CustomOperatorsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */; };
+		2785B5611C9DE9A400E40605 /* EnumsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */; };
+		2785B5621C9DE9A400E40605 /* PrimitivesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */; };
+		2785B5631C9DE9A400E40605 /* StringInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706BF1C9BEB0C0024E94A /* StringInitializableTest.json */; };
+		2785B5641C9DE9A400E40605 /* HexInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */; };
+		2785B5651C9DE9A400E40605 /* SerializableEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C31C9BEB0C0024E94A /* SerializableEntityTest.json */; };
+		2785B5661C9DE9A400E40605 /* SimpleModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C51C9BEB0C0024E94A /* SimpleModel.json */; };
+		2785B5671C9DE9A400E40605 /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C81C9BEB0C0024E94A /* DecodableTest.json */; };
+		2785B5691C9DEBDD00E40605 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */; };
 		27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */; };
 		27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */; };
 		27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -53,6 +84,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 272F1DC51C6A392A0098F620;
 			remoteInfo = Serializable;
+		};
+		2785B5381C9DE72F00E40605 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 272F1DBD1C6A392A0098F620 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2785B52C1C9DE72E00E40605;
+			remoteInfo = "Serializable OSX";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -89,6 +127,9 @@
 		272F1DD71C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276FB5391C7354960055EC7C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		2785B52D1C9DE72E00E40605 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serializable OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtensionTests.swift; sourceTree = "<group>"; };
 		27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTestModel.swift; sourceTree = "<group>"; };
 		303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
@@ -112,6 +153,22 @@
 			files = (
 				272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */,
 				27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2785B5291C9DE72E00E40605 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2785B5331C9DE72F00E40605 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */,
+				2785B55D1C9DE98B00E40605 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +242,8 @@
 			children = (
 				272F1DC61C6A392A0098F620 /* Serializable.framework */,
 				272F1DD01C6A392A0098F620 /* SerializableTests.xctest */,
+				2785B52D1C9DE72E00E40605 /* Serializable.framework */,
+				2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +279,7 @@
 		276FB53F1C73559E0055EC7C /* CashierExtension */ = {
 			isa = PBXGroup;
 			children = (
+				2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */,
 			);
 			name = CashierExtension;
 			sourceTree = "<group>";
@@ -260,12 +320,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2785B52A1C9DE72E00E40605 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2785B5461C9DE90000E40605 /* Serializable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		272F1DC51C6A392A0098F620 /* Serializable */ = {
+		272F1DC51C6A392A0098F620 /* Serializable iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serializable" */;
+			buildConfigurationList = 272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serializable iOS" */;
 			buildPhases = (
 				272F1DC11C6A392A0098F620 /* Sources */,
 				272F1DC21C6A392A0098F620 /* Frameworks */,
@@ -276,7 +344,7 @@
 			);
 			dependencies = (
 			);
-			name = Serializable;
+			name = "Serializable iOS";
 			productName = Serializable;
 			productReference = 272F1DC61C6A392A0098F620 /* Serializable.framework */;
 			productType = "com.apple.product-type.framework";
@@ -299,6 +367,42 @@
 			productReference = 272F1DD01C6A392A0098F620 /* SerializableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2785B52C1C9DE72E00E40605 /* Serializable OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSX" */;
+			buildPhases = (
+				2785B5281C9DE72E00E40605 /* Sources */,
+				2785B5291C9DE72E00E40605 /* Frameworks */,
+				2785B52A1C9DE72E00E40605 /* Headers */,
+				2785B52B1C9DE72E00E40605 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serializable OSX";
+			productName = "Serializable OSX";
+			productReference = 2785B52D1C9DE72E00E40605 /* Serializable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2785B5351C9DE72F00E40605 /* Serializable OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2785B5431C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSXTests" */;
+			buildPhases = (
+				2785B5321C9DE72F00E40605 /* Sources */,
+				2785B5331C9DE72F00E40605 /* Frameworks */,
+				2785B5341C9DE72F00E40605 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2785B5391C9DE72F00E40605 /* PBXTargetDependency */,
+			);
+			name = "Serializable OSXTests";
+			productName = "Serializable OSXTests";
+			productReference = 2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,6 +419,12 @@
 					272F1DCF1C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					2785B52C1C9DE72E00E40605 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					2785B5351C9DE72F00E40605 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 272F1DC01C6A392A0098F620 /* Build configuration list for PBXProject "Serializable" */;
@@ -329,8 +439,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				272F1DC51C6A392A0098F620 /* Serializable */,
+				272F1DC51C6A392A0098F620 /* Serializable iOS */,
 				272F1DCF1C6A392A0098F620 /* SerializableTests */,
+				2785B52C1C9DE72E00E40605 /* Serializable OSX */,
+				2785B5351C9DE72F00E40605 /* Serializable OSXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -360,6 +472,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2785B52B1C9DE72E00E40605 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2785B5341C9DE72F00E40605 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2785B5601C9DE9A400E40605 /* CustomOperatorsTest.json in Resources */,
+				2785B5611C9DE9A400E40605 /* EnumsTest.json in Resources */,
+				2785B5621C9DE9A400E40605 /* PrimitivesTest.json in Resources */,
+				2785B5631C9DE9A400E40605 /* StringInitializableTest.json in Resources */,
+				2785B5641C9DE9A400E40605 /* HexInitializableTest.json in Resources */,
+				2785B5651C9DE9A400E40605 /* SerializableEntityTest.json in Resources */,
+				2785B5661C9DE9A400E40605 /* SimpleModel.json in Resources */,
+				2785B5671C9DE9A400E40605 /* DecodableTest.json in Resources */,
+				2785B55F1C9DE99900E40605 /* Cashier.framework in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -369,6 +504,7 @@
 			files = (
 				272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */,
 				30C898571C921DFC004A25E2 /* AlamofireExtension.swift in Sources */,
+				2785B5691C9DEBDD00E40605 /* UIColorExtension.swift in Sources */,
 				276FB53C1C7354E40055EC7C /* Operator.swift in Sources */,
 				276FB53A1C7354960055EC7C /* Extensions.swift in Sources */,
 			);
@@ -399,13 +535,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2785B5281C9DE72E00E40605 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2785B5481C9DE92900E40605 /* Serializable.swift in Sources */,
+				2785B5491C9DE92900E40605 /* Extensions.swift in Sources */,
+				2785B54A1C9DE92900E40605 /* Operator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2785B5321C9DE72F00E40605 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2785B54C1C9DE98000E40605 /* EnumsTestModel.swift in Sources */,
+				2785B54D1C9DE98000E40605 /* PrimitivesTestModel.swift in Sources */,
+				2785B54E1C9DE98000E40605 /* StringInitializableTestModel.swift in Sources */,
+				2785B5501C9DE98000E40605 /* SerializableEntityTestModel.swift in Sources */,
+				2785B5511C9DE98000E40605 /* SimpleModel.swift in Sources */,
+				2785B5521C9DE98000E40605 /* DecodableModel.swift in Sources */,
+				2785B5531C9DE98000E40605 /* NetworkTestModel.swift in Sources */,
+				2785B5541C9DE98000E40605 /* CustomOperatorsTests.swift in Sources */,
+				2785B5551C9DE98000E40605 /* SerializableEnumsTests.swift in Sources */,
+				2785B5561C9DE98000E40605 /* SerializablePrimitivesTests.swift in Sources */,
+				2785B5571C9DE98000E40605 /* StringInitializableTests.swift in Sources */,
+				2785B5581C9DE98000E40605 /* HexInitalizableTests.swift in Sources */,
+				2785B5591C9DE98000E40605 /* SerializableNilEntitiesTests.swift in Sources */,
+				2785B55A1C9DE98000E40605 /* DecodableTests.swift in Sources */,
+				2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		272F1DD31C6A392A0098F620 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 272F1DC51C6A392A0098F620 /* Serializable */;
+			target = 272F1DC51C6A392A0098F620 /* Serializable iOS */;
 			targetProxy = 272F1DD21C6A392A0098F620 /* PBXContainerItemProxy */;
+		};
+		2785B5391C9DE72F00E40605 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2785B52C1C9DE72E00E40605 /* Serializable OSX */;
+			targetProxy = 2785B5381C9DE72F00E40605 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -519,7 +692,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Serializable;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -545,7 +718,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Serializable;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -578,6 +751,94 @@
 			};
 			name = Release;
 		};
+		2785B53E1C9DE72F00E40605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
+				PRODUCT_NAME = Serializable;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2785B53F1C9DE72F00E40605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
+				PRODUCT_NAME = Serializable;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2785B5401C9DE72F00E40605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
+				);
+				INFOPLIST_FILE = "Serializable OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2785B5411C9DE72F00E40605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
+				);
+				INFOPLIST_FILE = "Serializable OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,7 +851,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serializable" */ = {
+		272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serializable iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				272F1DDB1C6A392A0098F620 /* Debug */,
@@ -607,6 +868,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2785B53E1C9DE72F00E40605 /* Debug */,
+				2785B53F1C9DE72F00E40605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2785B5431C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2785B5401C9DE72F00E40605 /* Debug */,
+				2785B5411C9DE72F00E40605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

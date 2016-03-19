@@ -8,6 +8,7 @@
 
 import Foundation
 import Serializable
+import UIKit
 
 enum Type: Int {
 	case First = 0
