@@ -66,7 +66,7 @@ class AlamofireExtensionTests: XCTestCase {
 	}
 	func testAlamofireExtensionUnexpectedArrayJSON() {
 		let expectation = expectationWithDescription("Expected array data to single object from response")
-		let handler:(Alamofire.Response<[DecodableModel], NSError>) -> Void = { result in
+		let handler:(Alamofire.Response<DecodableModel, NSError>) -> Void = { result in
 			switch result.result {
 			case .Failure:
 				expectation.fulfill()
@@ -87,7 +87,7 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/ArrayTest.json").responseSerializable(handler)
+		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/Empty.json").responseSerializable(handler)
 		waitForExpectationsWithTimeout(1, handler: nil)
 	}
 	
