@@ -1,4 +1,4 @@
-//
+
 //  AlamofireExtension.swift
 //  Serializable
 //
@@ -35,7 +35,7 @@ public extension Parser {
                 }
                 
             case let .Failure(error):
-                if let data = data {
+                if let data = data where data.length != 0 {
                     var userInfo = error.userInfo
                     userInfo["ResponseString"] = String(data: data, encoding: NSUTF8StringEncoding)
                     let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
