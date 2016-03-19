@@ -90,5 +90,55 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/Empty.json").responseSerializable(handler)
 		waitForExpectationsWithTimeout(1, handler: nil)
 	}
+	func testAlamofireArrayUnwrapper() {
+		let expectation = expectationWithDescription("Expected unwrapped array response")
+		let handler:(Alamofire.Response<[DecodableModel], NSError>) -> Void = { result in
+			switch result.result {
+			case .Success:
+				expectation.fulfill()
+			default:
+				break
+			}
+		}
+		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
+		
+		manager.request(.GET,
+			"https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/NestedArrayTest.json")
+			.responseSerializable(handler, unwrapper: unwrapper)
+		waitForExpectationsWithTimeout(1, handler: nil)
+	}
 	
+	func testAlamofireArrayNotUnwrapped() {
+		let expectation = expectationWithDescription("Expected unwrapped array response")
+		let handler:(Alamofire.Response<[DecodableModel], NSError>) -> Void = { result in
+			switch result.result {
+			case .Failure:
+				expectation.fulfill()
+			default:
+				break
+			}
+		}		
+		
+		manager.request(.GET,
+			"https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/NestedArrayTest.json")
+			.responseSerializable(handler)
+		waitForExpectationsWithTimeout(1, handler: nil)
+	}
+	func testAlamofireWrongTypeUnwrapper() {
+		let expectation = expectationWithDescription("Expected unwrapped array response")
+		let handler:(Alamofire.Response<DecodableModel, NSError>) -> Void = { result in
+			switch result.result {
+			case .Success:
+				expectation.fulfill()
+			default:
+				break
+			}
+		}
+		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
+		
+		manager.request(.GET,
+			"https://raw.githubusercontent.com/nodes-ios/Serializable/Alamofire-Additions/SerializableTests/TestEndpoint/NestedArrayTest.json")
+			.responseSerializable(handler, unwrapper: unwrapper)
+		waitForExpectationsWithTimeout(1, handler: nil)
+	}
 }
