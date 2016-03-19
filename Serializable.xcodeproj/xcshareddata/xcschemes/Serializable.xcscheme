@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "272F1DC51C6A392A0098F620"
                BuildableName = "Serializable.framework"
-               BlueprintName = "Serializable"
+               BlueprintName = "Serializable iOS"
                ReferencedContainer = "container:Serializable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "272F1DC51C6A392A0098F620"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable"
+            BlueprintName = "Serializable iOS"
             ReferencedContainer = "container:Serializable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "272F1DC51C6A392A0098F620"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable"
+            BlueprintName = "Serializable iOS"
             ReferencedContainer = "container:Serializable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,7 +85,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "272F1DC51C6A392A0098F620"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable"
+            BlueprintName = "Serializable iOS"
             ReferencedContainer = "container:Serializable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
