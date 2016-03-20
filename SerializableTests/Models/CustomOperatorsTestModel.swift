@@ -8,7 +8,6 @@
 
 import Foundation
 import Serializable
-import UIKit
 
 enum Type: Int {
 	case First = 0
@@ -22,7 +21,6 @@ struct CustomOperatorsTestModel {
     var otherSerializable: CustomOperatorsTestNestedModel?
 	var someSerializable = CustomOperatorsTestNestedModel()
 	var someUrl = NSURL()
-	var someColor: UIColor?
 	var someEnum: Type = .First
 	var someArray: [CustomOperatorsTestNestedModel] = []
 }
@@ -35,7 +33,6 @@ extension CustomOperatorsTestModel: Serializable {
 		otherSerializable <== (self, dictionary, "other_serializable")
 		someSerializable  <== (self, dictionary, "some_serializable")
 		someUrl           <== (self, dictionary, "some_url")
-		someColor         <== (self, dictionary, "some_color")
 		someEnum          <== (self, dictionary, "some_enum")
 		someArray         <== (self, dictionary, "some_array")
 	}
@@ -48,7 +45,6 @@ extension CustomOperatorsTestModel: Serializable {
 		(dict, "other_serializable") <== otherSerializable
 		(dict, "some_serializable")  <== someSerializable
 		(dict, "some_url")           <== someUrl
-		(dict, "some_color")         <== someColor
 		(dict, "some_enum")          <== someEnum
 		(dict, "some_array")         <== someArray
 		return dict

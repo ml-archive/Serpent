@@ -34,6 +34,21 @@
 		272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
 		272F1DCA1C6A392A0098F620 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
+		2732ECA41C9F21BF00BFD4E1 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */; };
+		2732ECB11C9F282800BFD4E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2732ECB21C9F284D00BFD4E1 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
+		2732ECB31C9F284D00BFD4E1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */; };
+		2732ECB41C9F284D00BFD4E1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
+		2732ECB51C9F284D00BFD4E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
+		2732ECB61C9F284D00BFD4E1 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
+		2732ECB71C9F285800BFD4E1 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2732ECB81C9F297C00BFD4E1 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
+		2732ECB91C9F297C00BFD4E1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */; };
+		2732ECBA1C9F297C00BFD4E1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
+		2732ECBB1C9F297C00BFD4E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
+		2732ECBC1C9F297C00BFD4E1 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
+		2732ECBD1C9F298B00BFD4E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED841C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2732ECBE1C9F299200BFD4E1 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		276FB53A1C7354960055EC7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		276FB53C1C7354E40055EC7C /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
 		2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B52D1C9DE72E00E40605 /* Serializable.framework */; };
@@ -52,17 +67,14 @@
 		2785B5551C9DE98000E40605 /* SerializableEnumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */; };
 		2785B5561C9DE98000E40605 /* SerializablePrimitivesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */; };
 		2785B5571C9DE98000E40605 /* StringInitializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B51C9BEAF50024E94A /* StringInitializableTests.swift */; };
-		2785B5581C9DE98000E40605 /* HexInitalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B61C9BEAF50024E94A /* HexInitalizableTests.swift */; };
 		2785B5591C9DE98000E40605 /* SerializableNilEntitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B71C9BEAF50024E94A /* SerializableNilEntitiesTests.swift */; };
 		2785B55A1C9DE98000E40605 /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B81C9BEAF50024E94A /* DecodableTests.swift */; };
 		2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */; };
-		2785B55D1C9DE98B00E40605 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
 		2785B55F1C9DE99900E40605 /* Cashier.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
 		2785B5601C9DE9A400E40605 /* CustomOperatorsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */; };
 		2785B5611C9DE9A400E40605 /* EnumsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */; };
 		2785B5621C9DE9A400E40605 /* PrimitivesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */; };
 		2785B5631C9DE9A400E40605 /* StringInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706BF1C9BEB0C0024E94A /* StringInitializableTest.json */; };
-		2785B5641C9DE9A400E40605 /* HexInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */; };
 		2785B5651C9DE9A400E40605 /* SerializableEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C31C9BEB0C0024E94A /* SerializableEntityTest.json */; };
 		2785B5661C9DE9A400E40605 /* SimpleModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C51C9BEB0C0024E94A /* SimpleModel.json */; };
 		2785B5671C9DE9A400E40605 /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C81C9BEB0C0024E94A /* DecodableTest.json */; };
@@ -70,6 +82,11 @@
 		27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */; };
 		27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */; };
 		27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		27D9ED7B1C9F1DD500EB2B49 /* CustomOperatorsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */; };
+		27D9ED8F1C9F201B00EB2B49 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		27D9ED901C9F201C00EB2B49 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		27D9ED911C9F202600EB2B49 /* AlamofireExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */; };
+		27D9ED921C9F202A00EB2B49 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
 		27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
 		27F2A4D31C9C3F4200916E01 /* Cashier.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
 		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -84,6 +101,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 272F1DC51C6A392A0098F620;
 			remoteInfo = Serializable;
+		};
+		2732ECA51C9F21BF00BFD4E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 272F1DBD1C6A392A0098F620 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2732EC991C9F21BF00BFD4E1;
+			remoteInfo = "Serializable tvOS";
 		};
 		2785B5381C9DE72F00E40605 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -125,6 +149,9 @@
 		272F1DCB1C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272F1DD01C6A392A0098F620 /* SerializableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerializableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1DD71C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2732EC8D1C9F21A500BFD4E1 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2732ECA31C9F21BF00BFD4E1 /* Serializable tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serializable tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		276FB5391C7354960055EC7C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		2785B52D1C9DE72E00E40605 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +159,9 @@
 		2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtensionTests.swift; sourceTree = "<group>"; };
 		27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTestModel.swift; sourceTree = "<group>"; };
+		27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		27D9ED841C9F1FFC00EB2B49 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		30C898471C921B84004A25E2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		30C898491C921B84004A25E2 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
@@ -156,10 +186,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2732EC891C9F21A500BFD4E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2732ECBD1C9F298B00BFD4E1 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732EC961C9F21BF00BFD4E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2732ECB11C9F282800BFD4E1 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732ECA01C9F21BF00BFD4E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2732ECA41C9F21BF00BFD4E1 /* Serializable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2785B5291C9DE72E00E40605 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D9ED8F1C9F201B00EB2B49 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */,
-				2785B55D1C9DE98B00E40605 /* Alamofire.framework in Frameworks */,
+				27D9ED901C9F201C00EB2B49 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,9 +275,6 @@
 			children = (
 				303C3AD91C8F69B900C1D5B4 /* AlamofireExtension */,
 				276FB53F1C73559E0055EC7C /* CashierExtension */,
-				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
-				276FB5391C7354960055EC7C /* Extensions.swift */,
-				276FB53B1C7354E40055EC7C /* Operator.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -244,6 +296,9 @@
 				272F1DD01C6A392A0098F620 /* SerializableTests.xctest */,
 				2785B52D1C9DE72E00E40605 /* Serializable.framework */,
 				2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */,
+				2732EC8D1C9F21A500BFD4E1 /* Serializable.framework */,
+				2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */,
+				2732ECA31C9F21BF00BFD4E1 /* Serializable tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,8 +335,35 @@
 			isa = PBXGroup;
 			children = (
 				2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */,
+				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
+				276FB5391C7354960055EC7C /* Extensions.swift */,
+				276FB53B1C7354E40055EC7C /* Operator.swift */,
 			);
 			name = CashierExtension;
+			sourceTree = "<group>";
+		};
+		27D9ED7C1C9F1FFC00EB2B49 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		27D9ED7F1C9F1FFC00EB2B49 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		27D9ED831C9F1FFC00EB2B49 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				27D9ED841C9F1FFC00EB2B49 /* Alamofire.framework */,
+			);
+			path = watchOS;
 			sourceTree = "<group>";
 		};
 		303C3AD91C8F69B900C1D5B4 /* AlamofireExtension */ = {
@@ -295,6 +377,9 @@
 		30C898411C921B84004A25E2 /* Prebuilt */ = {
 			isa = PBXGroup;
 			children = (
+				27D9ED7C1C9F1FFC00EB2B49 /* Mac */,
+				27D9ED7F1C9F1FFC00EB2B49 /* tvOS */,
+				27D9ED831C9F1FFC00EB2B49 /* watchOS */,
 				30C898421C921B84004A25E2 /* iOS */,
 			);
 			path = Prebuilt;
@@ -317,6 +402,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				272F1DCA1C6A392A0098F620 /* Serializable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732EC8A1C9F21A500BFD4E1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2732ECBE1C9F299200BFD4E1 /* Serializable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732EC971C9F21BF00BFD4E1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2732ECB71C9F285800BFD4E1 /* Serializable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +466,60 @@
 			name = SerializableTests;
 			productName = SerializableTests;
 			productReference = 272F1DD01C6A392A0098F620 /* SerializableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2732EC8C1C9F21A500BFD4E1 /* Serializable watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2732EC921C9F21A500BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable watchOS" */;
+			buildPhases = (
+				2732EC881C9F21A500BFD4E1 /* Sources */,
+				2732EC891C9F21A500BFD4E1 /* Frameworks */,
+				2732EC8A1C9F21A500BFD4E1 /* Headers */,
+				2732EC8B1C9F21A500BFD4E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serializable watchOS";
+			productName = "Serializable watchOS";
+			productReference = 2732EC8D1C9F21A500BFD4E1 /* Serializable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2732EC991C9F21BF00BFD4E1 /* Serializable tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2732ECAB1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOS" */;
+			buildPhases = (
+				2732EC951C9F21BF00BFD4E1 /* Sources */,
+				2732EC961C9F21BF00BFD4E1 /* Frameworks */,
+				2732EC971C9F21BF00BFD4E1 /* Headers */,
+				2732EC981C9F21BF00BFD4E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serializable tvOS";
+			productName = "Serializable tvOS";
+			productReference = 2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2732ECA21C9F21BF00BFD4E1 /* Serializable tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2732ECAE1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOSTests" */;
+			buildPhases = (
+				2732EC9F1C9F21BF00BFD4E1 /* Sources */,
+				2732ECA01C9F21BF00BFD4E1 /* Frameworks */,
+				2732ECA11C9F21BF00BFD4E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2732ECA61C9F21BF00BFD4E1 /* PBXTargetDependency */,
+			);
+			name = "Serializable tvOSTests";
+			productName = "Serializable tvOSTests";
+			productReference = 2732ECA31C9F21BF00BFD4E1 /* Serializable tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2785B52C1C9DE72E00E40605 /* Serializable OSX */ = {
@@ -419,6 +574,15 @@
 					272F1DCF1C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					2732EC8C1C9F21A500BFD4E1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					2732EC991C9F21BF00BFD4E1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					2732ECA21C9F21BF00BFD4E1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					2785B52C1C9DE72E00E40605 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -443,6 +607,9 @@
 				272F1DCF1C6A392A0098F620 /* SerializableTests */,
 				2785B52C1C9DE72E00E40605 /* Serializable OSX */,
 				2785B5351C9DE72F00E40605 /* Serializable OSXTests */,
+				2732EC991C9F21BF00BFD4E1 /* Serializable tvOS */,
+				2732ECA21C9F21BF00BFD4E1 /* Serializable tvOSTests */,
+				2732EC8C1C9F21A500BFD4E1 /* Serializable watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -472,6 +639,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2732EC8B1C9F21A500BFD4E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732EC981C9F21BF00BFD4E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732ECA11C9F21BF00BFD4E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2785B52B1C9DE72E00E40605 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,7 +675,6 @@
 				2785B5611C9DE9A400E40605 /* EnumsTest.json in Resources */,
 				2785B5621C9DE9A400E40605 /* PrimitivesTest.json in Resources */,
 				2785B5631C9DE9A400E40605 /* StringInitializableTest.json in Resources */,
-				2785B5641C9DE9A400E40605 /* HexInitializableTest.json in Resources */,
 				2785B5651C9DE9A400E40605 /* SerializableEntityTest.json in Resources */,
 				2785B5661C9DE9A400E40605 /* SimpleModel.json in Resources */,
 				2785B5671C9DE9A400E40605 /* DecodableTest.json in Resources */,
@@ -535,10 +722,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2732EC881C9F21A500BFD4E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2732ECB81C9F297C00BFD4E1 /* AlamofireExtension.swift in Sources */,
+				2732ECB91C9F297C00BFD4E1 /* UIColorExtension.swift in Sources */,
+				2732ECBA1C9F297C00BFD4E1 /* Serializable.swift in Sources */,
+				2732ECBB1C9F297C00BFD4E1 /* Extensions.swift in Sources */,
+				2732ECBC1C9F297C00BFD4E1 /* Operator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732EC951C9F21BF00BFD4E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2732ECB21C9F284D00BFD4E1 /* AlamofireExtension.swift in Sources */,
+				2732ECB31C9F284D00BFD4E1 /* UIColorExtension.swift in Sources */,
+				2732ECB41C9F284D00BFD4E1 /* Serializable.swift in Sources */,
+				2732ECB51C9F284D00BFD4E1 /* Extensions.swift in Sources */,
+				2732ECB61C9F284D00BFD4E1 /* Operator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2732EC9F1C9F21BF00BFD4E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2785B5281C9DE72E00E40605 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D9ED921C9F202A00EB2B49 /* AlamofireExtension.swift in Sources */,
 				2785B5481C9DE92900E40605 /* Serializable.swift in Sources */,
 				2785B5491C9DE92900E40605 /* Extensions.swift in Sources */,
 				2785B54A1C9DE92900E40605 /* Operator.swift in Sources */,
@@ -557,12 +776,13 @@
 				2785B5521C9DE98000E40605 /* DecodableModel.swift in Sources */,
 				2785B5531C9DE98000E40605 /* NetworkTestModel.swift in Sources */,
 				2785B5541C9DE98000E40605 /* CustomOperatorsTests.swift in Sources */,
+				27D9ED911C9F202600EB2B49 /* AlamofireExtensionTests.swift in Sources */,
 				2785B5551C9DE98000E40605 /* SerializableEnumsTests.swift in Sources */,
 				2785B5561C9DE98000E40605 /* SerializablePrimitivesTests.swift in Sources */,
 				2785B5571C9DE98000E40605 /* StringInitializableTests.swift in Sources */,
-				2785B5581C9DE98000E40605 /* HexInitalizableTests.swift in Sources */,
 				2785B5591C9DE98000E40605 /* SerializableNilEntitiesTests.swift in Sources */,
 				2785B55A1C9DE98000E40605 /* DecodableTests.swift in Sources */,
+				27D9ED7B1C9F1DD500EB2B49 /* CustomOperatorsTestModel.swift in Sources */,
 				2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +794,11 @@
 			isa = PBXTargetDependency;
 			target = 272F1DC51C6A392A0098F620 /* Serializable iOS */;
 			targetProxy = 272F1DD21C6A392A0098F620 /* PBXContainerItemProxy */;
+		};
+		2732ECA61C9F21BF00BFD4E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2732EC991C9F21BF00BFD4E1 /* Serializable tvOS */;
+			targetProxy = 2732ECA51C9F21BF00BFD4E1 /* PBXContainerItemProxy */;
 		};
 		2785B5391C9DE72F00E40605 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -734,6 +959,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Prebuilt/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -748,6 +974,129 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Prebuilt/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_PATHS = "";
+			};
+			name = Release;
+		};
+		2732EC931C9F21A500BFD4E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/watchOS",
+				);
+				INFOPLIST_FILE = Serializable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-watchOS";
+				PRODUCT_NAME = Serializable;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		2732EC941C9F21A500BFD4E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/watchOS",
+				);
+				INFOPLIST_FILE = Serializable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-watchOS";
+				PRODUCT_NAME = Serializable;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		2732ECAC1C9F21BF00BFD4E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/tvOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOS";
+				PRODUCT_NAME = Serializable;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		2732ECAD1C9F21BF00BFD4E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/tvOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOS";
+				PRODUCT_NAME = Serializable;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		2732ECAF1C9F21BF00BFD4E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Serializable tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		2732ECB01C9F21BF00BFD4E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Serializable tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
@@ -763,7 +1112,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Prebuilt/Mac",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
@@ -789,7 +1138,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Prebuilt/Mac",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
@@ -810,10 +1159,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Prebuilt/Mac",
 				);
-				INFOPLIST_FILE = "Serializable OSXTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				INFOPLIST_FILE = SerializableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Prebuilt/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -828,10 +1177,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Prebuilt/Mac",
 				);
-				INFOPLIST_FILE = "Serializable OSXTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				INFOPLIST_FILE = SerializableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Prebuilt/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -869,6 +1218,30 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2732EC921C9F21A500BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2732EC931C9F21A500BFD4E1 /* Debug */,
+				2732EC941C9F21A500BFD4E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2732ECAB1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2732ECAC1C9F21BF00BFD4E1 /* Debug */,
+				2732ECAD1C9F21BF00BFD4E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2732ECAE1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2732ECAF1C9F21BF00BFD4E1 /* Debug */,
+				2732ECB01C9F21BF00BFD4E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -876,6 +1249,7 @@
 				2785B53F1C9DE72F00E40605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2785B5431C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSXTests" */ = {
 			isa = XCConfigurationList;
@@ -884,6 +1258,7 @@
 				2785B5411C9DE72F00E40605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
