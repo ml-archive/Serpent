@@ -33,7 +33,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "http://httpbin.org/get").responseSerializable(handler)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	
 	func testAlamofireExtensionBadJSON() {
@@ -47,7 +47,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "http://httpbin.org/deny").responseSerializable(handler)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 
 	
@@ -62,7 +62,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "http://httpbin.org/get").responseSerializable(handler)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	func testAlamofireExtensionUnexpectedArrayJSON() {
 		let expectation = expectationWithDescription("Expected array data to single object from response")
@@ -75,7 +75,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/ArrayTest.json").responseSerializable(handler)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	func testAlamofireExtensionEmptyJSON() {
 		let expectation = expectationWithDescription("Expected empty response")
@@ -88,7 +88,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/Empty.json").responseSerializable(handler)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	func testAlamofireArrayUnwrapper() {
 		let expectation = expectationWithDescription("Expected unwrapped array response")
@@ -105,7 +105,7 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET,
 			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler, unwrapper: unwrapper)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	
 	func testAlamofireArrayNotUnwrapped() {
@@ -122,7 +122,7 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET,
 			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	func testAlamofireWrongTypeUnwrapper() {
 		let expectation = expectationWithDescription("Expected unwrapped array response")
@@ -139,6 +139,6 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET,
 			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler, unwrapper: unwrapper)
-		waitForExpectationsWithTimeout(1, handler: nil)
+		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 }
