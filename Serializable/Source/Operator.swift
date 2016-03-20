@@ -101,11 +101,11 @@ public func <==<T, S where T: StringInitializable, S: Keymappable>(inout left: T
 // HexInitializable
 
 public func <==<T, S where T: HexInitializable, S: Keymappable>(inout left: T?, right: (instance: S, dict: NSDictionary?, key: String)) {
-    let value: T? = right.instance.mapped(right.dict, key: right.key)
-    left = value ?? left
+	let value: T? = right.instance.mapped(right.dict, key: right.key)
+	left = value ?? left
 }
 
 public func <==<T, S where T: HexInitializable, S: Keymappable>(inout left: T, right: (instance: S, dict: NSDictionary?, key: String)) {
-    let value: T? = right.instance.mapped(right.dict, key: right.key)
-    left = value ?? left
+	let value: T? = right.instance.mapped(right.dict, key: right.key)
+	left = value ?? left
 }
