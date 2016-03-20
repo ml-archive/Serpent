@@ -35,5 +35,10 @@ class HexInitalizableTests: XCTestCase {
 		XCTAssertNil(testModel.notColor, "Error returning nil for non hex value")
         XCTAssertNil(testModel.invalidHexColor, "Error returning nil for invalid hex value")
 	}
+	
+	func testHexInitializableNilDictionary() {
+		let nilModel = HexInitializableTestNilModel(dictionary: nil)
+		XCTAssertEqual(nilModel.someColor, UIColor.redColor(), "Failed to parse nil dictionary into HexInitializable model")
+	}
 
 }

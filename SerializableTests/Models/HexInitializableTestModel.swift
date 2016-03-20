@@ -37,3 +37,19 @@ extension HexInitializableTestModel: Serializable {
         return dict
     }
 }
+
+struct HexInitializableTestNilModel {
+	var someColor = UIColor.redColor()
+}
+
+extension HexInitializableTestNilModel: Serializable {
+	init(dictionary: NSDictionary?) {
+		someColor <== (self, dictionary, "some_color")
+	}
+	
+	func encodableRepresentation() -> NSCoding {
+		let dict = NSMutableDictionary()
+		(dict, "some_color") <== someColor
+		return dict
+	}
+}

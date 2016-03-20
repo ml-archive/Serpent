@@ -211,26 +211,4 @@ public extension Keymappable {
         return nil
     }
 
-    /**
-     A generic mapping function that will try to parse an object of type `T` from the hex string 
-     value contained in the provided dictionary.
-
-     The `key` parameter will be first used to check value in custom input key mappings and if
-     no value is found, then `key` is used as the key to get the value stored in `dictionary`.
-
-     - parameter dictionary: An optional dictionary containing the array which should be parsed.
-     - parameter key: The key which will be used to get the actual key from input key mappings
-     or as the actual key for the value being parsed from the dictionary.
-
-     - returns: The value of type `T` or `nil` if parsing was unsuccessful.
-     */
-    public func mapped<T: HexInitializable>(dictionary: NSDictionary?, key: String) -> T? {
-        guard let dict = dictionary, source = dict[key] else { return nil }
-
-        if let hexString = source as? String where hexString.isEmpty == false {
-            return T.fromHexString(hexString)
-        }
-
-        return source as? T
-    }
 }
