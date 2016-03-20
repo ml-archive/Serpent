@@ -6,7 +6,7 @@ branches:
   - master
   - develop
 script:
-- set -o pipefail && xcodebuild -project Serializable.xcodeproj -scheme Serializable iOS
+- set -o pipefail && xcodebuild -project Serializable.xcodeproj -scheme "Serializable iOS"
   -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.2'
   build test | xcpretty
 after_success:
