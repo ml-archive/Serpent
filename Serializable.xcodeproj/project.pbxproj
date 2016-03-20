@@ -36,6 +36,11 @@
 		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
 		276FB53A1C7354960055EC7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		276FB53C1C7354E40055EC7C /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
+		27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */; };
+		27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */; };
+		27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
+		27F2A4D31C9C3F4200916E01 /* Cashier.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
 		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898571C921DFC004A25E2 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
@@ -84,6 +89,8 @@
 		272F1DD71C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276FB5391C7354960055EC7C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtensionTests.swift; sourceTree = "<group>"; };
+		27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTestModel.swift; sourceTree = "<group>"; };
 		303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		30C898471C921B84004A25E2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		30C898491C921B84004A25E2 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */,
+				27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +137,7 @@
 				01C706C61C9BEB0C0024E94A /* SimpleModel.swift */,
 				01C706C71C9BEB0C0024E94A /* DecodableModel.swift */,
 				01C706C81C9BEB0C0024E94A /* DecodableTest.json */,
+				27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +153,7 @@
 				01C706B71C9BEAF50024E94A /* SerializableNilEntitiesTests.swift */,
 				01C706B81C9BEAF50024E94A /* DecodableTests.swift */,
 				01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */,
+				27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -345,6 +355,8 @@
 				01C706D21C9BEB0C0024E94A /* DecodableTest.json in Resources */,
 				01C706CF1C9BEB0C0024E94A /* SimpleModel.json in Resources */,
 				272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */,
+				27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */,
+				27F2A4D31C9C3F4200916E01 /* Cashier.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +392,9 @@
 				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
 				01C706BB1C9BEAF50024E94A /* HexInitalizableTests.swift in Sources */,
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
+				27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */,
 				272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */,
+				27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */,
 				01C706CE1C9BEB0C0024E94A /* SerializableEntityTestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,8 +553,12 @@
 		272F1DDE1C6A392A0098F620 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
+				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Prebuilt/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -549,8 +567,12 @@
 		272F1DDF1C6A392A0098F620 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Prebuilt/iOS",
+				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Prebuilt/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
