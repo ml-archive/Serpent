@@ -4,6 +4,7 @@ xcode_sdk: iphonesimulator9.2
 branches:
   only:
   - master
+  - develop
 script:
 - set -o pipefail && xcodebuild -project Serializable.xcodeproj -scheme Serializable
   -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.2'
