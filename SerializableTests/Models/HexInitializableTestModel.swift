@@ -7,15 +7,21 @@
 //
 
 import Foundation
-import UIKit
 import Serializable
+#if os(OSX)
+	import Cocoa
+	typealias Color = NSColor
+#else
+	import UIKit
+	typealias Color = UIColor
+#endif
 
 struct HexInitializableTestModel {
-	var shortColor = UIColor.redColor()
-	var fullColor: UIColor?
-	var badColor: UIColor?
-	var notColor: UIColor?
-    var invalidHexColor: UIColor?
+	var shortColor = Color.redColor()
+	var fullColor: Color?
+	var badColor: Color?
+	var notColor: Color?
+    var invalidHexColor: Color?
 }
 
 extension HexInitializableTestModel: Serializable {
@@ -39,7 +45,7 @@ extension HexInitializableTestModel: Serializable {
 }
 
 struct HexInitializableTestNilModel {
-	var someColor = UIColor.redColor()
+	var someColor = Color.redColor()
 }
 
 extension HexInitializableTestNilModel: Serializable {

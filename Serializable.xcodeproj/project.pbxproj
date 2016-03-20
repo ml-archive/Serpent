@@ -37,13 +37,11 @@
 		2732ECA41C9F21BF00BFD4E1 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */; };
 		2732ECB11C9F282800BFD4E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2732ECB21C9F284D00BFD4E1 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
-		2732ECB31C9F284D00BFD4E1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */; };
 		2732ECB41C9F284D00BFD4E1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
 		2732ECB51C9F284D00BFD4E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		2732ECB61C9F284D00BFD4E1 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
 		2732ECB71C9F285800BFD4E1 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1DC91C6A392A0098F620 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2732ECB81C9F297C00BFD4E1 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
-		2732ECB91C9F297C00BFD4E1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */; };
 		2732ECBA1C9F297C00BFD4E1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D927F1C6DFF7900BCD3B6 /* Serializable.swift */; };
 		2732ECBB1C9F297C00BFD4E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		2732ECBC1C9F297C00BFD4E1 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
@@ -77,6 +75,9 @@
 		2732ECD81C9F2A4D00BFD4E1 /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C81C9BEB0C0024E94A /* DecodableTest.json */; };
 		2732ECD91C9F2A4D00BFD4E1 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */; };
 		2732ECDA1C9F2A6000BFD4E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */; };
+		2732ECDC1C9F44E800BFD4E1 /* HexInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C21C9BEB0C0024E94A /* HexInitializableTestModel.swift */; };
+		2732ECDD1C9F44EB00BFD4E1 /* HexInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */; };
+		2732ECDE1C9F44EE00BFD4E1 /* HexInitalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B61C9BEAF50024E94A /* HexInitalizableTests.swift */; };
 		276FB53A1C7354960055EC7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB5391C7354960055EC7C /* Extensions.swift */; };
 		276FB53C1C7354E40055EC7C /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276FB53B1C7354E40055EC7C /* Operator.swift */; };
 		2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B52D1C9DE72E00E40605 /* Serializable.framework */; };
@@ -106,7 +107,6 @@
 		2785B5651C9DE9A400E40605 /* SerializableEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C31C9BEB0C0024E94A /* SerializableEntityTest.json */; };
 		2785B5661C9DE9A400E40605 /* SimpleModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C51C9BEB0C0024E94A /* SimpleModel.json */; };
 		2785B5671C9DE9A400E40605 /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C81C9BEB0C0024E94A /* DecodableTest.json */; };
-		2785B5691C9DEBDD00E40605 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */; };
 		27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */; };
 		27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */; };
 		27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -171,7 +171,7 @@
 		272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumsTestModel.swift; sourceTree = "<group>"; };
 		272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimitivesTest.json; sourceTree = "<group>"; };
 		272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesTestModel.swift; sourceTree = "<group>"; };
-		272D927F1C6DFF7900BCD3B6 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		272D927F1C6DFF7900BCD3B6 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = Source/Serializable.swift; sourceTree = "<group>"; };
 		272F1DC61C6A392A0098F620 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1DC91C6A392A0098F620 /* Serializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializable.h; sourceTree = "<group>"; };
 		272F1DCB1C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,11 +180,10 @@
 		2732EC8D1C9F21A500BFD4E1 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2732ECA31C9F21BF00BFD4E1 /* Serializable tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serializable tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		276FB5391C7354960055EC7C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		276FB5391C7354960055EC7C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
+		276FB53B1C7354E40055EC7C /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = Source/Operator.swift; sourceTree = "<group>"; };
 		2785B52D1C9DE72E00E40605 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serializable OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtensionTests.swift; sourceTree = "<group>"; };
 		27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTestModel.swift; sourceTree = "<group>"; };
 		27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
@@ -336,6 +335,9 @@
 			isa = PBXGroup;
 			children = (
 				272D927D1C6DFF7900BCD3B6 /* Source */,
+				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
+				276FB5391C7354960055EC7C /* Extensions.swift */,
+				276FB53B1C7354E40055EC7C /* Operator.swift */,
 				272F1DC91C6A392A0098F620 /* Serializable.h */,
 				272F1DCB1C6A392A0098F620 /* Info.plist */,
 			);
@@ -363,10 +365,6 @@
 		276FB53F1C73559E0055EC7C /* CashierExtension */ = {
 			isa = PBXGroup;
 			children = (
-				2785B5681C9DEBDD00E40605 /* UIColorExtension.swift */,
-				272D927F1C6DFF7900BCD3B6 /* Serializable.swift */,
-				276FB5391C7354960055EC7C /* Extensions.swift */,
-				276FB53B1C7354E40055EC7C /* Operator.swift */,
 			);
 			name = CashierExtension;
 			sourceTree = "<group>";
@@ -716,6 +714,7 @@
 				2785B5651C9DE9A400E40605 /* SerializableEntityTest.json in Resources */,
 				2785B5661C9DE9A400E40605 /* SimpleModel.json in Resources */,
 				2785B5671C9DE9A400E40605 /* DecodableTest.json in Resources */,
+				2732ECDD1C9F44EB00BFD4E1 /* HexInitializableTest.json in Resources */,
 				2785B55F1C9DE99900E40605 /* Cashier.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,7 +728,6 @@
 			files = (
 				272D92811C6DFF7900BCD3B6 /* Serializable.swift in Sources */,
 				30C898571C921DFC004A25E2 /* AlamofireExtension.swift in Sources */,
-				2785B5691C9DEBDD00E40605 /* UIColorExtension.swift in Sources */,
 				276FB53C1C7354E40055EC7C /* Operator.swift in Sources */,
 				276FB53A1C7354960055EC7C /* Extensions.swift in Sources */,
 			);
@@ -765,7 +763,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2732ECB81C9F297C00BFD4E1 /* AlamofireExtension.swift in Sources */,
-				2732ECB91C9F297C00BFD4E1 /* UIColorExtension.swift in Sources */,
 				2732ECBA1C9F297C00BFD4E1 /* Serializable.swift in Sources */,
 				2732ECBB1C9F297C00BFD4E1 /* Extensions.swift in Sources */,
 				2732ECBC1C9F297C00BFD4E1 /* Operator.swift in Sources */,
@@ -777,7 +774,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2732ECB21C9F284D00BFD4E1 /* AlamofireExtension.swift in Sources */,
-				2732ECB31C9F284D00BFD4E1 /* UIColorExtension.swift in Sources */,
 				2732ECB41C9F284D00BFD4E1 /* Serializable.swift in Sources */,
 				2732ECB51C9F284D00BFD4E1 /* Extensions.swift in Sources */,
 				2732ECB61C9F284D00BFD4E1 /* Operator.swift in Sources */,
@@ -825,6 +821,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2785B54C1C9DE98000E40605 /* EnumsTestModel.swift in Sources */,
+				2732ECDE1C9F44EE00BFD4E1 /* HexInitalizableTests.swift in Sources */,
 				2785B54D1C9DE98000E40605 /* PrimitivesTestModel.swift in Sources */,
 				2785B54E1C9DE98000E40605 /* StringInitializableTestModel.swift in Sources */,
 				2785B5501C9DE98000E40605 /* SerializableEntityTestModel.swift in Sources */,
@@ -838,6 +835,7 @@
 				2785B5571C9DE98000E40605 /* StringInitializableTests.swift in Sources */,
 				2785B5591C9DE98000E40605 /* SerializableNilEntitiesTests.swift in Sources */,
 				2785B55A1C9DE98000E40605 /* DecodableTests.swift in Sources */,
+				2732ECDC1C9F44E800BFD4E1 /* HexInitializableTestModel.swift in Sources */,
 				27D9ED7B1C9F1DD500EB2B49 /* CustomOperatorsTestModel.swift in Sources */,
 				2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */,
 			);
@@ -1289,6 +1287,7 @@
 				2732EC941C9F21A500BFD4E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2732ECAB1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1297,6 +1296,7 @@
 				2732ECAD1C9F21BF00BFD4E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2732ECAE1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1305,6 +1305,7 @@
 				2732ECB01C9F21BF00BFD4E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSX" */ = {
 			isa = XCConfigurationList;
