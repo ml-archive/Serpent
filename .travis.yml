@@ -3,8 +3,13 @@ osx_image: xcode7.2
 xcode_sdk: iphonesimulator9.2
 branches:
   only:
-    - master
+  - master
 script:
-  - set -o pipefail && xcodebuild -project Serializable.xcodeproj -scheme Serializable -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.2' build test | xcpretty
+- set -o pipefail && xcodebuild -project Serializable.xcodeproj -scheme Serializable
+  -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.2'
+  build test | xcpretty
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
+notifications:
+  slack:
+    secure: ieWTXjWNxG8CzgeHpj5q1Rz4/l5pgCT65W0AfL3SdfdLrXv56frhW9bFl5C34HZyhCNijUggSlq2wGUPDuGmZ7tU94HX+3EXWkL0vs4pUcTKF8/rcnyQ2n1t4MzOZKX7MLSJOTGE874fp1d4XoXBT35FIi06hgG1xIXXprKYAxt7bS9kSPpfVxZSlH1N8pHiXJx6oJZU16YsEj7wkuBOgmp21TUQc580mDfAphO2dgdaPcG2A63IgsLrE/MTcUy32Czr9QED0nXA02q8n1EPUgOsJV6qtxz0mxgfL86Kt4VfajapfrHJTdu6sGzdFxy0/VcbZjOQJWCGlPlf9LjC0S4PdPo1iPEXQjrnPGNAjoZ0e0qwQH6/30sWuHuD/2LaLGyRM7bWLtSfYRMKCsXVl54VDGSmP0uVcXPTyGzrz0qoBfw/bQnurFKqnz9PGF+18aqiyk26YXCRWjLBTpWGSHUIiaHS1qL2xUfdnHdiznowoEFnRaWT5FYrZNRN4lVLwJg3OI/UWVGg5AATg90kHPQ06qvaqOqEbfy4ZTwWFbth0866djhaBsoo9NrwwwVVoUUqlCBv413x0Lp3tTNg3AUQvTRz5uJ+HC94/i3/3eEUM2rQUJbgVVfRhxrB8u/rgu37/DTKYMBgARveMn4qY2blpHU22q1mk+YmOLMHSi0=
