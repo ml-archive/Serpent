@@ -11,13 +11,13 @@ It's designed to be used together with our helper app, the [![ModelBoiler](http:
 
 The Serializable framework uses static typing, exhibiting superior performance compared to frameworks using reflection and eliminates boilerplate code.
 
+![Plaforms](https://img.shields.io/badge/platforms-iOS | OS X | watchOS | tvOS-lightgrey.svg)
 [![Travis](https://img.shields.io/travis/nodes-ios/Serializable.svg)](https://travis-ci.org/nodes-ios/Serializable)
 [![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serializable.svg)](https://codecov.io/github/nodes-ios/Serializable)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)  
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
-![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)
 [![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/serializable)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/serializable)
 
 
