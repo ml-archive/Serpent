@@ -8,6 +8,13 @@
 
 import XCTest
 import Serializable
+#if os(OSX)
+	import Cocoa
+	typealias HexColor = NSColor
+#else
+	import UIKit
+	typealias HexColor = UIColor
+#endif
 
 class HexInitalizableTests: XCTestCase {
 
@@ -27,12 +34,17 @@ class HexInitalizableTests: XCTestCase {
 	}
 	
 	func testHexInitializableUIColor() {
-		let color = UIColor(red: CGFloat(85) / 255.0, green: CGFloat(170) / 255.0, blue: CGFloat(204) / 255.0, alpha: 1.0)
+		let color = HexColor(red: CGFloat(85) / 255.0, green: CGFloat(170) / 255.0, blue: CGFloat(204) / 255.0, alpha: 1.0)
 		XCTAssertEqual(testModel.shortColor, color, "Error parsing short form color in HexInitializable")
 		XCTAssertEqual(testModel.fullColor, color, "Error parsing long form color in HexInitializable")
 		XCTAssertNil(testModel.badColor, "Error returning nil for malformed color hex")
 		XCTAssertNil(testModel.notColor, "Error returning nil for non hex value")
         XCTAssertNil(testModel.invalidHexColor, "Error returning nil for invalid hex value")
+	}
+	
+	func testHexInitializableNilDictionary() {
+		let nilModel = HexInitializableTestNilModel(dictionary: nil)
+		XCTAssertEqual(nilModel.someColor, HexColor.redColor(), "Failed to parse nil dictionary into HexInitializable model")
 	}
 
 }
