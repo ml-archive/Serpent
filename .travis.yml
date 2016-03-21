@@ -4,10 +4,39 @@ xcode_sdk: iphonesimulator9.2
 branches:
   only:
   - master
+  - develop
+
+env:
+  global:
+  - IOS_FRAMEWORK_SCHEME="Serializable iOS"
+  - OSX_FRAMEWORK_SCHEME="Serializable OSX"
+  - TVOS_FRAMEWORK_SCHEME="Serializable tvOS"
+  - WATCHOS_FRAMEWORK_SCHEME="Serializable watchOS"
+  - IOS_SDK=iphonesimulator9.2
+  - OSX_SDK=macosx10.11
+  - TVOS_SDK=appletvsimulator9.1
+  - WATCHOS_SDK=watchsimulator2.1
+  matrix:
+  - DESTINATION="OS=9.2,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"
+  - DESTINATION="arch=x86_64"                    SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES"
+  - DESTINATION="OS=9.1,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES"
+  - DESTINATION="OS=2.1,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"
+
 script:
-- set -o pipefail && xcodebuild -project Serializable.xcodeproj -scheme Serializable
-  -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.2'
-  build test | xcpretty
+  - set -o pipefail
+  #- xcodebuild -version
+  #- xcodebuild -showsdks
+
+  # Build Framework in Debug and Run Tests if specified
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -project Serializable.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty;
+    else
+      xcodebuild -project Serializable.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+
+  # Build in release
+  - xcodebuild -project Serializable.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 notifications:
