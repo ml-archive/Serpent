@@ -6,7 +6,6 @@
 //  Copyright © 2016 Nodes. All rights reserved.
 //
 
-import UIKit
 import XCTest
 import Serializable
 
