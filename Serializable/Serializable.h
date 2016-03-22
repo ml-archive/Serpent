@@ -5,8 +5,7 @@
 //  Created by Chris Combs on 09/02/16.
 //  Copyright © 2016 Nodes. All rights reserved.
 //
-
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for Serializable.
 FOUNDATION_EXPORT double SerializableVersionNumber;
