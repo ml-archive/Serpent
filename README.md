@@ -4,6 +4,7 @@
 
 <center>[![Travis](https://img.shields.io/travis/nodes-ios/Serializable.svg)](https://travis-ci.org/nodes-ios/Serializable)
 [![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serializable.svg)](https://codecov.io/github/nodes-ios/Serializable)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)  
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)

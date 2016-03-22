@@ -70,8 +70,4 @@ class CustomOperatorsTests: XCTestCase {
 		XCTAssertEqual(testModel.someUrl, NSURL(string: "http://www.google.com"), "StringInitializable parsing failed in custom operator")
 	}
 	
-	func testCustomOperatorHexInitializable() {
-		let color = UIColor(red: CGFloat(85) / 255.0, green: CGFloat(170) / 255.0, blue: CGFloat(204) / 255.0, alpha: 1.0)
-		XCTAssertEqual(testModel.someColor, color, "HexInitializable parsing failed in custom operator")
-	}
 }
