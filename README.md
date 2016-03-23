@@ -2,31 +2,31 @@
   <img src="./Serializable_icon.png?raw=true" alt="Serializable"/>
 </p>
 
-
-Serializable is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's implemented using protocol extensions, which makes it easily expandable.
-
-It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects.
-
-It's designed to be used together with our helper app, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), making model creation a breeze.
-
-The Serializable framework uses static typing, exhibiting superior performance compared to frameworks using reflection and eliminates boilerplate code.
-
-![Plaforms](https://img.shields.io/badge/platforms-iOS | OS X | watchOS | tvOS-lightgrey.svg)
-[![Travis](https://img.shields.io/travis/nodes-ios/Serializable.svg)](https://travis-ci.org/nodes-ios/Serializable)
+<center>[![Travis](https://img.shields.io/travis/nodes-ios/Serializable.svg)](https://travis-ci.org/nodes-ios/Serializable)
 [![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serializable.svg)](https://codecov.io/github/nodes-ios/Serializable)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)  
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
-[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/serializable)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/serializable)
+![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)
+[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/serializable)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/serializable)</center>
 
+Serializable is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects. Designed for use with Alamofire.
+
+It's designed to be used together with our helper app, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), making model creation a breeze.
+
+Serializable is implemented using protocol extensions and static typing.
 
 ## Why Serializable?
 There are plenty of other Encoding and Decoding frameworks available. Why should you use Serializable? 
 
 * [Performance](https://github.com/nodes-ios/Serializable/wiki/Performance-tests). Serializable is fast, up to 4x faster than similar frameworks
 * [Features](https://github.com/nodes-ios/Serializable/wiki/Performance-tests#feature-comparison). Serializable can parse anything you throw at it. Nested objects, Enums, NSURL, UIColor, you name it!
-* [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write, [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates it for you instantly. 
+* [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write, generates it for you instantly. 
+* [Alamofire Integration](). Using the included Alamofire extensions makes implementing an API call returning parsed model data as simple as doing a one-liner!
+* [Expandability](). Parsing into other datatypes can easily be added.
+* [Persisting](). Combined with our cashing framework [![Cashier]()](), Serializable objects can be very easily persisted to disk. 
 
 
 ## 📝 Requirements
@@ -201,6 +201,77 @@ extension School: Serializable {
 }
 ~~~
 Again, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates all of this code for you in less than a second!
+
+###Using with Alamofire
+
+Serializable comes integrated with Alamofire out of the box, through an extension on Alamofire's `Request` construct, that adds the function `responseSerializable(completion:unwrapper)`
+
+The extension uses Alamofire's familiar `Response` type to hold the returned data, and uses its generic associated type to automatically parse the data.
+
+Consider an endpoint returning a single `school` structure matching the struct from the example above. To implement the call, simply add a function to your shared connection manager or where ever you like to put it:
+
+~~~swift
+static func requestSchool:(completion: (Response<School, NSError>) -> Void)) {
+	request(.GET, "http://somewhere.com/school/1").responseSerializable(completion)
+}
+~~~
+
+In the consuming method you use it like this: 
+
+~~~swift
+ConnectionManager.requestSchool() { (response) in 
+	switch response.result {
+		case .Success(let school):
+			//Use your new school object!
+			
+		case .Failure(let error):
+			//Handle the error object, or check your Response for more detail
+	}
+}
+~~~
+
+For an array of objects, use the same technique:
+
+~~~swift
+static func requestStudents:(completion: (Response<[Student], NSError>) -> Void)) {
+	request(.GET, "http://somewhere.com/school/1/students").responseSerializable(completion)
+}
+~~~
+
+Some APIs wrap their data in containers. Use the `unwrapper` closure for that. Let's say your `/students` endpoint returns the data wrapped in a `students` object:
+
+~~~json
+{
+	"students" : [
+		{...
+		},
+		{...
+		}
+	]
+}
+~~~
+
+The `unwrapper` closure has 2 input arguments: The `sourceDictionary` (the JSON Response Dictionary) and the `expectedType` (the *type* of the target Serializable). Return the object that will serve as the input for the Serialiable initializer. 
+
+~~~swift
+static func requestStudents:(completion: (Response<[Student], NSError>) -> Void)) {
+	request(.GET, "http://somewhere.com/school/1/students").responseSerializable(completion, unwrapper: { $0.0["students"] })
+}
+~~~
+
+If you need to unwrap the response data in every call, you can install a default unwrapper using 
+
+~~~swift
+Parser.defaultWrapper = { You unwrapper here... }
+~~~
+
+The `expectedType` can be used to dynamically determine the key based on the type name using reflection. This is especially useful when handling paginated data. 
+
+See [here](https://github.com/nodes-ios/Nodes) for an example on how we use this in our projects at Nodes.
+
+***NOTE:*** `responseSerializable` Internally calls `validate().responseJSON()` on the request, so don't do that.
+
+
 
 ## 👥 Credits
 Made with ❤️ at [Nodes](http://nodesagency.com).
