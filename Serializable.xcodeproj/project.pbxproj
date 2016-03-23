@@ -99,7 +99,6 @@
 		2785B5591C9DE98000E40605 /* SerializableNilEntitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B71C9BEAF50024E94A /* SerializableNilEntitiesTests.swift */; };
 		2785B55A1C9DE98000E40605 /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B81C9BEAF50024E94A /* DecodableTests.swift */; };
 		2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */; };
-		2785B55F1C9DE99900E40605 /* Cashier.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
 		2785B5601C9DE9A400E40605 /* CustomOperatorsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */; };
 		2785B5611C9DE9A400E40605 /* EnumsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */; };
 		2785B5621C9DE9A400E40605 /* PrimitivesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */; };
@@ -116,7 +115,6 @@
 		27D9ED911C9F202600EB2B49 /* AlamofireExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */; };
 		27D9ED921C9F202A00EB2B49 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
 		27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
-		27F2A4D31C9C3F4200916E01 /* Cashier.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
 		305738F71CA1A5EE00667C67 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305738F51CA1A5EE00667C67 /* BridgingBox.swift */; };
 		305738F81CA1A5EE00667C67 /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305738F61CA1A5EE00667C67 /* CashierExtension.swift */; };
 		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -668,7 +666,6 @@
 				01C706CF1C9BEB0C0024E94A /* SimpleModel.json in Resources */,
 				272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */,
 				27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */,
-				27F2A4D31C9C3F4200916E01 /* Cashier.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +718,6 @@
 				2785B5661C9DE9A400E40605 /* SimpleModel.json in Resources */,
 				2785B5671C9DE9A400E40605 /* DecodableTest.json in Resources */,
 				2732ECDD1C9F44EB00BFD4E1 /* HexInitializableTest.json in Resources */,
-				2785B55F1C9DE99900E40605 /* Cashier.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
