@@ -2,14 +2,14 @@
   <img src="./Serializable_icon.png?raw=true" alt="Serializable"/>
 </p>
 
-<center>[![Travis](https://img.shields.io/travis/nodes-ios/Serializable.svg)](https://travis-ci.org/nodes-ios/Serializable)
-[![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serializable.svg)](https://codecov.io/github/nodes-ios/Serializable)
+<center>[![Travis](https://img.shields.io/travis/nodes-ios/Serializable.svg)](https://travis-ci.org/nodes-ios/Serializable) 
+[![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serializable.svg)](https://codecov.io/github/nodes-ios/Serializable) 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)  
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable)
-![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
-![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![CocoaPods](https://img.shields.io/cocoapods/v/Serializable.svg)](https://cocoapods.org/pods/Serializable) 
+![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg) 
+![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg) 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serializable/blob/master/LICENSE) 
 [![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/serializable)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/serializable)</center>
 
 Serializable is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects. Designed for use with Alamofire.
@@ -26,7 +26,7 @@ There are plenty of other Encoding and Decoding frameworks available. Why should
 * [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write, generates it for you instantly. 
 * [Alamofire Integration](). Using the included Alamofire extensions makes implementing an API call returning parsed model data as simple as doing a one-liner!
 * [Expandability](). Parsing into other datatypes can easily be added.
-* [Persisting](). Combined with our cashing framework [![Cashier]()](), Serializable objects can be very easily persisted to disk. 
+* [Persisting](). Combined with our cashing framework [Cashier](https://github.com/nodes-ios/Cashier), Serializable objects can be very easily persisted to disk. 
 
 
 ## 📝 Requirements
@@ -59,9 +59,6 @@ let package = Package(
     ]
 )
 ~~~
-
-**NOTE:** This doesn't currently work as SPM doens't support UIKit, but once it will we will already be supporting it! :)
-
 
 ## 🔧 Setup
 
@@ -243,9 +240,11 @@ Some APIs wrap their data in containers. Use the `unwrapper` closure for that. L
 ~~~json
 {
 	"students" : [
-		{...
+		{
+		    "..." : "..."
 		},
-		{...
+		{
+		    "..." : "..."
 		}
 	]
 }
