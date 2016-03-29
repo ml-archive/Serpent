@@ -62,7 +62,7 @@ public extension Parser {
 public extension Alamofire.Request
 {
     /**
-     Adds a handler that attempts to parse the result of the request into a **Serializable**
+     Adds a handler that attempts to parse the result of the request into a **Decodable**
      
      - parameter completionHandler:A closure that is invoked when the request is finished
      
@@ -73,7 +73,7 @@ public extension Alamofire.Request
      - returns: The request
      */
   
-    public func responseSerializable<T:Serializable>(completionHandler: Response<T, NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+    public func responseSerializable<T:Decodable>(completionHandler: Response<T, NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         let serializer = Parser.serializer(parsingHandler: {
             ( data: AnyObject? ) -> T? in
             
@@ -91,7 +91,7 @@ public extension Alamofire.Request
     }
     
     /**
-     Adds a handler that attempts to parse the result of the request into an array of **Serializable**
+     Adds a handler that attempts to parse the result of the request into an array of **Decodable**
      
      - parameter completionHandler:A closure that is invoked when the request is finished
      
@@ -102,7 +102,7 @@ public extension Alamofire.Request
      - returns: The request
      */
     
-    public func responseSerializable<T:Serializable>(completionHandler: Response<[T], NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+    public func responseSerializable<T:Decodable>(completionHandler: Response<[T], NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         
         let serializer = Parser.serializer(parsingHandler: {
             ( data: AnyObject? ) -> [T]? in
