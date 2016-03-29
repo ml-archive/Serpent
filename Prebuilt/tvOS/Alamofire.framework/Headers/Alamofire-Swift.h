@@ -153,6 +153,9 @@ SWIFT_CLASS("_TtCC9Alamofire7Manager15SessionDelegate")
 /// Overrides default behavior for NSURLSessionDelegate method URLSession:didBecomeInvalidWithError:.
 @property (nonatomic, copy) void (^ _Nullable sessionDidBecomeInvalidWithError)(NSURLSession * _Nonnull, NSError * _Nullable);
 
+/// Overrides all behavior for NSURLSessionDelegate method URLSession:didReceiveChallenge:completionHandler: and requires the caller to call the completionHandler.
+@property (nonatomic, copy) void (^ _Nullable sessionDidReceiveChallengeWithCompletion)(NSURLSession * _Nonnull, NSURLAuthenticationChallenge * _Nonnull, void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable));
+
 /// Overrides default behavior for NSURLSessionDelegate method URLSessionDidFinishEventsForBackgroundURLSession:.
 @property (nonatomic, copy) void (^ _Nullable sessionDidFinishEventsForBackgroundURLSession)(NSURLSession * _Nonnull);
 
@@ -180,8 +183,17 @@ SWIFT_CLASS("_TtCC9Alamofire7Manager15SessionDelegate")
 /// Overrides default behavior for NSURLSessionTaskDelegate method URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:.
 @property (nonatomic, copy) NSURLRequest * _Nullable (^ _Nullable taskWillPerformHTTPRedirection)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, NSHTTPURLResponse * _Nonnull, NSURLRequest * _Nonnull);
 
+/// Overrides all behavior for NSURLSessionTaskDelegate method URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler: and requires the caller to call the completionHandler.
+@property (nonatomic, copy) void (^ _Nullable taskWillPerformHTTPRedirectionWithCompletion)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, NSHTTPURLResponse * _Nonnull, NSURLRequest * _Nonnull, void (^ _Nonnull)(NSURLRequest * _Nullable));
+
+/// Overrides all behavior for NSURLSessionTaskDelegate method URLSession:task:didReceiveChallenge:completionHandler: and requires the caller to call the completionHandler.
+@property (nonatomic, copy) void (^ _Nullable taskDidReceiveChallengeWithCompletion)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, NSURLAuthenticationChallenge * _Nonnull, void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable));
+
 /// Overrides default behavior for NSURLSessionTaskDelegate method URLSession:session:task:needNewBodyStream:.
-@property (nonatomic, copy) NSInputStream * _Null_unspecified (^ _Nullable taskNeedNewBodyStream)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull);
+@property (nonatomic, copy) NSInputStream * _Nullable (^ _Nullable taskNeedNewBodyStream)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull);
+
+/// Overrides all behavior for NSURLSessionTaskDelegate method URLSession:session:task:needNewBodyStream: and requires the caller to call the completionHandler.
+@property (nonatomic, copy) void (^ _Nullable taskNeedNewBodyStreamWithCompletion)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, void (^ _Nonnull)(NSInputStream * _Nullable));
 
 /// Overrides default behavior for NSURLSessionTaskDelegate method URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:.
 @property (nonatomic, copy) void (^ _Nullable taskDidSendBodyData)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, int64_t, int64_t, int64_t);
@@ -249,6 +261,9 @@ SWIFT_CLASS("_TtCC9Alamofire7Manager15SessionDelegate")
 /// Overrides default behavior for NSURLSessionDataDelegate method URLSession:dataTask:didReceiveResponse:completionHandler:.
 @property (nonatomic, copy) NSURLSessionResponseDisposition (^ _Nullable dataTaskDidReceiveResponse)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSURLResponse * _Nonnull);
 
+/// Overrides all behavior for NSURLSessionDataDelegate method URLSession:dataTask:didReceiveResponse:completionHandler: and requires caller to call the completionHandler.
+@property (nonatomic, copy) void (^ _Nullable dataTaskDidReceiveResponseWithCompletion)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSURLResponse * _Nonnull, void (^ _Nonnull)(NSURLSessionResponseDisposition));
+
 /// Overrides default behavior for NSURLSessionDataDelegate method URLSession:dataTask:didBecomeDownloadTask:.
 @property (nonatomic, copy) void (^ _Nullable dataTaskDidBecomeDownloadTask)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSURLSessionDownloadTask * _Nonnull);
 
@@ -256,7 +271,10 @@ SWIFT_CLASS("_TtCC9Alamofire7Manager15SessionDelegate")
 @property (nonatomic, copy) void (^ _Nullable dataTaskDidReceiveData)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSData * _Nonnull);
 
 /// Overrides default behavior for NSURLSessionDataDelegate method URLSession:dataTask:willCacheResponse:completionHandler:.
-@property (nonatomic, copy) NSCachedURLResponse * _Null_unspecified (^ _Nullable dataTaskWillCacheResponse)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSCachedURLResponse * _Nonnull);
+@property (nonatomic, copy) NSCachedURLResponse * _Nullable (^ _Nullable dataTaskWillCacheResponse)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSCachedURLResponse * _Nonnull);
+
+/// Overrides all behavior for NSURLSessionDataDelegate method URLSession:dataTask:willCacheResponse:completionHandler: and requires caller to call the completionHandler.
+@property (nonatomic, copy) void (^ _Nullable dataTaskWillCacheResponseWithCompletion)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSCachedURLResponse * _Nonnull, void (^ _Nonnull)(NSCachedURLResponse * _Nullable));
 
 /// Tells the delegate that the data task received the initial reply (headers) from the server.
 ///
