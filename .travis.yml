@@ -16,7 +16,7 @@ env:
   - OSX_SDK=macosx10.11
   - TVOS_SDK=appletvsimulator9.2
   - WATCHOS_SDK=watchsimulator2.2
-  - SWIFT_VERSION=swift-2.2.1-SNAPSHOT-2016-03-28-a
+  - SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-03-24-a
   matrix:
   - DESTINATION="OS=9.3,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" SPM_BUILD="NO"
   - DESTINATION="arch=x86_64"                    SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES" SPM_BUILD="NO"
@@ -27,7 +27,7 @@ env:
 before_install:
   # If needed download and setup swift snapshot
   - if [ $SPM_BUILD == "YES" ]; then 
-      curl -O https://swift.org/builds/swift-2.2-branch/xcode/${SWIFT_VERSION}/${SWIFT_VERSION}-osx.pkg && sudo installer -pkg ${SWIFT_VERSION}-osx.pkg -target / && export TOOLCHAINS=swift;
+      curl -O https://swift.org/builds/development/xcode/${SWIFT_VERSION}/${SWIFT_VERSION}-osx.pkg && sudo installer -pkg ${SWIFT_VERSION}-osx.pkg -target / && export TOOLCHAINS=swift;
     fi
 
 script:
@@ -37,7 +37,8 @@ script:
 
   # If switbuild try building with swift and exit if succeeded
   - if [ $SPM_BUILD == "YES" ]; then
-      swift build && exit 0;
+      swift build;
+      exit;
     fi
 
   # Build Framework in Debug and Run Tests if specified
