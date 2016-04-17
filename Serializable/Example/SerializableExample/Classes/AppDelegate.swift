@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import Serializable
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Unwrap data from nested dictionary
+        Parser.defaultUnwrapper = { (sourceDictionary, type) in
+            if let nestedObject: AnyObject = sourceDictionary["results"] {
+                return nestedObject
+            }
+
+            return sourceDictionary
+        }
+
         return true
     }
 
