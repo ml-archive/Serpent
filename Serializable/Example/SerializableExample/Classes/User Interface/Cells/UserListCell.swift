@@ -16,6 +16,7 @@ class UserListCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,7 @@ class UserListCell: UITableViewCell {
         super.prepareForReuse()
         profileImageView.image = nil
         nameLabel.text = nil
+        emailLabel.text = nil
     }
 }
 
@@ -40,7 +42,8 @@ extension UserListCell {
             profileImageView.imageFromUrl(thumbnail.URLString)
         }
 
-        // Set name
+        // Set name and email
         nameLabel.text = user.name.nameString
+        emailLabel.text = user.email
     }
 }
