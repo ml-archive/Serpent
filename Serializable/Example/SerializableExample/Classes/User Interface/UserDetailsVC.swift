@@ -33,7 +33,7 @@ class UserDetailsVC: UIViewController {
         phoneLabel.text = user.phoneNumber
         
         // Set image
-        if let picture = user.picture.medium {
+        if let picture = user.picture.large {
             profileImageView.imageFromUrl(picture.URLString)
         }
     }
