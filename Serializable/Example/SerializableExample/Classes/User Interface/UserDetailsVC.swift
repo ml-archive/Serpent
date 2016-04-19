@@ -24,13 +24,15 @@ class UserDetailsVC: UIViewController {
         updateUI()
     }
     
-    private func updateUI() {
+    private func updateUI() {        
+        // Set Labels
         usernameLabel.text = user.name.nameString
-        locationLabel.text = user.location.city
-        genderLabel.text = user.gender.encodableRepresentation()
+        genderLabel.text = user.gender.encodableRepresentation()        
+        locationLabel.text = user.location.city + ", " + user.location.state
         emailLabel.text = user.email
         phoneLabel.text = user.phoneNumber
         
+        // Set image
         if let picture = user.picture.medium {
             profileImageView.imageFromUrl(picture.URLString)
         }
