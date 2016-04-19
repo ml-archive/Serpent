@@ -61,5 +61,18 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.populateWithUser(users[indexPath.row])
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("ShowUserDetails", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowUserDetails" {
+            if let userVC = segue.destinationViewController as? UserDetailsVC {
+                guard let indexPath = tableView.indexPathForSelectedRow else { return }
+                userVC.user = users[indexPath.row]
+            }
+        }
+    }
 }
 

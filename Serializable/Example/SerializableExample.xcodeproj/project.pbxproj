@@ -25,6 +25,7 @@
 		01F962A81CC39C71006083C5 /* Identification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962A71CC39C71006083C5 /* Identification.swift */; };
 		01F962AA1CC39C7C006083C5 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962A91CC39C7C006083C5 /* ProfilePicture.swift */; };
 		01F962AC1CC39CE3006083C5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962AB1CC39CE3006083C5 /* Location.swift */; };
+		676232F71CC4CDD300929DD9 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676232F61CC4CDD300929DD9 /* UserDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		01F962A71CC39C71006083C5 /* Identification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identification.swift; sourceTree = "<group>"; };
 		01F962A91CC39C7C006083C5 /* ProfilePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		01F962AB1CC39CE3006083C5 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		676232F61CC4CDD300929DD9 /* UserDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				01F962741CC39556006083C5 /* HomeVC.swift */,
+				676232F61CC4CDD300929DD9 /* UserDetailsVC.swift */,
 				01F9627B1CC3965D006083C5 /* Cells */,
 			);
 			path = "User Interface";
@@ -402,6 +405,7 @@
 				01F962751CC39556006083C5 /* HomeVC.swift in Sources */,
 				01F962771CC39562006083C5 /* ConnectionManager.swift in Sources */,
 				01F9626C1CC38F5C006083C5 /* AppDelegate.swift in Sources */,
+				676232F71CC4CDD300929DD9 /* UserDetailsVC.swift in Sources */,
 				01F962A61CC39C60006083C5 /* LoginInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
