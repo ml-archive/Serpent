@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Serializable/Source"
+  s.source_files  = "Serializable/Serializable/Source"
   s.exclude_files = "Serializable/Source/CashierExtension.swift"
 
   # s.public_header_files = "Classes/**/*.h"
