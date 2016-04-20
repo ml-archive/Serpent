@@ -114,7 +114,7 @@
 		01F962791CC3962D006083C5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		01F9627C1CC3966E006083C5 /* UserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		01F9627D1CC3966E006083C5 /* UserListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
-		01F962811CC39808006083C5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../Serializable/Prebuilt Frameworks/iOS/Alamofire.framework"; sourceTree = "<group>"; };
+		01F962811CC39808006083C5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Dependencies/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		01F962871CC39824006083C5 /* Serializable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Serializable.xcodeproj; path = ../Serializable.xcodeproj; sourceTree = "<group>"; };
 		01F962A31CC39C59006083C5 /* NameInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameInfo.swift; sourceTree = "<group>"; };
 		01F962A51CC39C60006083C5 /* LoginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
@@ -509,7 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/../Serializable/Prebuilt Frameworks/iOS/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/../Dependencies/iOS/\"";
 				INFOPLIST_FILE = "$(SRCROOT)/SerializableExample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-Example";
@@ -522,7 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/../Serializable/Prebuilt Frameworks/iOS/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/../Dependencies/iOS/\"";
 				INFOPLIST_FILE = "$(SRCROOT)/SerializableExample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-Example";
