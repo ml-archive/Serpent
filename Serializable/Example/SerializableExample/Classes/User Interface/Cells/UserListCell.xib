@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="UserListCell" customModule="Serializable_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="243" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubl-Jd-qiR">
+                        <rect key="frame" x="77" y="12" width="281" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IdA-v0-vic">
+                        <rect key="frame" x="17" y="12" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="6ze-6z-Pjf"/>
+                            <constraint firstAttribute="height" constant="48" id="rQz-7y-sfb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="user@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C96-PO-zpo">
+                        <rect key="frame" x="77" y="43" width="278" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IdA-v0-vic" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="6em-Zt-pIM"/>
+                    <constraint firstItem="IdA-v0-vic" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GQI-K3-sPv"/>
+                    <constraint firstItem="C96-PO-zpo" firstAttribute="leading" secondItem="Ubl-Jd-qiR" secondAttribute="leading" id="HQR-Hb-HIo"/>
+                    <constraint firstItem="Ubl-Jd-qiR" firstAttribute="leading" secondItem="IdA-v0-vic" secondAttribute="trailing" constant="12" id="OxQ-xv-Wnb"/>
+                    <constraint firstAttribute="trailing" secondItem="Ubl-Jd-qiR" secondAttribute="trailing" constant="17" id="Q1y-bm-kae"/>
+                    <constraint firstItem="Ubl-Jd-qiR" firstAttribute="top" secondItem="IdA-v0-vic" secondAttribute="top" id="TnM-pw-sdd"/>
+                    <constraint firstAttribute="trailing" secondItem="C96-PO-zpo" secondAttribute="trailing" constant="20" symbolic="YES" id="adD-DB-9gP"/>
+                    <constraint firstItem="C96-PO-zpo" firstAttribute="bottom" secondItem="IdA-v0-vic" secondAttribute="bottom" id="r9a-T8-Fe5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="emailLabel" destination="C96-PO-zpo" id="hfi-Hg-XFm"/>
+                <outlet property="nameLabel" destination="Ubl-Jd-qiR" id="mkY-tf-gnz"/>
+                <outlet property="profileImageView" destination="IdA-v0-vic" id="kgD-QF-Zzh"/>
+            </connections>
+            <point key="canvasLocation" x="429.5" y="458"/>
+        </tableViewCell>
+    </objects>
+</document>
