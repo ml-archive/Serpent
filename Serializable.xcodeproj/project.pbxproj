@@ -413,7 +413,8 @@
 				27D9ED831C9F1FFC00EB2B49 /* watchOS */,
 				30C898421C921B84004A25E2 /* iOS */,
 			);
-			path = Prebuilt;
+			name = Prebuilt;
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		30C898421C921B84004A25E2 /* iOS */ = {
@@ -968,7 +969,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -994,7 +995,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1011,10 +1012,10 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Prebuilt/iOS";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Dependencies/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
@@ -1026,10 +1027,10 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/iOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Prebuilt/iOS";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/ $(PROJECT_DIR)/Dependencies/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
@@ -1046,7 +1047,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/watchOS",
+					"$(PROJECT_DIR)/Dependencies/watchOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1071,7 +1072,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/watchOS",
+					"$(PROJECT_DIR)/Dependencies/watchOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1096,7 +1097,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/tvOS",
+					"$(PROJECT_DIR)/Dependencies/tvOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1120,7 +1121,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/tvOS",
+					"$(PROJECT_DIR)/Dependencies/tvOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1139,10 +1140,10 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/tvOS",
+					"$(PROJECT_DIR)/Dependencies/tvOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Prebuilt/tvOS";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Dependencies/tvOS";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1155,10 +1156,10 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/tvOS",
+					"$(PROJECT_DIR)/Dependencies/tvOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Prebuilt/tvOS";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Dependencies/tvOS";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1178,7 +1179,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/Mac",
+					"$(PROJECT_DIR)/Dependencies/Mac",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
@@ -1204,7 +1205,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/Mac",
+					"$(PROJECT_DIR)/Dependencies/Mac",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
@@ -1225,10 +1226,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/Mac",
+					"$(PROJECT_DIR)/Dependencies/Mac",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Prebuilt/Mac";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Dependencies/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1243,10 +1244,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Prebuilt/Mac",
+					"$(PROJECT_DIR)/Dependencies/Mac",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Prebuilt/Mac";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Dependencies/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
