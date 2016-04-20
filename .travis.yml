@@ -8,6 +8,7 @@ branches:
 
 env:
   global:
+  - SERIALIZABLE_PROJECT="Serializable/Serializable.xcodeproj"
   - IOS_FRAMEWORK_SCHEME="Serializable iOS"
   - OSX_FRAMEWORK_SCHEME="Serializable OSX"
   - TVOS_FRAMEWORK_SCHEME="Serializable tvOS"
@@ -24,18 +25,16 @@ env:
 
 script:
   - set -o pipefail
-  #- xcodebuild -version
-  #- xcodebuild -showsdks
 
   # Build Framework in Debug and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -project Serializable.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty;
+      xcodebuild -project "$SERIALIZABLE_PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO clean build test | xcpretty;
     else
-      xcodebuild -project Serializable.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+      xcodebuild -project "$SERIALIZABLE_PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO clean build | xcpretty;
     fi
 
   # Build in release
-  - xcodebuild -project Serializable.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  - xcodebuild -project "$SERIALIZABLE_PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO clean build | xcpretty;
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
