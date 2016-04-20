@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="NTk-6s-3aL">
+                                <rect key="frame" x="104" y="237" width="112" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NTk-6s-3aL" secondAttribute="height" multiplier="19:16" id="pw2-DW-vlE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="LogoText" translatesAutoresizingMaskIntoConstraints="NO" id="TdO-Sg-Sy2">
+                                <rect key="frame" x="104" y="353" width="112" height="9"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NTk-6s-3aL" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.35" id="IrU-ch-48V"/>
+                            <constraint firstItem="NTk-6s-3aL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ov4-5U-Oc2"/>
+                            <constraint firstItem="TdO-Sg-Sy2" firstAttribute="top" secondItem="NTk-6s-3aL" secondAttribute="bottom" constant="22" id="VHN-gs-u9i"/>
+                            <constraint firstItem="NTk-6s-3aL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="aGb-7v-CaC"/>
+                            <constraint firstItem="TdO-Sg-Sy2" firstAttribute="centerX" secondItem="NTk-6s-3aL" secondAttribute="centerX" id="pEy-pr-mWl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="442"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="121" height="134"/>
+        <image name="LogoText" width="112" height="9"/>
+    </resources>
+</document>
