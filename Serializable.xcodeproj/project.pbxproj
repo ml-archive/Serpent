@@ -121,8 +121,6 @@
 		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898571C921DFC004A25E2 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
 		832B870E1CE7BACD0002A097 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
-		832B870F1CE7BACE0002A097 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
-		832B87101CE7BACF0002A097 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
 		83480E541CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */; };
 		83480E551CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */; };
 		83480E561CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */; };
@@ -249,7 +247,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2732ECA41C9F21BF00BFD4E1 /* Serializable.framework in Frameworks */,
-				832B87101CE7BACF0002A097 /* Cashier.framework in Frameworks */,
 				2732ECDA1C9F2A6000BFD4E1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */,
-				832B870F1CE7BACE0002A097 /* Cashier.framework in Frameworks */,
 				27D9ED901C9F201C00EB2B49 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
