@@ -120,6 +120,14 @@
 		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898571C921DFC004A25E2 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C3ADA1C8F69CE00C1D5B4 /* AlamofireExtension.swift */; };
+		832B870E1CE7BACD0002A097 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; };
+		83480E541CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */; };
+		83480E551CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */; };
+		83480E561CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */; };
+		83480E581CE7872800B5F5F2 /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83480E571CE7872800B5F5F2 /* CashierExtensionTests.swift */; };
+		838385321CE90A6900CE92C7 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305738F51CA1A5EE00667C67 /* BridgingBox.swift */; };
+		838385331CE90A6900CE92C7 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305738F51CA1A5EE00667C67 /* BridgingBox.swift */; };
+		838385341CE90A6A00CE92C7 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305738F51CA1A5EE00667C67 /* BridgingBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +202,8 @@
 		305738F61CA1A5EE00667C67 /* CashierExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtension.swift; sourceTree = "<group>"; };
 		30C898471C921B84004A25E2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		30C898491C921B84004A25E2 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
+		83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingBoxTests.swift; sourceTree = "<group>"; };
+		83480E571CE7872800B5F5F2 /* CashierExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */,
+				832B870E1CE7BACD0002A097 /* Cashier.framework in Frameworks */,
 				27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +307,8 @@
 				01C706B81C9BEAF50024E94A /* DecodableTests.swift */,
 				01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */,
 				27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */,
+				83480E531CE783F500B5F5F2 /* BridgingBoxTests.swift */,
+				83480E571CE7872800B5F5F2 /* CashierExtensionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -748,6 +761,7 @@
 				01C706D11C9BEB0C0024E94A /* DecodableModel.swift in Sources */,
 				01C706BA1C9BEAF50024E94A /* StringInitializableTests.swift in Sources */,
 				01C706BD1C9BEAF50024E94A /* DecodableTests.swift in Sources */,
+				83480E541CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */,
 				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
 				01C706D01C9BEB0C0024E94A /* SimpleModel.swift in Sources */,
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
@@ -758,6 +772,7 @@
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
 				27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */,
 				272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */,
+				83480E581CE7872800B5F5F2 /* CashierExtensionTests.swift in Sources */,
 				27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */,
 				01C706CE1C9BEB0C0024E94A /* SerializableEntityTestModel.swift in Sources */,
 			);
@@ -771,6 +786,7 @@
 				2732ECBA1C9F297C00BFD4E1 /* Serializable.swift in Sources */,
 				2732ECBB1C9F297C00BFD4E1 /* Extensions.swift in Sources */,
 				2732ECBC1C9F297C00BFD4E1 /* Operator.swift in Sources */,
+				838385341CE90A6A00CE92C7 /* BridgingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +798,7 @@
 				2732ECB41C9F284D00BFD4E1 /* Serializable.swift in Sources */,
 				2732ECB51C9F284D00BFD4E1 /* Extensions.swift in Sources */,
 				2732ECB61C9F284D00BFD4E1 /* Operator.swift in Sources */,
+				838385331CE90A6900CE92C7 /* BridgingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +812,7 @@
 				2732ECC21C9F2A3600BFD4E1 /* StringInitializableTestModel.swift in Sources */,
 				2732ECC31C9F2A3600BFD4E1 /* HexInitializableTestModel.swift in Sources */,
 				2732ECC41C9F2A3600BFD4E1 /* SerializableEntityTestModel.swift in Sources */,
+				83480E561CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */,
 				2732ECC51C9F2A3600BFD4E1 /* SimpleModel.swift in Sources */,
 				2732ECC61C9F2A3600BFD4E1 /* DecodableModel.swift in Sources */,
 				2732ECC71C9F2A3600BFD4E1 /* NetworkTestModel.swift in Sources */,
@@ -818,6 +836,7 @@
 				2785B5481C9DE92900E40605 /* Serializable.swift in Sources */,
 				2785B5491C9DE92900E40605 /* Extensions.swift in Sources */,
 				2785B54A1C9DE92900E40605 /* Operator.swift in Sources */,
+				838385321CE90A6900CE92C7 /* BridgingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +850,7 @@
 				2785B54E1C9DE98000E40605 /* StringInitializableTestModel.swift in Sources */,
 				2785B5501C9DE98000E40605 /* SerializableEntityTestModel.swift in Sources */,
 				2785B5511C9DE98000E40605 /* SimpleModel.swift in Sources */,
+				83480E551CE783F500B5F5F2 /* BridgingBoxTests.swift in Sources */,
 				2785B5521C9DE98000E40605 /* DecodableModel.swift in Sources */,
 				2785B5531C9DE98000E40605 /* NetworkTestModel.swift in Sources */,
 				2785B5541C9DE98000E40605 /* CustomOperatorsTests.swift in Sources */,
@@ -1048,6 +1068,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/watchOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1073,6 +1094,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/watchOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = Serializable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1098,6 +1120,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/tvOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1122,6 +1145,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/tvOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1141,6 +1165,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/tvOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Dependencies/tvOS";
@@ -1157,6 +1182,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/tvOS",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Dependencies/tvOS";
@@ -1180,6 +1206,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/Mac",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
@@ -1206,6 +1233,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/Mac",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Info.plist";
@@ -1227,6 +1255,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/Mac",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Dependencies/Mac";
@@ -1245,6 +1274,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/Mac",
+					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Dependencies/Mac";
