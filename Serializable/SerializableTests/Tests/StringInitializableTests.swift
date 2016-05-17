@@ -38,5 +38,26 @@ class StringInitializableTests: XCTestCase {
         XCTAssertNil(testModel.someBadDate, "Failed to return nil when parsing bad date")
         XCTAssertEqual(NSDate.fromString(testModel.someDate?.stringRepresentation() ?? ""), testModel.someDate, "String representation of URL differs.")
     }
+    
+    func testNSURLEncoding() {
+        guard let encodedModel = testModel.encodableRepresentation() as? NSDictionary else { XCTFail("encodableRepresentation() Failed"); return }
+        
+        if let someUrl = encodedModel["some_url"] as? String {
+            XCTAssertEqual(someUrl, "http://www.google.com", "Failed to encode NSURL to String")
+        } else {
+            XCTFail("Failed to encode NSURL to String")
+        }
+    }
+    
+    func testNSDateEncoding() {
+        guard let encodedModel = testModel.encodableRepresentation() as? NSDictionary else { XCTFail("encodableRepresentation() Failed"); return }
+        
+        if let someDateString = encodedModel["some_date"] as? String {
+            let someDate = NSDateFormatter().dateFromString(someDateString)
+            XCTAssertEqual(someDate, NSDateFormatter().dateFromString("1974-08-15T15:17:14+00:00"), "Failed to encode NSDate to String")
+        } else {
+            XCTFail("Failed to encode NSDate to String")
+        }
+    }
 }
 
