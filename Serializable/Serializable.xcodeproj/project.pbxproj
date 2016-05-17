@@ -120,6 +120,8 @@
 		27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
 		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		83F3AFCF1CE92DB300D47725 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
+		83F3AFD01CE92DB300D47725 /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +196,8 @@
 		27D9ED841C9F1FFC00EB2B49 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		30C898471C921B84004A25E2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		30C898491C921B84004A25E2 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
+		83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingBoxTests.swift; sourceTree = "<group>"; };
+		83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +346,8 @@
 				01C706B81C9BEAF50024E94A /* DecodableTests.swift */,
 				01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */,
 				27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */,
+				83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */,
+				83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -765,6 +771,7 @@
 				01C706D11C9BEB0C0024E94A /* DecodableModel.swift in Sources */,
 				01C706BA1C9BEAF50024E94A /* StringInitializableTests.swift in Sources */,
 				01C706BD1C9BEAF50024E94A /* DecodableTests.swift in Sources */,
+				83F3AFCF1CE92DB300D47725 /* BridgingBoxTests.swift in Sources */,
 				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
 				01C706D01C9BEB0C0024E94A /* SimpleModel.swift in Sources */,
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
@@ -775,6 +782,7 @@
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
 				27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */,
 				272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */,
+				83F3AFD01CE92DB300D47725 /* CashierExtensionTests.swift in Sources */,
 				27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */,
 				01C706CE1C9BEB0C0024E94A /* SerializableEntityTestModel.swift in Sources */,
 			);
