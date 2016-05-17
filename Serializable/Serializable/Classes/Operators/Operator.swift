@@ -22,6 +22,10 @@ public func <==<T: Encodable>(left: (dict: NSMutableDictionary, key: String), ri
     left.dict.setValue(right?.encodableRepresentation(), forKey: left.key)
 }
 
+public func <==<T: StringInitializable>(left: (dict: NSMutableDictionary, key: String), right: T?) {
+    left.dict.setValue(right?.stringRepresentation(), forKey: left.key)
+}
+
 public func <==<T where T:SequenceType, T.Generator.Element: Encodable>(left: (dict: NSMutableDictionary, key: String), right: T?) {
 	left.dict.setValue(right?.encodableRepresentation(), forKey: left.key)
 }
