@@ -74,7 +74,7 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/ArrayTest.json").responseSerializable(handler)
+		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/ArrayTest.json").responseSerializable(handler)
 		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	func testAlamofireExtensionEmptyJSON() {
@@ -87,7 +87,7 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/Empty.json").responseSerializable(handler)
+		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/Empty.json").responseSerializable(handler)
 		waitForExpectationsWithTimeout(5, handler: nil)
 	}
 	func testAlamofireArrayUnwrapper() {
@@ -103,7 +103,7 @@ class AlamofireExtensionTests: XCTestCase {
 		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
 		
 		manager.request(.GET,
-			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/NestedArrayTest.json")
+			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler, unwrapper: unwrapper)
 		waitForExpectationsWithTimeout(5, handler: nil)
 	}
@@ -120,7 +120,7 @@ class AlamofireExtensionTests: XCTestCase {
 		}		
 		
 		manager.request(.GET,
-			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/NestedArrayTest.json")
+			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler)
 		waitForExpectationsWithTimeout(5, handler: nil)
 	}
@@ -137,7 +137,7 @@ class AlamofireExtensionTests: XCTestCase {
 		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
 		
 		manager.request(.GET,
-			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/SerializableTests/TestEndpoint/NestedArrayTest.json")
+			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler, unwrapper: unwrapper)
 		waitForExpectationsWithTimeout(5, handler: nil)
 	}
