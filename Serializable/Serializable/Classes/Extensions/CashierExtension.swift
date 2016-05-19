@@ -116,7 +116,7 @@ public extension Cashier {
 	*/
 	public func deleteSerializableForKey(key: String, purgeMemoryCache purge: Bool = true) {
 		if purge {
-			BridgingBox.sharedBoxCache.removeValueForKey(key)
+			BridgingBox.sharedBoxCache.removeValueForKey(self.id+key)
 		}
 		self.deleteObjectForKey(key)
 	}
