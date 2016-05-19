@@ -1,0 +1,14 @@
+comment:
+  layout: header, changes, diff
+coverage:
+  ignore:
+  - */SerializableTests/.*
+  - Pods/.*
+  - Applications/Xcode.app/.*
+  - vendor/.*
+  - Carthage/.*
+  - build/.*
+  - .*Tests.m
+  - .*Tests.swift
+  status:
+    patch: false
