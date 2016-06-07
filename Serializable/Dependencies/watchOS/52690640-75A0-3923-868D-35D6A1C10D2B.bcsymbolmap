@@ -1,0 +1,501 @@
+BCSymbolMap Version: 1.0
+-[NSString(MD5Addition) stringFromMD5]
+OBJC_METH_VAR_NAME_
+OBJC_SELECTOR_REFERENCES_
+OBJC_METH_VAR_NAME_.1
+OBJC_SELECTOR_REFERENCES_.2
+OBJC_CLASSLIST_REFERENCES_$_
+OBJC_METH_VAR_NAME_.3
+OBJC_SELECTOR_REFERENCES_.4
+OBJC_METH_VAR_NAME_.5
+OBJC_SELECTOR_REFERENCES_.6
+.str
+_unnamed_cfstring_
+OBJC_METH_VAR_NAME_.7
+OBJC_SELECTOR_REFERENCES_.8
+OBJC_CLASS_NAME_
+OBJC_METH_VAR_NAME_.9
+OBJC_METH_VAR_TYPE_
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSString_$_MD5Addition
+l_OBJC_$_CATEGORY_NSString_$_MD5Addition
+OBJC_LABEL_CATEGORY_$
+Apple LLVM version 7.3.0 (clang-703.0.29)
+-[NSString(MD5Addition) stringFromMD5]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NSString+MD5Addition.m
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier
+-[Cashier init]
+-[Cashier emptyCache]
+-[Cashier dealloc]
++[Cashier baseSaveDirectory]
++[Cashier defaultCache]
++[Cashier cacheWithId:]
+__23+[Cashier cacheWithId:]_block_invoke
++[Cashier createDirectoryAtPath:]
+-[Cashier updateSystemVersion]
+-[Cashier loadProperties]
+-[Cashier addKVO]
+-[Cashier removeKVO]
+-[Cashier observeValueForKeyPath:ofObject:change:context:]
+-[Cashier setPersistsCacheAcrossVersions:]
+-[Cashier loadCreationDates]
+-[Cashier objectForKeyIsValid:]
+-[Cashier internalObjectForKeyIsValid:]
+-[Cashier lastUpdateTimeForKey:]
+-[Cashier refreshValidationOnObjectForKey:]
+-[Cashier URLEncodedFilenameFromString:]
+-[Cashier encodedStringForUseInPath:]
+-[Cashier setObject:forKey:]
+-[Cashier setImage:forKey:]
+-[Cashier setData:forKey:]
+-[Cashier setData:forKey:useMemoryCache:]
+-[Cashier setWritableObject:forKey:useMemoryCache:]
+-[Cashier fileURLWillBeWritten:]
+-[Cashier setCodableObject:forKey:]
+-[Cashier objectForKey:]
+-[Cashier imageForKey:]
+-[Cashier dataForKey:]
+-[Cashier dataForKey:useMemoryCache:]
+-[Cashier dictForKey:]
+-[Cashier arrayForKey:]
+-[Cashier dictionaryForKey:]
+-[Cashier stringForKey:]
+-[Cashier deleteObjectForKey:]
+-[Cashier clearAllData]
++[Cashier isVersion:greaterThanVersion:]
++[Cashier normalizedValuesFromArray:]
+-[Cashier id]
+-[Cashier setId:]
+-[Cashier persistent]
+-[Cashier setPersistent:]
+-[Cashier encryptionEnabled]
+-[Cashier setEncryptionEnabled:]
+-[Cashier lifespan]
+-[Cashier setLifespan:]
+-[Cashier returnsExpiredData]
+-[Cashier setReturnsExpiredData:]
+-[Cashier persistsCacheAcrossVersions]
+-[Cashier creationDates]
+-[Cashier setCreationDates:]
+-[Cashier storagePath]
+-[Cashier setStoragePath:]
+-[Cashier memoryCache]
+-[Cashier setMemoryCache:]
+-[Cashier .cxx_destruct]
+.str.1
+_unnamed_cfstring_.2
+OBJC_CLASSLIST_SUP_REFS_$_
+OBJC_SELECTOR_REFERENCES_.10
+OBJC_METH_VAR_NAME_.11
+OBJC_SELECTOR_REFERENCES_.12
+OBJC_METH_VAR_NAME_.13
+OBJC_SELECTOR_REFERENCES_.14
+OBJC_METH_VAR_NAME_.15
+OBJC_SELECTOR_REFERENCES_.16
+OBJC_METH_VAR_NAME_.17
+OBJC_SELECTOR_REFERENCES_.18
+.str.19
+_unnamed_cfstring_.20
+OBJC_METH_VAR_NAME_.21
+OBJC_SELECTOR_REFERENCES_.22
+OBJC_METH_VAR_NAME_.23
+OBJC_SELECTOR_REFERENCES_.24
+OBJC_METH_VAR_NAME_.25
+OBJC_SELECTOR_REFERENCES_.26
+OBJC_METH_VAR_NAME_.27
+OBJC_SELECTOR_REFERENCES_.28
+.str.29
+_unnamed_cfstring_.30
+OBJC_METH_VAR_NAME_.31
+OBJC_SELECTOR_REFERENCES_.32
+.str.33
+_unnamed_cfstring_.34
+OBJC_METH_VAR_NAME_.35
+OBJC_SELECTOR_REFERENCES_.36
+cacheWithId:.onceToken
+OBJC_CLASSLIST_REFERENCES_$_.37
+OBJC_METH_VAR_NAME_.38
+OBJC_SELECTOR_REFERENCES_.39
+sharedInstances
+.str.40
+__block_descriptor_tmp
+__block_literal_global
+OBJC_METH_VAR_NAME_.41
+OBJC_SELECTOR_REFERENCES_.42
+OBJC_METH_VAR_NAME_.43
+OBJC_SELECTOR_REFERENCES_.44
+OBJC_METH_VAR_NAME_.45
+OBJC_SELECTOR_REFERENCES_.46
+OBJC_METH_VAR_NAME_.47
+OBJC_SELECTOR_REFERENCES_.48
+OBJC_METH_VAR_NAME_.49
+OBJC_SELECTOR_REFERENCES_.50
+OBJC_CLASSLIST_REFERENCES_$_.51
+OBJC_METH_VAR_NAME_.52
+OBJC_SELECTOR_REFERENCES_.53
+.str.54
+_unnamed_cfstring_.55
+OBJC_METH_VAR_NAME_.56
+OBJC_SELECTOR_REFERENCES_.57
+OBJC_CLASSLIST_REFERENCES_$_.58
+OBJC_METH_VAR_NAME_.59
+OBJC_SELECTOR_REFERENCES_.60
+.str.61
+_unnamed_cfstring_.62
+OBJC_METH_VAR_NAME_.63
+OBJC_SELECTOR_REFERENCES_.64
+OBJC_CLASSLIST_REFERENCES_$_.65
+OBJC_METH_VAR_NAME_.66
+OBJC_SELECTOR_REFERENCES_.67
+OBJC_METH_VAR_NAME_.68
+OBJC_SELECTOR_REFERENCES_.69
+OBJC_METH_VAR_NAME_.70
+OBJC_SELECTOR_REFERENCES_.71
+OBJC_METH_VAR_NAME_.72
+OBJC_SELECTOR_REFERENCES_.73
+OBJC_METH_VAR_NAME_.74
+OBJC_SELECTOR_REFERENCES_.75
+.str.76
+_unnamed_cfstring_.77
+.str.78
+_unnamed_cfstring_.79
+OBJC_METH_VAR_NAME_.80
+OBJC_SELECTOR_REFERENCES_.81
+OBJC_METH_VAR_NAME_.82
+OBJC_SELECTOR_REFERENCES_.83
+OBJC_METH_VAR_NAME_.84
+OBJC_SELECTOR_REFERENCES_.85
+.str.86
+_unnamed_cfstring_.87
+OBJC_METH_VAR_NAME_.88
+OBJC_SELECTOR_REFERENCES_.89
+.str.90
+_unnamed_cfstring_.91
+OBJC_METH_VAR_NAME_.92
+OBJC_SELECTOR_REFERENCES_.93
+OBJC_METH_VAR_NAME_.94
+OBJC_SELECTOR_REFERENCES_.95
+OBJC_METH_VAR_NAME_.96
+OBJC_SELECTOR_REFERENCES_.97
+OBJC_METH_VAR_NAME_.98
+OBJC_SELECTOR_REFERENCES_.99
+OBJC_METH_VAR_NAME_.100
+OBJC_SELECTOR_REFERENCES_.101
+.str.102
+_unnamed_cfstring_.103
+OBJC_METH_VAR_NAME_.104
+OBJC_SELECTOR_REFERENCES_.105
+OBJC_CLASSLIST_REFERENCES_$_.106
+OBJC_METH_VAR_NAME_.107
+OBJC_SELECTOR_REFERENCES_.108
+OBJC_METH_VAR_NAME_.109
+OBJC_SELECTOR_REFERENCES_.110
+OBJC_METH_VAR_NAME_.111
+OBJC_SELECTOR_REFERENCES_.112
+OBJC_IVAR_$_Cashier.properties
+.str.113
+_unnamed_cfstring_.114
+.str.115
+_unnamed_cfstring_.116
+.str.117
+_unnamed_cfstring_.118
+.str.119
+_unnamed_cfstring_.120
+OBJC_METH_VAR_NAME_.121
+OBJC_SELECTOR_REFERENCES_.122
+OBJC_METH_VAR_NAME_.123
+OBJC_SELECTOR_REFERENCES_.124
+OBJC_METH_VAR_NAME_.125
+OBJC_SELECTOR_REFERENCES_.126
+OBJC_METH_VAR_NAME_.127
+OBJC_SELECTOR_REFERENCES_.128
+OBJC_CLASSLIST_REFERENCES_$_.129
+OBJC_METH_VAR_NAME_.130
+OBJC_SELECTOR_REFERENCES_.131
+OBJC_IVAR_$_Cashier._persistsCacheAcrossVersions
+OBJC_METH_VAR_NAME_.132
+OBJC_SELECTOR_REFERENCES_.133
+OBJC_METH_VAR_NAME_.134
+OBJC_SELECTOR_REFERENCES_.135
+OBJC_METH_VAR_NAME_.136
+OBJC_SELECTOR_REFERENCES_.137
+OBJC_METH_VAR_NAME_.138
+OBJC_SELECTOR_REFERENCES_.139
+OBJC_METH_VAR_NAME_.140
+OBJC_SELECTOR_REFERENCES_.141
+OBJC_METH_VAR_NAME_.142
+OBJC_SELECTOR_REFERENCES_.143
+OBJC_CLASSLIST_REFERENCES_$_.144
+OBJC_METH_VAR_NAME_.145
+OBJC_SELECTOR_REFERENCES_.146
+OBJC_METH_VAR_NAME_.147
+OBJC_SELECTOR_REFERENCES_.148
+OBJC_METH_VAR_NAME_.149
+OBJC_SELECTOR_REFERENCES_.150
+OBJC_METH_VAR_NAME_.151
+OBJC_SELECTOR_REFERENCES_.152
+OBJC_METH_VAR_NAME_.153
+OBJC_SELECTOR_REFERENCES_.154
+OBJC_CLASSLIST_REFERENCES_$_.155
+OBJC_METH_VAR_NAME_.156
+OBJC_SELECTOR_REFERENCES_.157
+OBJC_METH_VAR_NAME_.158
+OBJC_SELECTOR_REFERENCES_.159
+OBJC_METH_VAR_NAME_.160
+OBJC_SELECTOR_REFERENCES_.161
+OBJC_CLASSLIST_REFERENCES_$_.162
+OBJC_METH_VAR_NAME_.163
+OBJC_SELECTOR_REFERENCES_.164
+OBJC_CLASSLIST_REFERENCES_$_.165
+.str.166
+_unnamed_cfstring_.167
+.str.168
+_unnamed_cfstring_.169
+OBJC_METH_VAR_NAME_.170
+OBJC_SELECTOR_REFERENCES_.171
+OBJC_METH_VAR_NAME_.172
+OBJC_SELECTOR_REFERENCES_.173
+OBJC_METH_VAR_NAME_.174
+OBJC_SELECTOR_REFERENCES_.175
+OBJC_METH_VAR_NAME_.176
+OBJC_SELECTOR_REFERENCES_.177
+.str.178
+_unnamed_cfstring_.179
+OBJC_METH_VAR_NAME_.180
+OBJC_SELECTOR_REFERENCES_.181
+.str.182
+_unnamed_cfstring_.183
+OBJC_METH_VAR_NAME_.184
+OBJC_SELECTOR_REFERENCES_.185
+OBJC_METH_VAR_NAME_.186
+OBJC_SELECTOR_REFERENCES_.187
+OBJC_METH_VAR_NAME_.188
+OBJC_SELECTOR_REFERENCES_.189
+.str.190
+_unnamed_cfstring_.191
+OBJC_METH_VAR_NAME_.192
+OBJC_SELECTOR_REFERENCES_.193
+OBJC_METH_VAR_NAME_.194
+OBJC_SELECTOR_REFERENCES_.195
+.str.196
+_unnamed_cfstring_.197
+OBJC_METH_VAR_NAME_.198
+OBJC_SELECTOR_REFERENCES_.199
+OBJC_METH_VAR_NAME_.200
+OBJC_SELECTOR_REFERENCES_.201
+OBJC_CLASSLIST_REFERENCES_$_.202
+OBJC_METH_VAR_NAME_.203
+OBJC_SELECTOR_REFERENCES_.204
+OBJC_METH_VAR_NAME_.205
+OBJC_SELECTOR_REFERENCES_.206
+.str.207
+_unnamed_cfstring_.208
+OBJC_METH_VAR_NAME_.209
+OBJC_SELECTOR_REFERENCES_.210
+OBJC_CLASSLIST_REFERENCES_$_.211
+OBJC_METH_VAR_NAME_.212
+OBJC_SELECTOR_REFERENCES_.213
+OBJC_METH_VAR_NAME_.214
+OBJC_SELECTOR_REFERENCES_.215
+OBJC_METH_VAR_NAME_.216
+OBJC_SELECTOR_REFERENCES_.217
+OBJC_METH_VAR_NAME_.218
+OBJC_SELECTOR_REFERENCES_.219
+OBJC_METH_VAR_NAME_.220
+OBJC_SELECTOR_REFERENCES_.221
+OBJC_METH_VAR_NAME_.222
+OBJC_SELECTOR_REFERENCES_.223
+OBJC_METH_VAR_NAME_.224
+OBJC_SELECTOR_REFERENCES_.225
+OBJC_CLASSLIST_REFERENCES_$_.226
+OBJC_METH_VAR_NAME_.227
+OBJC_SELECTOR_REFERENCES_.228
+OBJC_CLASSLIST_REFERENCES_$_.229
+OBJC_METH_VAR_NAME_.230
+OBJC_SELECTOR_REFERENCES_.231
+OBJC_METH_VAR_NAME_.232
+OBJC_SELECTOR_REFERENCES_.233
+OBJC_METH_VAR_NAME_.234
+OBJC_SELECTOR_REFERENCES_.235
+OBJC_METH_VAR_NAME_.236
+OBJC_SELECTOR_REFERENCES_.237
+.str.238
+_unnamed_cfstring_.239
+.str.240
+_unnamed_cfstring_.241
+OBJC_METH_VAR_NAME_.242
+OBJC_SELECTOR_REFERENCES_.243
+OBJC_METH_VAR_NAME_.244
+OBJC_SELECTOR_REFERENCES_.245
+maxValues
+OBJC_METH_VAR_NAME_.246
+OBJC_SELECTOR_REFERENCES_.247
+OBJC_METH_VAR_NAME_.248
+OBJC_SELECTOR_REFERENCES_.249
+.str.250
+_unnamed_cfstring_.251
+OBJC_METH_VAR_NAME_.252
+OBJC_SELECTOR_REFERENCES_.253
+OBJC_CLASSLIST_REFERENCES_$_.254
+OBJC_METH_VAR_NAME_.255
+OBJC_SELECTOR_REFERENCES_.256
+OBJC_IVAR_$_Cashier._id
+OBJC_IVAR_$_Cashier._persistent
+OBJC_IVAR_$_Cashier._encryptionEnabled
+OBJC_IVAR_$_Cashier._lifespan
+OBJC_IVAR_$_Cashier._returnsExpiredData
+OBJC_IVAR_$_Cashier._creationDates
+OBJC_IVAR_$_Cashier._storagePath
+OBJC_IVAR_$_Cashier._memoryCache
+OBJC_METH_VAR_NAME_.257
+OBJC_METH_VAR_TYPE_.258
+OBJC_METH_VAR_TYPE_.259
+OBJC_METH_VAR_TYPE_.260
+l_OBJC_$_CLASS_METHODS_Cashier
+l_OBJC_METACLASS_RO_$_Cashier
+OBJC_CLASS_NAME_.261
+OBJC_METH_VAR_NAME_.262
+OBJC_METH_VAR_TYPE_.263
+OBJC_METH_VAR_NAME_.264
+OBJC_METH_VAR_TYPE_.265
+OBJC_METH_VAR_NAME_.266
+OBJC_METH_VAR_TYPE_.267
+OBJC_METH_VAR_NAME_.268
+OBJC_METH_VAR_TYPE_.269
+OBJC_METH_VAR_TYPE_.270
+OBJC_METH_VAR_TYPE_.271
+OBJC_METH_VAR_NAME_.272
+OBJC_METH_VAR_NAME_.273
+OBJC_METH_VAR_TYPE_.274
+OBJC_METH_VAR_NAME_.275
+OBJC_METH_VAR_NAME_.276
+OBJC_METH_VAR_TYPE_.277
+OBJC_METH_VAR_NAME_.278
+OBJC_METH_VAR_NAME_.279
+OBJC_METH_VAR_NAME_.280
+OBJC_METH_VAR_NAME_.281
+OBJC_METH_VAR_NAME_.282
+OBJC_METH_VAR_TYPE_.283
+OBJC_METH_VAR_NAME_.284
+OBJC_METH_VAR_TYPE_.285
+OBJC_METH_VAR_NAME_.286
+OBJC_METH_VAR_TYPE_.287
+l_OBJC_$_INSTANCE_METHODS_Cashier
+OBJC_METH_VAR_NAME_.288
+OBJC_METH_VAR_TYPE_.289
+OBJC_METH_VAR_NAME_.290
+OBJC_METH_VAR_TYPE_.291
+OBJC_METH_VAR_NAME_.292
+OBJC_METH_VAR_NAME_.293
+OBJC_METH_VAR_NAME_.294
+OBJC_METH_VAR_NAME_.295
+OBJC_METH_VAR_TYPE_.296
+OBJC_METH_VAR_NAME_.297
+OBJC_METH_VAR_NAME_.298
+OBJC_METH_VAR_NAME_.299
+OBJC_METH_VAR_TYPE_.300
+OBJC_METH_VAR_NAME_.301
+OBJC_METH_VAR_TYPE_.302
+l_OBJC_$_INSTANCE_VARIABLES_Cashier
+OBJC_PROP_NAME_ATTR_
+OBJC_PROP_NAME_ATTR_.303
+OBJC_PROP_NAME_ATTR_.304
+OBJC_PROP_NAME_ATTR_.305
+OBJC_PROP_NAME_ATTR_.306
+OBJC_PROP_NAME_ATTR_.307
+OBJC_PROP_NAME_ATTR_.308
+OBJC_PROP_NAME_ATTR_.309
+OBJC_PROP_NAME_ATTR_.310
+OBJC_PROP_NAME_ATTR_.311
+OBJC_PROP_NAME_ATTR_.312
+OBJC_PROP_NAME_ATTR_.313
+OBJC_PROP_NAME_ATTR_.314
+OBJC_PROP_NAME_ATTR_.315
+OBJC_PROP_NAME_ATTR_.316
+OBJC_PROP_NAME_ATTR_.317
+OBJC_PROP_NAME_ATTR_.318
+OBJC_PROP_NAME_ATTR_.319
+l_OBJC_$_PROP_LIST_Cashier
+l_OBJC_CLASS_RO_$_Cashier
+OBJC_LABEL_CLASS_$
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/usr/include/dispatch/once.h
+-[Cashier .cxx_destruct]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.m
+-[Cashier setMemoryCache:]
+-[Cashier memoryCache]
+-[Cashier setStoragePath:]
+-[Cashier storagePath]
+-[Cashier setCreationDates:]
+-[Cashier creationDates]
+-[Cashier persistsCacheAcrossVersions]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.h
+-[Cashier setReturnsExpiredData:]
+-[Cashier returnsExpiredData]
+-[Cashier setLifespan:]
+-[Cashier lifespan]
+-[Cashier setEncryptionEnabled:]
+-[Cashier encryptionEnabled]
+-[Cashier setPersistent:]
+-[Cashier persistent]
+-[Cashier setId:]
+-[Cashier id]
++[Cashier normalizedValuesFromArray:]
++[Cashier isVersion:greaterThanVersion:]
+-[Cashier clearAllData]
+-[Cashier deleteObjectForKey:]
+-[Cashier stringForKey:]
+-[Cashier dictionaryForKey:]
+-[Cashier arrayForKey:]
+-[Cashier dictForKey:]
+-[Cashier dataForKey:useMemoryCache:]
+-[Cashier dataForKey:]
+-[Cashier imageForKey:]
+-[Cashier objectForKey:]
+-[Cashier setCodableObject:forKey:]
+-[Cashier fileURLWillBeWritten:]
+-[Cashier setWritableObject:forKey:useMemoryCache:]
+-[Cashier setData:forKey:useMemoryCache:]
+-[Cashier setData:forKey:]
+-[Cashier setImage:forKey:]
+-[Cashier setObject:forKey:]
+-[Cashier encodedStringForUseInPath:]
+-[Cashier URLEncodedFilenameFromString:]
+-[Cashier refreshValidationOnObjectForKey:]
+-[Cashier lastUpdateTimeForKey:]
+-[Cashier internalObjectForKeyIsValid:]
+-[Cashier objectForKeyIsValid:]
+-[Cashier loadCreationDates]
+-[Cashier setPersistsCacheAcrossVersions:]
+-[Cashier observeValueForKeyPath:ofObject:change:context:]
+-[Cashier removeKVO]
+-[Cashier addKVO]
+-[Cashier loadProperties]
+-[Cashier updateSystemVersion]
++[Cashier createDirectoryAtPath:]
++[Cashier cacheWithId:]
++[Cashier defaultCache]
++[Cashier baseSaveDirectory]
+-[Cashier dealloc]
+-[Cashier emptyCache]
+-[Cashier init]
++[NOPersistentStore baseSaveDirectory]
+-[NOPersistentStore fileURLWillBeWritten:]
++[NOPersistentStore defaultCache]
+-[NOPersistentStore persistsCacheAcrossVersions]
+.str.7
+_unnamed_cfstring_.8
+.str.9
+_unnamed_cfstring_.10
+OBJC_METH_VAR_NAME_.14
+l_OBJC_$_CLASS_METHODS_NOPersistentStore
+l_OBJC_METACLASS_RO_$_NOPersistentStore
+OBJC_METH_VAR_TYPE_.16
+OBJC_METH_VAR_TYPE_.18
+l_OBJC_$_INSTANCE_METHODS_NOPersistentStore
+l_OBJC_CLASS_RO_$_NOPersistentStore
+-[NOPersistentStore persistsCacheAcrossVersions]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NOPersistentStore.m
++[NOPersistentStore defaultCache]
+-[NOPersistentStore fileURLWillBeWritten:]
++[NOPersistentStore baseSaveDirectory]
+/Users/nick/Library/Developer/Xcode/DerivedData/Cashier-dyhwxhoxmvuegselkzndlwdefwfg/Build/Intermediates/Cashier.build/Release-watchos/Cashier watchOS.build/DerivedSources/Cashier_vers.c

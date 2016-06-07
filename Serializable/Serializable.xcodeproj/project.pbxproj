@@ -22,6 +22,19 @@
 		01C706D01C9BEB0C0024E94A /* SimpleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C61C9BEB0C0024E94A /* SimpleModel.swift */; };
 		01C706D11C9BEB0C0024E94A /* DecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C71C9BEB0C0024E94A /* DecodableModel.swift */; };
 		01C706D21C9BEB0C0024E94A /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C81C9BEB0C0024E94A /* DecodableTest.json */; };
+		01CD3F901D06F2E90044887E /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620D1CC38A52006083C5 /* CashierExtension.swift */; };
+		01CD3F911D06F2E90044887E /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962121CC38A52006083C5 /* BridgingBox.swift */; };
+		01CD3F921D06F2F30044887E /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620D1CC38A52006083C5 /* CashierExtension.swift */; };
+		01CD3F931D06F2F30044887E /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962121CC38A52006083C5 /* BridgingBox.swift */; };
+		01CD3F941D06F2F70044887E /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620D1CC38A52006083C5 /* CashierExtension.swift */; };
+		01CD3F951D06F2F70044887E /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962121CC38A52006083C5 /* BridgingBox.swift */; };
+		01CD3F971D0704140044887E /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD3F961D0704140044887E /* Cashier.framework */; };
+		01CD3F991D0704320044887E /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD3F981D0704320044887E /* Cashier.framework */; };
+		01CD3F9B1D07043E0044887E /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD3F9A1D07043E0044887E /* Cashier.framework */; };
+		01CD3F9C1D0705CF0044887E /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */; };
+		01CD3F9D1D0705CF0044887E /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */; };
+		01CD3F9E1D0705D20044887E /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
+		01CD3F9F1D0705D20044887E /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
 		01F962301CC38A52006083C5 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620C1CC38A52006083C5 /* AlamofireExtension.swift */; };
 		01F962311CC38A52006083C5 /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620D1CC38A52006083C5 /* CashierExtension.swift */; };
 		01F962321CC38A52006083C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620E1CC38A52006083C5 /* Extensions.swift */; };
@@ -164,6 +177,9 @@
 		01C706C61C9BEB0C0024E94A /* SimpleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleModel.swift; sourceTree = "<group>"; };
 		01C706C71C9BEB0C0024E94A /* DecodableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableModel.swift; sourceTree = "<group>"; };
 		01C706C81C9BEB0C0024E94A /* DecodableTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DecodableTest.json; sourceTree = "<group>"; };
+		01CD3F961D0704140044887E /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
+		01CD3F981D0704320044887E /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
+		01CD3F9A1D07043E0044887E /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
 		01F9620C1CC38A52006083C5 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		01F9620D1CC38A52006083C5 /* CashierExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtension.swift; sourceTree = "<group>"; };
 		01F9620E1CC38A52006083C5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -223,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F971D0704140044887E /* Cashier.framework in Frameworks */,
 				2732ECBD1C9F298B00BFD4E1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F991D0704320044887E /* Cashier.framework in Frameworks */,
 				2732ECB11C9F282800BFD4E1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +266,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F9B1D07043E0044887E /* Cashier.framework in Frameworks */,
 				01F9624F1CC38B36006083C5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +426,7 @@
 		27D9ED7C1C9F1FFC00EB2B49 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				01CD3F9A1D07043E0044887E /* Cashier.framework */,
 				27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */,
 			);
 			path = Mac;
@@ -415,6 +435,7 @@
 		27D9ED7F1C9F1FFC00EB2B49 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				01CD3F981D0704320044887E /* Cashier.framework */,
 				27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */,
 			);
 			path = tvOS;
@@ -423,6 +444,7 @@
 		27D9ED831C9F1FFC00EB2B49 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
+				01CD3F961D0704140044887E /* Cashier.framework */,
 				27D9ED841C9F1FFC00EB2B49 /* Alamofire.framework */,
 			);
 			path = watchOS;
@@ -792,6 +814,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F901D06F2E90044887E /* CashierExtension.swift in Sources */,
+				01CD3F911D06F2E90044887E /* BridgingBox.swift in Sources */,
 				01F962571CC38BCA006083C5 /* AlamofireExtension.swift in Sources */,
 				01F962591CC38BCA006083C5 /* Extensions.swift in Sources */,
 				01F962561CC38BCA006083C5 /* Serializable.swift in Sources */,
@@ -803,6 +827,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F921D06F2F30044887E /* CashierExtension.swift in Sources */,
+				01CD3F931D06F2F30044887E /* BridgingBox.swift in Sources */,
 				01F9625B1CC38BCA006083C5 /* AlamofireExtension.swift in Sources */,
 				01F9625D1CC38BCA006083C5 /* Extensions.swift in Sources */,
 				01F9625A1CC38BCA006083C5 /* Serializable.swift in Sources */,
@@ -815,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2732ECBF1C9F2A3600BFD4E1 /* CustomOperatorsTestModel.swift in Sources */,
+				01CD3F9D1D0705CF0044887E /* CashierExtensionTests.swift in Sources */,
 				2732ECC01C9F2A3600BFD4E1 /* EnumsTestModel.swift in Sources */,
 				2732ECC11C9F2A3600BFD4E1 /* PrimitivesTestModel.swift in Sources */,
 				2732ECC21C9F2A3600BFD4E1 /* StringInitializableTestModel.swift in Sources */,
@@ -832,6 +859,7 @@
 				2732ECCE1C9F2A3600BFD4E1 /* DecodableTests.swift in Sources */,
 				2732ECCF1C9F2A3600BFD4E1 /* SerializableEntityTests.swift in Sources */,
 				2732ECD01C9F2A3600BFD4E1 /* AlamofireExtensionTests.swift in Sources */,
+				01CD3F9E1D0705D20044887E /* BridgingBoxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +867,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F941D06F2F70044887E /* CashierExtension.swift in Sources */,
+				01CD3F951D06F2F70044887E /* BridgingBox.swift in Sources */,
 				01F9625F1CC38BCB006083C5 /* AlamofireExtension.swift in Sources */,
 				01F962611CC38BCB006083C5 /* Extensions.swift in Sources */,
 				01F9625E1CC38BCB006083C5 /* Serializable.swift in Sources */,
@@ -851,6 +881,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2785B54C1C9DE98000E40605 /* EnumsTestModel.swift in Sources */,
+				01CD3F9C1D0705CF0044887E /* CashierExtensionTests.swift in Sources */,
 				2732ECDE1C9F44EE00BFD4E1 /* HexInitalizableTests.swift in Sources */,
 				2785B54D1C9DE98000E40605 /* PrimitivesTestModel.swift in Sources */,
 				2785B54E1C9DE98000E40605 /* StringInitializableTestModel.swift in Sources */,
@@ -868,6 +899,7 @@
 				2732ECDC1C9F44E800BFD4E1 /* HexInitializableTestModel.swift in Sources */,
 				27D9ED7B1C9F1DD500EB2B49 /* CustomOperatorsTestModel.swift in Sources */,
 				2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */,
+				01CD3F9F1D0705D20044887E /* BridgingBoxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,6 +1064,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Dependencies/iOS\"";
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks \"$(PROJECT_DIR)/Dependencies/iOS\"";
+				OTHER_SWIFT_FLAGS = "-D TEST_MEMORY_WARNING";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
@@ -1044,6 +1077,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Dependencies/iOS\"";
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks \"$(PROJECT_DIR)/Dependencies/iOS\"";
+				OTHER_SWIFT_FLAGS = "-D TEST_MEMORY_WARNING";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
@@ -1059,7 +1093,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Dependencies/watchOS\"";
-				INFOPLIST_FILE = "Serializable/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-watchOS";
@@ -1081,7 +1115,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Dependencies/watchOS\"";
-				INFOPLIST_FILE = "Serializable/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Serializable/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-watchOS";
@@ -1142,6 +1176,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Dependencies/tvOS\"";
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks \"$(PROJECT_DIR)/Dependencies/tvOS\"";
+				OTHER_SWIFT_FLAGS = "-D TEST_MEMORY_WARNING";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1155,6 +1190,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Dependencies/tvOS\"";
 				INFOPLIST_FILE = SerializableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks \"$(PROJECT_DIR)/Dependencies/tvOS\"";
+				OTHER_SWIFT_FLAGS = "-D TEST_MEMORY_WARNING";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;

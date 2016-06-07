@@ -1,0 +1,824 @@
+BCSymbolMap Version: 1.0
+-[NSString(MD5Addition) stringFromMD5]
+OBJC_METH_VAR_NAME_
+OBJC_SELECTOR_REFERENCES_
+OBJC_METH_VAR_NAME_.1
+OBJC_SELECTOR_REFERENCES_.2
+OBJC_CLASSLIST_REFERENCES_$_
+OBJC_METH_VAR_NAME_.3
+OBJC_SELECTOR_REFERENCES_.4
+OBJC_METH_VAR_NAME_.5
+OBJC_SELECTOR_REFERENCES_.6
+.str
+_unnamed_cfstring_
+OBJC_METH_VAR_NAME_.7
+OBJC_SELECTOR_REFERENCES_.8
+OBJC_CLASS_NAME_
+OBJC_METH_VAR_NAME_.9
+OBJC_METH_VAR_TYPE_
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSString_$_MD5Addition
+l_OBJC_$_CATEGORY_NSString_$_MD5Addition
+OBJC_LABEL_CATEGORY_$
+Apple LLVM version 7.3.0 (clang-703.0.29)
+-[NSString(MD5Addition) stringFromMD5]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NSString+MD5Addition.m
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier
+-[Cashier init]
+-[Cashier emptyCache]
+-[Cashier dealloc]
++[Cashier baseSaveDirectory]
++[Cashier defaultCache]
++[Cashier cacheWithId:]
+__23+[Cashier cacheWithId:]_block_invoke
++[Cashier createDirectoryAtPath:]
+-[Cashier updateSystemVersion]
+-[Cashier loadProperties]
+-[Cashier addKVO]
+-[Cashier removeKVO]
+-[Cashier observeValueForKeyPath:ofObject:change:context:]
+-[Cashier setPersistsCacheAcrossVersions:]
+-[Cashier loadCreationDates]
+-[Cashier objectForKeyIsValid:]
+-[Cashier internalObjectForKeyIsValid:]
+-[Cashier lastUpdateTimeForKey:]
+-[Cashier refreshValidationOnObjectForKey:]
+-[Cashier URLEncodedFilenameFromString:]
+-[Cashier encodedStringForUseInPath:]
+-[Cashier setObject:forKey:]
+-[Cashier setImage:forKey:]
+-[Cashier setData:forKey:]
+-[Cashier setData:forKey:useMemoryCache:]
+-[Cashier setWritableObject:forKey:useMemoryCache:]
+-[Cashier fileURLWillBeWritten:]
+-[Cashier setCodableObject:forKey:]
+-[Cashier objectForKey:]
+-[Cashier imageForKey:]
+-[Cashier dataForKey:]
+-[Cashier dataForKey:useMemoryCache:]
+-[Cashier dictForKey:]
+-[Cashier arrayForKey:]
+-[Cashier dictionaryForKey:]
+-[Cashier stringForKey:]
+-[Cashier deleteObjectForKey:]
+-[Cashier clearAllData]
++[Cashier isVersion:greaterThanVersion:]
++[Cashier normalizedValuesFromArray:]
+-[Cashier id]
+-[Cashier setId:]
+-[Cashier persistent]
+-[Cashier setPersistent:]
+-[Cashier encryptionEnabled]
+-[Cashier setEncryptionEnabled:]
+-[Cashier lifespan]
+-[Cashier setLifespan:]
+-[Cashier returnsExpiredData]
+-[Cashier setReturnsExpiredData:]
+-[Cashier persistsCacheAcrossVersions]
+-[Cashier creationDates]
+-[Cashier setCreationDates:]
+-[Cashier storagePath]
+-[Cashier setStoragePath:]
+-[Cashier memoryCache]
+-[Cashier setMemoryCache:]
+-[Cashier .cxx_destruct]
+.str.1
+_unnamed_cfstring_.2
+OBJC_CLASSLIST_SUP_REFS_$_
+OBJC_SELECTOR_REFERENCES_.10
+OBJC_METH_VAR_NAME_.11
+OBJC_SELECTOR_REFERENCES_.12
+OBJC_METH_VAR_NAME_.13
+OBJC_SELECTOR_REFERENCES_.14
+OBJC_METH_VAR_NAME_.15
+OBJC_SELECTOR_REFERENCES_.16
+OBJC_CLASSLIST_REFERENCES_$_.17
+OBJC_METH_VAR_NAME_.18
+OBJC_SELECTOR_REFERENCES_.19
+OBJC_METH_VAR_NAME_.20
+OBJC_SELECTOR_REFERENCES_.21
+OBJC_METH_VAR_NAME_.22
+OBJC_SELECTOR_REFERENCES_.23
+OBJC_METH_VAR_NAME_.24
+OBJC_SELECTOR_REFERENCES_.25
+.str.26
+_unnamed_cfstring_.27
+OBJC_METH_VAR_NAME_.28
+OBJC_SELECTOR_REFERENCES_.29
+OBJC_METH_VAR_NAME_.30
+OBJC_SELECTOR_REFERENCES_.31
+OBJC_METH_VAR_NAME_.32
+OBJC_SELECTOR_REFERENCES_.33
+OBJC_METH_VAR_NAME_.34
+OBJC_SELECTOR_REFERENCES_.35
+OBJC_METH_VAR_NAME_.36
+OBJC_SELECTOR_REFERENCES_.37
+.str.38
+_unnamed_cfstring_.39
+OBJC_METH_VAR_NAME_.40
+OBJC_SELECTOR_REFERENCES_.41
+.str.42
+_unnamed_cfstring_.43
+OBJC_METH_VAR_NAME_.44
+OBJC_SELECTOR_REFERENCES_.45
+cacheWithId:.onceToken
+OBJC_CLASSLIST_REFERENCES_$_.46
+OBJC_METH_VAR_NAME_.47
+OBJC_SELECTOR_REFERENCES_.48
+sharedInstances
+.str.49
+__block_descriptor_tmp
+__block_literal_global
+OBJC_METH_VAR_NAME_.50
+OBJC_SELECTOR_REFERENCES_.51
+OBJC_METH_VAR_NAME_.52
+OBJC_SELECTOR_REFERENCES_.53
+OBJC_METH_VAR_NAME_.54
+OBJC_SELECTOR_REFERENCES_.55
+OBJC_METH_VAR_NAME_.56
+OBJC_SELECTOR_REFERENCES_.57
+OBJC_METH_VAR_NAME_.58
+OBJC_SELECTOR_REFERENCES_.59
+OBJC_CLASSLIST_REFERENCES_$_.60
+OBJC_METH_VAR_NAME_.61
+OBJC_SELECTOR_REFERENCES_.62
+.str.63
+_unnamed_cfstring_.64
+OBJC_METH_VAR_NAME_.65
+OBJC_SELECTOR_REFERENCES_.66
+OBJC_CLASSLIST_REFERENCES_$_.67
+OBJC_METH_VAR_NAME_.68
+OBJC_SELECTOR_REFERENCES_.69
+.str.70
+_unnamed_cfstring_.71
+OBJC_METH_VAR_NAME_.72
+OBJC_SELECTOR_REFERENCES_.73
+OBJC_CLASSLIST_REFERENCES_$_.74
+OBJC_METH_VAR_NAME_.75
+OBJC_SELECTOR_REFERENCES_.76
+OBJC_METH_VAR_NAME_.77
+OBJC_SELECTOR_REFERENCES_.78
+OBJC_METH_VAR_NAME_.79
+OBJC_SELECTOR_REFERENCES_.80
+OBJC_METH_VAR_NAME_.81
+OBJC_SELECTOR_REFERENCES_.82
+OBJC_METH_VAR_NAME_.83
+OBJC_SELECTOR_REFERENCES_.84
+.str.85
+_unnamed_cfstring_.86
+.str.87
+_unnamed_cfstring_.88
+OBJC_METH_VAR_NAME_.89
+OBJC_SELECTOR_REFERENCES_.90
+OBJC_METH_VAR_NAME_.91
+OBJC_SELECTOR_REFERENCES_.92
+OBJC_METH_VAR_NAME_.93
+OBJC_SELECTOR_REFERENCES_.94
+.str.95
+_unnamed_cfstring_.96
+OBJC_METH_VAR_NAME_.97
+OBJC_SELECTOR_REFERENCES_.98
+.str.99
+_unnamed_cfstring_.100
+OBJC_METH_VAR_NAME_.101
+OBJC_SELECTOR_REFERENCES_.102
+OBJC_METH_VAR_NAME_.103
+OBJC_SELECTOR_REFERENCES_.104
+OBJC_METH_VAR_NAME_.105
+OBJC_SELECTOR_REFERENCES_.106
+OBJC_METH_VAR_NAME_.107
+OBJC_SELECTOR_REFERENCES_.108
+OBJC_METH_VAR_NAME_.109
+OBJC_SELECTOR_REFERENCES_.110
+.str.111
+_unnamed_cfstring_.112
+OBJC_METH_VAR_NAME_.113
+OBJC_SELECTOR_REFERENCES_.114
+OBJC_CLASSLIST_REFERENCES_$_.115
+OBJC_METH_VAR_NAME_.116
+OBJC_SELECTOR_REFERENCES_.117
+OBJC_METH_VAR_NAME_.118
+OBJC_SELECTOR_REFERENCES_.119
+OBJC_METH_VAR_NAME_.120
+OBJC_SELECTOR_REFERENCES_.121
+OBJC_IVAR_$_Cashier.properties
+.str.122
+_unnamed_cfstring_.123
+.str.124
+_unnamed_cfstring_.125
+.str.126
+_unnamed_cfstring_.127
+.str.128
+_unnamed_cfstring_.129
+OBJC_METH_VAR_NAME_.130
+OBJC_SELECTOR_REFERENCES_.131
+OBJC_METH_VAR_NAME_.132
+OBJC_SELECTOR_REFERENCES_.133
+OBJC_METH_VAR_NAME_.134
+OBJC_SELECTOR_REFERENCES_.135
+OBJC_METH_VAR_NAME_.136
+OBJC_SELECTOR_REFERENCES_.137
+OBJC_CLASSLIST_REFERENCES_$_.138
+OBJC_METH_VAR_NAME_.139
+OBJC_SELECTOR_REFERENCES_.140
+OBJC_IVAR_$_Cashier._persistsCacheAcrossVersions
+OBJC_METH_VAR_NAME_.141
+OBJC_SELECTOR_REFERENCES_.142
+OBJC_METH_VAR_NAME_.143
+OBJC_SELECTOR_REFERENCES_.144
+OBJC_METH_VAR_NAME_.145
+OBJC_SELECTOR_REFERENCES_.146
+OBJC_METH_VAR_NAME_.147
+OBJC_SELECTOR_REFERENCES_.148
+OBJC_METH_VAR_NAME_.149
+OBJC_SELECTOR_REFERENCES_.150
+OBJC_METH_VAR_NAME_.151
+OBJC_SELECTOR_REFERENCES_.152
+OBJC_CLASSLIST_REFERENCES_$_.153
+OBJC_METH_VAR_NAME_.154
+OBJC_SELECTOR_REFERENCES_.155
+OBJC_METH_VAR_NAME_.156
+OBJC_SELECTOR_REFERENCES_.157
+OBJC_METH_VAR_NAME_.158
+OBJC_SELECTOR_REFERENCES_.159
+OBJC_METH_VAR_NAME_.160
+OBJC_SELECTOR_REFERENCES_.161
+OBJC_METH_VAR_NAME_.162
+OBJC_SELECTOR_REFERENCES_.163
+OBJC_CLASSLIST_REFERENCES_$_.164
+OBJC_METH_VAR_NAME_.165
+OBJC_SELECTOR_REFERENCES_.166
+OBJC_METH_VAR_NAME_.167
+OBJC_SELECTOR_REFERENCES_.168
+OBJC_METH_VAR_NAME_.169
+OBJC_SELECTOR_REFERENCES_.170
+OBJC_CLASSLIST_REFERENCES_$_.171
+OBJC_METH_VAR_NAME_.172
+OBJC_SELECTOR_REFERENCES_.173
+OBJC_CLASSLIST_REFERENCES_$_.174
+.str.175
+_unnamed_cfstring_.176
+.str.177
+_unnamed_cfstring_.178
+OBJC_METH_VAR_NAME_.179
+OBJC_SELECTOR_REFERENCES_.180
+OBJC_METH_VAR_NAME_.181
+OBJC_SELECTOR_REFERENCES_.182
+OBJC_METH_VAR_NAME_.183
+OBJC_SELECTOR_REFERENCES_.184
+OBJC_METH_VAR_NAME_.185
+OBJC_SELECTOR_REFERENCES_.186
+.str.187
+_unnamed_cfstring_.188
+OBJC_METH_VAR_NAME_.189
+OBJC_SELECTOR_REFERENCES_.190
+.str.191
+_unnamed_cfstring_.192
+OBJC_METH_VAR_NAME_.193
+OBJC_SELECTOR_REFERENCES_.194
+OBJC_METH_VAR_NAME_.195
+OBJC_SELECTOR_REFERENCES_.196
+OBJC_METH_VAR_NAME_.197
+OBJC_SELECTOR_REFERENCES_.198
+.str.199
+_unnamed_cfstring_.200
+OBJC_METH_VAR_NAME_.201
+OBJC_SELECTOR_REFERENCES_.202
+OBJC_METH_VAR_NAME_.203
+OBJC_SELECTOR_REFERENCES_.204
+.str.205
+_unnamed_cfstring_.206
+OBJC_METH_VAR_NAME_.207
+OBJC_SELECTOR_REFERENCES_.208
+OBJC_METH_VAR_NAME_.209
+OBJC_SELECTOR_REFERENCES_.210
+OBJC_CLASSLIST_REFERENCES_$_.211
+OBJC_METH_VAR_NAME_.212
+OBJC_SELECTOR_REFERENCES_.213
+OBJC_METH_VAR_NAME_.214
+OBJC_SELECTOR_REFERENCES_.215
+.str.216
+_unnamed_cfstring_.217
+OBJC_METH_VAR_NAME_.218
+OBJC_SELECTOR_REFERENCES_.219
+OBJC_CLASSLIST_REFERENCES_$_.220
+OBJC_METH_VAR_NAME_.221
+OBJC_SELECTOR_REFERENCES_.222
+OBJC_METH_VAR_NAME_.223
+OBJC_SELECTOR_REFERENCES_.224
+OBJC_METH_VAR_NAME_.225
+OBJC_SELECTOR_REFERENCES_.226
+OBJC_METH_VAR_NAME_.227
+OBJC_SELECTOR_REFERENCES_.228
+OBJC_METH_VAR_NAME_.229
+OBJC_SELECTOR_REFERENCES_.230
+OBJC_METH_VAR_NAME_.231
+OBJC_SELECTOR_REFERENCES_.232
+OBJC_METH_VAR_NAME_.233
+OBJC_SELECTOR_REFERENCES_.234
+OBJC_CLASSLIST_REFERENCES_$_.235
+OBJC_METH_VAR_NAME_.236
+OBJC_SELECTOR_REFERENCES_.237
+OBJC_CLASSLIST_REFERENCES_$_.238
+OBJC_METH_VAR_NAME_.239
+OBJC_SELECTOR_REFERENCES_.240
+OBJC_METH_VAR_NAME_.241
+OBJC_SELECTOR_REFERENCES_.242
+OBJC_METH_VAR_NAME_.243
+OBJC_SELECTOR_REFERENCES_.244
+OBJC_METH_VAR_NAME_.245
+OBJC_SELECTOR_REFERENCES_.246
+.str.247
+_unnamed_cfstring_.248
+.str.249
+_unnamed_cfstring_.250
+OBJC_METH_VAR_NAME_.251
+OBJC_SELECTOR_REFERENCES_.252
+OBJC_METH_VAR_NAME_.253
+OBJC_SELECTOR_REFERENCES_.254
+maxValues
+OBJC_METH_VAR_NAME_.255
+OBJC_SELECTOR_REFERENCES_.256
+OBJC_METH_VAR_NAME_.257
+OBJC_SELECTOR_REFERENCES_.258
+.str.259
+_unnamed_cfstring_.260
+OBJC_METH_VAR_NAME_.261
+OBJC_SELECTOR_REFERENCES_.262
+OBJC_CLASSLIST_REFERENCES_$_.263
+OBJC_METH_VAR_NAME_.264
+OBJC_SELECTOR_REFERENCES_.265
+OBJC_IVAR_$_Cashier._id
+OBJC_IVAR_$_Cashier._persistent
+OBJC_IVAR_$_Cashier._encryptionEnabled
+OBJC_IVAR_$_Cashier._lifespan
+OBJC_IVAR_$_Cashier._returnsExpiredData
+OBJC_IVAR_$_Cashier._creationDates
+OBJC_IVAR_$_Cashier._storagePath
+OBJC_IVAR_$_Cashier._memoryCache
+OBJC_METH_VAR_NAME_.266
+OBJC_METH_VAR_TYPE_.267
+OBJC_METH_VAR_TYPE_.268
+OBJC_METH_VAR_TYPE_.269
+l_OBJC_$_CLASS_METHODS_Cashier
+l_OBJC_METACLASS_RO_$_Cashier
+OBJC_CLASS_NAME_.270
+OBJC_METH_VAR_TYPE_.271
+OBJC_METH_VAR_NAME_.272
+OBJC_METH_VAR_TYPE_.273
+OBJC_METH_VAR_NAME_.274
+OBJC_METH_VAR_TYPE_.275
+OBJC_METH_VAR_NAME_.276
+OBJC_METH_VAR_TYPE_.277
+OBJC_METH_VAR_TYPE_.278
+OBJC_METH_VAR_TYPE_.279
+OBJC_METH_VAR_NAME_.280
+OBJC_METH_VAR_NAME_.281
+OBJC_METH_VAR_TYPE_.282
+OBJC_METH_VAR_NAME_.283
+OBJC_METH_VAR_NAME_.284
+OBJC_METH_VAR_TYPE_.285
+OBJC_METH_VAR_NAME_.286
+OBJC_METH_VAR_NAME_.287
+OBJC_METH_VAR_NAME_.288
+OBJC_METH_VAR_NAME_.289
+OBJC_METH_VAR_NAME_.290
+OBJC_METH_VAR_TYPE_.291
+OBJC_METH_VAR_NAME_.292
+OBJC_METH_VAR_TYPE_.293
+OBJC_METH_VAR_NAME_.294
+OBJC_METH_VAR_TYPE_.295
+l_OBJC_$_INSTANCE_METHODS_Cashier
+OBJC_METH_VAR_NAME_.296
+OBJC_METH_VAR_TYPE_.297
+OBJC_METH_VAR_NAME_.298
+OBJC_METH_VAR_TYPE_.299
+OBJC_METH_VAR_NAME_.300
+OBJC_METH_VAR_NAME_.301
+OBJC_METH_VAR_NAME_.302
+OBJC_METH_VAR_NAME_.303
+OBJC_METH_VAR_TYPE_.304
+OBJC_METH_VAR_NAME_.305
+OBJC_METH_VAR_NAME_.306
+OBJC_METH_VAR_NAME_.307
+OBJC_METH_VAR_TYPE_.308
+OBJC_METH_VAR_NAME_.309
+OBJC_METH_VAR_TYPE_.310
+l_OBJC_$_INSTANCE_VARIABLES_Cashier
+OBJC_PROP_NAME_ATTR_
+OBJC_PROP_NAME_ATTR_.311
+OBJC_PROP_NAME_ATTR_.312
+OBJC_PROP_NAME_ATTR_.313
+OBJC_PROP_NAME_ATTR_.314
+OBJC_PROP_NAME_ATTR_.315
+OBJC_PROP_NAME_ATTR_.316
+OBJC_PROP_NAME_ATTR_.317
+OBJC_PROP_NAME_ATTR_.318
+OBJC_PROP_NAME_ATTR_.319
+OBJC_PROP_NAME_ATTR_.320
+OBJC_PROP_NAME_ATTR_.321
+OBJC_PROP_NAME_ATTR_.322
+OBJC_PROP_NAME_ATTR_.323
+OBJC_PROP_NAME_ATTR_.324
+OBJC_PROP_NAME_ATTR_.325
+OBJC_PROP_NAME_ATTR_.326
+OBJC_PROP_NAME_ATTR_.327
+l_OBJC_$_PROP_LIST_Cashier
+l_OBJC_CLASS_RO_$_Cashier
+OBJC_LABEL_CLASS_$
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/include/dispatch/once.h
+-[Cashier .cxx_destruct]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.m
+-[Cashier setMemoryCache:]
+-[Cashier memoryCache]
+-[Cashier setStoragePath:]
+-[Cashier storagePath]
+-[Cashier setCreationDates:]
+-[Cashier creationDates]
+-[Cashier persistsCacheAcrossVersions]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.h
+-[Cashier setReturnsExpiredData:]
+-[Cashier returnsExpiredData]
+-[Cashier setLifespan:]
+-[Cashier lifespan]
+-[Cashier setEncryptionEnabled:]
+-[Cashier encryptionEnabled]
+-[Cashier setPersistent:]
+-[Cashier persistent]
+-[Cashier setId:]
+-[Cashier id]
++[Cashier normalizedValuesFromArray:]
++[Cashier isVersion:greaterThanVersion:]
+-[Cashier clearAllData]
+-[Cashier deleteObjectForKey:]
+-[Cashier stringForKey:]
+-[Cashier dictionaryForKey:]
+-[Cashier arrayForKey:]
+-[Cashier dictForKey:]
+-[Cashier dataForKey:useMemoryCache:]
+-[Cashier dataForKey:]
+-[Cashier imageForKey:]
+-[Cashier objectForKey:]
+-[Cashier setCodableObject:forKey:]
+-[Cashier fileURLWillBeWritten:]
+-[Cashier setWritableObject:forKey:useMemoryCache:]
+-[Cashier setData:forKey:useMemoryCache:]
+-[Cashier setData:forKey:]
+-[Cashier setImage:forKey:]
+-[Cashier setObject:forKey:]
+-[Cashier encodedStringForUseInPath:]
+-[Cashier URLEncodedFilenameFromString:]
+-[Cashier refreshValidationOnObjectForKey:]
+-[Cashier lastUpdateTimeForKey:]
+-[Cashier internalObjectForKeyIsValid:]
+-[Cashier objectForKeyIsValid:]
+-[Cashier loadCreationDates]
+-[Cashier setPersistsCacheAcrossVersions:]
+-[Cashier observeValueForKeyPath:ofObject:change:context:]
+-[Cashier removeKVO]
+-[Cashier addKVO]
+-[Cashier loadProperties]
+-[Cashier updateSystemVersion]
++[Cashier createDirectoryAtPath:]
++[Cashier cacheWithId:]
++[Cashier defaultCache]
++[Cashier baseSaveDirectory]
+-[Cashier dealloc]
+-[Cashier emptyCache]
+-[Cashier init]
++[NOPersistentStore baseSaveDirectory]
+-[NOPersistentStore fileURLWillBeWritten:]
++[NOPersistentStore defaultCache]
+-[NOPersistentStore persistsCacheAcrossVersions]
+.str.7
+_unnamed_cfstring_.8
+.str.9
+_unnamed_cfstring_.10
+OBJC_METH_VAR_NAME_.14
+l_OBJC_$_CLASS_METHODS_NOPersistentStore
+l_OBJC_METACLASS_RO_$_NOPersistentStore
+OBJC_METH_VAR_TYPE_.16
+OBJC_METH_VAR_NAME_.17
+OBJC_METH_VAR_TYPE_.18
+l_OBJC_$_INSTANCE_METHODS_NOPersistentStore
+l_OBJC_CLASS_RO_$_NOPersistentStore
+-[NOPersistentStore persistsCacheAcrossVersions]
+/Volumes/Repositories/Nodes/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NOPersistentStore.m
++[NOPersistentStore defaultCache]
+-[NOPersistentStore fileURLWillBeWritten:]
++[NOPersistentStore baseSaveDirectory]
+/Users/nick/Library/Developer/Xcode/DerivedData/Cashier-dyhwxhoxmvuegselkzndlwdefwfg/Build/Intermediates/Cashier.build/Release-iphoneos/Cashier iOS.build/DerivedSources/Cashier_vers.c
+_ZL15__ARCLite__loadv
+_ZL30add_image_hook_autoreleasepoolPK11mach_headerl
+_ZL34__arclite_objc_autoreleasePoolPushv
+_ZL33__arclite_objc_autoreleasePoolPopPv
+_ZL19patch_lazy_pointersPK11mach_headerP7patch_tm
+_ZL42__arclite_NSArray_objectAtIndexedSubscriptP7NSArrayP13objc_selectorj
+_ZL53__arclite_NSMutableArray_setObject_atIndexedSubscriptP14NSMutableArrayP13objc_selectorP11objc_objectj
+_ZL46__arclite_NSDictionary_objectForKeyedSubscriptP12NSDictionaryP13objc_selectorP11objc_object
+_ZL47__arclite_NSOrderedSet_objectAtIndexedSubscriptP12NSOrderedSetP13objc_selectorj
+_ZL58__arclite_NSMutableOrderedSet_setObject_atIndexedSubscriptP19NSMutableOrderedSetP13objc_selectorP11objc_objectj
+_ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+_ZL18add_image_hook_ARCPK11mach_headerl
+_ZL36__arclite_object_setInstanceVariableP11objc_objectPKcPv
+_ZL24__arclite_object_setIvarP11objc_objectP9objc_ivarS0_
+_ZL21__arclite_object_copyP11objc_objectm
+_ZL21__arclite_objc_retainP11objc_object
+_ZL26__arclite_objc_retainBlockP11objc_object
+_ZL22__arclite_objc_releaseP11objc_object
+_ZL26__arclite_objc_autoreleaseP11objc_object
+_ZL32__arclite_objc_retainAutoreleaseP11objc_object
+_ZL37__arclite_objc_autoreleaseReturnValueP11objc_object
+_ZL43__arclite_objc_retainAutoreleaseReturnValueP11objc_object
+_ZL44__arclite_objc_retainAutoreleasedReturnValueP11objc_object
+_ZL26__arclite_objc_storeStrongPP11objc_objectS0_
+_ZL22add_image_hook_swiftV1PK11mach_headerl
+_ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+_ZL13replaceMethodP10objc_classP13objc_selectorPFP11objc_objectS4_S2_zEPS6_
+_ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+_ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+_ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+_ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+_ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+_ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+_ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+_ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+_ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+_ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+_ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+_ZL32__arclite_object_getIndexedIvarsP11objc_object
+_ZL23__arclite_objc_getClassPKc
+_ZL27__arclite_objc_getMetaClassPKc
+_ZL31__arclite_objc_getRequiredClassPKc
+_ZL26__arclite_objc_lookUpClassPKc
+_ZL26__arclite_objc_getProtocolPKc
+_ZL23__arclite_class_getNameP10objc_class
+_ZL26__arclite_protocol_getNameP8Protocol
+_ZL37__arclite_objc_copyClassNamesForImagePKcPj
+_ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+_ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+_ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+_ZL14initialize_impP11objc_objectP13objc_selector
+_ZL18allocateMaybeSwiftP18glue_swift_class_tm
+_ZL22copySwiftV1MangledNamePKcb
+_ZL13demangledNamePKcb
+_ZL16scanMangledFieldRPKcS0_S1_Ri
+_ZL30arclite_uninitialized_functionv
+_ZL12cxxConstructP11objc_object
+_ZL20fixStringForCoreDataP11objc_object
+OBJC_METACLASS_$___ARCLite__
+_ZL24OBJC_CLASS_$___ARCLite__
+_ZL31OBJC_METACLASS_RO_$___ARCLite__
+_non_lazy_classes
+_ZL27OBJC_CLASS_RO_$___ARCLite__
+_ZL11_class_name
+_ZL32OBJC_$_CLASS_METHODS___ARCLite__
+_ZL17_load_method_name
+_ZL17_load_method_type
+_ZL23NSAutoreleasePool_class
+_ZZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+_ZGVZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+.str.2
+.str.5
+.str.6
+OBJC_METH_VAR_NAME_.8
+OBJC_SELECTOR_REFERENCES_.9
+.str.10
+.str.13
+OBJC_SELECTOR_REFERENCES_.15
+.str.16
+.str.17
+OBJC_METH_VAR_TYPE_.20
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteIndexedSubscripting__
+l_OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
+OBJC_METH_VAR_NAME_.21
+OBJC_SELECTOR_REFERENCES_.22
+OBJC_METH_VAR_NAME_.23
+OBJC_SELECTOR_REFERENCES_.24
+OBJC_METH_VAR_NAME_.25
+OBJC_SELECTOR_REFERENCES_.26
+OBJC_METH_VAR_NAME_.27
+OBJC_SELECTOR_REFERENCES_.28
+OBJC_METH_VAR_TYPE_.29
+OBJC_METH_VAR_TYPE_.31
+OBJC_CLASS_NAME_.32
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteKeyedSubscripting__
+l_OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+OBJC_METH_VAR_NAME_.33
+OBJC_SELECTOR_REFERENCES_.34
+.str.35
+OBJC_SELECTOR_REFERENCES_.36
+OBJC_METH_VAR_NAME_.37
+OBJC_SELECTOR_REFERENCES_.38
+OBJC_METH_VAR_NAME_.39
+OBJC_SELECTOR_REFERENCES_.40
+_ZZL18add_image_hook_ARCPK11mach_headerlE7patches
+_ZGVZL18add_image_hook_ARCPK11mach_headerlE7patches
+.str.41
+.str.43
+.str.44
+.str.45
+.str.46
+.str.47
+.str.48
+.str.50
+.str.51
+.str.52
+OBJC_METH_VAR_NAME_.53
+OBJC_SELECTOR_REFERENCES_.54
+OBJC_METH_VAR_NAME_.55
+OBJC_SELECTOR_REFERENCES_.56
+OBJC_METH_VAR_NAME_.57
+OBJC_SELECTOR_REFERENCES_.58
+.str.59
+.str.60
+_ZL30NSUndoManagerProxy_targetClass
+.str.64
+_ZL29original_NSManagedObject_init
+OBJC_METH_VAR_NAME_.67
+OBJC_SELECTOR_REFERENCES_.68
+_ZL40original_NSManagedObject_allocWithEntity
+OBJC_METH_VAR_NAME_.69
+OBJC_SELECTOR_REFERENCES_.70
+_ZL35original_NSManagedObject_allocBatch
+_ZL25NSMutableDictionary_class
+.str.71
+_ZL22NSConstantString_class
+.str.72
+_ZL14NSString_class
+.str.73
+OBJC_METH_VAR_NAME_.74
+OBJC_SELECTOR_REFERENCES_.75
+_ZL36original_NSKKMS_fastIndexForKnownKey
+OBJC_METH_VAR_NAME_.76
+OBJC_SELECTOR_REFERENCES_.77
+_ZL27original_NSKKMS_indexForKey
+.str.78
+_ZL28original_NSKKsD_objectForKey
+_ZL34original_NSKKsD_removeObjectForKey
+_ZL32original_NSKKsD_setObject_forKey
+_ZL40original_NSKKsD_addEntriesFromDictionary
+_ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+_ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+.str.81
+.str.82
+_ZL31original_objc_allocateClassPair
+.str.83
+_ZL31original_object_getIndexedIvars
+.str.84
+_ZL22original_objc_getClass
+_ZL26original_objc_getMetaClass
+.str.86
+_ZL30original_objc_getRequiredClass
+_ZL25original_objc_lookUpClass
+.str.88
+_ZL25original_objc_getProtocol
+.str.89
+_ZL22original_class_getName
+.str.90
+_ZL25original_protocol_getName
+.str.91
+_ZL36original_objc_copyClassNamesForImage
+OBJC_METH_VAR_NAME_.92
+OBJC_SELECTOR_REFERENCES_.93
+OBJC_METH_VAR_NAME_.94
+OBJC_SELECTOR_REFERENCES_.95
+.str.96
+.str.97
+.str.98
+.str.100
+.str.101
+.str.102
+.str.103
+_ZL12demangleLock
+_ZL9Demangled
+.str.104
+.str.105
+OBJC_METH_VAR_NAME_.106
+OBJC_SELECTOR_REFERENCES_.107
+OBJC_METH_VAR_NAME_.108
+OBJC_SELECTOR_REFERENCES_.109
+OBJC_METH_VAR_NAME_.110
+OBJC_SELECTOR_REFERENCES_.111
+OBJC_METH_VAR_NAME_.112
+OBJC_SELECTOR_REFERENCES_.113
+OBJC_METH_VAR_NAME_.114
+OBJC_SELECTOR_REFERENCES_.115
+Apple LLVM version 7.3.0 (clang-703.0.21)
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -fembed-bitcode -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/Symbols/BuiltProducts -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -fgnu-inline-asm -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~248/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.o -mlinker-version=264.3 -march=armv7a
+__arclite_NSKKsD_addEntriesFromDictionary
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+fixStringForCoreData
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+cxxConstruct
+__arclite_NSManagedObject_init
+arclite_uninitialized_function
+replaceMethod
+__arclite_NSUndoManagerProxy_isKindOfClass
+patch_t<const char **(const char *, unsigned int *)>
+__arclite_objc_copyClassNamesForImage
+patch_t<const char *(Protocol *)>
+__arclite_protocol_getName
+patch_t<const char *(Class)>
+__isctype
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.Internal.sdk/usr/include/ctype.h
+isdigit
+scanMangledField
+copySwiftV1DemangledName
+demangledName
+__arclite_class_getName
+patch_t<Protocol *(const char *)>
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+patch_t<Class (const char *)>
+copySwiftV1MangledName
+__arclite_objc_getClass
+patch_t<void *(id)>
+word_align
+__arclite_object_getIndexedIvars
+patch_t<Class (Class, const char *, unsigned long)>
+allocateMaybeSwift
+isSwift
+metaclass
+__arclite_objc_allocateClassPair
+patch_t<Class (Class, const objc_image_info *)>
+initialize_imp
+property_list_nth
+transcribeProperties
+transcribeProtocols
+method_list_nth
+transcribeMethods
+alignment
+max
+ivar_list_nth
+transcribeIvars
+fastFlags
+ro
+__arclite_objc_readClassPair
+add_image_hook_swiftV1
+install_swiftV1
+patch_t<void (id *, id)>
+__arclite_objc_storeStrong
+__arclite_objc_retainAutoreleasedReturnValue
+__arclite_objc_retainAutoreleaseReturnValue
+__arclite_objc_autoreleaseReturnValue
+__arclite_objc_retainAutorelease
+__arclite_objc_autorelease
+patch_t<void (id)>
+__arclite_objc_release
+__arclite_objc_retainBlock
+patch_t<id (id)>
+__arclite_objc_retain
+patch_t<id (id, unsigned long)>
+fixupCopiedReferences
+classOrSuperClassesUseARR
+__arclite_object_copy
+patch_t<void (id, objc_ivar *, id)>
+isScannedOffset
+alignedInstanceStart
+_class_getInstanceStart
+data
+__arclite_class_usesAutomaticRetainRelease
+_ivar_getClass
+__arclite_object_setIvar
+patch_t<objc_ivar *(id, const char *, void *)>
+__arclite_object_setInstanceVariable
+add_image_hook_ARC
+install_ARC
+objc_collectingEnabled
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.Internal.sdk/usr/include/objc/objc-auto.h
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+addOrReplaceMethod
+install_dict_nil_value
+__arclite_NSMutableOrderedSet_setObject_atIndexedSubscript
+__arclite_NSOrderedSet_objectAtIndexedSubscript
+keyedGetter
+__arclite_NSDictionary_objectForKeyedSubscript
+__arclite_NSMutableArray_setObject_atIndexedSubscript
+indexedGetter
+__arclite_NSArray_objectAtIndexedSubscript
+addMethod
+install_subscripting
+patch_lazy_pointers
+patch_t<void (void *)>
+__arclite_objc_autoreleasePoolPop
+patch_t<void *()>
+__arclite_objc_autoreleasePoolPush
+add_image_hook_autoreleasepool
+install_autoreleasepool
+__ARCLite__load
