@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Serializable"
-  s.version      = "0.1.0"
+  s.version      = "0.10.0"
   s.summary      = "A protocol to serialize Swift Structs and Classes for encoding and decoding"
 
   # This description is used to generate tags and improve search results.
@@ -63,13 +63,13 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  # s.ios.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
+   s.ios.deployment_target = "8.0"
+   s.osx.deployment_target = "10.9"
+   s.watchos.deployment_target = "2.0"
+   s.tvos.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/nodes-ios/Serializable.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/nodes-ios/Serializable.git", :tag => "0.10.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Serializable/Serializable/Source"
-  s.exclude_files = "Serializable/Source/CashierExtension.swift"
+  s.source_files  = "Serializable/Serializable"
+  #s.exclude_files = "Serializable/Source/CashierExtension.swift"
 
   # s.public_header_files = "Classes/**/*.h"
 
