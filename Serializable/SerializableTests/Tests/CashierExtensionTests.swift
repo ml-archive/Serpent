@@ -78,7 +78,8 @@ class CashierExtensionTests: XCTestCase {
         let loadedModel: SimpleModel? = Cashier.defaultCache().serializableForKey("SimpleModelDelete")
         XCTAssertNil(loadedModel, "Failed to delete model from cache")
     }
-    
+
+#if TEST_MEMORY_WARNING
     func testLoadIgnoringMemCaches() {
         let box = BridgingBox(simpleModel)
         Cashier.defaultCache().setObject(box, forKey: "ManualBox")
@@ -89,7 +90,8 @@ class CashierExtensionTests: XCTestCase {
         XCTAssertEqual(simpleModel.id, loadedModel!.id, "Failed to load correct model direct from cache")
         
     }
-    
+#endif
+
     func testArrayLoadIgnoringMemCaches() {
         let box = BridgingBox(simpleModel)
         Cashier.defaultCache().setObject([box], forKey: "ManualBox")
