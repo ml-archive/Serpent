@@ -5,6 +5,7 @@ branches:
   only:
   - master
   - develop
+  - swift-3.0
 
 env:
   global:
