@@ -41,7 +41,7 @@ public extension Parser {
                     let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
                     return .Failure(newError)
                 }
-
+                
                 return .Failure(error)
             }
         }
@@ -72,7 +72,7 @@ public extension Alamofire.Request
      
      - returns: The request
      */
-  
+    
     public func responseSerializable<T:Decodable>(completionHandler: Response<T, NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         let serializer = Parser.serializer(parsingHandler: {
             ( data: AnyObject? ) -> T? in
@@ -123,4 +123,18 @@ public extension Alamofire.Request
         
         return validate().response(responseSerializer: serializer, completionHandler: completionHandler)
     }
+    
+    /**
+     Convenience method for a handler that does not need to parse the results of the network request.
+     
+     - parameter completionHandler:A closure that is invoked when the request is finished
+     
+     - returns: The request
+     */
+    public typealias NilSerializable = AnyObject
+    
+    public func responseSerializable(completionHandler: Response<NilSerializable, NSError> -> Void) -> Self {
+        return validate().responseJSON(completionHandler: completionHandler)
+    }
+    
 }
