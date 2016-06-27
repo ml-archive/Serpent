@@ -12,6 +12,8 @@ import Alamofire
 
 class AlamofireExtensionTests: XCTestCase {
 	
+    let timeoutDuration = 10.0
+    
 	let manager = Manager()
     
     override func setUp() {
@@ -33,7 +35,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "http://httpbin.org/get").responseSerializable(handler)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
 	
 	func testAlamofireExtensionBadJSON() {
@@ -47,7 +49,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "http://httpbin.org/deny").responseSerializable(handler)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
 
 	
@@ -62,7 +64,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "http://httpbin.org/get").responseSerializable(handler)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
 	func testAlamofireExtensionUnexpectedArrayJSON() {
 		let expectation = expectationWithDescription("Expected array data to single object from response")
@@ -75,7 +77,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/ArrayTest.json").responseSerializable(handler)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
 	func testAlamofireExtensionEmptyJSON() {
 		let expectation = expectationWithDescription("Expected empty response")
@@ -88,7 +90,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/Empty.json").responseSerializable(handler)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
 	func testAlamofireArrayUnwrapper() {
 		let expectation = expectationWithDescription("Expected unwrapped array response")
@@ -105,7 +107,7 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET,
 			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler, unwrapper: unwrapper)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
 	
 	func testAlamofireArrayNotUnwrapped() {
@@ -122,7 +124,7 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET,
 			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
 	func testAlamofireWrongTypeUnwrapper() {
 		let expectation = expectationWithDescription("Expected unwrapped array response")
@@ -139,6 +141,20 @@ class AlamofireExtensionTests: XCTestCase {
 		manager.request(.GET,
 			"https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json")
 			.responseSerializable(handler, unwrapper: unwrapper)
-		waitForExpectationsWithTimeout(5, handler: nil)
+		waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
 	}
+    
+    func testAlamofireExtensionNonSerializable() {
+        let expectation = expectationWithDescription("Expected empty response")
+        let handler:(Alamofire.Response<NilSerializable, NSError>) -> Void = { result in
+            switch result.result {
+            case .Failure:
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+        manager.request(.GET, "https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/Empty.json").responseSerializable(handler)
+        waitForExpectationsWithTimeout(timeoutDuration, handler: nil)
+    }
 }

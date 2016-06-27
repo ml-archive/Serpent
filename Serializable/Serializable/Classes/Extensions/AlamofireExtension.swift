@@ -131,10 +131,12 @@ public extension Alamofire.Request
      
      - returns: The request
      */
-    public typealias NilSerializable = AnyObject
+    
     
     public func responseSerializable(completionHandler: Response<NilSerializable, NSError> -> Void) -> Self {
         return validate().responseJSON(completionHandler: completionHandler)
     }
     
 }
+// Convenience type for network requests with no response data
+public typealias NilSerializable = AnyObject
