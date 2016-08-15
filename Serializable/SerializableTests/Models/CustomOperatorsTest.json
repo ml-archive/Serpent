@@ -37,4 +37,9 @@
 					"optional_string_with_default_value": "optional default success"
 					},
 	],
+    "some_dictionary" : {
+                         "test" : "value",
+                         "integer" : 1,
+                         "float" : 1.023
+    }
 }
