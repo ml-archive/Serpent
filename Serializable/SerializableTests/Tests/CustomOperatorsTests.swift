@@ -32,6 +32,7 @@ class CustomOperatorsTests: XCTestCase {
         XCTAssertEqual(testModel.string, "success", "String parsing with custom operator failed.")
         XCTAssertEqual(testModel.secondString, "haha", "String parsing with custom operator failed.")
         XCTAssertNil(testModel.nilString, "Nil string parsing with custom operator failed.")
+        XCTAssertNotNil(testModel.someDictionary, "Dictionary parsing with custom operator failed.")
     }
 
     func testCustomOperatorsEncode() {
@@ -69,6 +70,12 @@ class CustomOperatorsTests: XCTestCase {
 	func testCustomOperatorStringInitializable() {
 		XCTAssertEqual(testModel.someUrl, NSURL(string: "http://www.google.com"), "StringInitializable parsing failed in custom operator")
 	}
+
+    func testCustomOperatorDictionaryParsing() {
+        XCTAssertEqual(testModel.someDictionary?["test"] as? String, "value", "Dictionary doesn't contain string value for key.")
+        XCTAssertEqual(testModel.someDictionary?["integer"] as? Int, 1, "Dictionary doesn't contain integer value for key.")
+        XCTAssertEqual(testModel.someDictionary?["float"] as? Double, 1.023, "Dictionary doesn't contain float value for key.")
+    }
 	
 }
  
