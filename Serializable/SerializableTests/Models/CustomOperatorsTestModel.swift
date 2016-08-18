@@ -23,32 +23,35 @@ struct CustomOperatorsTestModel {
 	var someUrl = NSURL()
 	var someEnum: Type = .First
 	var someArray: [CustomOperatorsTestNestedModel] = []
+    var someDictionary: [String : AnyObject]?
 }
 
 extension CustomOperatorsTestModel: Serializable {
-	init(dictionary: NSDictionary?) {
-		string            <== (self, dictionary, "string")
-		secondString      <== (self, dictionary, "second_string")
-		nilString         <== (self, dictionary, "nil_string")
-		otherSerializable <== (self, dictionary, "other_serializable")
-		someSerializable  <== (self, dictionary, "some_serializable")
-		someUrl           <== (self, dictionary, "some_url")
-		someEnum          <== (self, dictionary, "some_enum")
-		someArray         <== (self, dictionary, "some_array")
-	}
-	
-	func encodableRepresentation() -> NSCoding {
-		let dict = NSMutableDictionary()
-		(dict, "string")             <== string
-		(dict, "second_string")      <== secondString
-		(dict, "nil_string")         <== nilString
-		(dict, "other_serializable") <== otherSerializable
-		(dict, "some_serializable")  <== someSerializable
-		(dict, "some_url")           <== someUrl
-		(dict, "some_enum")          <== someEnum
-		(dict, "some_array")         <== someArray
-		return dict
-	}
+    init(dictionary: NSDictionary?) {
+        string            <== (self, dictionary, "string")
+        secondString      <== (self, dictionary, "second_string")
+        nilString         <== (self, dictionary, "nil_string")
+        otherSerializable <== (self, dictionary, "other_serializable")
+        someSerializable  <== (self, dictionary, "some_serializable")
+        someUrl           <== (self, dictionary, "some_url")
+        someEnum          <== (self, dictionary, "some_enum")
+        someArray         <== (self, dictionary, "some_array")
+        someDictionary    <== (self, dictionary, "some_dictionary")
+    }
+
+    func encodableRepresentation() -> NSCoding {
+        let dict = NSMutableDictionary()
+        (dict, "string")             <== string
+        (dict, "second_string")      <== secondString
+        (dict, "nil_string")         <== nilString
+        (dict, "other_serializable") <== otherSerializable
+        (dict, "some_serializable")  <== someSerializable
+        (dict, "some_url")           <== someUrl
+        (dict, "some_enum")          <== someEnum
+        (dict, "some_array")         <== someArray
+        (dict, "some_dictionary")    <== someDictionary
+        return dict
+    }
 }
 
 struct CustomOperatorsTestNestedModel {
