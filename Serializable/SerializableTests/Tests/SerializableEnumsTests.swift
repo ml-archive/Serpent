@@ -21,8 +21,8 @@ class SerializableEnumsTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         do {
-            if let path = NSBundle(forClass: self.dynamicType).pathForResource("EnumsTest", ofType: "json"), data = NSData(contentsOfFile: path) {
-                bridgedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? NSDictionary
+            if let path = Bundle(for: type(of: self)).path(forResource: "EnumsTest", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+                bridgedDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
                 testModel = EnumsTestModel(dictionary: bridgedDictionary)
             }
         } catch {
@@ -51,9 +51,9 @@ class SerializableEnumsTests: XCTestCase {
     }
 
     func testDoubleEnumArrayParsing() {
-        XCTAssertEqual(testModel.doubleEnumArray, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Double enum array test failed!")
-        XCTAssertEqual(testModel.optionalDoubleEnumArray!, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Optional double enum array test failed!")
-        XCTAssertEqual(testModel.optionalDoubleEnumArrayWithDefaultValue!, [DoubleEnum.Value1, DoubleEnum.DifferentValue], "Optional double enum array with default value test failed!")
+        XCTAssertEqual(testModel.doubleEnumArray, [DoubleEnum.value1, DoubleEnum.differentValue], "Double enum array test failed!")
+        XCTAssertEqual(testModel.optionalDoubleEnumArray!, [DoubleEnum.value1, DoubleEnum.differentValue], "Optional double enum array test failed!")
+        XCTAssertEqual(testModel.optionalDoubleEnumArrayWithDefaultValue!, [DoubleEnum.value1, DoubleEnum.differentValue], "Optional double enum array with default value test failed!")
         XCTAssertNil(testModel.nonExistentDoubleEnumArray, "Optional double enum array with non existent value test failed!")
         XCTAssertNil(testModel.wrongTypeDoubleEnumArray,"Wrong type double enum array test failed!")
     }

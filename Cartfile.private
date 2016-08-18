@@ -1,2 +1,2 @@
-github "Alamofire/Alamofire" ~> 3.5.0
+github "Alamofire/Alamofire" "swift3"
 github "nodes-ios/Cashier"
