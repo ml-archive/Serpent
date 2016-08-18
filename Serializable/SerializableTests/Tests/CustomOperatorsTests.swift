@@ -18,8 +18,8 @@ class CustomOperatorsTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         do {
-            if let path = NSBundle(forClass: self.dynamicType).pathForResource("CustomOperatorsTest", ofType: "json"), data = NSData(contentsOfFile: path) {
-                bridgedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? NSDictionary
+            if let path = Bundle(for: type(of: self)).path(forResource: "CustomOperatorsTest", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+                bridgedDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
                 testModel = CustomOperatorsTestModel(dictionary: bridgedDictionary)
             }
         } catch {
@@ -39,17 +39,17 @@ class CustomOperatorsTests: XCTestCase {
         let rep = testModel.encodableRepresentation() as! NSDictionary
 		let subArray = testModel.someArray
 
-        XCTAssertEqual(rep.valueForKey("string") as? String, "success", "String encode with custom operator failed.")
-        XCTAssertEqual(rep.valueForKey("second_string") as? String, "haha", "String encode with custom operator failed.")
-        XCTAssertNil(rep.valueForKey("nil_string"), "Nil string encode with custom operator failed.")
+        XCTAssertEqual(rep.value(forKey: "string") as? String, "success", "String encode with custom operator failed.")
+        XCTAssertEqual(rep.value(forKey: "second_string") as? String, "haha", "String encode with custom operator failed.")
+        XCTAssertNil(rep.value(forKey: "nil_string"), "Nil string encode with custom operator failed.")
 		
-		if let type = rep.valueForKey("some_enum") as? Int {
-			XCTAssertEqual(Type(rawValue: type), .Second, "Enum encode with custom operator failed.")
+		if let type = rep.value(forKey: "some_enum") as? Int {
+			XCTAssertEqual(Type(rawValue: type), .second, "Enum encode with custom operator failed.")
 		}
 		else {
 			XCTFail("Enum encode with custom operator failed.")
 		}
-		XCTAssertEqual(CustomOperatorsTestNestedModel.array(rep.valueForKey("some_array")), subArray, "Array encode with custom operator failed.")
+		XCTAssertEqual(CustomOperatorsTestNestedModel.array(rep.value(forKey: "some_array") as AnyObject?), subArray, "Array encode with custom operator failed.")
     }
 
     func testCustomOperatorNestedSerializable() {
@@ -68,7 +68,7 @@ class CustomOperatorsTests: XCTestCase {
     }
 	
 	func testCustomOperatorStringInitializable() {
-		XCTAssertEqual(testModel.someUrl, NSURL(string: "http://www.google.com"), "StringInitializable parsing failed in custom operator")
+		XCTAssertEqual(testModel.someUrl, URL(string: "http://www.google.com"), "StringInitializable parsing failed in custom operator")
 	}
 
     func testCustomOperatorDictionaryParsing() {

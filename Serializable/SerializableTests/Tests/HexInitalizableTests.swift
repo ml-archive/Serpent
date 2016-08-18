@@ -23,8 +23,8 @@ class HexInitalizableTests: XCTestCase {
 	override func setUp() {
 		super.setUp()
 		do {
-			if let path = NSBundle(forClass: self.dynamicType).pathForResource("HexInitializableTest", ofType: "json"), data = NSData(contentsOfFile: path) {
-				let bridgedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? NSDictionary
+			if let path = Bundle(for: type(of: self)).path(forResource: "HexInitializableTest", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+				let bridgedDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
 				testModel = HexInitializableTestModel(dictionary: bridgedDictionary)
 			}
 		} catch {
@@ -44,7 +44,7 @@ class HexInitalizableTests: XCTestCase {
 	
 	func testHexInitializableNilDictionary() {
 		let nilModel = HexInitializableTestNilModel(dictionary: nil)
-		XCTAssertEqual(nilModel.someColor, HexColor.redColor(), "Failed to parse nil dictionary into HexInitializable model")
+		XCTAssertEqual(nilModel.someColor, HexColor.red, "Failed to parse nil dictionary into HexInitializable model")
 	}
 
 }
