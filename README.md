@@ -23,10 +23,11 @@ There are plenty of other Encoding and Decoding frameworks available. Why should
 
 * [Performance](https://github.com/nodes-ios/Serializable/wiki/Performance-tests). Serializable is fast, up to 4x faster than similar frameworks
 * [Features](https://github.com/nodes-ios/Serializable/wiki/Performance-tests#feature-comparison). Serializable can parse anything you throw at it. Nested objects, Enums, NSURL, UIColor, you name it!
-* [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write, generates it for you instantly. 
+* [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write.  [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates it for you instantly. 
 * [Alamofire Integration](). Using the included Alamofire extensions makes implementing an API call returning parsed model data as simple as doing a one-liner!
 * [Expandability](). Parsing into other datatypes can easily be added.
-* [Persisting](). Combined with our cashing framework [Cashier](https://github.com/nodes-ios/Cashier), Serializable objects can be very easily persisted to disk. 
+* [Persisting](). Combined with our caching framework [Cashier](https://github.com/nodes-ios/Cashier), Serializable objects can be very easily persisted to disk. 
+* <a href = "https://github.com/nodes-ios/SerializableXcodeFileTemplate"><img src = "https://raw.githubusercontent.com/nodes-ios/SerializableXcodeFileTemplate/master/Serializable/Serializable%20Model.xctemplate/TemplateIcon.png" height = 25> Serializable Xcode File Template </a> makes it easier to create the model files in Xcode.
 
 
 ## 📝 Requirements
