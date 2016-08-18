@@ -16,9 +16,9 @@ enum StringEnum: String {
 }
 
 enum DoubleEnum: Double {
-    case NoneValue
-    case Value1 = 123.456
-    case DifferentValue = -9453.5147684
+    case noneValue
+    case value1 = 123.456
+    case differentValue = -9453.5147684
 }
 
 struct EnumsTestModel {
@@ -34,9 +34,9 @@ struct EnumsTestModel {
     var nonExistentStringEnumArray: [StringEnum]?
     var wrongTypeStringEnumArray: [StringEnum]?
     
-    var doubleEnum: DoubleEnum = .NoneValue
+    var doubleEnum: DoubleEnum = .noneValue
     var optionalDoubleEnum: DoubleEnum?
-    var optionalDoubleEnumWithDefaultValue: DoubleEnum? = .NoneValue
+    var optionalDoubleEnumWithDefaultValue: DoubleEnum? = .noneValue
     var nonExistentDoubleEnum: DoubleEnum?
     var wrongTypeDoubleEnum: DoubleEnum?
     

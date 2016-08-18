@@ -44,7 +44,7 @@ class SerializableNilEntitiesTests: XCTestCase {
 	}
 	
 	func testNilStringInitializables() {
-		XCTAssertEqual(testModel.url, NSURL(string: "http://www.google.com"), "Guard statement failed for StringInitializable with nil dictionary")
+		XCTAssertEqual(testModel.url, URL(string: "http://www.google.com"), "Guard statement failed for StringInitializable with nil dictionary")
 		XCTAssertNil(testModel.optionalUrl, "Guard statement failed for optional StringInitializable with nil dictionary")
 	}
 	
@@ -52,25 +52,25 @@ class SerializableNilEntitiesTests: XCTestCase {
 
 public struct NilModel {
 	
-	public enum Type: Int {
-		case First = 0
-		case Second = 1
+	public enum NilModelType: Int {
+		case first = 0
+		case second = 1
 	}
 	
 	var id: Int = 0
 	var name = SimpleModel()
 	var names = [SimpleModel]()
-	var url = NSURL(string: "http://www.google.com")!
-	var someEnum: Type = .First
-	var someEnumArray: [Type] = []
+	var url = URL(string: "http://www.google.com")!
+	var someEnum: NilModelType = .first
+	var someEnumArray: [NilModelType] = []
 	var somePrimitiveArray: [String] = []
 	
 	var optionalId: Int?
 	var optionalName: SimpleModel?
 	var optionalNames: [SimpleModel]?
-	var optionalUrl: NSURL?
-	var optionalEnum: Type?
-	var optionalEnumArray: [Type]?
+	var optionalUrl: URL?
+	var optionalEnum: NilModelType?
+	var optionalEnumArray: [NilModelType]?
 	var optionalPrimitiveArray: [String]?
 }
 extension NilModel: Serializable {

@@ -10,8 +10,8 @@ import Foundation
 import Serializable
 
 enum Type: Int {
-	case First = 0
-	case Second = 1
+	case first = 0
+	case second = 1
 }
 
 struct CustomOperatorsTestModel {
@@ -20,8 +20,8 @@ struct CustomOperatorsTestModel {
     var nilString: String?
     var otherSerializable: CustomOperatorsTestNestedModel?
 	var someSerializable = CustomOperatorsTestNestedModel()
-	var someUrl = NSURL()
-	var someEnum: Type = .First
+	var someUrl = URL(string: "")
+	var someEnum: Type = .first
 	var someArray: [CustomOperatorsTestNestedModel] = []
     var someDictionary: [String : AnyObject]?
 }

@@ -10,11 +10,11 @@ import Foundation
 import Serializable
 
 struct StringInitializableTestModel {
-	var someUrl: NSURL?
-	var someDate: NSDate?
-    var someEmptyDate: NSDate?
-    var someEmptyURL: NSURL? //<- some_empty_url
-    var someBadDate: NSDate?
+	var someUrl: URL?
+	var someDate: Date?
+    var someEmptyDate: Date?
+    var someEmptyURL: URL? //<- some_empty_url
+    var someBadDate: Date?
 }
 
 extension StringInitializableTestModel: Serializable {

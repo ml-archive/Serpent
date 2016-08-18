@@ -12,12 +12,12 @@ import Foundation
 // MARK: String Initializable
 
 public protocol StringInitializable {
-    static func fromString<T>(string: String) -> T?
-    func stringRepresentation() -> String?
+    static func fromString<T>(_ string: String) -> T?
+    func stringRepresentation() -> String
 }
 
-extension NSURL: StringInitializable {
-    public static func fromString<T>(string: String) -> T? {
+extension URL: StringInitializable {
+    public static func fromString<T>(_ string: String) -> T? {
         return self.init(string: string) as? T
     }
 
@@ -26,14 +26,14 @@ extension NSURL: StringInitializable {
     }
 }
 
-extension NSDate: StringInitializable {
-    static private let internalDateFormatter = NSDateFormatter()
-    static private let allowedDateFormats = ["yyyy-MM-dd'T'HH:mm:ssZZZZZ", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd"]
+extension Date: StringInitializable {
+    static fileprivate let internalDateFormatter = DateFormatter()
+    static fileprivate let allowedDateFormats = ["yyyy-MM-dd'T'HH:mm:ssZZZZZ", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd"]
 
-    public static func fromString<T>(string: String) -> T? {
+    public static func fromString<T>(_ string: String) -> T? {
         for format in allowedDateFormats {
             internalDateFormatter.dateFormat = format
-            if let date = internalDateFormatter.dateFromString(string) as? T {
+            if let date = internalDateFormatter.date(from: string) as? T {
                 return date
             }
         }
@@ -41,9 +41,9 @@ extension NSDate: StringInitializable {
         return nil
     }
 
-    public func stringRepresentation() -> String? {
-        NSDate.internalDateFormatter.dateFormat = NSDate.allowedDateFormats.first
-        return NSDate.internalDateFormatter.stringFromDate(self)
+    public func stringRepresentation() -> String {
+        Date.internalDateFormatter.dateFormat = Date.allowedDateFormats.first
+        return Date.internalDateFormatter.string(from: self)
     }
 }
 
@@ -57,16 +57,16 @@ extension NSDate: StringInitializable {
 #endif
 
 public protocol HexInitializable {
-	static func fromHexString<T>(hexString: String) -> T?
+	static func fromHexString<T>(_ hexString: String) -> T?
 }
 
 extension Color: HexInitializable {
-	public static func fromHexString<T>(hexString: String) -> T? {
-		let charSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-		var str = hexString.stringByTrimmingCharactersInSet(charSet).uppercaseString
+	public static func fromHexString<T>(_ hexString: String) -> T? {
+		let charSet = CharacterSet.whitespacesAndNewlines
+		var str = hexString.trimmingCharacters(in: charSet).uppercased()
 		
 		if (str.hasPrefix("#")) {
-			str = str.substringFromIndex(str.startIndex.advancedBy(1))
+			str = str.substring(from: str.index(str.startIndex, offsetBy: 1))
 		}
 		
 		// TODO: Handle 3, 4 & 8 character long HEX strings in the future
@@ -75,20 +75,20 @@ extension Color: HexInitializable {
 		}
 		
 		let range   = NSMakeRange(0, 6)
-		let options = NSMatchingOptions(rawValue:0)
+		let options = NSRegularExpression.MatchingOptions(rawValue:0)
 		
-		guard validHexRegex.numberOfMatchesInString(str, options: options, range: range) == 1 else {
+		guard validHexRegex.numberOfMatches(in: str, options: options, range: range) == 1 else {
 			return nil
 		}
 		
-		let rString = str.substringToIndex(str.startIndex.advancedBy(2))
-		let gString = str.substringWithRange(str.startIndex.advancedBy(2)..<str.startIndex.advancedBy(4))
-		let bString = str.substringWithRange(str.startIndex.advancedBy(4)..<str.startIndex.advancedBy(6))
+		let rString = str.substring(to: str.index(str.startIndex, offsetBy: 2))
+		let gString = str.substring(with: str.index(str.startIndex, offsetBy: 2)..<str.index(str.startIndex, offsetBy: 4))
+		let bString = str.substring(with: str.index(str.startIndex, offsetBy: 4)..<str.index(str.startIndex, offsetBy: 6))
 		
 		var r: CUnsignedInt = 0, g: CUnsignedInt = 0, b: CUnsignedInt = 0
-		NSScanner(string: rString).scanHexInt(&r)
-		NSScanner(string: gString).scanHexInt(&g)
-		NSScanner(string: bString).scanHexInt(&b)
+		Scanner(string: rString).scanHexInt32(&r)
+		Scanner(string: gString).scanHexInt32(&g)
+		Scanner(string: bString).scanHexInt32(&b)
 		
 		return self.init(
 			red: CGFloat(r) / 255.0,
@@ -98,14 +98,14 @@ extension Color: HexInitializable {
 	}
 }
 
-let validHexRegex = try! NSRegularExpression(pattern: "[0-9A-F]{6}", options: NSRegularExpressionOptions(rawValue: 0))
+let validHexRegex = try! NSRegularExpression(pattern: "[0-9A-F]{6}", options: NSRegularExpression.Options(rawValue: 0))
 
 
 
 // MARK: - Extensions -
 // MARK: SequenceType
 
-public extension SequenceType where Generator.Element:Encodable {
+public extension Sequence where Iterator.Element:Encodable {
 	func encodableRepresentation() -> [NSCoding] {
 		return self.map { element in return element.encodableRepresentation() }
 	}

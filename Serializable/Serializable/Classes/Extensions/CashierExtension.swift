@@ -18,7 +18,7 @@ public extension Cashier {
 	- object: Generic type which confroms with `Serializable`.
 	- key: Key as a `String`.
 	*/
-	public func setSerializable<T where T:Serializable>(object: T, forKey key: String) {
+	public func setSerializable<T>(_ object: T, forKey key: String) where T:Serializable {
 		let box = BridgingBox(object)
 		self.setObject(box, forKey: key)
 		BridgingBox.sharedBoxCache[self.id+key] = object
@@ -31,7 +31,7 @@ public extension Cashier {
 	- object: Generic type which confroms with `_ArrayType`.
 	- key: Key as a `String`.
 	*/
-	public func setSerializable<T where T:_ArrayType, T.Generator.Element: Serializable>(object: T, forKey key: String) {
+	public func setSerializable<T>(_ object: T, forKey key: String) where T: Sequence, T.Iterator.Element: Serializable {
 		let boxedArray = object.map { BridgingBox($0) }
 		self.setObject(boxedArray, forKey: key)
 		BridgingBox.sharedBoxCache[self.id+key] = object
@@ -47,12 +47,12 @@ public extension Cashier {
 	- Parameter key: `Key` for `BridgingBox` or `objectForKey` as `String`.
 	- Returns: Generic type stored value/object that conforms with `Serializable` or return `nil`.
 	*/
-	public func serializableForKey<T where T:Serializable>(key: String) -> T? {
+	public func serializableForKey<T>(_ key: String) -> T? where T:Serializable {
 		if let cachedSerializable = BridgingBox.sharedBoxCache[self.id+key] as? T {
-			return self.objectForKeyIsValid(key) ? cachedSerializable : nil
+			return self.object(forKeyIsValid: key) ? cachedSerializable : nil
 		}
 		
-		guard let box:BridgingBox = self.objectForKey(key) as? BridgingBox else {
+		guard let box:BridgingBox = self.object(forKey: key) as? BridgingBox else {
 			return nil
 		}
 		
@@ -72,12 +72,12 @@ public extension Cashier {
 	- Parameter key: `Key` for `BridgingBox` as `String`.
 	- Returns: Array that holds object that conforms with `Serializable` or return `nil`.
 	*/
-	public func serializableForKey<T where T:Serializable>(key: String) -> [T]? {
+	public func serializableForKey<T>(_ key: String) -> [T]? where T:Serializable {
 		if let cachedSerializable = BridgingBox.sharedBoxCache[self.id+key] as? [T] {
-			return self.objectForKeyIsValid(key) ? cachedSerializable : nil
+			return self.object(forKeyIsValid: key) ? cachedSerializable : nil
 		}
 		
-		guard let box = self.objectForKey(key) as? [BridgingBox] else {
+		guard let box = self.object(forKey: key) as? [BridgingBox] else {
 			return nil
 		}
 		
@@ -100,7 +100,7 @@ public extension Cashier {
 	- parameter purgeMemoryCaches: If set to `true`, it will also purge all memory caches, including
 	the shared bridging box cache for objects adhering to `Serializable`.
 	*/
-	public func clearAllData(purgeMemoryCaches purgeMemoryCaches: Bool) {
+	public func clearAllData(purgeMemoryCaches: Bool) {
 		self.clearAllData()
 		
 		if purgeMemoryCaches {
@@ -114,10 +114,10 @@ public extension Cashier {
 	- parameter key: `Key` for `BridgingBox` as `String`.
 	- parameter purgeMemoryCache: If set to `true`, it will also purge the memory cache.
 	*/
-	public func deleteSerializableForKey(key: String, purgeMemoryCache purge: Bool = true) {
+	public func deleteSerializableForKey(_ key: String, purgeMemoryCache purge: Bool = true) {
 		if purge {
-			BridgingBox.sharedBoxCache.removeValueForKey(self.id+key)
+			BridgingBox.sharedBoxCache.removeValue(forKey: self.id+key)
 		}
-		self.deleteObjectForKey(key)
+		self.deleteObject(forKey: key)
 	}
 }
