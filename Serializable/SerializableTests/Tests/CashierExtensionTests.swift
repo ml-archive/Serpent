@@ -19,8 +19,8 @@ class CashierExtensionTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         do {
-            if let path = NSBundle(forClass: self.dynamicType).pathForResource("SimpleModel", ofType: "json"), data = NSData(contentsOfFile: path) {
-                let bridgedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? NSDictionary
+            if let path = Bundle(for: type(of: self)).path(forResource: "SimpleModel", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+                let bridgedDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
                 simpleModel = SimpleModel(dictionary: bridgedDictionary)
             }
         } catch {
@@ -83,7 +83,7 @@ class CashierExtensionTests: XCTestCase {
     func testLoadIgnoringMemCaches() {
         let box = BridgingBox(simpleModel)
         Cashier.defaultCache().setObject(box, forKey: "ManualBox")
-        NSNotificationCenter.defaultCenter().postNotificationName(UIApplicationDidReceiveMemoryWarningNotification, object: nil) // clear the Cashier mem cache
+        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil) // clear the Cashier mem cache
         let loadedModel: SimpleModel? = Cashier.defaultCache().serializableForKey("ManualBox")
         
         XCTAssertNotNil(loadedModel, "Failed to load model direct from cache")
@@ -105,7 +105,7 @@ class CashierExtensionTests: XCTestCase {
     
     func testInvalidObjectInBridgingBox() {
         Cashier.defaultCache().setSerializable(simpleModel, forKey: "SimpleModel")
-        Cashier.defaultCache().deleteObjectForKey("SimpleModel")
+        Cashier.defaultCache().deleteObject(forKey: "SimpleModel")
         let loadedModel: SimpleModel? = Cashier.defaultCache().serializableForKey("SimpleModel")
         
         XCTAssertNil(loadedModel, "Failed to return nil model from cache")        
@@ -113,7 +113,7 @@ class CashierExtensionTests: XCTestCase {
     
     func testInvalidArrayObjectInBridgingBox() {
         Cashier.defaultCache().setSerializable([simpleModel], forKey: "SimpleModel")
-        Cashier.defaultCache().deleteObjectForKey("SimpleModel")
+        Cashier.defaultCache().deleteObject(forKey: "SimpleModel")
         let loadedModel: [SimpleModel]? = Cashier.defaultCache().serializableForKey("SimpleModel")
         
         XCTAssertNil(loadedModel, "Failed to return nil model from cache")

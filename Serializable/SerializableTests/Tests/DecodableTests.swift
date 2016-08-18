@@ -17,10 +17,10 @@ class DecodableTests: XCTestCase {
     override func setUp() {
         super.setUp()
 		do {
-			if let path = NSBundle(forClass: self.dynamicType).pathForResource("DecodableTest", ofType: "json"), data = NSData(contentsOfFile: path) {
-				bridgedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? NSDictionary
-				testModels = DecodableModel.array(bridgedDictionary["models"])
-				testNonArrayModels = DecodableModel.array(bridgedDictionary["model"])
+			if let path = Bundle(for: type(of: self)).path(forResource: "DecodableTest", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+				bridgedDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
+				testModels = DecodableModel.array(bridgedDictionary.object(forKey:"models") as AnyObject?)
+				testNonArrayModels = DecodableModel.array(bridgedDictionary.object(forKey:"model") as AnyObject?)
 			}
 		} catch {
 			XCTFail("Failed to prepare bridged dictionary.")

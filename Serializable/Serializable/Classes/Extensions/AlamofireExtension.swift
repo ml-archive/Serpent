@@ -19,35 +19,35 @@ public extension Parser {
      Parse any generic object using the parsing handler.
      */
     
-    internal static func serializer<T>(parsingHandler parsingHandler: (( data: AnyObject? ) -> T?)?) -> ResponseSerializer<T, NSError> {
+    internal static func serializer<T>(parsingHandler: (( _ data: Any? ) -> T?)?) -> ResponseSerializer<T, NSError> {
         return ResponseSerializer<T, NSError> { (request, response, data, error) -> Result<T, NSError> in
             
-            let JSONResponseSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
+            let JSONResponseSerializer = Request.JSONResponseSerializer(options: .allowFragments)
             let result = JSONResponseSerializer.serializeResponse(request, response, data, error)
             
             switch result {
-            case let .Success(value):
-                if let parsedObject: T = parsingHandler?( data: value ) {
-                    NSNotificationCenter.defaultCenter().postNotificationName(APICallSucceededNotification, object: nil)
-                    return .Success(parsedObject)
+            case let .success(value):
+                if let parsedObject: T = parsingHandler?( value ) {
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: APICallSucceededNotification), object: nil)
+                    return .success(parsedObject)
                 } else {
-                    return .Failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Parsing block failed!", "JSONResponse" : value]))
+                    return .failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Parsing block failed!", "JSONResponse" : value]))
                 }
                 
-            case let .Failure(error):
-                if let data = data where data.length != 0 {
+            case let .failure(error):
+                if let data = data , data.count != 0 {
                     var userInfo = error.userInfo
-                    userInfo["ResponseString"] = String(data: data, encoding: NSUTF8StringEncoding)
+                    userInfo["ResponseString"] = String(data: data, encoding: String.Encoding.utf8)
                     let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
-                    return .Failure(newError)
+                    return .failure(newError)
                 }
                 
-                return .Failure(error)
+                return .failure(error)
             }
         }
     }
     
-    typealias Unwrapper = ((sourceDictionary: NSDictionary, expectedType:Any) -> AnyObject?)
+    typealias Unwrapper = ((_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?)
     
     /**
      The default unwrapper. Default implementation just passes data straight through. 
@@ -72,14 +72,14 @@ public extension Alamofire.Request
      
      - returns: The request
      */
-    
-    public func responseSerializable<T:Decodable>(completionHandler: Response<T, NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+    @discardableResult
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (Response<T, NSError>) -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         let serializer = Parser.serializer(parsingHandler: {
-            ( data: AnyObject? ) -> T? in
+            ( data: Any? ) -> T? in
             
-            if let sourceDictionary = data as? [String : AnyObject] {
+            if let sourceDictionary = data as? NSDictionary {
                 
-                let unwrappedDictionary = unwrapper(sourceDictionary: sourceDictionary, expectedType:T.self) as? [String : AnyObject] ?? sourceDictionary
+                let unwrappedDictionary = unwrapper(sourceDictionary, T.self) as? NSDictionary ?? sourceDictionary
                 
                 return T(dictionary: unwrappedDictionary) as T?
             }
@@ -101,16 +101,16 @@ public extension Alamofire.Request
      
      - returns: The request
      */
-    
-    public func responseSerializable<T:Decodable>(completionHandler: Response<[T], NSError> -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+	@discardableResult
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (Response<[T], NSError>) -> Void, unwrapper:Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         
         let serializer = Parser.serializer(parsingHandler: {
-            ( data: AnyObject? ) -> [T]? in
+            ( data: Any? ) -> [T]? in
             
-            var finalArray:AnyObject? = data
+            var finalArray:Any? = data
             
             if let dataDict = data as? NSDictionary {
-                if let unwrappedArray = unwrapper(sourceDictionary: dataDict, expectedType:T.self) as? NSArray {
+                if let unwrappedArray = unwrapper(dataDict, T.self) as? NSArray {
                     finalArray = unwrappedArray
                 }
             }
@@ -132,11 +132,11 @@ public extension Alamofire.Request
      - returns: The request
      */
     
-    
-    public func responseSerializable(completionHandler: Response<NilSerializable, NSError> -> Void) -> Self {
+	@discardableResult
+    public func responseSerializable(_ completionHandler: @escaping (Response<NilSerializable, NSError>) -> Void) -> Self {
         return validate().responseJSON(completionHandler: completionHandler)
     }
     
 }
 // Convenience type for network requests with no response data
-public typealias NilSerializable = AnyObject
+public typealias NilSerializable = Any

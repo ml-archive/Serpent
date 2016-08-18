@@ -1,0 +1,89 @@
+BCSymbolMap Version: 2.0
+-[NSString(MD5Addition) stringFromMD5]
+Apple LLVM version 8.0.0 (clang-800.0.24.1)
+/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NSString+MD5Addition.m
+/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier
+-[Cashier init]
+-[Cashier emptyCache]
+-[Cashier dealloc]
++[Cashier baseSaveDirectory]
++[Cashier defaultCache]
++[Cashier cacheWithId:]
+___23+[Cashier cacheWithId:]_block_invoke
++[Cashier createDirectoryAtPath:]
+-[Cashier updateSystemVersion]
+-[Cashier loadProperties]
+-[Cashier addKVO]
+-[Cashier removeKVO]
+-[Cashier observeValueForKeyPath:ofObject:change:context:]
+-[Cashier setPersistsCacheAcrossVersions:]
+-[Cashier loadCreationDates]
+-[Cashier objectForKeyIsValid:]
+-[Cashier internalObjectForKeyIsValid:]
+-[Cashier lastUpdateTimeForKey:]
+-[Cashier refreshValidationOnObjectForKey:]
+-[Cashier URLEncodedFilenameFromString:]
+-[Cashier encodedStringForUseInPath:]
+-[Cashier setObject:forKey:]
+-[Cashier setImage:forKey:]
+-[Cashier setData:forKey:]
+-[Cashier setData:forKey:useMemoryCache:]
+-[Cashier setWritableObject:forKey:useMemoryCache:]
+-[Cashier fileURLWillBeWritten:]
+-[Cashier setCodableObject:forKey:]
+-[Cashier objectForKey:]
+-[Cashier imageForKey:]
+-[Cashier dataForKey:]
+-[Cashier dataForKey:useMemoryCache:]
+-[Cashier dictForKey:]
+-[Cashier arrayForKey:]
+-[Cashier dictionaryForKey:]
+-[Cashier stringForKey:]
+-[Cashier deleteObjectForKey:]
+-[Cashier clearAllData]
++[Cashier isVersion:greaterThanVersion:]
++[Cashier normalizedValuesFromArray:]
+-[Cashier id]
+-[Cashier setId:]
+-[Cashier persistent]
+-[Cashier setPersistent:]
+-[Cashier encryptionEnabled]
+-[Cashier setEncryptionEnabled:]
+-[Cashier lifespan]
+-[Cashier setLifespan:]
+-[Cashier returnsExpiredData]
+-[Cashier setReturnsExpiredData:]
+-[Cashier persistsCacheAcrossVersions]
+-[Cashier creationDates]
+-[Cashier setCreationDates:]
+-[Cashier storagePath]
+-[Cashier setStoragePath:]
+-[Cashier memoryCache]
+-[Cashier setMemoryCache:]
+-[Cashier .cxx_destruct]
+_cacheWithId:.onceToken
+_sharedInstances
+___block_descriptor_tmp
+___block_literal_global
+_OBJC_IVAR_$_Cashier.properties
+_OBJC_IVAR_$_Cashier._persistsCacheAcrossVersions
+_maxValues
+_OBJC_IVAR_$_Cashier._id
+_OBJC_IVAR_$_Cashier._persistent
+_OBJC_IVAR_$_Cashier._encryptionEnabled
+_OBJC_IVAR_$_Cashier._lifespan
+_OBJC_IVAR_$_Cashier._returnsExpiredData
+_OBJC_IVAR_$_Cashier._creationDates
+_OBJC_IVAR_$_Cashier._storagePath
+_OBJC_IVAR_$_Cashier._memoryCache
+/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.m
+/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.h
+__23+[Cashier cacheWithId:]_block_invoke
+_dispatch_once
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/usr/include/dispatch/once.h
++[NOPersistentStore baseSaveDirectory]
+-[NOPersistentStore fileURLWillBeWritten:]
++[NOPersistentStore defaultCache]
+-[NOPersistentStore persistsCacheAcrossVersions]
+/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NOPersistentStore.m
+/Users/chris/Library/Developer/Xcode/DerivedData/Cashier-fzmychravbhoqcdweaiezqwzkjmt/Build/Intermediates/Cashier.build/Release-appletvos/Cashier tvOS.build/DerivedSources/Cashier_vers.c

@@ -17,7 +17,7 @@ import Serializable
 #endif
 
 struct HexInitializableTestModel {
-	var shortColor = Color.redColor()
+	var shortColor = Color.red
 	var fullColor: Color?
 	var badColor: Color?
 	var notColor: Color?
@@ -45,7 +45,7 @@ extension HexInitializableTestModel: Serializable {
 }
 
 struct HexInitializableTestNilModel {
-	var someColor = Color.redColor()
+	var someColor = Color.red
 }
 
 extension HexInitializableTestNilModel: Serializable {
