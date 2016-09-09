@@ -63,7 +63,7 @@ class CashierExtensionTests: XCTestCase {
     
     func testClearSerializableCache() {
         Cashier.defaultCache().setSerializable(simpleModel, forKey: "SimpleModel")
-        Cashier.defaultCache().clearAllData(purgeMemoryCaches: true)
+        Cashier.defaultCache().clearAllData(true)
         
         let loadedModel: SimpleModel? = Cashier.defaultCache().serializableForKey("SimpleModel")
         XCTAssertNil(loadedModel, "Failed to clear serializables from cache")

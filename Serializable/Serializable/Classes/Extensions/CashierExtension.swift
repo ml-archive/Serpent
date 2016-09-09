@@ -18,7 +18,7 @@ public extension Cashier {
 	- object: Generic type which confroms with `Serializable`.
 	- key: Key as a `String`.
 	*/
-	public func setSerializable<T>(_ object: T, forKey key: String) where T:Serializable {
+	public func setSerializable<T>(_ object: T, forKey key: String) where T: Serializable {
 		let box = BridgingBox(object)
 		self.setObject(box, forKey: key)
 		BridgingBox.sharedBoxCache[self.id+key] = object
@@ -100,7 +100,7 @@ public extension Cashier {
 	- parameter purgeMemoryCaches: If set to `true`, it will also purge all memory caches, including
 	the shared bridging box cache for objects adhering to `Serializable`.
 	*/
-	public func clearAllData(purgeMemoryCaches: Bool) {
+	public func clearAllData(_ purgeMemoryCaches: Bool) {
 		self.clearAllData()
 		
 		if purgeMemoryCaches {
