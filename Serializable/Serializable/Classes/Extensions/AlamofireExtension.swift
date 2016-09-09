@@ -19,7 +19,7 @@ public extension Parser {
      Parse any generic object using the parsing handler.
      */
     
-    internal static func serializer<T>(parsingHandler: (( _ data: Any? ) -> T?)?) -> ResponseSerializer<T, NSError> {
+    internal static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> ResponseSerializer<T, NSError> {
         return ResponseSerializer<T, NSError> { (request, response, data, error) -> Result<T, NSError> in
             
             let JSONResponseSerializer = Request.JSONResponseSerializer(options: .allowFragments)
@@ -74,7 +74,7 @@ public extension Alamofire.Request
      */
     @discardableResult
     public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (Response<T, NSError>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
-        let serializer = Parser.serializer(parsingHandler: {
+        let serializer = Parser.serializer( {
             ( data: Any? ) -> T? in
             
             if let sourceDictionary = data as? NSDictionary {
@@ -104,7 +104,7 @@ public extension Alamofire.Request
 	@discardableResult
     public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (Response<[T], NSError>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         
-        let serializer = Parser.serializer(parsingHandler: {
+        let serializer = Parser.serializer( {
             ( data: Any? ) -> [T]? in
             
             var finalArray:Any? = data
