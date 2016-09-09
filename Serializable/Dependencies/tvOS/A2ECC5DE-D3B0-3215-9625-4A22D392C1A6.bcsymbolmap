@@ -1,8 +1,8 @@
 BCSymbolMap Version: 2.0
 -[NSString(MD5Addition) stringFromMD5]
-Apple LLVM version 8.0.0 (clang-800.0.24.1)
-/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NSString+MD5Addition.m
-/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier
+Apple LLVM version 8.0.0 (clang-800.0.38)
+/Users/jakobmygind/Documents/XcodeProjects/Nodes/Nodes Frameworks/Serializable/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NSString+MD5Addition.m
+/Users/jakobmygind/Documents/XcodeProjects/Nodes/Nodes Frameworks/Serializable/Serializable/Carthage/Checkouts/Cashier
 -[Cashier init]
 -[Cashier emptyCache]
 -[Cashier dealloc]
@@ -76,14 +76,14 @@ _OBJC_IVAR_$_Cashier._returnsExpiredData
 _OBJC_IVAR_$_Cashier._creationDates
 _OBJC_IVAR_$_Cashier._storagePath
 _OBJC_IVAR_$_Cashier._memoryCache
-/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.m
-/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.h
+/Users/jakobmygind/Documents/XcodeProjects/Nodes/Nodes Frameworks/Serializable/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.m
+/Users/jakobmygind/Documents/XcodeProjects/Nodes/Nodes Frameworks/Serializable/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/Cashier.h
 __23+[Cashier cacheWithId:]_block_invoke
 _dispatch_once
-/Applications/Xcode-beta.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/usr/include/dispatch/once.h
+/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/usr/include/dispatch/once.h
 +[NOPersistentStore baseSaveDirectory]
 -[NOPersistentStore fileURLWillBeWritten:]
 +[NOPersistentStore defaultCache]
 -[NOPersistentStore persistsCacheAcrossVersions]
-/Users/chris/Desktop/Nodes/CoreRepos/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NOPersistentStore.m
-/Users/chris/Library/Developer/Xcode/DerivedData/Cashier-fzmychravbhoqcdweaiezqwzkjmt/Build/Intermediates/Cashier.build/Release-watchos/Cashier watchOS.build/DerivedSources/Cashier_vers.c
+/Users/jakobmygind/Documents/XcodeProjects/Nodes/Nodes Frameworks/Serializable/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NOPersistentStore.m
+/Users/jakobmygind/Library/Developer/Xcode/DerivedData/Cashier-exwxuuhssyjeriednplgwpmqwukl/Build/Intermediates/Cashier.build/Release-appletvos/Cashier tvOS.build/DerivedSources/Cashier_vers.c
