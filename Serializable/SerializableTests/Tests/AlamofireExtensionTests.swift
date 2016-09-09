@@ -12,7 +12,7 @@ import Alamofire
 
 class AlamofireExtensionTests: XCTestCase {
 	
-    let timeoutDuration = 15.0
+    let timeoutDuration = 60.0
     
 	let manager = SessionManager()
     
