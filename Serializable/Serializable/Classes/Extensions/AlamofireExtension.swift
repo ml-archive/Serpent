@@ -19,11 +19,11 @@ public extension Parser {
      Parse any generic object using the parsing handler.
      */
     
-    internal static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> ResponseSerializer<T, NSError> {
-        return ResponseSerializer<T, NSError> { (request, response, data, error) -> Result<T, NSError> in
+    internal static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> DataResponseSerializer<T> {
+        return DataResponseSerializer<T> { (request, response, data, error) -> Result<T> in
             
-            let JSONResponseSerializer = Request.JSONResponseSerializer(options: .allowFragments)
-            let result = JSONResponseSerializer.serializeResponse(request, response, data, error)
+           
+            let result = Request.serializeResponseJSON(options: .allowFragments, response: response, data: data, error: error)
             
             switch result {
             case let .success(value):
@@ -36,10 +36,11 @@ public extension Parser {
                 
             case let .failure(error):
                 if let data = data , data.count != 0 {
-                    var userInfo = error.userInfo
-                    userInfo["ResponseString"] = String(data: data, encoding: String.Encoding.utf8)
-                    let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
-                    return .failure(newError)
+                    //TODO; Find out what to do with error
+//                    var userInfo = error.userInfo
+//                    userInfo["ResponseString"] = String(data: data, encoding: String.Encoding.utf8)
+//                    let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
+                    return .failure(error)
                 }
                 
                 return .failure(error)
@@ -59,7 +60,7 @@ public extension Parser {
 
 //MARK: - Wrapper methods
 
-public extension Alamofire.Request
+public extension Alamofire.DataRequest
 {
     /**
      Adds a handler that attempts to parse the result of the request into a **Decodable**
@@ -73,7 +74,7 @@ public extension Alamofire.Request
      - returns: The request
      */
     @discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (Response<T, NSError>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         let serializer = Parser.serializer( {
             ( data: Any? ) -> T? in
             
@@ -102,7 +103,7 @@ public extension Alamofire.Request
      - returns: The request
      */
 	@discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (Response<[T], NSError>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         
         let serializer = Parser.serializer( {
             ( data: Any? ) -> [T]? in
@@ -133,7 +134,7 @@ public extension Alamofire.Request
      */
     
 	@discardableResult
-    public func responseSerializable(_ completionHandler: @escaping (Response<NilSerializable, NSError>) -> Void) -> Self {
+    public func responseSerializable(_ completionHandler: @escaping (DataResponse<NilSerializable>) -> Void) -> Self {
         return validate().responseJSON(completionHandler: completionHandler)
     }
     
