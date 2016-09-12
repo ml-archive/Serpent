@@ -134,11 +134,12 @@ SWIFT_CLASS("_TtC9Alamofire12TaskDelegate")
   The serial operation queue used to execute all operations after the task completes.
 */
 @property (nonatomic, readonly, strong) NSOperationQueue * _Nonnull queue;
-@property (nonatomic, strong) NSURLSessionTask * _Nonnull task;
+@property (nonatomic, strong) NSURLSessionTask * _Nullable task;
 @property (nonatomic, readonly, copy) NSData * _Nullable data;
 @property (nonatomic) NSError * _Nullable error;
 @property (nonatomic, strong) NSURLCredential * _Nullable credential;
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) id _Nullable metrics;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) NSURLRequest * _Nullable (^ _Nullable taskWillPerformHTTPRedirection)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, NSHTTPURLResponse * _Nonnull, NSURLRequest * _Nonnull);
 @property (nonatomic, copy) NSInputStream * _Nullable (^ _Nullable taskNeedNewBodyStream)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull);
@@ -162,7 +163,7 @@ SWIFT_CLASS("_TtC9Alamofire16DataTaskDelegate")
 @property (nonatomic, readonly, copy) NSData * _Nullable data;
 @property (nonatomic, strong) NSProgress * _Nonnull progress;
 @property (nonatomic, copy) void (^ _Nullable dataStream)(NSData * _Nonnull);
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) NSURLSessionResponseDisposition (^ _Nullable dataTaskDidReceiveResponse)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSURLResponse * _Nonnull);
 @property (nonatomic, copy) void (^ _Nullable dataTaskDidBecomeDownloadTask)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSURLSessionDownloadTask * _Nonnull);
@@ -184,7 +185,7 @@ SWIFT_CLASS("_TtC9Alamofire20DownloadTaskDelegate")
 @property (nonatomic, copy) NSURL * _Nullable temporaryURL;
 @property (nonatomic, copy) NSURL * _Nullable destinationURL;
 @property (nonatomic, readonly, copy) NSURL * _Nullable fileURL;
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) NSURL * _Nonnull (^ _Nullable downloadTaskDidFinishDownloadingToURL)(NSURLSession * _Nonnull, NSURLSessionDownloadTask * _Nonnull, NSURL * _Nonnull);
 @property (nonatomic, copy) void (^ _Nullable downloadTaskDidWriteData)(NSURLSession * _Nonnull, NSURLSessionDownloadTask * _Nonnull, int64_t, int64_t, int64_t);
@@ -192,6 +193,10 @@ SWIFT_CLASS("_TtC9Alamofire20DownloadTaskDelegate")
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes;
+@end
+
+
+@interface NSNumber (SWIFT_EXTENSION(Alamofire))
 @end
 
 @class NSURLSessionStreamTask;
@@ -440,61 +445,6 @@ SWIFT_CLASS("_TtC9Alamofire15SessionDelegate")
 @end
 
 
-@interface SessionDelegate (SWIFT_EXTENSION(Alamofire)) <NSURLSessionDataDelegate>
-/**
-  Tells the delegate that the data task received the initial reply (headers) from the server.
-  \param session The session containing the data task that received an initial reply.
-
-  \param dataTask The data task that received an initial reply.
-
-  \param response A URL response object populated with headers.
-
-  \param completionHandler A completion handler that your code calls to continue the transfer, passing a
-  constant to indicate whether the transfer should continue as a data task or
-  should become a download task.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveResponse:(NSURLResponse * _Nonnull)response completionHandler:(void (^ _Nonnull)(NSURLSessionResponseDisposition))completionHandler;
-/**
-  Tells the delegate that the data task was changed to a download task.
-  \param session The session containing the task that was replaced by a download task.
-
-  \param dataTask The data task that was replaced by a download task.
-
-  \param downloadTask The new download task that replaced the data task.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didBecomeDownloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask;
-/**
-  Tells the delegate that the data task has received some of the expected data.
-  \param session The session containing the data task that provided data.
-
-  \param dataTask The data task that provided data.
-
-  \param data A data object containing the transferred data.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
-/**
-  Asks the delegate whether the data (or upload) task should store the response in the cache.
-  \param session The session containing the data (or upload) task.
-
-  \param dataTask The data (or upload) task.
-
-  \param proposedResponse The default caching behavior. This behavior is determined based on the current
-  caching policy and the values of certain received headers, such as the Pragma
-  and Cache-Control headers.
-
-  \param completionHandler A block that your handler must call, providing either the original proposed
-  response, a modified version of that response, or NULL to prevent caching the
-  response. If your delegate implements this method, it must call this completion
-  handler; otherwise, your app leaks memory.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask willCacheResponse:(NSCachedURLResponse * _Nonnull)proposedResponse completionHandler:(void (^ _Nonnull)(NSCachedURLResponse * _Nullable))completionHandler;
-@end
-
-
 @interface SessionDelegate (SWIFT_EXTENSION(Alamofire)) <NSURLSessionDelegate>
 /**
   Tells the delegate that the session has been invalidated.
@@ -565,6 +515,62 @@ SWIFT_CLASS("_TtC9Alamofire15SessionDelegate")
 @end
 
 
+@interface SessionDelegate (SWIFT_EXTENSION(Alamofire)) <NSURLSessionDataDelegate>
+/**
+  Tells the delegate that the data task received the initial reply (headers) from the server.
+  \param session The session containing the data task that received an initial reply.
+
+  \param dataTask The data task that received an initial reply.
+
+  \param response A URL response object populated with headers.
+
+  \param completionHandler A completion handler that your code calls to continue the transfer, passing a
+  constant to indicate whether the transfer should continue as a data task or
+  should become a download task.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveResponse:(NSURLResponse * _Nonnull)response completionHandler:(void (^ _Nonnull)(NSURLSessionResponseDisposition))completionHandler;
+/**
+  Tells the delegate that the data task was changed to a download task.
+  \param session The session containing the task that was replaced by a download task.
+
+  \param dataTask The data task that was replaced by a download task.
+
+  \param downloadTask The new download task that replaced the data task.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didBecomeDownloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask;
+/**
+  Tells the delegate that the data task has received some of the expected data.
+  \param session The session containing the data task that provided data.
+
+  \param dataTask The data task that provided data.
+
+  \param data A data object containing the transferred data.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
+/**
+  Asks the delegate whether the data (or upload) task should store the response in the cache.
+  \param session The session containing the data (or upload) task.
+
+  \param dataTask The data (or upload) task.
+
+  \param proposedResponse The default caching behavior. This behavior is determined based on the current
+  caching policy and the values of certain received headers, such as the Pragma
+  and Cache-Control headers.
+
+  \param completionHandler A block that your handler must call, providing either the original proposed
+  response, a modified version of that response, or NULL to prevent caching the
+  response. If your delegate implements this method, it must call this completion
+  handler; otherwise, your app leaks memory.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask willCacheResponse:(NSCachedURLResponse * _Nonnull)proposedResponse completionHandler:(void (^ _Nonnull)(NSCachedURLResponse * _Nullable))completionHandler;
+@end
+
+@class NSURLSessionTaskMetrics;
+
 @interface SessionDelegate (SWIFT_EXTENSION(Alamofire)) <NSURLSessionTaskDelegate>
 /**
   Tells the delegate that the remote server requested an HTTP redirect.
@@ -620,6 +626,16 @@ SWIFT_CLASS("_TtC9Alamofire15SessionDelegate")
 */
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
 /**
+  Tells the delegate that the session finished collecting metrics for the task.
+  \param session The session collecting the metrics.
+
+  \param task The task whose metrics have been collected.
+
+  \param metrics The collected metrics.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics * _Nonnull)metrics;
+/**
   Tells the delegate that the task finished transferring data.
   \param session The session containing the task whose request finished transferring data.
 
@@ -642,7 +658,7 @@ SWIFT_CLASS("_TtC9Alamofire18UploadTaskDelegate")
 @interface UploadTaskDelegate : DataTaskDelegate
 @property (nonatomic, readonly, strong) NSURLSessionUploadTask * _Nonnull uploadTask;
 @property (nonatomic, strong) NSProgress * _Nonnull uploadProgress;
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) void (^ _Nullable taskDidSendBodyData)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, int64_t, int64_t, int64_t);
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
