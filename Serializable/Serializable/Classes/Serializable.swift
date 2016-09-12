@@ -22,7 +22,6 @@ public protocol Encodable {
 
 public protocol Decodable {
     init(dictionary:NSDictionary?)
-    static func array(_ source: AnyObject?) -> [Self]
 }
 
 public extension Decodable {
