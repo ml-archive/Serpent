@@ -134,11 +134,12 @@ SWIFT_CLASS("_TtC9Alamofire12TaskDelegate")
   The serial operation queue used to execute all operations after the task completes.
 */
 @property (nonatomic, readonly, strong) NSOperationQueue * _Nonnull queue;
-@property (nonatomic, strong) NSURLSessionTask * _Nonnull task;
+@property (nonatomic, strong) NSURLSessionTask * _Nullable task;
 @property (nonatomic, readonly, copy) NSData * _Nullable data;
 @property (nonatomic) NSError * _Nullable error;
 @property (nonatomic, strong) NSURLCredential * _Nullable credential;
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) id _Nullable metrics;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) NSURLRequest * _Nullable (^ _Nullable taskWillPerformHTTPRedirection)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, NSHTTPURLResponse * _Nonnull, NSURLRequest * _Nonnull);
 @property (nonatomic, copy) NSInputStream * _Nullable (^ _Nullable taskNeedNewBodyStream)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull);
@@ -162,7 +163,7 @@ SWIFT_CLASS("_TtC9Alamofire16DataTaskDelegate")
 @property (nonatomic, readonly, copy) NSData * _Nullable data;
 @property (nonatomic, strong) NSProgress * _Nonnull progress;
 @property (nonatomic, copy) void (^ _Nullable dataStream)(NSData * _Nonnull);
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) NSURLSessionResponseDisposition (^ _Nullable dataTaskDidReceiveResponse)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSURLResponse * _Nonnull);
 @property (nonatomic, copy) void (^ _Nullable dataTaskDidBecomeDownloadTask)(NSURLSession * _Nonnull, NSURLSessionDataTask * _Nonnull, NSURLSessionDownloadTask * _Nonnull);
@@ -184,7 +185,7 @@ SWIFT_CLASS("_TtC9Alamofire20DownloadTaskDelegate")
 @property (nonatomic, copy) NSURL * _Nullable temporaryURL;
 @property (nonatomic, copy) NSURL * _Nullable destinationURL;
 @property (nonatomic, readonly, copy) NSURL * _Nullable fileURL;
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) NSURL * _Nonnull (^ _Nullable downloadTaskDidFinishDownloadingToURL)(NSURLSession * _Nonnull, NSURLSessionDownloadTask * _Nonnull, NSURL * _Nonnull);
 @property (nonatomic, copy) void (^ _Nullable downloadTaskDidWriteData)(NSURLSession * _Nonnull, NSURLSessionDownloadTask * _Nonnull, int64_t, int64_t, int64_t);
@@ -192,6 +193,10 @@ SWIFT_CLASS("_TtC9Alamofire20DownloadTaskDelegate")
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes;
+@end
+
+
+@interface NSNumber (SWIFT_EXTENSION(Alamofire))
 @end
 
 
@@ -414,6 +419,36 @@ SWIFT_CLASS("_TtC9Alamofire15SessionDelegate")
 @end
 
 
+@interface SessionDelegate (SWIFT_EXTENSION(Alamofire)) <NSURLSessionDelegate>
+/**
+  Tells the delegate that the session has been invalidated.
+  \param session The session object that was invalidated.
+
+  \param error The error that caused invalidation, or nil if the invalidation was explicit.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
+/**
+  Requests credentials from the delegate in response to a session-level authentication request from the
+  remote server.
+  \param session The session containing the task that requested authentication.
+
+  \param challenge An object that contains the request for authentication.
+
+  \param completionHandler A handler that your delegate method must call providing the disposition
+  and credential.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
+/**
+  Tells the delegate that all messages enqueued for a session have been delivered.
+  \param session The session that no longer has any outstanding requests.
+
+*/
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
+@end
+
+
 @interface SessionDelegate (SWIFT_EXTENSION(Alamofire)) <NSURLSessionDataDelegate>
 /**
   Tells the delegate that the data task received the initial reply (headers) from the server.
@@ -466,36 +501,6 @@ SWIFT_CLASS("_TtC9Alamofire15SessionDelegate")
 
 */
 - (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask willCacheResponse:(NSCachedURLResponse * _Nonnull)proposedResponse completionHandler:(void (^ _Nonnull)(NSCachedURLResponse * _Nullable))completionHandler;
-@end
-
-
-@interface SessionDelegate (SWIFT_EXTENSION(Alamofire)) <NSURLSessionDelegate>
-/**
-  Tells the delegate that the session has been invalidated.
-  \param session The session object that was invalidated.
-
-  \param error The error that caused invalidation, or nil if the invalidation was explicit.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-/**
-  Requests credentials from the delegate in response to a session-level authentication request from the
-  remote server.
-  \param session The session containing the task that requested authentication.
-
-  \param challenge An object that contains the request for authentication.
-
-  \param completionHandler A handler that your delegate method must call providing the disposition
-  and credential.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-/**
-  Tells the delegate that all messages enqueued for a session have been delivered.
-  \param session The session that no longer has any outstanding requests.
-
-*/
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
 @end
 
 
@@ -576,7 +581,7 @@ SWIFT_CLASS("_TtC9Alamofire18UploadTaskDelegate")
 @interface UploadTaskDelegate : DataTaskDelegate
 @property (nonatomic, readonly, strong) NSURLSessionUploadTask * _Nonnull uploadTask;
 @property (nonatomic, strong) NSProgress * _Nonnull uploadProgress;
-- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nonnull)task OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTask:(NSURLSessionTask * _Nullable)task OBJC_DESIGNATED_INITIALIZER;
 - (void)reset;
 @property (nonatomic, copy) void (^ _Nullable taskDidSendBodyData)(NSURLSession * _Nonnull, NSURLSessionTask * _Nonnull, int64_t, int64_t, int64_t);
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
