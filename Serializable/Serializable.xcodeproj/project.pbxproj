@@ -35,8 +35,6 @@
 		01CD3F9D1D0705CF0044887E /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */; };
 		01CD3F9E1D0705D20044887E /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
 		01CD3F9F1D0705D20044887E /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
-		01F962301CC38A52006083C5 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620C1CC38A52006083C5 /* AlamofireExtension.swift */; };
-		01F962311CC38A52006083C5 /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620D1CC38A52006083C5 /* CashierExtension.swift */; };
 		01F962321CC38A52006083C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620E1CC38A52006083C5 /* Extensions.swift */; };
 		01F962331CC38A52006083C5 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962101CC38A52006083C5 /* Operator.swift */; };
 		01F962341CC38A52006083C5 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962121CC38A52006083C5 /* BridgingBox.swift */; };
@@ -133,6 +131,8 @@
 		27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
 		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		830D4DA51D9133D100838C16 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620C1CC38A52006083C5 /* AlamofireExtension.swift */; };
+		830D4DA61D9133D100838C16 /* CashierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620D1CC38A52006083C5 /* CashierExtension.swift */; };
 		83F3AFCF1CE92DB300D47725 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
 		83F3AFD01CE92DB300D47725 /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */; };
 /* End PBXBuildFile section */
@@ -647,9 +647,11 @@
 				TargetAttributes = {
 					272F1DC51C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 					272F1DCF1C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 					2732EC8C1C9F21A500BFD4E1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -775,11 +777,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F962351CC38A52006083C5 /* Serializable.swift in Sources */,
-				01F962301CC38A52006083C5 /* AlamofireExtension.swift in Sources */,
+				830D4DA61D9133D100838C16 /* CashierExtension.swift in Sources */,
+				830D4DA51D9133D100838C16 /* AlamofireExtension.swift in Sources */,
 				01F962331CC38A52006083C5 /* Operator.swift in Sources */,
 				01F962321CC38A52006083C5 /* Extensions.swift in Sources */,
 				01F962341CC38A52006083C5 /* BridgingBox.swift in Sources */,
-				01F962311CC38A52006083C5 /* CashierExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,6 +1037,7 @@
 				PRODUCT_NAME = Serializable;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1055,6 +1058,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
 				PRODUCT_NAME = Serializable;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -1068,6 +1072,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1081,6 +1086,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
