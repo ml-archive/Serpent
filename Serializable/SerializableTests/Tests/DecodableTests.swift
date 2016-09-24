@@ -19,8 +19,8 @@ class DecodableTests: XCTestCase {
 		do {
 			if let path = Bundle(for: type(of: self)).path(forResource: "DecodableTest", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
 				bridgedDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
-				testModels = DecodableModel.array(bridgedDictionary.object(forKey:"models") as AnyObject?)
-				testNonArrayModels = DecodableModel.array(bridgedDictionary.object(forKey:"model") as AnyObject?)
+				testModels = DecodableModel.array(bridgedDictionary.object(forKey:"models"))
+				testNonArrayModels = DecodableModel.array(bridgedDictionary.object(forKey:"model"))
 			}
 		} catch {
 			XCTFail("Failed to prepare bridged dictionary.")
