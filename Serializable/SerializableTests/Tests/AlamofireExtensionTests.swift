@@ -12,7 +12,7 @@ import Alamofire
 
 class AlamofireExtensionTests: XCTestCase {
 	
-    let timeoutDuration = 60.0
+    let timeoutDuration = 2.0
     
 	let manager = SessionManager()
     
@@ -21,7 +21,12 @@ class AlamofireExtensionTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
- 
+	func urlForResource(resource: String) -> URL? {
+		if let path = Bundle(for: type(of: self)).path(forResource: resource, ofType: "json") {
+			return URL(fileURLWithPath: path)
+		}
+		return nil
+	}
 	
 	func testAlamofireExtension() {
 		let expectation = self.expectation(description: "Expected network request success")
@@ -30,11 +35,14 @@ class AlamofireExtensionTests: XCTestCase {
 			case .success:
 				expectation.fulfill()
 			default:
+				print(result)
 				break // Fail
 				
 			}
 		}
-		manager.request("http://httpbin.org/get", method: .get).responseSerializable(handler)
+		if let url = urlForResource(resource: "NetworkModel") {
+			manager.request(url, method: .get).responseSerializable(handler)
+		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
 	
@@ -48,7 +56,9 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		manager.request("http://httpbin.org/deny", method: .get).responseSerializable(handler)
+		if let url = urlForResource(resource: "NetworkModelBad") {
+			manager.request(url, method: .get).responseSerializable(handler)
+		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
 
@@ -63,7 +73,9 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		manager.request("http://httpbin.org/get", method: .get).responseSerializable(handler)
+		if let url = urlForResource(resource: "NetworkModel") {
+			manager.request(url, method: .get).responseSerializable(handler)
+		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
 	func testAlamofireExtensionUnexpectedArrayJSON() {
@@ -76,7 +88,9 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		manager.request("https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/ArrayTest.json", method: .get).responseSerializable(handler)
+		if let url = urlForResource(resource: "ArrayTest") {
+			manager.request(url, method: .get).responseSerializable(handler)
+		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
 	func testAlamofireExtensionEmptyJSON() {
@@ -89,7 +103,9 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		manager.request("https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/Empty.json", method: .get).responseSerializable(handler)
+		if let url = urlForResource(resource: "Empty") {
+			manager.request(url, method: .get).responseSerializable(handler)
+		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
 	func testAlamofireArrayUnwrapper() {
@@ -104,9 +120,10 @@ class AlamofireExtensionTests: XCTestCase {
 		}
 		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
 		
-		manager.request("https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json",
-		                method: .get)
-			.responseSerializable(handler, unwrapper: unwrapper)
+		if let url = urlForResource(resource: "NestedArrayTest") {
+			manager.request(url, method: .get).responseSerializable(handler, unwrapper: unwrapper)
+		}
+		
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
 	
@@ -121,9 +138,9 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}		
 		
-		manager.request("https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json",
-		                method: .get)
-			.responseSerializable(handler)
+		if let url = urlForResource(resource: "NestedArrayTest") {
+			manager.request(url, method: .get).responseSerializable(handler)
+		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
 	func testAlamofireWrongTypeUnwrapper() {
@@ -138,9 +155,9 @@ class AlamofireExtensionTests: XCTestCase {
 		}
 		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
 		
-		manager.request("https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/NestedArrayTest.json",
-			method: .get)
-			.responseSerializable(handler, unwrapper: unwrapper)
+		if let url = urlForResource(resource: "NestedArrayTest") {
+			manager.request(url, method: .get).responseSerializable(handler, unwrapper: unwrapper)
+		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
     
@@ -154,7 +171,9 @@ class AlamofireExtensionTests: XCTestCase {
                 break
             }
         }
-        manager.request("https://raw.githubusercontent.com/nodes-ios/Serializable/master/Serializable/SerializableTests/TestEndpoint/Empty.json", method: .get).responseSerializable(handler)
+		if let url = urlForResource(resource: "Empty") {
+			manager.request(url, method: .get).responseSerializable(handler)
+		}
         waitForExpectations(timeout: timeoutDuration, handler: nil)
     }
 }
