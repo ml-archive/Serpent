@@ -25,7 +25,7 @@ public protocol Decodable {
 }
 
 public extension Decodable {
-    public static func array(_ source: AnyObject?) -> [Self] {
+    public static func array(_ source: Any?) -> [Self] {
         guard let source = source as? [NSDictionary] else {
             return [Self]()
         }

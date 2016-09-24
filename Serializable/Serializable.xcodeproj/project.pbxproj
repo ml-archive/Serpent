@@ -148,6 +148,24 @@
 		830175B41D96E9D000B85378 /* NetworkModelBad.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175B31D96E9D000B85378 /* NetworkModelBad.json */; };
 		830175B51D96E9D000B85378 /* NetworkModelBad.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175B31D96E9D000B85378 /* NetworkModelBad.json */; };
 		830175B61D96E9D000B85378 /* NetworkModelBad.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175B31D96E9D000B85378 /* NetworkModelBad.json */; };
+		830175B81D97007300B85378 /* SerializablePerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175B71D97007300B85378 /* SerializablePerformanceTest.swift */; };
+		830175B91D97007300B85378 /* SerializablePerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175B71D97007300B85378 /* SerializablePerformanceTest.swift */; };
+		830175BA1D97007300B85378 /* SerializablePerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175B71D97007300B85378 /* SerializablePerformanceTest.swift */; };
+		830175BF1D97008800B85378 /* PerformanceSmallTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175BB1D97008800B85378 /* PerformanceSmallTest.json */; };
+		830175C01D97008800B85378 /* PerformanceSmallTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175BB1D97008800B85378 /* PerformanceSmallTest.json */; };
+		830175C11D97008800B85378 /* PerformanceSmallTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175BB1D97008800B85378 /* PerformanceSmallTest.json */; };
+		830175C21D97008800B85378 /* PerformanceTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175BC1D97008800B85378 /* PerformanceTest.json */; };
+		830175C31D97008800B85378 /* PerformanceTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175BC1D97008800B85378 /* PerformanceTest.json */; };
+		830175C41D97008800B85378 /* PerformanceTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175BC1D97008800B85378 /* PerformanceTest.json */; };
+		830175C51D97008800B85378 /* PerformanceTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175BD1D97008800B85378 /* PerformanceTestModel.swift */; };
+		830175C61D97008800B85378 /* PerformanceTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175BD1D97008800B85378 /* PerformanceTestModel.swift */; };
+		830175C71D97008800B85378 /* PerformanceTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175BD1D97008800B85378 /* PerformanceTestModel.swift */; };
+		830175C81D97008800B85378 /* PerformanceTestSmallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175BE1D97008800B85378 /* PerformanceTestSmallModel.swift */; };
+		830175C91D97008800B85378 /* PerformanceTestSmallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175BE1D97008800B85378 /* PerformanceTestSmallModel.swift */; };
+		830175CA1D97008800B85378 /* PerformanceTestSmallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175BE1D97008800B85378 /* PerformanceTestSmallModel.swift */; };
+		830175CC1D97037D00B85378 /* NilTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175CB1D97037D00B85378 /* NilTestModel.swift */; };
+		830175CD1D97037D00B85378 /* NilTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175CB1D97037D00B85378 /* NilTestModel.swift */; };
+		830175CE1D97037D00B85378 /* NilTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175CB1D97037D00B85378 /* NilTestModel.swift */; };
 		83F3AFCF1CE92DB300D47725 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
 		83F3AFD01CE92DB300D47725 /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */; };
 /* End PBXBuildFile section */
@@ -232,6 +250,12 @@
 		830175A21D96E44100B85378 /* NestedArrayTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NestedArrayTest.json; sourceTree = "<group>"; };
 		830175AD1D96E8A700B85378 /* NetworkModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkModel.json; sourceTree = "<group>"; };
 		830175B31D96E9D000B85378 /* NetworkModelBad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkModelBad.json; sourceTree = "<group>"; };
+		830175B71D97007300B85378 /* SerializablePerformanceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializablePerformanceTest.swift; sourceTree = "<group>"; };
+		830175BB1D97008800B85378 /* PerformanceSmallTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PerformanceSmallTest.json; sourceTree = "<group>"; };
+		830175BC1D97008800B85378 /* PerformanceTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PerformanceTest.json; sourceTree = "<group>"; };
+		830175BD1D97008800B85378 /* PerformanceTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTestModel.swift; sourceTree = "<group>"; };
+		830175BE1D97008800B85378 /* PerformanceTestSmallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTestSmallModel.swift; sourceTree = "<group>"; };
+		830175CB1D97037D00B85378 /* NilTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NilTestModel.swift; sourceTree = "<group>"; };
 		83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingBoxTests.swift; sourceTree = "<group>"; };
 		83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -352,6 +376,10 @@
 		272D926C1C6DFB7300BCD3B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				830175BB1D97008800B85378 /* PerformanceSmallTest.json */,
+				830175BC1D97008800B85378 /* PerformanceTest.json */,
+				830175BD1D97008800B85378 /* PerformanceTestModel.swift */,
+				830175BE1D97008800B85378 /* PerformanceTestSmallModel.swift */,
 				272D926D1C6DFB7300BCD3B6 /* CustomOperatorsTest.json */,
 				272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */,
 				272D926F1C6DFB7300BCD3B6 /* EnumsTest.json */,
@@ -369,6 +397,7 @@
 				01C706C71C9BEB0C0024E94A /* DecodableModel.swift */,
 				01C706C81C9BEB0C0024E94A /* DecodableTest.json */,
 				27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */,
+				830175CB1D97037D00B85378 /* NilTestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +416,7 @@
 				01C706B91C9BEAF50024E94A /* SerializableEntityTests.swift */,
 				27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */,
 				83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */,
+				830175B71D97007300B85378 /* SerializablePerformanceTest.swift */,
 				83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */,
 			);
 			path = Tests;
@@ -749,6 +779,7 @@
 				830175A91D96E44100B85378 /* NestedArrayTest.json in Resources */,
 				01C706CD1C9BEB0C0024E94A /* SerializableEntityTest.json in Resources */,
 				01C706CB1C9BEB0C0024E94A /* HexInitializableTest.json in Resources */,
+				830175BF1D97008800B85378 /* PerformanceSmallTest.json in Resources */,
 				272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */,
 				272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */,
 				01C706D21C9BEB0C0024E94A /* DecodableTest.json in Resources */,
@@ -757,6 +788,7 @@
 				830175A61D96E44100B85378 /* Empty.json in Resources */,
 				272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */,
 				830175AE1D96E8A700B85378 /* NetworkModel.json in Resources */,
+				830175C21D97008800B85378 /* PerformanceTest.json in Resources */,
 				27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,6 +816,7 @@
 				830175AB1D96E44100B85378 /* NestedArrayTest.json in Resources */,
 				2732ECD21C9F2A4D00BFD4E1 /* EnumsTest.json in Resources */,
 				2732ECD31C9F2A4D00BFD4E1 /* PrimitivesTest.json in Resources */,
+				830175C11D97008800B85378 /* PerformanceSmallTest.json in Resources */,
 				2732ECD41C9F2A4D00BFD4E1 /* StringInitializableTest.json in Resources */,
 				2732ECD51C9F2A4D00BFD4E1 /* HexInitializableTest.json in Resources */,
 				2732ECD61C9F2A4D00BFD4E1 /* SerializableEntityTest.json in Resources */,
@@ -792,6 +825,7 @@
 				830175A81D96E44100B85378 /* Empty.json in Resources */,
 				2732ECD81C9F2A4D00BFD4E1 /* DecodableTest.json in Resources */,
 				830175B01D96E8A700B85378 /* NetworkModel.json in Resources */,
+				830175C41D97008800B85378 /* PerformanceTest.json in Resources */,
 				2732ECD91C9F2A4D00BFD4E1 /* Alamofire.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,9 +845,11 @@
 				2785B5601C9DE9A400E40605 /* CustomOperatorsTest.json in Resources */,
 				2785B5611C9DE9A400E40605 /* EnumsTest.json in Resources */,
 				830175A41D96E44100B85378 /* ArrayTest.json in Resources */,
+				830175C01D97008800B85378 /* PerformanceSmallTest.json in Resources */,
 				830175B51D96E9D000B85378 /* NetworkModelBad.json in Resources */,
 				2785B5621C9DE9A400E40605 /* PrimitivesTest.json in Resources */,
 				830175AA1D96E44100B85378 /* NestedArrayTest.json in Resources */,
+				830175C31D97008800B85378 /* PerformanceTest.json in Resources */,
 				2785B5631C9DE9A400E40605 /* StringInitializableTest.json in Resources */,
 				830175A71D96E44100B85378 /* Empty.json in Resources */,
 				2785B5651C9DE9A400E40605 /* SerializableEntityTest.json in Resources */,
@@ -849,18 +885,22 @@
 				01C706D11C9BEB0C0024E94A /* DecodableModel.swift in Sources */,
 				01C706BA1C9BEAF50024E94A /* StringInitializableTests.swift in Sources */,
 				01C706BD1C9BEAF50024E94A /* DecodableTests.swift in Sources */,
+				830175C51D97008800B85378 /* PerformanceTestModel.swift in Sources */,
 				83F3AFCF1CE92DB300D47725 /* BridgingBoxTests.swift in Sources */,
 				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
 				01C706D01C9BEB0C0024E94A /* SimpleModel.swift in Sources */,
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
 				01C706BE1C9BEAF50024E94A /* SerializableEntityTests.swift in Sources */,
+				830175B81D97007300B85378 /* SerializablePerformanceTest.swift in Sources */,
 				01C706CC1C9BEB0C0024E94A /* HexInitializableTestModel.swift in Sources */,
 				272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */,
 				01C706BB1C9BEAF50024E94A /* HexInitalizableTests.swift in Sources */,
 				272D926B1C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift in Sources */,
+				830175CC1D97037D00B85378 /* NilTestModel.swift in Sources */,
 				27B05FD21C9C3869004F2CCB /* NetworkTestModel.swift in Sources */,
 				272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */,
 				83F3AFD01CE92DB300D47725 /* CashierExtensionTests.swift in Sources */,
+				830175C81D97008800B85378 /* PerformanceTestSmallModel.swift in Sources */,
 				27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */,
 				01C706CE1C9BEB0C0024E94A /* SerializableEntityTestModel.swift in Sources */,
 			);
@@ -902,18 +942,22 @@
 				2732ECC11C9F2A3600BFD4E1 /* PrimitivesTestModel.swift in Sources */,
 				2732ECC21C9F2A3600BFD4E1 /* StringInitializableTestModel.swift in Sources */,
 				2732ECC31C9F2A3600BFD4E1 /* HexInitializableTestModel.swift in Sources */,
+				830175C71D97008800B85378 /* PerformanceTestModel.swift in Sources */,
 				2732ECC41C9F2A3600BFD4E1 /* SerializableEntityTestModel.swift in Sources */,
 				2732ECC51C9F2A3600BFD4E1 /* SimpleModel.swift in Sources */,
 				2732ECC61C9F2A3600BFD4E1 /* DecodableModel.swift in Sources */,
 				2732ECC71C9F2A3600BFD4E1 /* NetworkTestModel.swift in Sources */,
 				2732ECC81C9F2A3600BFD4E1 /* CustomOperatorsTests.swift in Sources */,
+				830175BA1D97007300B85378 /* SerializablePerformanceTest.swift in Sources */,
 				2732ECC91C9F2A3600BFD4E1 /* SerializableEnumsTests.swift in Sources */,
 				2732ECCA1C9F2A3600BFD4E1 /* SerializablePrimitivesTests.swift in Sources */,
 				2732ECCB1C9F2A3600BFD4E1 /* StringInitializableTests.swift in Sources */,
 				2732ECCC1C9F2A3600BFD4E1 /* HexInitalizableTests.swift in Sources */,
+				830175CE1D97037D00B85378 /* NilTestModel.swift in Sources */,
 				2732ECCD1C9F2A3600BFD4E1 /* SerializableNilEntitiesTests.swift in Sources */,
 				2732ECCE1C9F2A3600BFD4E1 /* DecodableTests.swift in Sources */,
 				2732ECCF1C9F2A3600BFD4E1 /* SerializableEntityTests.swift in Sources */,
+				830175CA1D97008800B85378 /* PerformanceTestSmallModel.swift in Sources */,
 				2732ECD01C9F2A3600BFD4E1 /* AlamofireExtensionTests.swift in Sources */,
 				01CD3F9E1D0705D20044887E /* BridgingBoxTests.swift in Sources */,
 			);
@@ -942,18 +986,22 @@
 				2785B54D1C9DE98000E40605 /* PrimitivesTestModel.swift in Sources */,
 				2785B54E1C9DE98000E40605 /* StringInitializableTestModel.swift in Sources */,
 				2785B5501C9DE98000E40605 /* SerializableEntityTestModel.swift in Sources */,
+				830175C61D97008800B85378 /* PerformanceTestModel.swift in Sources */,
 				2785B5511C9DE98000E40605 /* SimpleModel.swift in Sources */,
 				2785B5521C9DE98000E40605 /* DecodableModel.swift in Sources */,
 				2785B5531C9DE98000E40605 /* NetworkTestModel.swift in Sources */,
 				2785B5541C9DE98000E40605 /* CustomOperatorsTests.swift in Sources */,
 				27D9ED911C9F202600EB2B49 /* AlamofireExtensionTests.swift in Sources */,
+				830175B91D97007300B85378 /* SerializablePerformanceTest.swift in Sources */,
 				2785B5551C9DE98000E40605 /* SerializableEnumsTests.swift in Sources */,
 				2785B5561C9DE98000E40605 /* SerializablePrimitivesTests.swift in Sources */,
 				2785B5571C9DE98000E40605 /* StringInitializableTests.swift in Sources */,
 				2785B5591C9DE98000E40605 /* SerializableNilEntitiesTests.swift in Sources */,
+				830175CD1D97037D00B85378 /* NilTestModel.swift in Sources */,
 				2785B55A1C9DE98000E40605 /* DecodableTests.swift in Sources */,
 				2732ECDC1C9F44E800BFD4E1 /* HexInitializableTestModel.swift in Sources */,
 				27D9ED7B1C9F1DD500EB2B49 /* CustomOperatorsTestModel.swift in Sources */,
+				830175C91D97008800B85378 /* PerformanceTestSmallModel.swift in Sources */,
 				2785B55B1C9DE98000E40605 /* SerializableEntityTests.swift in Sources */,
 				01CD3F9F1D0705D20044887E /* BridgingBoxTests.swift in Sources */,
 			);
