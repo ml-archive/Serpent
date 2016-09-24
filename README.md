@@ -43,9 +43,10 @@ github "nodes-ios/Serializable"
 ~~~
 
 ### CocoaPods
-~~~
-pod 'Serializable', '~> 0.1.0'
-~~~
+
+~~pod 'Serializable', '~> 0.1.0'~~
+
+Under maintenance, returning soon!
 
 ### Swift Package Manager
 To use Serializable as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following to your `Package.swift` file.  
