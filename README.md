@@ -33,7 +33,7 @@ There are plenty of other Encoding and Decoding frameworks available. Why should
 ## 📝 Requirements
 
 * iOS 8.0+
-* Swift 2.0+
+* Swift 3.0+
 
 ## 📦 Installation
 
