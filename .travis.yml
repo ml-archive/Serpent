@@ -1,6 +1,6 @@
 language: objective-c
-osx_image: xcode8
-xcode_sdk: iphonesimulator10.0
+osx_image: xcode8.1
+xcode_sdk: iphonesimulator10.1
 branches:
   only:
   - master
@@ -14,14 +14,14 @@ env:
   - OSX_FRAMEWORK_SCHEME="Serializable OSX"
   - TVOS_FRAMEWORK_SCHEME="Serializable tvOS"
   - WATCHOS_FRAMEWORK_SCHEME="Serializable watchOS"
-  - IOS_SDK=iphonesimulator10.0
-  - OSX_SDK=macosx10.12
-  - TVOS_SDK=appletvsimulator10.0
+  - IOS_SDK=iphonesimulator10.1
+  - OSX_SDK=macosx10.12.1
+  - TVOS_SDK=appletvsimulator10.1
   - WATCHOS_SDK=watchsimulator3.0
   matrix:
-  - DESTINATION="OS=10.0,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"
+  - DESTINATION="OS=10.1,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"
   - DESTINATION="arch=x86_64"                    SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES"
-  - DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES"
+  - DESTINATION="OS=10.1,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES"
   - DESTINATION="OS=3.0,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"
 
 script:
