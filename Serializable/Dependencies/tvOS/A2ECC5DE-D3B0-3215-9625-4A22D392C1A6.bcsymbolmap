@@ -1,6 +1,6 @@
 BCSymbolMap Version: 2.0
 -[NSString(MD5Addition) stringFromMD5]
-Apple LLVM version 8.0.0 (clang-800.0.38)
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
 /Users/jakobmygind/Documents/XcodeProjects/Nodes/Nodes Frameworks/Serializable/Serializable/Carthage/Checkouts/Cashier/Cashier/Classes/NSString+MD5Addition.m
 /Users/jakobmygind/Documents/XcodeProjects/Nodes/Nodes Frameworks/Serializable/Serializable/Carthage/Checkouts/Cashier
 -[Cashier init]
