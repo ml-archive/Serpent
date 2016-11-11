@@ -35,8 +35,11 @@ class HexInitalizableTests: XCTestCase {
 	
 	func testHexInitializableUIColor() {
 		let color = HexColor(red: CGFloat(85) / 255.0, green: CGFloat(170) / 255.0, blue: CGFloat(204) / 255.0, alpha: 1.0)
+        let colorAlpha = HexColor(red: CGFloat(85) / 255.0, green: CGFloat(170) / 255.0, blue: CGFloat(204) / 255.0, alpha: 1.0).withAlphaComponent(0.8)
 		XCTAssertEqual(testModel.shortColor, color, "Error parsing short form color in HexInitializable")
 		XCTAssertEqual(testModel.fullColor, color, "Error parsing long form color in HexInitializable")
+        XCTAssertEqual(testModel.threeColor, color, "Error parsing three hex form color in HexInitializable")
+        XCTAssertEqual(testModel.alphaRGB, colorAlpha, "Error parsing three hex form color in HexInitializable")
 		XCTAssertNil(testModel.badColor, "Error returning nil for malformed color hex")
 		XCTAssertNil(testModel.notColor, "Error returning nil for non hex value")
         XCTAssertNil(testModel.invalidHexColor, "Error returning nil for invalid hex value")

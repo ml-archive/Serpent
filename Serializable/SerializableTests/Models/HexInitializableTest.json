@@ -5,6 +5,7 @@
 	"not_color" : {
 		"color" : "asdf"
 	},
-    "invalid_hex_color" : "SSg12F"
-    
+    "three_color" : "5AC",
+    "invalid_hex_color" : "SSg12F",
+    "alpha_rgb" : "CC55AACC"
 }

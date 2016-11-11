@@ -61,46 +61,36 @@ public protocol HexInitializable {
 }
 
 extension Color: HexInitializable {
-	public static func fromHexString<T>(_ hexString: String) -> T? {
-		let charSet = CharacterSet.whitespacesAndNewlines
-		var str = hexString.trimmingCharacters(in: charSet).uppercased()
-		
-		if (str.hasPrefix("#")) {
-			str = str.substring(from: str.index(str.startIndex, offsetBy: 1))
-		}
-		
-		// TODO: Handle 3, 4 & 8 character long HEX strings in the future
-		if str.characters.count != 6 {
-			return nil
-		}
-		
-		let range   = NSMakeRange(0, 6)
-		let options = NSRegularExpression.MatchingOptions(rawValue:0)
-		
-		guard validHexRegex.numberOfMatches(in: str, options: options, range: range) == 1 else {
-			return nil
-		}
-		
-		let rString = str.substring(to: str.index(str.startIndex, offsetBy: 2))
-		let gString = str.substring(with: str.index(str.startIndex, offsetBy: 2)..<str.index(str.startIndex, offsetBy: 4))
-		let bString = str.substring(with: str.index(str.startIndex, offsetBy: 4)..<str.index(str.startIndex, offsetBy: 6))
-		
-		var r: CUnsignedInt = 0, g: CUnsignedInt = 0, b: CUnsignedInt = 0
-		Scanner(string: rString).scanHexInt32(&r)
-		Scanner(string: gString).scanHexInt32(&g)
-		Scanner(string: bString).scanHexInt32(&b)
-		
-		return self.init(
-			red: CGFloat(r) / 255.0,
-			green: CGFloat(g) / 255.0,
-			blue: CGFloat(b) / 255.0,
-			alpha: 1.0) as? T
-	}
+
+    public static func fromHexString<T>(_ hexString: String) -> T? {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt32()
+        let a, r, g, b: UInt32
+        
+        guard Scanner(string: hex).scanHexInt32(&int) else {
+            return nil
+        }
+        
+        switch hex.characters.count {
+        // RGB (12-bit)
+        case 3:
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        // RRGGBB (24-bit)
+        case 6:
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        // ARGB (32-bit)
+        case 8:
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            return nil
+        }
+        
+        return self.init(red: CGFloat(r) / 255,
+                         green: CGFloat(g) / 255,
+                         blue: CGFloat(b) / 255,
+                         alpha: CGFloat(a) / 255) as? T
+    }
 }
-
-let validHexRegex = try! NSRegularExpression(pattern: "[0-9A-F]{6}", options: NSRegularExpression.Options(rawValue: 0))
-
-
 
 // MARK: - Extensions -
 // MARK: SequenceType

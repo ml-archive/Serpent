@@ -22,6 +22,8 @@ struct HexInitializableTestModel {
 	var badColor: Color?
 	var notColor: Color?
     var invalidHexColor: Color?
+    var threeColor: Color?
+    var alphaRGB: Color?
 }
 
 extension HexInitializableTestModel: Serializable {
@@ -31,6 +33,8 @@ extension HexInitializableTestModel: Serializable {
         badColor        <== (self, dictionary, "bad_color")
         notColor        <== (self, dictionary, "not_color")
         invalidHexColor <== (self, dictionary, "invalid_hex_color")
+        threeColor      <== (self, dictionary, "three_color")
+        alphaRGB        <== (self, dictionary, "alpha_rgb")
     }
     
     func encodableRepresentation() -> NSCoding {
@@ -40,6 +44,8 @@ extension HexInitializableTestModel: Serializable {
         (dict, "bad_color")         <== badColor
         (dict, "not_color")         <== notColor
         (dict, "invalid_hex_color") <== invalidHexColor
+        (dict, "three_color")       <== threeColor
+        (dict, "alpha_rgb")         <== alphaRGB
         return dict
     }
 }
