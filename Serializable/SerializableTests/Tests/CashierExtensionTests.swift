@@ -8,7 +8,7 @@
 
 import XCTest
 import Cashier
-import Serializable
+import Serpent
 
 class CashierExtensionTests: XCTestCase {
     

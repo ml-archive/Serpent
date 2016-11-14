@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Serializable
+import Serpent
 #if os(OSX)
 	import Cocoa
 	typealias Color = NSColor
