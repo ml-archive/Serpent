@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
-               BuildableName = "Serializable.framework"
+               BuildableName = "Serpent.framework"
                BlueprintName = "Serpent tvOS"
                ReferencedContainer = "container:Serpent.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
-            BuildableName = "Serializable.framework"
+            BuildableName = "Serpent.framework"
             BlueprintName = "Serpent tvOS"
             ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
-            BuildableName = "Serializable.framework"
+            BuildableName = "Serpent.framework"
             BlueprintName = "Serpent tvOS"
             ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
-            BuildableName = "Serializable.framework"
+            BuildableName = "Serpent.framework"
             BlueprintName = "Serpent tvOS"
             ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>

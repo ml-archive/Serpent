@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Serializable
+import Serpent
 
 struct SerializableEntityTestModel {
 	var id = 0

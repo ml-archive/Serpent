@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Serializable
+import Serpent
 
 public struct NilModel {
 	

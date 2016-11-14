@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Serializable
+import Serpent
 #if os(OSX)
 	import Cocoa
 	typealias HexColor = NSColor

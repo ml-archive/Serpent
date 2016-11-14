@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Serializable
+import Serpent
 
 struct PrimitivesTestModel {
     var integer: Int = 0

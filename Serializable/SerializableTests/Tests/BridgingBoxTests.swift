@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Serializable
+import Serpent
 
 class BridgingBoxTests: XCTestCase {
     
