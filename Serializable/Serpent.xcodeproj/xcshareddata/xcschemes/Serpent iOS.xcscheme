@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
+               BlueprintIdentifier = "272F1DC51C6A392A0098F620"
                BuildableName = "Serializable.framework"
-               BlueprintName = "Serializable tvOS"
-               ReferencedContainer = "container:Serializable.xcodeproj">
+               BlueprintName = "Serpent iOS"
+               ReferencedContainer = "container:Serpent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,27 +33,27 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2732ECA21C9F21BF00BFD4E1"
-               BuildableName = "Serializable tvOSTests.xctest"
-               BlueprintName = "Serializable tvOSTests"
-               ReferencedContainer = "container:Serializable.xcodeproj">
+               BlueprintIdentifier = "272F1DCF1C6A392A0098F620"
+               BuildableName = "SerpentTests.xctest"
+               BlueprintName = "SerpentTests"
+               ReferencedContainer = "container:Serpent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
+            BlueprintIdentifier = "272F1DC51C6A392A0098F620"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable tvOS"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent iOS"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -65,10 +65,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
+            BlueprintIdentifier = "272F1DC51C6A392A0098F620"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable tvOS"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent iOS"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,10 +83,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2732EC991C9F21BF00BFD4E1"
+            BlueprintIdentifier = "272F1DC51C6A392A0098F620"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable tvOS"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent iOS"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

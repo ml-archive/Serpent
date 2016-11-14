@@ -67,8 +67,8 @@
 		272D92761C6DFB7300BCD3B6 /* EnumsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */; };
 		272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */; };
 		272D92781C6DFB7300BCD3B6 /* PrimitivesTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */; };
-		272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serializable.framework */; };
-		2732ECA41C9F21BF00BFD4E1 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */; };
+		272F1DD11C6A392A0098F620 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1DC61C6A392A0098F620 /* Serpent.framework */; };
+		2732ECA41C9F21BF00BFD4E1 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732EC9A1C9F21BF00BFD4E1 /* Serpent.framework */; };
 		2732ECB11C9F282800BFD4E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2732ECBD1C9F298B00BFD4E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED841C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2732ECBF1C9F2A3600BFD4E1 /* CustomOperatorsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */; };
@@ -102,7 +102,7 @@
 		2732ECDC1C9F44E800BFD4E1 /* HexInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C21C9BEB0C0024E94A /* HexInitializableTestModel.swift */; };
 		2732ECDD1C9F44EB00BFD4E1 /* HexInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */; };
 		2732ECDE1C9F44EE00BFD4E1 /* HexInitalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706B61C9BEAF50024E94A /* HexInitalizableTests.swift */; };
-		2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B52D1C9DE72E00E40605 /* Serializable.framework */; };
+		2785B5371C9DE72F00E40605 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B52D1C9DE72E00E40605 /* Serpent.framework */; };
 		2785B54C1C9DE98000E40605 /* EnumsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */; };
 		2785B54D1C9DE98000E40605 /* PrimitivesTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */; };
 		2785B54E1C9DE98000E40605 /* StringInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C01C9BEB0C0024E94A /* StringInitializableTestModel.swift */; };
@@ -230,14 +230,14 @@
 		272D92701C6DFB7300BCD3B6 /* EnumsTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumsTestModel.swift; sourceTree = "<group>"; };
 		272D92711C6DFB7300BCD3B6 /* PrimitivesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimitivesTest.json; sourceTree = "<group>"; };
 		272D92721C6DFB7300BCD3B6 /* PrimitivesTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesTestModel.swift; sourceTree = "<group>"; };
-		272F1DC61C6A392A0098F620 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		272F1DD01C6A392A0098F620 /* SerializableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerializableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		272F1DC61C6A392A0098F620 /* Serpent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serpent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		272F1DD01C6A392A0098F620 /* SerpentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerpentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1DD71C6A392A0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2732EC8D1C9F21A500BFD4E1 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2732ECA31C9F21BF00BFD4E1 /* Serializable tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serializable tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2785B52D1C9DE72E00E40605 /* Serializable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serializable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serializable OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2732EC8D1C9F21A500BFD4E1 /* Serpent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serpent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2732EC9A1C9F21BF00BFD4E1 /* Serpent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serpent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2732ECA31C9F21BF00BFD4E1 /* Serpent tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serpent tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2785B52D1C9DE72E00E40605 /* Serpent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Serpent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2785B5361C9DE72F00E40605 /* Serpent OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serpent OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtensionTests.swift; sourceTree = "<group>"; };
 		27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTestModel.swift; sourceTree = "<group>"; };
 		27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272F1DD11C6A392A0098F620 /* Serializable.framework in Frameworks */,
+				272F1DD11C6A392A0098F620 /* Serpent.framework in Frameworks */,
 				27B05FD31C9C3E48004F2CCB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2732ECA41C9F21BF00BFD4E1 /* Serializable.framework in Frameworks */,
+				2732ECA41C9F21BF00BFD4E1 /* Serpent.framework in Frameworks */,
 				2732ECDA1C9F2A6000BFD4E1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +319,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2785B5371C9DE72F00E40605 /* Serializable.framework in Frameworks */,
+				2785B5371C9DE72F00E40605 /* Serpent.framework in Frameworks */,
 				27D9ED901C9F201C00EB2B49 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,13 +435,13 @@
 		272F1DC71C6A392A0098F620 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				272F1DC61C6A392A0098F620 /* Serializable.framework */,
-				272F1DD01C6A392A0098F620 /* SerializableTests.xctest */,
-				2785B52D1C9DE72E00E40605 /* Serializable.framework */,
-				2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */,
-				2732EC8D1C9F21A500BFD4E1 /* Serializable.framework */,
-				2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */,
-				2732ECA31C9F21BF00BFD4E1 /* Serializable tvOSTests.xctest */,
+				272F1DC61C6A392A0098F620 /* Serpent.framework */,
+				272F1DD01C6A392A0098F620 /* SerpentTests.xctest */,
+				2785B52D1C9DE72E00E40605 /* Serpent.framework */,
+				2785B5361C9DE72F00E40605 /* Serpent OSXTests.xctest */,
+				2732EC8D1C9F21A500BFD4E1 /* Serpent.framework */,
+				2732EC9A1C9F21BF00BFD4E1 /* Serpent.framework */,
+				2732ECA31C9F21BF00BFD4E1 /* Serpent tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -573,9 +573,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		272F1DC51C6A392A0098F620 /* Serializable iOS */ = {
+		272F1DC51C6A392A0098F620 /* Serpent iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serializable iOS" */;
+			buildConfigurationList = 272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serpent iOS" */;
 			buildPhases = (
 				272F1DC11C6A392A0098F620 /* Sources */,
 				272F1DC21C6A392A0098F620 /* Frameworks */,
@@ -586,14 +586,14 @@
 			);
 			dependencies = (
 			);
-			name = "Serializable iOS";
+			name = "Serpent iOS";
 			productName = Serializable;
-			productReference = 272F1DC61C6A392A0098F620 /* Serializable.framework */;
+			productReference = 272F1DC61C6A392A0098F620 /* Serpent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		272F1DCF1C6A392A0098F620 /* SerializableTests */ = {
+		272F1DCF1C6A392A0098F620 /* SerpentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 272F1DDD1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "SerializableTests" */;
+			buildConfigurationList = 272F1DDD1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "SerpentTests" */;
 			buildPhases = (
 				272F1DCC1C6A392A0098F620 /* Sources */,
 				272F1DCD1C6A392A0098F620 /* Frameworks */,
@@ -604,14 +604,14 @@
 			dependencies = (
 				272F1DD31C6A392A0098F620 /* PBXTargetDependency */,
 			);
-			name = SerializableTests;
+			name = SerpentTests;
 			productName = SerializableTests;
-			productReference = 272F1DD01C6A392A0098F620 /* SerializableTests.xctest */;
+			productReference = 272F1DD01C6A392A0098F620 /* SerpentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2732EC8C1C9F21A500BFD4E1 /* Serializable watchOS */ = {
+		2732EC8C1C9F21A500BFD4E1 /* Serpent watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2732EC921C9F21A500BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable watchOS" */;
+			buildConfigurationList = 2732EC921C9F21A500BFD4E1 /* Build configuration list for PBXNativeTarget "Serpent watchOS" */;
 			buildPhases = (
 				2732EC881C9F21A500BFD4E1 /* Sources */,
 				2732EC891C9F21A500BFD4E1 /* Frameworks */,
@@ -622,14 +622,14 @@
 			);
 			dependencies = (
 			);
-			name = "Serializable watchOS";
+			name = "Serpent watchOS";
 			productName = "Serializable watchOS";
-			productReference = 2732EC8D1C9F21A500BFD4E1 /* Serializable.framework */;
+			productReference = 2732EC8D1C9F21A500BFD4E1 /* Serpent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2732EC991C9F21BF00BFD4E1 /* Serializable tvOS */ = {
+		2732EC991C9F21BF00BFD4E1 /* Serpent tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2732ECAB1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOS" */;
+			buildConfigurationList = 2732ECAB1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serpent tvOS" */;
 			buildPhases = (
 				2732EC951C9F21BF00BFD4E1 /* Sources */,
 				2732EC961C9F21BF00BFD4E1 /* Frameworks */,
@@ -640,14 +640,14 @@
 			);
 			dependencies = (
 			);
-			name = "Serializable tvOS";
+			name = "Serpent tvOS";
 			productName = "Serializable tvOS";
-			productReference = 2732EC9A1C9F21BF00BFD4E1 /* Serializable.framework */;
+			productReference = 2732EC9A1C9F21BF00BFD4E1 /* Serpent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2732ECA21C9F21BF00BFD4E1 /* Serializable tvOSTests */ = {
+		2732ECA21C9F21BF00BFD4E1 /* Serpent tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2732ECAE1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOSTests" */;
+			buildConfigurationList = 2732ECAE1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serpent tvOSTests" */;
 			buildPhases = (
 				2732EC9F1C9F21BF00BFD4E1 /* Sources */,
 				2732ECA01C9F21BF00BFD4E1 /* Frameworks */,
@@ -658,14 +658,14 @@
 			dependencies = (
 				2732ECA61C9F21BF00BFD4E1 /* PBXTargetDependency */,
 			);
-			name = "Serializable tvOSTests";
+			name = "Serpent tvOSTests";
 			productName = "Serializable tvOSTests";
-			productReference = 2732ECA31C9F21BF00BFD4E1 /* Serializable tvOSTests.xctest */;
+			productReference = 2732ECA31C9F21BF00BFD4E1 /* Serpent tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2785B52C1C9DE72E00E40605 /* Serializable OSX */ = {
+		2785B52C1C9DE72E00E40605 /* Serpent OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSX" */;
+			buildConfigurationList = 2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serpent OSX" */;
 			buildPhases = (
 				2785B5281C9DE72E00E40605 /* Sources */,
 				2785B5291C9DE72E00E40605 /* Frameworks */,
@@ -676,14 +676,14 @@
 			);
 			dependencies = (
 			);
-			name = "Serializable OSX";
+			name = "Serpent OSX";
 			productName = "Serializable OSX";
-			productReference = 2785B52D1C9DE72E00E40605 /* Serializable.framework */;
+			productReference = 2785B52D1C9DE72E00E40605 /* Serpent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2785B5351C9DE72F00E40605 /* Serializable OSXTests */ = {
+		2785B5351C9DE72F00E40605 /* Serpent OSXTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2785B5431C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSXTests" */;
+			buildConfigurationList = 2785B5431C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serpent OSXTests" */;
 			buildPhases = (
 				2785B5321C9DE72F00E40605 /* Sources */,
 				2785B5331C9DE72F00E40605 /* Frameworks */,
@@ -694,9 +694,9 @@
 			dependencies = (
 				2785B5391C9DE72F00E40605 /* PBXTargetDependency */,
 			);
-			name = "Serializable OSXTests";
+			name = "Serpent OSXTests";
 			productName = "Serializable OSXTests";
-			productReference = 2785B5361C9DE72F00E40605 /* Serializable OSXTests.xctest */;
+			productReference = 2785B5361C9DE72F00E40605 /* Serpent OSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -739,7 +739,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 272F1DC01C6A392A0098F620 /* Build configuration list for PBXProject "Serializable" */;
+			buildConfigurationList = 272F1DC01C6A392A0098F620 /* Build configuration list for PBXProject "Serpent" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -751,13 +751,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				272F1DC51C6A392A0098F620 /* Serializable iOS */,
-				272F1DCF1C6A392A0098F620 /* SerializableTests */,
-				2785B52C1C9DE72E00E40605 /* Serializable OSX */,
-				2785B5351C9DE72F00E40605 /* Serializable OSXTests */,
-				2732EC991C9F21BF00BFD4E1 /* Serializable tvOS */,
-				2732ECA21C9F21BF00BFD4E1 /* Serializable tvOSTests */,
-				2732EC8C1C9F21A500BFD4E1 /* Serializable watchOS */,
+				272F1DC51C6A392A0098F620 /* Serpent iOS */,
+				272F1DCF1C6A392A0098F620 /* SerpentTests */,
+				2785B52C1C9DE72E00E40605 /* Serpent OSX */,
+				2785B5351C9DE72F00E40605 /* Serpent OSXTests */,
+				2732EC991C9F21BF00BFD4E1 /* Serpent tvOS */,
+				2732ECA21C9F21BF00BFD4E1 /* Serpent tvOSTests */,
+				2732EC8C1C9F21A500BFD4E1 /* Serpent watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1012,17 +1012,17 @@
 /* Begin PBXTargetDependency section */
 		272F1DD31C6A392A0098F620 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 272F1DC51C6A392A0098F620 /* Serializable iOS */;
+			target = 272F1DC51C6A392A0098F620 /* Serpent iOS */;
 			targetProxy = 272F1DD21C6A392A0098F620 /* PBXContainerItemProxy */;
 		};
 		2732ECA61C9F21BF00BFD4E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2732EC991C9F21BF00BFD4E1 /* Serializable tvOS */;
+			target = 2732EC991C9F21BF00BFD4E1 /* Serpent tvOS */;
 			targetProxy = 2732ECA51C9F21BF00BFD4E1 /* PBXContainerItemProxy */;
 		};
 		2785B5391C9DE72F00E40605 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2785B52C1C9DE72E00E40605 /* Serializable OSX */;
+			target = 2785B52C1C9DE72E00E40605 /* Serpent OSX */;
 			targetProxy = 2785B5381C9DE72F00E40605 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1142,7 +1142,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0.1;
@@ -1165,7 +1165,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0.1;
 			};
@@ -1213,7 +1213,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-watchOS";
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0.1;
@@ -1237,7 +1237,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-watchOS";
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0.1;
@@ -1261,7 +1261,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOS";
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0.1;
@@ -1284,7 +1284,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOS";
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
                 SWIFT_VERSION = 3.0.1;
@@ -1340,7 +1340,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
                 SWIFT_VERSION = 3.0.1;
@@ -1364,7 +1364,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
-				PRODUCT_NAME = Serializable;
+				PRODUCT_NAME = Serpent;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
                 SWIFT_VERSION = 3.0.1;
@@ -1406,7 +1406,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		272F1DC01C6A392A0098F620 /* Build configuration list for PBXProject "Serializable" */ = {
+		272F1DC01C6A392A0098F620 /* Build configuration list for PBXProject "Serpent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				272F1DD81C6A392A0098F620 /* Debug */,
@@ -1415,7 +1415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serializable iOS" */ = {
+		272F1DDA1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "Serpent iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				272F1DDB1C6A392A0098F620 /* Debug */,
@@ -1424,7 +1424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		272F1DDD1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "SerializableTests" */ = {
+		272F1DDD1C6A392A0098F620 /* Build configuration list for PBXNativeTarget "SerpentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				272F1DDE1C6A392A0098F620 /* Debug */,
@@ -1433,7 +1433,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2732EC921C9F21A500BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable watchOS" */ = {
+		2732EC921C9F21A500BFD4E1 /* Build configuration list for PBXNativeTarget "Serpent watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2732EC931C9F21A500BFD4E1 /* Debug */,
@@ -1442,7 +1442,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2732ECAB1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOS" */ = {
+		2732ECAB1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serpent tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2732ECAC1C9F21BF00BFD4E1 /* Debug */,
@@ -1451,7 +1451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2732ECAE1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serializable tvOSTests" */ = {
+		2732ECAE1C9F21BF00BFD4E1 /* Build configuration list for PBXNativeTarget "Serpent tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2732ECAF1C9F21BF00BFD4E1 /* Debug */,
@@ -1460,7 +1460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSX" */ = {
+		2785B5421C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serpent OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2785B53E1C9DE72F00E40605 /* Debug */,
@@ -1469,7 +1469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2785B5431C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serializable OSXTests" */ = {
+		2785B5431C9DE72F00E40605 /* Build configuration list for PBXNativeTarget "Serpent OSXTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2785B5401C9DE72F00E40605 /* Debug */,

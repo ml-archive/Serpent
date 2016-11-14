@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "272F1DC51C6A392A0098F620"
+               BlueprintIdentifier = "2732EC8C1C9F21A500BFD4E1"
                BuildableName = "Serializable.framework"
-               BlueprintName = "Serializable iOS"
-               ReferencedContainer = "container:Serializable.xcodeproj">
+               BlueprintName = "Serpent watchOS"
+               ReferencedContainer = "container:Serpent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,26 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "272F1DCF1C6A392A0098F620"
-               BuildableName = "SerializableTests.xctest"
-               BlueprintName = "SerializableTests"
-               ReferencedContainer = "container:Serializable.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "272F1DC51C6A392A0098F620"
-            BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable iOS"
-            ReferencedContainer = "container:Serializable.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,10 +46,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "272F1DC51C6A392A0098F620"
+            BlueprintIdentifier = "2732EC8C1C9F21A500BFD4E1"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable iOS"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent watchOS"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "272F1DC51C6A392A0098F620"
+            BlueprintIdentifier = "2732EC8C1C9F21A500BFD4E1"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable iOS"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent watchOS"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
