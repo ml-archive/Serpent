@@ -6,7 +6,7 @@
 //  Copyright © 2016 Nodes. All rights reserved.
 //
 
-import Serializable
+import Serpent
 
 struct NetworkTestModel {
 	var origin = ""

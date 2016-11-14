@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Serializable
+import Serpent
 
 struct StringInitializableTestModel {
 	var someUrl: URL?

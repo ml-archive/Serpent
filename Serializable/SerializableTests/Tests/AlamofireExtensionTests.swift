@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Serializable
+import Serpent
 import Alamofire
 
 class AlamofireExtensionTests: XCTestCase {

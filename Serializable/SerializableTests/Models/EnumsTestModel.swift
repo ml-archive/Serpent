@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Serializable
+import Serpent
 
 enum StringEnum: String {
     case Value1 = "value1"
