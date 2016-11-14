@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8.1
+osx_image: 10.12/Xcode 8.1
 xcode_sdk: iphonesimulator10.1
 branches:
   only:
