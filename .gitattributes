@@ -1,2 +1,4 @@
 Serializable.podspec linguist-documentation
 Serializable/Serializable.h linguist-documentation
+Serializable/Dependencies/* linguist-documentation
+*.rb linguist-language=Swift
