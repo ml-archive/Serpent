@@ -706,7 +706,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Nodes;
 				TargetAttributes = {
 					272F1DC51C6A392A0098F620 = {
@@ -1145,7 +1145,7 @@
 				PRODUCT_NAME = Serializable;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -1167,7 +1167,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serializable;
 				PRODUCT_NAME = Serializable;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -1181,7 +1181,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -1195,7 +1195,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerializableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -1216,7 +1216,7 @@
 				PRODUCT_NAME = Serializable;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 4;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -1240,7 +1240,7 @@
 				PRODUCT_NAME = Serializable;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 4;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -1264,7 +1264,7 @@
 				PRODUCT_NAME = Serializable;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1287,7 +1287,7 @@
 				PRODUCT_NAME = Serializable;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+                SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1303,7 +1303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
+                SWIFT_VERSION = 3.0.1;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
@@ -1318,7 +1318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
+                SWIFT_VERSION = 3.0.1;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
@@ -1343,7 +1343,7 @@
 				PRODUCT_NAME = Serializable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+                SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -1367,7 +1367,7 @@
 				PRODUCT_NAME = Serializable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+                SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -1383,7 +1383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+                SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -1399,7 +1399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+                SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
