@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2785B52C1C9DE72E00E40605"
                BuildableName = "Serializable.framework"
-               BlueprintName = "Serializable OSX"
-               ReferencedContainer = "container:Serializable.xcodeproj">
+               BlueprintName = "Serpent OSX"
+               ReferencedContainer = "container:Serpent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2785B5351C9DE72F00E40605"
-               BuildableName = "Serializable OSXTests.xctest"
-               BlueprintName = "Serializable OSXTests"
-               ReferencedContainer = "container:Serializable.xcodeproj">
+               BuildableName = "Serpent OSXTests.xctest"
+               BlueprintName = "Serpent OSXTests"
+               ReferencedContainer = "container:Serpent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,8 +45,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2785B52C1C9DE72E00E40605"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable OSX"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent OSX"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,8 +67,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2785B52C1C9DE72E00E40605"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable OSX"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent OSX"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,8 +85,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2785B52C1C9DE72E00E40605"
             BuildableName = "Serializable.framework"
-            BlueprintName = "Serializable OSX"
-            ReferencedContainer = "container:Serializable.xcodeproj">
+            BlueprintName = "Serpent OSX"
+            ReferencedContainer = "container:Serpent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
