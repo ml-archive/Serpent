@@ -8,5 +8,5 @@
 import PackageDescription
 
 let package = Package(
-	name: "Serializable"
+	name: "Serpent"
 )

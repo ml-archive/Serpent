@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Serializable"
+  s.name         = "Serpent"
   s.version      = "0.10.0"
   s.summary      = "A protocol to serialize Swift Structs and Classes for encoding and decoding"
 
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Serializable/Serializable"
+  s.source_files  = "Serpent/Serpent"
   #s.exclude_files = "Serializable/Source/CashierExtension.swift"
 
   # s.public_header_files = "Classes/**/*.h"
