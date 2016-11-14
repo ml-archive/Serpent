@@ -40,22 +40,22 @@
 		01F962321CC38A52006083C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620E1CC38A52006083C5 /* Extensions.swift */; };
 		01F962331CC38A52006083C5 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962101CC38A52006083C5 /* Operator.swift */; };
 		01F962341CC38A52006083C5 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962121CC38A52006083C5 /* BridgingBox.swift */; };
-		01F962351CC38A52006083C5 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serializable.swift */; };
-		01F962371CC38A52006083C5 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01F9624C1CC38AB7006083C5 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01F9624D1CC38ABC006083C5 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01F9624E1CC38AC2006083C5 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01F962351CC38A52006083C5 /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serpent.swift */; };
+		01F962371CC38A52006083C5 /* Serpent.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serpent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01F9624C1CC38AB7006083C5 /* Serpent.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serpent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01F9624D1CC38ABC006083C5 /* Serpent.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serpent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01F9624E1CC38AC2006083C5 /* Serpent.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F962161CC38A52006083C5 /* Serpent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01F9624F1CC38B36006083C5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */; };
 		01F962501CC38BBD006083C5 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962101CC38A52006083C5 /* Operator.swift */; };
 		01F962511CC38BBD006083C5 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962101CC38A52006083C5 /* Operator.swift */; };
 		01F962521CC38BBE006083C5 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962101CC38A52006083C5 /* Operator.swift */; };
-		01F962561CC38BCA006083C5 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serializable.swift */; };
+		01F962561CC38BCA006083C5 /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serpent.swift */; };
 		01F962571CC38BCA006083C5 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620C1CC38A52006083C5 /* AlamofireExtension.swift */; };
 		01F962591CC38BCA006083C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620E1CC38A52006083C5 /* Extensions.swift */; };
-		01F9625A1CC38BCA006083C5 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serializable.swift */; };
+		01F9625A1CC38BCA006083C5 /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serpent.swift */; };
 		01F9625B1CC38BCA006083C5 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620C1CC38A52006083C5 /* AlamofireExtension.swift */; };
 		01F9625D1CC38BCA006083C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620E1CC38A52006083C5 /* Extensions.swift */; };
-		01F9625E1CC38BCB006083C5 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serializable.swift */; };
+		01F9625E1CC38BCB006083C5 /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962131CC38A52006083C5 /* Serpent.swift */; };
 		01F9625F1CC38BCB006083C5 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620C1CC38A52006083C5 /* AlamofireExtension.swift */; };
 		01F962611CC38BCB006083C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9620E1CC38A52006083C5 /* Extensions.swift */; };
 		272D92691C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */; };
@@ -218,9 +218,9 @@
 		01F9620E1CC38A52006083C5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		01F962101CC38A52006083C5 /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		01F962121CC38A52006083C5 /* BridgingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingBox.swift; sourceTree = "<group>"; };
-		01F962131CC38A52006083C5 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		01F962131CC38A52006083C5 /* Serpent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serpent.swift; sourceTree = "<group>"; };
 		01F962151CC38A52006083C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01F962161CC38A52006083C5 /* Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serializable.h; sourceTree = "<group>"; };
+		01F962161CC38A52006083C5 /* Serpent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serpent.h; sourceTree = "<group>"; };
 		272D92661C6DFB5B00BCD3B6 /* CustomOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTests.swift; sourceTree = "<group>"; };
 		272D92671C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializableEnumsTests.swift; sourceTree = "<group>"; };
 		272D92681C6DFB5B00BCD3B6 /* SerializablePrimitivesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializablePrimitivesTests.swift; sourceTree = "<group>"; };
@@ -330,7 +330,7 @@
 		01F9620A1CC38A52006083C5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				01F962131CC38A52006083C5 /* Serializable.swift */,
+				01F962131CC38A52006083C5 /* Serpent.swift */,
 				01F9620B1CC38A52006083C5 /* Extensions */,
 				01F9620F1CC38A52006083C5 /* Operators */,
 				01F962111CC38A52006083C5 /* Other */,
@@ -368,7 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				01F962151CC38A52006083C5 /* Info.plist */,
-				01F962161CC38A52006083C5 /* Serializable.h */,
+				01F962161CC38A52006083C5 /* Serpent.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -542,7 +542,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F962371CC38A52006083C5 /* Serializable.h in Headers */,
+				01F962371CC38A52006083C5 /* Serpent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +550,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F9624E1CC38AC2006083C5 /* Serializable.h in Headers */,
+				01F9624E1CC38AC2006083C5 /* Serpent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +558,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F9624D1CC38ABC006083C5 /* Serializable.h in Headers */,
+				01F9624D1CC38ABC006083C5 /* Serpent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +566,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F9624C1CC38AB7006083C5 /* Serializable.h in Headers */,
+				01F9624C1CC38AB7006083C5 /* Serpent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,7 +866,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F962351CC38A52006083C5 /* Serializable.swift in Sources */,
+				01F962351CC38A52006083C5 /* Serpent.swift in Sources */,
 				01F962301CC38A52006083C5 /* AlamofireExtension.swift in Sources */,
 				01F962331CC38A52006083C5 /* Operator.swift in Sources */,
 				01F962321CC38A52006083C5 /* Extensions.swift in Sources */,
@@ -914,7 +914,7 @@
 				01CD3F911D06F2E90044887E /* BridgingBox.swift in Sources */,
 				01F962571CC38BCA006083C5 /* AlamofireExtension.swift in Sources */,
 				01F962591CC38BCA006083C5 /* Extensions.swift in Sources */,
-				01F962561CC38BCA006083C5 /* Serializable.swift in Sources */,
+				01F962561CC38BCA006083C5 /* Serpent.swift in Sources */,
 				01F962521CC38BBE006083C5 /* Operator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -927,7 +927,7 @@
 				01CD3F931D06F2F30044887E /* BridgingBox.swift in Sources */,
 				01F9625B1CC38BCA006083C5 /* AlamofireExtension.swift in Sources */,
 				01F9625D1CC38BCA006083C5 /* Extensions.swift in Sources */,
-				01F9625A1CC38BCA006083C5 /* Serializable.swift in Sources */,
+				01F9625A1CC38BCA006083C5 /* Serpent.swift in Sources */,
 				01F962511CC38BBD006083C5 /* Operator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -971,7 +971,7 @@
 				01CD3F951D06F2F70044887E /* BridgingBox.swift in Sources */,
 				01F9625F1CC38BCB006083C5 /* AlamofireExtension.swift in Sources */,
 				01F962611CC38BCB006083C5 /* Extensions.swift in Sources */,
-				01F9625E1CC38BCB006083C5 /* Serializable.swift in Sources */,
+				01F9625E1CC38BCB006083C5 /* Serpent.swift in Sources */,
 				01F962501CC38BBD006083C5 /* Operator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
