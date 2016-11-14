@@ -1,6 +1,6 @@
 //
-//  Serializable.h
-//  Serializable
+//  Serpent.h
+//  Serpent
 //
 //  Created by Chris Combs on 09/02/16.
 //  Copyright © 2016 Nodes. All rights reserved.
