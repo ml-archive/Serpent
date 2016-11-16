@@ -6,20 +6,20 @@
 //  Copyright © 2016 Nodes ApS. All rights reserved.
 //
 
-import Serializable
+import Serpent
 import Alamofire
 import UIKit
 
 // MARK: - Basic Setup -
 
 struct ConnectionManager {
-    static let manager: Manager = Manager(configuration: ConnectionManager.configuration())
+    static let manager = SessionManager(configuration: ConnectionManager.configuration())
 
-    static func configuration() -> NSURLSessionConfiguration {
-        let configuration = Manager.sharedInstance.session.configuration
+    static func configuration() -> URLSessionConfiguration {
+        let configuration = SessionManager.default.session.configuration
 
         configuration.timeoutIntervalForRequest = 20
-        configuration.HTTPAdditionalHeaders = ["Accept" : "application/json"]
+        configuration.httpAdditionalHeaders = ["Accept" : "application/json"]
 
         return configuration
     }
@@ -27,9 +27,11 @@ struct ConnectionManager {
 
 extension ConnectionManager {
 
-    static func fetchRandomUsers(userCount count: Int = 150, completion: ((response: Response<[User], NSError>) -> Void)) {
-        let params: [String: AnyObject] = ["results" : count]
-        manager.request(.GET, "https://randomuser.me/api/", parameters: params).responseSerializable(completion)
+    static func fetchRandomUsers(userCount count: Int = 150, completion: @escaping (DataResponse<[User]>) -> Void) {
+        let params: [String: AnyObject] = ["results" : count as AnyObject]
+
+        manager.request("https://randomuser.me/api", method: .get,
+                        parameters: params, headers: nil).responseSerializable(completion)
     }
 }
 
@@ -39,15 +41,16 @@ extension ConnectionManager {
 extension UIImageView {
 
     // Taken from http://stackoverflow.com/a/30591853/1001803
-    public func imageFromUrl(urlString: String) {
-        if let url = NSURL(string: urlString) {
-            let request = NSURLRequest(URL: url)
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
-                (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
-                if let imageData = data as NSData? {
-                    self.image = UIImage(data: imageData)
+    public func imageFromUrl(_ url: URL?) {
+        if let url = url {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else { return }
+                
+                DispatchQueue.main.sync() {
+                    self.image = UIImage(data: data)
                 }
             }
+            task.resume()
         }
     }
 }

@@ -16,7 +16,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.registerNib(UINib(nibName: UserListCell.reuseIdentifier, bundle: nil),
+        tableView.register(UINib(nibName: UserListCell.reuseIdentifier, bundle: nil),
                               forCellReuseIdentifier: UserListCell.reuseIdentifier)
 
         reloadData()
@@ -27,49 +27,49 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func reloadData() {
         ConnectionManager.fetchRandomUsers { (response) in
             switch response.result {
-            case .Success(let users):
+            case .success(let users):
                 self.users = users
                 self.tableView.reloadData()
-            case .Failure(let error):
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
+            case .failure(let error):
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
 
-    @IBAction func refreshPressed(sender: UIBarButtonItem) {
+    @IBAction func refreshPressed(_ sender: UIBarButtonItem) {
         reloadData()
     }
 
     // MARK: - UITableView Data Source & Delegate -
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
 
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UserListCell.staticHeight
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(UserListCell.reuseIdentifier, forIndexPath: indexPath) as? UserListCell ?? UserListCell()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserListCell.reuseIdentifier, for: indexPath) as? UserListCell ?? UserListCell()
         cell.populateWithUser(users[indexPath.row])
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        performSegueWithIdentifier("ShowUserDetails", sender: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowUserDetails", sender: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowUserDetails" {
-            if let userVC = segue.destinationViewController as? UserDetailsVC {
+            if let userVC = segue.destination as? UserDetailsVC {
                 guard let indexPath = tableView.indexPathForSelectedRow else { return }
                 userVC.user = users[indexPath.row]
             }
