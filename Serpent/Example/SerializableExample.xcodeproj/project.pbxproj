@@ -18,72 +18,65 @@
 		01F9627F1CC3966E006083C5 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F9627D1CC3966E006083C5 /* UserListCell.xib */; };
 		01F962841CC3980C006083C5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01F962811CC39808006083C5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01F962861CC39813006083C5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F962811CC39808006083C5 /* Alamofire.framework */; };
-		01F9629F1CC3982A006083C5 /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F962921CC39824006083C5 /* Serializable.framework */; };
-		01F962A01CC3982A006083C5 /* Serializable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01F962921CC39824006083C5 /* Serializable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01F962A41CC39C59006083C5 /* NameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962A31CC39C59006083C5 /* NameInfo.swift */; };
 		01F962A61CC39C60006083C5 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962A51CC39C60006083C5 /* LoginInfo.swift */; };
 		01F962A81CC39C71006083C5 /* Identification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962A71CC39C71006083C5 /* Identification.swift */; };
 		01F962AA1CC39C7C006083C5 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962A91CC39C7C006083C5 /* ProfilePicture.swift */; };
 		01F962AC1CC39CE3006083C5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F962AB1CC39CE3006083C5 /* Location.swift */; };
 		676232F71CC4CDD300929DD9 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676232F61CC4CDD300929DD9 /* UserDetailsVC.swift */; };
+		E3BA1ED51DDCA55A00392A27 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34075631DDCA4B000B8344F /* Serpent.framework */; };
+		E3BA1ED61DDCA55E00392A27 /* Serpent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E34075631DDCA4B000B8344F /* Serpent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		01F962911CC39824006083C5 /* PBXContainerItemProxy */ = {
+		E34075621DDCA4B000B8344F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+			containerPortal = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 272F1DC61C6A392A0098F620;
-			remoteInfo = "Serializable iOS";
+			remoteInfo = "Serpent iOS";
 		};
-		01F962931CC39824006083C5 /* PBXContainerItemProxy */ = {
+		E34075641DDCA4B000B8344F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+			containerPortal = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 272F1DD01C6A392A0098F620;
-			remoteInfo = SerializableTests;
+			remoteInfo = SerpentTests;
 		};
-		01F962951CC39824006083C5 /* PBXContainerItemProxy */ = {
+		E34075661DDCA4B000B8344F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+			containerPortal = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2785B52D1C9DE72E00E40605;
-			remoteInfo = "Serializable OSX";
+			remoteInfo = "Serpent OSX";
 		};
-		01F962971CC39824006083C5 /* PBXContainerItemProxy */ = {
+		E34075681DDCA4B000B8344F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+			containerPortal = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2785B5361C9DE72F00E40605;
-			remoteInfo = "Serializable OSXTests";
+			remoteInfo = "Serpent OSXTests";
 		};
-		01F962991CC39824006083C5 /* PBXContainerItemProxy */ = {
+		E340756A1DDCA4B000B8344F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+			containerPortal = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2732EC9A1C9F21BF00BFD4E1;
-			remoteInfo = "Serializable tvOS";
+			remoteInfo = "Serpent tvOS";
 		};
-		01F9629B1CC39824006083C5 /* PBXContainerItemProxy */ = {
+		E340756C1DDCA4B000B8344F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+			containerPortal = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2732ECA31C9F21BF00BFD4E1;
-			remoteInfo = "Serializable tvOSTests";
+			remoteInfo = "Serpent tvOSTests";
 		};
-		01F9629D1CC39824006083C5 /* PBXContainerItemProxy */ = {
+		E340756E1DDCA4B000B8344F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+			containerPortal = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2732EC8D1C9F21A500BFD4E1;
-			remoteInfo = "Serializable watchOS";
-		};
-		01F962A11CC3982A006083C5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 272F1DC51C6A392A0098F620;
-			remoteInfo = "Serializable iOS";
+			remoteInfo = "Serpent watchOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -95,7 +88,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				01F962841CC3980C006083C5 /* Alamofire.framework in Embed Frameworks */,
-				01F962A01CC3982A006083C5 /* Serializable.framework in Embed Frameworks */,
+				E3BA1ED61DDCA55E00392A27 /* Serpent.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,13 +108,13 @@
 		01F9627C1CC3966E006083C5 /* UserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		01F9627D1CC3966E006083C5 /* UserListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
 		01F962811CC39808006083C5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Dependencies/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		01F962871CC39824006083C5 /* Serializable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Serializable.xcodeproj; path = ../Serializable.xcodeproj; sourceTree = "<group>"; };
 		01F962A31CC39C59006083C5 /* NameInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameInfo.swift; sourceTree = "<group>"; };
 		01F962A51CC39C60006083C5 /* LoginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
 		01F962A71CC39C71006083C5 /* Identification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identification.swift; sourceTree = "<group>"; };
 		01F962A91CC39C7C006083C5 /* ProfilePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		01F962AB1CC39CE3006083C5 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		676232F61CC4CDD300929DD9 /* UserDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
+		E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Serpent.xcodeproj; path = "/Users/Nodes/Documents/Nodes-Projects/Serpent/Serpent/Serpent.xcodeproj"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BA1ED51DDCA55A00392A27 /* Serpent.framework in Frameworks */,
 				01F962861CC39813006083C5 /* Alamofire.framework in Frameworks */,
-				01F9629F1CC3982A006083C5 /* Serializable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +133,6 @@
 		01F961EA1CC38966006083C5 = {
 			isa = PBXGroup;
 			children = (
-				01F962871CC39824006083C5 /* Serializable.xcodeproj */,
 				01F961F51CC38966006083C5 /* Serializable Example */,
 				01F962801CC397E8006083C5 /* Frameworks */,
 				01F961F41CC38966006083C5 /* Products */,
@@ -158,6 +150,7 @@
 		01F961F51CC38966006083C5 /* Serializable Example */ = {
 			isa = PBXGroup;
 			children = (
+				E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */,
 				01F962621CC38F5C006083C5 /* Classes */,
 				01F962651CC38F5C006083C5 /* Resources */,
 				01F962671CC38F5C006083C5 /* Storyboards */,
@@ -251,16 +244,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		01F962881CC39824006083C5 /* Products */ = {
+		E34075591DDCA4AF00B8344F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01F962921CC39824006083C5 /* Serializable.framework */,
-				01F962941CC39824006083C5 /* SerializableTests.xctest */,
-				01F962961CC39824006083C5 /* Serializable.framework */,
-				01F962981CC39824006083C5 /* Serializable OSXTests.xctest */,
-				01F9629A1CC39824006083C5 /* Serializable.framework */,
-				01F9629C1CC39824006083C5 /* Serializable tvOSTests.xctest */,
-				01F9629E1CC39824006083C5 /* Serializable.framework */,
+				E34075631DDCA4B000B8344F /* Serpent.framework */,
+				E34075651DDCA4B000B8344F /* SerpentTests.xctest */,
+				E34075671DDCA4B000B8344F /* Serpent.framework */,
+				E34075691DDCA4B000B8344F /* Serpent OSXTests.xctest */,
+				E340756B1DDCA4B000B8344F /* Serpent.framework */,
+				E340756D1DDCA4B000B8344F /* Serpent tvOSTests.xctest */,
+				E340756F1DDCA4B000B8344F /* Serpent.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,7 +273,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				01F962A21CC3982A006083C5 /* PBXTargetDependency */,
 			);
 			name = "Serializable Example";
 			productName = "Serializable Example";
@@ -299,6 +291,8 @@
 				TargetAttributes = {
 					01F961F21CC38966006083C5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = M92A6H7EPZ;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -314,8 +308,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 01F962881CC39824006083C5 /* Products */;
-					ProjectRef = 01F962871CC39824006083C5 /* Serializable.xcodeproj */;
+					ProductGroup = E34075591DDCA4AF00B8344F /* Products */;
+					ProjectRef = E34075581DDCA4AF00B8344F /* Serpent.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -326,53 +320,53 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		01F962921CC39824006083C5 /* Serializable.framework */ = {
+		E34075631DDCA4B000B8344F /* Serpent.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Serializable.framework;
-			remoteRef = 01F962911CC39824006083C5 /* PBXContainerItemProxy */;
+			path = Serpent.framework;
+			remoteRef = E34075621DDCA4B000B8344F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		01F962941CC39824006083C5 /* SerializableTests.xctest */ = {
+		E34075651DDCA4B000B8344F /* SerpentTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = SerializableTests.xctest;
-			remoteRef = 01F962931CC39824006083C5 /* PBXContainerItemProxy */;
+			path = SerpentTests.xctest;
+			remoteRef = E34075641DDCA4B000B8344F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		01F962961CC39824006083C5 /* Serializable.framework */ = {
+		E34075671DDCA4B000B8344F /* Serpent.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Serializable.framework;
-			remoteRef = 01F962951CC39824006083C5 /* PBXContainerItemProxy */;
+			path = Serpent.framework;
+			remoteRef = E34075661DDCA4B000B8344F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		01F962981CC39824006083C5 /* Serializable OSXTests.xctest */ = {
+		E34075691DDCA4B000B8344F /* Serpent OSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Serializable OSXTests.xctest";
-			remoteRef = 01F962971CC39824006083C5 /* PBXContainerItemProxy */;
+			path = "Serpent OSXTests.xctest";
+			remoteRef = E34075681DDCA4B000B8344F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		01F9629A1CC39824006083C5 /* Serializable.framework */ = {
+		E340756B1DDCA4B000B8344F /* Serpent.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Serializable.framework;
-			remoteRef = 01F962991CC39824006083C5 /* PBXContainerItemProxy */;
+			path = Serpent.framework;
+			remoteRef = E340756A1DDCA4B000B8344F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		01F9629C1CC39824006083C5 /* Serializable tvOSTests.xctest */ = {
+		E340756D1DDCA4B000B8344F /* Serpent tvOSTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Serializable tvOSTests.xctest";
-			remoteRef = 01F9629B1CC39824006083C5 /* PBXContainerItemProxy */;
+			path = "Serpent tvOSTests.xctest";
+			remoteRef = E340756C1DDCA4B000B8344F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		01F9629E1CC39824006083C5 /* Serializable.framework */ = {
+		E340756F1DDCA4B000B8344F /* Serpent.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Serializable.framework;
-			remoteRef = 01F9629D1CC39824006083C5 /* PBXContainerItemProxy */;
+			path = Serpent.framework;
+			remoteRef = E340756E1DDCA4B000B8344F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -411,14 +405,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		01F962A21CC3982A006083C5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Serializable iOS";
-			targetProxy = 01F962A11CC3982A006083C5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		01F962031CC38966006083C5 /* Debug */ = {
@@ -508,12 +494,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M92A6H7EPZ;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/../Dependencies/iOS/\"";
 				INFOPLIST_FILE = "$(SRCROOT)/SerializableExample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -521,12 +510,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M92A6H7EPZ;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/../Dependencies/iOS/\"";
 				INFOPLIST_FILE = "$(SRCROOT)/SerializableExample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serializable-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

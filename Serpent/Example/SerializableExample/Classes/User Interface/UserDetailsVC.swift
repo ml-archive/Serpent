@@ -24,7 +24,7 @@ class UserDetailsVC: UIViewController {
         updateUI()
     }
     
-    private func updateUI() {        
+    fileprivate func updateUI() {        
         // Set Labels
         usernameLabel.text = user.name.nameString
         genderLabel.text = user.gender.encodableRepresentation()        
@@ -34,7 +34,7 @@ class UserDetailsVC: UIViewController {
         
         // Set image
         if let picture = user.picture.large {
-            profileImageView.imageFromUrl(picture.URLString)
+            profileImageView.imageFromUrl(picture)
         }
     }
 }

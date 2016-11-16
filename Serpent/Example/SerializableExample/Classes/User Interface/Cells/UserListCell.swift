@@ -36,10 +36,10 @@ class UserListCell: UITableViewCell {
 // MARK: - Populate -
 
 extension UserListCell {
-    func populateWithUser(user: User) {
+    func populateWithUser(_ user: User) {
         // Set image
         if let thumbnail = user.picture.thumbnail {
-            profileImageView.imageFromUrl(thumbnail.URLString)
+            profileImageView.imageFromUrl(thumbnail)
         }
 
         // Set name and email

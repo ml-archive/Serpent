@@ -97,7 +97,6 @@
 		2732ECD61C9F2A4D00BFD4E1 /* SerializableEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C31C9BEB0C0024E94A /* SerializableEntityTest.json */; };
 		2732ECD71C9F2A4D00BFD4E1 /* SimpleModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C51C9BEB0C0024E94A /* SimpleModel.json */; };
 		2732ECD81C9F2A4D00BFD4E1 /* DecodableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C81C9BEB0C0024E94A /* DecodableTest.json */; };
-		2732ECD91C9F2A4D00BFD4E1 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */; };
 		2732ECDA1C9F2A6000BFD4E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED811C9F1FFC00EB2B49 /* Alamofire.framework */; };
 		2732ECDC1C9F44E800BFD4E1 /* HexInitializableTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C706C21C9BEB0C0024E94A /* HexInitializableTestModel.swift */; };
 		2732ECDD1C9F44EB00BFD4E1 /* HexInitializableTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C706C11C9BEB0C0024E94A /* HexInitializableTest.json */; };
@@ -130,7 +129,6 @@
 		27D9ED7B1C9F1DD500EB2B49 /* CustomOperatorsTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D926E1C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift */; };
 		27D9ED901C9F201C00EB2B49 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9ED7D1C9F1FFC00EB2B49 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		27D9ED911C9F202600EB2B49 /* AlamofireExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B05FCF1C9C3842004F2CCB /* AlamofireExtensionTests.swift */; };
-		27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; };
 		30C8984F1C921B84004A25E2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898471C921B84004A25E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30C898511C921B84004A25E2 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C898491C921B84004A25E2 /* Cashier.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		830175A31D96E44100B85378 /* ArrayTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 830175A01D96E44100B85378 /* ArrayTest.json */; };
@@ -788,7 +786,6 @@
 				272D92731C6DFB7300BCD3B6 /* CustomOperatorsTest.json in Resources */,
 				830175AE1D96E8A700B85378 /* NetworkModel.json in Resources */,
 				830175C21D97008800B85378 /* PerformanceTest.json in Resources */,
-				27F2A4D21C9C3F3D00916E01 /* Alamofire.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,7 +822,6 @@
 				2732ECD81C9F2A4D00BFD4E1 /* DecodableTest.json in Resources */,
 				830175B01D96E8A700B85378 /* NetworkModel.json in Resources */,
 				830175C41D97008800B85378 /* PerformanceTest.json in Resources */,
-				2732ECD91C9F2A4D00BFD4E1 /* Alamofire.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
