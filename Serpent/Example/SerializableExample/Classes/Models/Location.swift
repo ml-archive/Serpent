@@ -6,7 +6,7 @@
 //  Copyright © 2016 Nodes ApS. All rights reserved.
 //
 
-import Serializable
+import Serpent
 
 struct Location {
     var street   = ""

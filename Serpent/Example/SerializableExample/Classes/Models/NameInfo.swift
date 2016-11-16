@@ -6,7 +6,7 @@
 //  Copyright © 2016 Nodes ApS. All rights reserved.
 //
 
-import Serializable
+import Serpent
 
 struct NameInfo {
     var title = ""
@@ -32,6 +32,6 @@ extension NameInfo: Serializable {
 
 extension NameInfo {
     var nameString: String {
-        return "\(first.capitalizedString) \(last.capitalizedString)"
+        return "\(first.capitalized) \(last.capitalized)"
     }
 }
