@@ -1,6 +1,6 @@
 //
 //  UserDetailsVC.swift
-//  SerializableExample
+//  SerpentExample
 //
 //  Created by Pablo Surfate on 4/18/16.
 //  Copyright © 2016 Nodes ApS. All rights reserved.
