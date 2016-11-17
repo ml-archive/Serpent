@@ -26,6 +26,11 @@ class StringInitializableTests: XCTestCase {
 		}
 	}
 	
+	override func tearDown() {
+		super.tearDown()
+		Date.customDateFormats = []
+	}
+	
 	func testNSURL() {
 		XCTAssertNotNil(testModel.someUrl, "Failed to create NSURL from string")
 		XCTAssertEqual(testModel.someUrl, URL(string: "http://www.google.com"), "Failed to parse URL")
