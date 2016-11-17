@@ -16,6 +16,7 @@ class StringInitializableTests: XCTestCase {
 		super.setUp()
 		do {
 			if let path = Bundle(for: type(of: self)).path(forResource: "StringInitializableTest", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+				Date.customDateFormats = ["yyyy-MM-dd HH:mm:ss"]
 				let bridgedDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
 				testModel = StringInitializableTestModel(dictionary: bridgedDictionary)
 			}
@@ -23,6 +24,11 @@ class StringInitializableTests: XCTestCase {
 			XCTFail("Failed to prepare bridged dictionary.")
 			return
 		}
+	}
+	
+	override func tearDown() {
+		super.tearDown()
+		Date.customDateFormats = []
 	}
 	
 	func testNSURL() {
@@ -37,6 +43,7 @@ class StringInitializableTests: XCTestCase {
         XCTAssertNil(testModel.someEmptyDate, "Failed to return nil when parsing empty date")
         XCTAssertNil(testModel.someBadDate, "Failed to return nil when parsing bad date")
         XCTAssertEqual(Date.fromString(testModel.someDate?.stringRepresentation() ?? ""), testModel.someDate, "String representation of URL differs.")
+		XCTAssertEqual(Date.fromString(testModel.someCustomDate?.stringRepresentation() ?? ""), testModel.someCustomDate, "String representation of custom URL differs.")
     }
     
     func testNSURLEncoding() {
@@ -59,5 +66,16 @@ class StringInitializableTests: XCTestCase {
             XCTFail("Failed to encode NSDate to String")
         }
     }
+	
+	func testCustomNSDateEncoding() {
+		guard let encodedModel = testModel.encodableRepresentation() as? NSDictionary else { XCTFail("encodableRepresentation() Failed"); return }
+		
+		if let someDateString = encodedModel["some_custom_date"] as? String {
+			let someDate = DateFormatter().date(from: someDateString)
+			XCTAssertEqual(someDate, DateFormatter().date(from: "2016-11-15 17:19:04"), "Failed to encode NSDate to String")
+		} else {
+			XCTFail("Failed to encode NSDate to String")
+		}
+	}
 }
 
