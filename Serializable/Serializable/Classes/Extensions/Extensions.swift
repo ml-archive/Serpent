@@ -29,9 +29,10 @@ extension URL: StringInitializable {
 extension Date: StringInitializable {
     static fileprivate let internalDateFormatter = DateFormatter()
     static fileprivate let allowedDateFormats = ["yyyy-MM-dd'T'HH:mm:ssZZZZZ", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd"]
+	static public var customDateFormats: [String] = []
 
     public static func fromString<T>(_ string: String) -> T? {
-        for format in allowedDateFormats {
+        for format in allowedDateFormats + customDateFormats {
             internalDateFormatter.dateFormat = format
             if let date = internalDateFormatter.date(from: string) as? T {
                 return date
