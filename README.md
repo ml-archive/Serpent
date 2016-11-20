@@ -21,7 +21,7 @@ Serpent is implemented using protocol extensions and static typing.
 ## Why Serpent?
 There are plenty of other Encoding and Decoding frameworks available. Why should you use Serpent? 
 
-* [Performance](https://github.com/nodes-ios/Serpent/wiki/Performance-tests). Serpent is fast, up to 4x faster than similar frameworks
+* [Performance](https://github.com/nodes-ios/Serpent/wiki/Performance-tests). Serpent is fast, up to 4x faster than similar frameworks.
 * [Features](https://github.com/nodes-ios/Serpent/wiki/Performance-tests#feature-comparison). Serpent can parse anything you throw at it. Nested objects, Enums, NSURL, UIColor, you name it!
 * [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write.  [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates it for you instantly. 
 * [Alamofire Integration](). Using the included Alamofire extensions makes implementing an API call returning parsed model data as simple as doing a one-liner!
@@ -38,9 +38,17 @@ There are plenty of other Encoding and Decoding frameworks available. Why should
 ## 📦 Installation
 
 ### Carthage
+~~~bash
+github "nodes-ios/Serpent" ~> 1.0
 ~~~
-github "nodes-ios/Serpent" 
-~~~
+
+> Last versions compatible with lower Swift versions:  
+> 
+> **Swift 2.3**  
+> `github "nodes-ios/Serpent" == 0.13.2`
+> 
+> **Swift 2.2**  
+> `github "nodes-ios/Serpent" == 0.11.2`
 
 ### CocoaPods
 
@@ -62,7 +70,7 @@ let package = Package(
 
 ## 🔧 Setup
 
-We **highly** recommend you use our [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) to assist with generating the code needed to conform to Serpent. Instructions for installation and usage can be found at the [Model Boiler github repository](https://github.com/nodes-ios/ModelBoiler). 
+We **highly** recommend you use our [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) to assist with generating the code needed to conform to Serpent. Instructions for installation and usage can be found at the [Model Boiler GitHub repository](https://github.com/nodes-ios/ModelBoiler). 
 
 ## 💻 Usage
 
@@ -72,7 +80,7 @@ Serpent supports Primitive types, Enum, NSURL, NSDate, UIColor, other Serpents, 
 
 Primitive types do not need to have an explicit type, if Swift is able to infer it normally. `var name: String = ""` works just as well as `var name = ""`. Optionals will of course need an explicit type. 
 
-**Note:** Enums you create must conform to RawRepresentable, meaning they must have an explicit type. Otherwise, the parser won't know what to do with the incoming data it receives. 
+> **NOTE:** Enums you create must conform to `RawRepresentable`, meaning they must have an explicit type. Otherwise, the parser won't know what to do with the incoming data it receives. 
 
 
 #### Create your model struct or class:
@@ -85,12 +93,12 @@ struct Foo {
 }
 ~~~
 
-**NOTE:** Classes must be marked `final`
+> **NOTE:** Classes must be marked `final`.
 
-####Add the required methods for `Encodable` and `Decodable`: 
+#### Add the required methods for `Encodable` and `Decodable`: 
 
 ~~~swift
-extension Foo: Serpent {
+extension Foo: Serializable {
     init(dictionary: NSDictionary?) {
         id      <== (self, dictionary, "id")
         name    <== (self, dictionary, "name")
@@ -106,6 +114,8 @@ extension Foo: Serpent {
     }
 }
 ~~~
+
+> **NOTE:** You can add conformance to `Serializable` which is a type alias for both `Encodable` and `Decodable`.
 
 And thats it! If you're using the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), this extension will be generated for you, so that you don't need to type it all out for every model you have. 
 
@@ -161,7 +171,7 @@ struct School {
 You can get as complicated as you like, and the syntax will always remain the same. The extensions will be:
 
 ~~~swift
-extension Student: Serpent {
+extension Student: Serializable {
 	init(dictionary: NSDictionary?) {
 		name   <== (self, dictionary, "name")
 		age    <== (self, dictionary, "age")
@@ -177,7 +187,7 @@ extension Student: Serpent {
 	}
 }
 
-extension School: Serpent {
+extension School: Serializable {
 	init(dictionary: NSDictionary?) {
 		name     <== (self, dictionary, "name")
 		location <== (self, dictionary, "location")
@@ -199,9 +209,9 @@ extension School: Serpent {
 ~~~
 Again, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates all of this code for you in less than a second!
 
-###Using with Alamofire
+### Using with Alamofire
 
-Serpent comes integrated with Alamofire out of the box, through an extension on Alamofire's `Request` construct, that adds the function `responseSerpent(completion:unwrapper)`
+Serpent comes integrated with Alamofire out of the box, through an extension on Alamofire's `Request` construct, that adds the function `responseSerializable(completion:unwrapper)`
 
 The extension uses Alamofire's familiar `Response` type to hold the returned data, and uses its generic associated type to automatically parse the data.
 
@@ -209,7 +219,7 @@ Consider an endpoint returning a single `school` structure matching the struct f
 
 ~~~swift
 static func requestSchool:(completion: (Response<School, NSError>) -> Void)) {
-	request(.GET, "http://somewhere.com/school/1").responseSerpent(completion)
+	request(.GET, "http://somewhere.com/school/1").responseSerializable(completion)
 }
 ~~~
 
@@ -231,7 +241,7 @@ For an array of objects, use the same technique:
 
 ~~~swift
 static func requestStudents:(completion: (Response<[Student], NSError>) -> Void)) {
-	request(.GET, "http://somewhere.com/school/1/students").responseSerpent(completion)
+	request(.GET, "http://somewhere.com/school/1/students").responseSerializable(completion)
 }
 ~~~
 
@@ -250,11 +260,11 @@ Some APIs wrap their data in containers. Use the `unwrapper` closure for that. L
 }
 ~~~
 
-The `unwrapper` closure has 2 input arguments: The `sourceDictionary` (the JSON Response Dictionary) and the `expectedType` (the *type* of the target Serpent). Return the object that will serve as the input for the Serialiable initializer. 
+The `unwrapper` closure has 2 input arguments: The `sourceDictionary` (the JSON Response Dictionary) and the `expectedType` (the *type* of the target Serpent). Return the object that will serve as the input for the Serializable initializer. 
 
 ~~~swift
 static func requestStudents:(completion: (Response<[Student], NSError>) -> Void)) {
-	request(.GET, "http://somewhere.com/school/1/students").responseSerpent(completion, unwrapper: { $0.0["students"] })
+	request(.GET, "http://somewhere.com/school/1/students").responseSerializable(completion, unwrapper: { $0.0["students"] })
 }
 ~~~
 
@@ -268,7 +278,7 @@ The `expectedType` can be used to dynamically determine the key based on the typ
 
 See [here](https://github.com/nodes-ios/Nodes) for an example on how we use this in our projects at Nodes.
 
-***NOTE:*** `responseSerpent` Internally calls `validate().responseJSON()` on the request, so don't do that.
+***NOTE:*** `responseSerializable` Internally calls `validate().responseJSON()` on the request, so you don't have to do that.
 
 
 
