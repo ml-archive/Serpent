@@ -6,8 +6,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serpent.svg)](https://codecov.io/github/nodes-ios/Serpent) 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serpent/blob/master/LICENSE)  
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
-[![CocoaPods](https://img.shields.io/cocoapods/v/Serpent.svg)](https://cocoapods.org/pods/Serpent) 
-![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg) 
+[![CocoaPods](https://img.shields.io/cocoapods/v/Serpent.svg)](https://cocoapods.org/pods/Serpent)
 ![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg) 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serpent/blob/master/LICENSE) 
 [![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/Serpent)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/Serpent)</center>
@@ -55,18 +54,8 @@ github "nodes-ios/Serpent" ~> 1.0
 Under maintenance, returning soon!
 
 ### Swift Package Manager
-To use Serpent as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following to your `Package.swift` file.  
 
-~~~swift
-import PackageDescription
-
-let package = Package(
-    name: "YourPackage",
-    dependencies: [
-        .Package(url: "https://github.com/nodes-ios/Serpent.git", majorVersion: 2)
-    ]
-)
-~~~
+Under maintenance, returning soon!
 
 ## 🔧 Setup
 
