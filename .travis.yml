@@ -19,14 +19,14 @@ env:
   - TVOS_SDK=appletvsimulator10.0
   - WATCHOS_SDK=watchsimulator3.1
   matrix:
-  - DESTINATION="OS=10.1,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"
-  - DESTINATION="arch=x86_64"                    SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES"
-  - DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES"
-  - DESTINATION="OS=3.1,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"
+  - DESTINATION="OS=10.1,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" CARTHAGE_PLATFORM="ios"
+  - DESTINATION="arch=x86_64"                    SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES" CARTHAGE_PLATFORM="osx"
+  - DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" CARTHAGE_PLATFORM="tvos"
+  - DESTINATION="OS=3.1,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO" CARTHAGE_PLATFORM="watchos"
 
 install:
   # Setup carthage dependencies before build
-  - carthage bootstrap
+  - carthage bootstrap --platform $CARTHAGE_PLATFORM
 
 script:
   - set -o pipefail
