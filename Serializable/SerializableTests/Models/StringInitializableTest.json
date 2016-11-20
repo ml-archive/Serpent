@@ -1,7 +1,0 @@
-{
-    "some_url" : "http://www.google.com",
-	"some_date" : "1974-08-15T15:17:14+00:00",
-	"some_empty_url" : "",
-    "some_empty_date" : "",
-    "some_bad_date" :"WOW_SUCH_DATE_NOT_CORRECT"
-}

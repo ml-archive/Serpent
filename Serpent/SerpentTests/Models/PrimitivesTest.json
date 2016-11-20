@@ -1,0 +1,38 @@
+{
+    "integer" : 1,
+    "optional_integer" : 2,
+    "optional_integer_with_default_value" : 3,
+
+    "negative_integer" : -10,
+    "optional_negative_integer" : -20,
+    "optional_negative_integer_with_default_value" : -30,
+
+    "double" : 123.1234567,
+    "optional_double" : 234.2345678,
+    "optional_double_with_default_value" : 345.3456789,
+
+    "float" : 1.234,
+    "optional_float" : 2.345,
+    "optional_float_with_default_value" : 3.456,
+
+    "bool" : "yes",
+    "optional_bool" : "1",
+    "optional_bool_with_default_value" : true,
+
+    "char" : "S",
+    "optional_char" : "O",
+    "optional_char_with_default_value" : "D",
+
+    "string" : "success",
+    "optional_string" : "optional success",
+    "optional_string_with_default_value" : "optional default success",
+	
+	"intString" : "1",
+	"doubleString" : "1.5",
+	"boolString" : "true",
+	"boolIntString" : "1",
+	
+	"stringInt" : 1,
+	"stringDouble" : 1.5,
+	"stringBool" : true
+}
