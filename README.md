@@ -51,7 +51,16 @@ github "nodes-ios/Serpent" ~> 1.0
 
 ### CocoaPods
 
-Under maintenance, returning soon!
+Choose one of the following, add it to your `Podfile` and run `pod install`:
+
+~~~ruby
+pod 'Serpent', '~> 1.0' # Just core
+pod 'Serpent/Extensions', '~> 1.0' # Includes core and all extensions
+pod 'Serpent/AlamofireExtension', '~> 1.0' # Includes core and Alamofire extension
+pod 'Serpent/CashierExtension', '~> 1.0' # Includes core and Cashier extension
+~~~
+
+> **NOTE:** CocoaPods only supports Serpent using Swift version 3.0 and higher.
 
 ### Swift Package Manager
 
@@ -268,7 +277,6 @@ The `expectedType` can be used to dynamically determine the key based on the typ
 See [here](https://github.com/nodes-ios/Nodes) for an example on how we use this in our projects at Nodes.
 
 ***NOTE:*** `responseSerializable` Internally calls `validate().responseJSON()` on the request, so you don't have to do that.
-
 
 
 ## 👥 Credits
