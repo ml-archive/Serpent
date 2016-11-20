@@ -1,15 +1,12 @@
-<p align="center">
-  <img src="./Serpent_icon.png?raw=true" alt="Serpent"/>
-</p>
+<p align="center"><img src="./Serpent_icon.png?raw=true" alt="Serpent"/></p>
 
-<center>[![Travis](https://img.shields.io/travis/nodes-ios/Serpent.svg)](https://travis-ci.org/nodes-ios/Serpent) 
-[![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serpent.svg)](https://codecov.io/github/nodes-ios/Serpent) 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serpent/blob/master/LICENSE)  
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
-[![CocoaPods](https://img.shields.io/cocoapods/v/Serpent.svg)](https://cocoapods.org/pods/Serpent)
-![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg) 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serpent/blob/master/LICENSE) 
-[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-ios/Serpent)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-ios/Serpent)</center>
+[![Travis](https://img.shields.io/travis/nodes-ios/Serpent.svg)](https://travis-ci.org/nodes-ios/Serpent)
+[![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serpent.svg)](https://codecov.io/github/nodes-ios/Serpent)
+[![codebeat badge](https://codebeat.co/badges/bf41edec-511c-405d-9036-a7253492c118)](https://codebeat.co/projects/github-com-nodes-ios-serpent)
+[![Carthage Compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![CocoaPods](https://img.shields.io/cocoapods/v/Serpent.svg)](https://cocoapods.org/pods/Serpent)    
+![Plaforms](https://img.shields.io/badge/platforms-iOS%20|%20macOS%20|%20tvOS%20|%20watchOS%20-lightgrey.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serpent/blob/master/LICENSE)
 
 Serpent is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects. Designed for use with Alamofire.
 
