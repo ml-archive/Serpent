@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint Serializable.podspec' to ensure this is a
+#  Be sure to run `pod spec lint Serpent.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -16,32 +16,20 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Serpent"
-  s.version      = "0.10.0"
-  s.summary      = "A protocol to serialize Swift Structs and Classes for encoding and decoding"
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version      = "1.0.0"
+  s.summary      = "A protocol to serialize Swift structs and classes for encoding and decoding."
+  s.homepage     = "https://github.com/nodes-ios/Serpent"
   s.description  = <<-DESC
-			A protocol to easily serialize Swift Structs and Classes for encoding and decoding
+  Serpent is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects.
+  It's designed to be used together with our helper app, the Model Boiler, making model creation a breeze. Serpent is implemented using protocol extensions and static typing.
+  Also provides extensions for Alamofire and Cashier.
                    DESC
-
-  s.homepage     = "https://github.com/nodes-ios/Serializable"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
-  #  Licensing your code is important. See http://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
 
-  s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-
+  # Permissive license
+  s.license = "MIT"
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -62,14 +50,10 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  # s.ios.platform     = :ios, "8.0"
-
-  #  When using multiple platforms
-   s.ios.deployment_target = "8.0"
-   s.osx.deployment_target = "10.9"
-   s.watchos.deployment_target = "2.0"
-   s.tvos.deployment_target = "9.0"
+  s.ios.deployment_target     = "8.0"
+  s.osx.deployment_target     = "10.9"
+  s.watchos.deployment_target = "2.0"
+  s.tvos.deployment_target    = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,59 +62,41 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/nodes-ios/Serializable.git", :tag => "0.10.0" }
+  s.source = { :git => "https://github.com/nodes-ios/Serpent.git", :tag => "1.0.0" }
 
-
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
+  # ――― Subspecs ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
 
-  s.source_files  = "Serpent/Serpent"
-  #s.exclude_files = "Serializable/Source/CashierExtension.swift"
+  s.default_subspecs = 'Core'
 
-  # s.public_header_files = "Classes/**/*.h"
+  # Main subspec
+  s.subspec 'Core' do |core|
+    # Add all files
+    core.source_files = "Serpent/Serpent/Classes/**/*"
 
+    # Exclude extensions by default
+    core.exclude_files = "Serpent/Serpent/Classes/Extensions/CashierExtension.swift", "Serpent/Serpent/Classes/Extensions/AlamofireExtension.swift"
+  end
 
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
+  # Subspec for all extensions
+  s.subspec 'Extensions' do |ext|
+    ext.dependency 'Serpent/Core'
+    ext.dependency 'Serpent/AlamofireExtension'
+    ext.dependency 'Serpent/CashierExtension'
+  end
 
-  # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  # Subspec for Alamofire extension
+  s.subspec 'AlamofireExtension' do |alamo|
+    alamo.dependency 'Serpent/Core'
+    alamo.dependency 'Alamofire', '~> 4.0'
+    alamo.source_files = "Serpent/Serpent/Classes/Extensions/AlamofireExtension.swift"
+  end
 
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
-
-  # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-  # s.requires_arc = true
-
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  # Subspec for Cashier extension
+  s.subspec 'CashierExtension' do |cashier|
+    cashier.dependency 'Serpent/Core'
+    cashier.dependency 'Cashier', '~> 1.0.1'
+    cashier.source_files = "Serpent/Serpent/Classes/Extensions/CashierExtension.swift"
+  end
 
 end
