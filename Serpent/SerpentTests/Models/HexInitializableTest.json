@@ -1,0 +1,11 @@
+{
+	"short_color" : "55AACC",
+	"full_color" : "#55AACC",
+	"bad_color" : "0066",
+	"not_color" : {
+		"color" : "asdf"
+	},
+    "three_color" : "5AC",
+    "invalid_hex_color" : "SSg12F",
+    "alpha_rgb" : "CC55AACC"
+}

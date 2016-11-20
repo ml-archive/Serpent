@@ -1,0 +1,45 @@
+{
+    "string": "success",
+    "second_string": "haha",
+    "other_serializable": {
+        "integer": 1,
+        "optional_integer": 2,
+        "optional_integer_with_default_value": 3,
+        "string": "success",
+        "optional_string": "optional success",
+        "optional_string_with_default_value": "optional default success"
+    },
+	"some_serializable": {
+		"integer": 1,
+		"optional_integer": 2,
+		"optional_integer_with_default_value": 3,
+		"string": "success",
+		"optional_string": "optional success",
+		"optional_string_with_default_value": "optional default success"
+	},
+	"some_url" : "http://www.google.com",
+	"some_enum" : 1,
+	"some_array" : [
+					{
+					"integer": 1,
+					"optional_integer": 2,
+					"optional_integer_with_default_value": 3,
+					"string": "success",
+					"optional_string": "optional success",
+					"optional_string_with_default_value": "optional default success"
+					},
+					{
+					"integer": 1,
+					"optional_integer": 2,
+					"optional_integer_with_default_value": 3,
+					"string": "success",
+					"optional_string": "optional success",
+					"optional_string_with_default_value": "optional default success"
+					},
+	],
+    "some_dictionary" : {
+                         "test" : "value",
+                         "integer" : 1,
+                         "float" : 1.023
+    }
+}

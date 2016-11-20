@@ -2,4 +2,4 @@ coverage:
   status:
     patch: false
   ignore:
-    - "Serializable/SerializableTests/.*"
+    - "Serpent/SerpentTests/.*"
