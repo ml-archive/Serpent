@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Serpent"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "A protocol to serialize Swift structs and classes for encoding and decoding."
   s.homepage     = "https://github.com/nodes-ios/Serpent"
   s.description  = <<-DESC
@@ -50,11 +50,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.ios.deployment_target     = "8.0"
-  s.osx.deployment_target     = "10.9"
-  s.watchos.deployment_target = "2.0"
-  s.tvos.deployment_target    = "9.0"
-
+  s.platforms = { :ios => "8.0", :osx => "10.10", :watchos => "2.0", :tvos => "9.0" }
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -62,7 +58,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source = { :git => "https://github.com/nodes-ios/Serpent.git", :tag => "1.0.0" }
+  s.source = { :git => "https://github.com/nodes-ios/Serpent.git", :tag => s.version }
 
   # ――― Subspecs ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -88,14 +84,14 @@ Pod::Spec.new do |s|
   # Subspec for Alamofire extension
   s.subspec 'AlamofireExtension' do |alamo|
     alamo.dependency 'Serpent/Core'
-    alamo.dependency 'Alamofire', '~> 4.0'
+    alamo.dependency 'Alamofire', '~> 4.1'
     alamo.source_files = "Serpent/Serpent/Classes/Extensions/AlamofireExtension.swift"
   end
 
   # Subspec for Cashier extension
   s.subspec 'CashierExtension' do |cashier|
     cashier.dependency 'Serpent/Core'
-    cashier.dependency 'Cashier', '~> 1.0.1'
+    cashier.dependency 'Cashier', '~> 1.2.1'
     cashier.source_files = "Serpent/Serpent/Classes/Extensions/CashierExtension.swift"
   end
 
