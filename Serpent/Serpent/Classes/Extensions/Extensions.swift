@@ -21,7 +21,7 @@ extension URL: StringInitializable {
         return self.init(string: string) as? T
     }
 
-    public func stringRepresentation() -> String? {
+    public func stringRepresentation() -> String {
         return self.absoluteString
     }
 }
