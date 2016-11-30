@@ -8,7 +8,7 @@
 ![Plaforms](https://img.shields.io/badge/platforms-iOS%20|%20macOS%20|%20tvOS%20|%20watchOS%20-lightgrey.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Serpent/blob/master/LICENSE)
 
-Serpent is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects. Designed for use with Alamofire.
+**Serpent** *(previously known as Serializable)* is a framework made for creating model objects or structs that can be easily serialized and deserialized from/to JSON. It's easily expandable and handles all common data types used when consuming a REST API, as well as recursive parsing of custom objects. Designed for use with Alamofire.
 
 It's designed to be used together with our helper app, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), making model creation a breeze.
 
@@ -35,7 +35,7 @@ Serpent is implemented using protocol extensions and static typing.
 There are plenty of other Encoding and Decoding frameworks available. Why should you use Serpent?
 
 * [Performance](https://github.com/nodes-ios/Serpent/wiki/Performance-tests). Serpent is fast, up to 4x faster than similar frameworks.
-* [Features](https://github.com/nodes-ios/Serpent/wiki/Performance-tests#feature-comparison). Serpent can parse anything you throw at it. Nested objects, Enums, NSURL, UIColor, you name it!
+* [Features](https://github.com/nodes-ios/Serpent/wiki/Performance-tests#feature-comparison). Serpent can parse anything you throw at it. Nested objects, Enums, URLs, UIColor, you name it!
 * [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write.  [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates it for you instantly.
 * [Alamofire Integration](). Using the included Alamofire extensions makes implementing an API call returning parsed model data as simple as doing a one-liner!
 * [Expandability](). Parsing into other datatypes can easily be added.
@@ -44,8 +44,9 @@ There are plenty of other Encoding and Decoding frameworks available. Why should
 
 ## 📝 Requirements
 
-* iOS 8.0+
-* Swift 3.0+
+* iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
+* Swift 3.0+  
+*(Swift 2.2 & Swift 2.3 supported in older versions)*
 
 ## 📦 Installation
 
@@ -61,6 +62,8 @@ github "nodes-ios/Serpent" ~> 1.0
 >
 > **Swift 2.2**  
 > `github "nodes-ios/Serpent" == 0.11.2`
+>
+> **NOTE:** Serpent was previously known as **Serializable**.
 
 ### CocoaPods
 
@@ -99,7 +102,7 @@ We **highly** recommend you use our [![ModelBoiler](http://i.imgur.com/V5UzMVk.p
 
 ### Getting started
 
-Serpent supports Primitive types, Enum, NSURL, NSDate, UIColor, other Serpents, and Arrays of all of the aforementioned types. Your variable declarations can have a default value or be optional.
+Serpent supports all primitive types, `enum`, `URL`, `Date`, `UIColor`, other `Serpent` model, and `Array` of all of the aforementioned types. Your variable declarations can have a default value or be optional.
 
 Primitive types do not need to have an explicit type, if Swift is able to infer it normally. `var name: String = ""` works just as well as `var name = ""`. Optionals will of course need an explicit type.
 
@@ -142,12 +145,12 @@ extension Foo: Serializable {
 
 And thats it! If you're using the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler), this extension will be generated for you, so that you don't need to type it all out for every model you have.
 
-###Using Serpent models
+### Using Serpent models
 
 New instances of your model can be created with a dictionary, e.g. from parsed JSON.
 
 ~~~swift
-let dictionary = try NSJSONSerialization.JSONObjectWithData(someData, options: .AllowFragments) as? NSDictionary
+let dictionary = try JSONSerialization.jsonObject(with: someData, options: .allowFragments) as? NSDictionary
 let newModel = Foo(dictionary: dictionary)
 ~~~
 
@@ -157,16 +160,16 @@ You can generate a dictionary version of your model by calling `encodableReprese
 let encodedDictionary = newModel.encodableRepresentation()
 ~~~
 
-###More complex examples
+### More complex examples
 
 In this example, we have two models, Student and School.
 
 ~~~swift
 struct Student {
 	enum Gender: String {
-		case Male = "male"
-		case Female = "female"
-		case Unspecified = "unspecified"
+		case male = "male"
+		case female = "female"
+		case unspecified = "unspecified"
 	}
 
 	var name = ""
@@ -176,15 +179,15 @@ struct Student {
 
 struct School {
 	enum Sport: Int {
-		case Football
-		case Basketball
-		case Tennis
-		case Swimming
+		case football
+		case basketball
+		case tennis
+		case swimming
 	}
 
 	var name = ""
 	var location = ""
-	var website: NSURL?
+	var website: URL?
 	var students: [Student] = []
 	var sports: [Sport]?
 }
@@ -241,20 +244,20 @@ The extension uses Alamofire's familiar `Response` type to hold the returned dat
 Consider an endpoint returning a single `school` structure matching the struct from the example above. To implement the call, simply add a function to your shared connection manager or where ever you like to put it:
 
 ~~~swift
-static func requestSchool:(completion: (Response<School, NSError>) -> Void)) {
-	request(.GET, "http://somewhere.com/school/1").responseSerializable(completion)
+func requestSchool(completion: @escaping (DataResponse<School>) -> Void) {
+	request("http://somewhere.com/school/1", method: .get).responseSerializable(completion)
 }
 ~~~
 
 In the consuming method you use it like this:
 
 ~~~swift
-ConnectionManager.requestSchool() { (response) in
+requestSchool() { (response) in
 	switch response.result {
-		case .Success(let school):
+		case .success(let school):
 			//Use your new school object!
 
-		case .Failure(let error):
+		case .failure(let error):
 			//Handle the error object, or check your Response for more detail
 	}
 }
@@ -263,8 +266,8 @@ ConnectionManager.requestSchool() { (response) in
 For an array of objects, use the same technique:
 
 ~~~swift
-static func requestStudents:(completion: (Response<[Student], NSError>) -> Void)) {
-	request(.GET, "http://somewhere.com/school/1/students").responseSerializable(completion)
+static func requestStudents(completion: @escaping (DataResponse<[Student]>) -> Void) {
+	request("http://somewhere.com/school/1/students", method: .get).responseSerializable(completion)
 }
 ~~~
 
@@ -286,15 +289,18 @@ Some APIs wrap their data in containers. Use the `unwrapper` closure for that. L
 The `unwrapper` closure has 2 input arguments: The `sourceDictionary` (the JSON Response Dictionary) and the `expectedType` (the *type* of the target Serpent). Return the object that will serve as the input for the Serializable initializer.
 
 ~~~swift
-static func requestStudents:(completion: (Response<[Student], NSError>) -> Void)) {
-	request(.GET, "http://somewhere.com/school/1/students").responseSerializable(completion, unwrapper: { $0.0["students"] })
+static func requestStudents(completion: (DataResponse<[Student]>) -> Void) {
+	request("http://somewhere.com/school/1/students", method: .get).responseSerializable(completion, unwrapper: { $0.0["students"] })
 }
 ~~~
 
 If you need to unwrap the response data in every call, you can install a default unwrapper using
 
 ~~~swift
-Parser.defaultWrapper = { You unwrapper here... }
+Parser.defaultWrapper = { sourceDictionary, expectedType in 
+	// You custom unwrapper here... 
+	return sourceDictionary
+}
 ~~~
 
 The `expectedType` can be used to dynamically determine the key based on the type name using reflection. This is especially useful when handling paginated data.
