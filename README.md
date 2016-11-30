@@ -44,7 +44,7 @@ There are plenty of other Encoding and Decoding frameworks available. Why should
 
 ## 📝 Requirements
 
-* iOS 8.0+
+* iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
 * Swift 3.0+
 
 ## 📦 Installation
