@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Serializable Example
+//  Serpent Example
 //
 //  Created by Dominik Hádl on 17/04/16.
 //  Copyright © 2016 Nodes ApS. All rights reserved.

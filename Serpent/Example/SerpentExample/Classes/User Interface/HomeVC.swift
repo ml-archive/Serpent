@@ -1,6 +1,6 @@
 //
 //  HomeVC.swift
-//  Serializable Example
+//  Serpent Example
 //
 //  Created by Dominik Hádl on 17/04/16.
 //  Copyright © 2016 Nodes ApS. All rights reserved.
@@ -64,13 +64,12 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "ShowUserDetails", sender: nil)
+        performSegue(withIdentifier: "ShowUserDetails", sender: indexPath)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowUserDetails" {
-            if let userVC = segue.destination as? UserDetailsVC {
-                guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            if let userVC = segue.destination as? UserDetailsVC, let indexPath = sender as? IndexPath {
                 userVC.user = users[indexPath.row]
             }
         }
