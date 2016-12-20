@@ -694,7 +694,7 @@
 				TargetAttributes = {
 					272F1DC51C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					272F1DCF1C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -714,7 +714,7 @@
 					};
 					2785B52C1C9DE72E00E40605 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					2785B5351C9DE72F00E40605 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1056,6 +1056,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1104,6 +1105,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -1131,7 +1133,7 @@
 				PRODUCT_NAME = Serpent;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1152,7 +1154,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serpent;
 				PRODUCT_NAME = Serpent;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1166,7 +1168,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerpentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
-				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -1180,7 +1181,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerpentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
-				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -1201,7 +1201,6 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Debug;
@@ -1223,7 +1222,6 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
@@ -1245,7 +1243,6 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -1267,7 +1264,6 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -1282,7 +1278,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serpent-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0.1;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
@@ -1297,7 +1292,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serpent-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0.1;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
@@ -1321,7 +1315,7 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1344,7 +1338,7 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1360,7 +1354,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serpent-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -1376,7 +1369,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serpent-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
