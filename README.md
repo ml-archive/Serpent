@@ -28,6 +28,7 @@ Serpent is implemented using protocol extensions and static typing.
 	- [Using Serpent models](#using-serpent-models)
 	- [More complex examples](#more-complex-examples)
 	- [Using with Alamofire](#using-with-alamofire)
+	- [Date parsing](#date-parsing)
 - [👥 Credits](#-credits)
 - [📄 License](#-license)
 
@@ -309,6 +310,14 @@ See [here](https://github.com/nodes-ios/Nodes) for an example on how we use this
 
 ***NOTE:*** `responseSerializable` Internally calls `validate().responseJSON()` on the request, so you don't have to do that.
 
+### Date parsing
+Serpent can create `Date` objects from the date strings in the JSON. By default, Serpent can parse the date strings from the following formats: `yyyy-MM-dd'T'HH:mm:ssZZZZZ`, `yyyy-MM-dd'T'HH:mm:ss`, `yyyy-MM-dd`. If you need to parse other date formats, you can do it by adding this line to your code (for example, in `AppDelegate`'s `didFinishLaunchingWithOptions:`:
+
+~~~swift
+Date.customDateFormats = ["yyyyMMddHHmm", "yyyyMMdd"]    // add the custom date formats you need here
+~~~
+
+The custom date formats won't replace the default ones, they will be still supported. 
 
 ## 👥 Credits
 Made with ❤️ at [Nodes](http://nodesagency.com).
