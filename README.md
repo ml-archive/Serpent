@@ -35,8 +35,8 @@ Serpent is implemented using protocol extensions and static typing.
 ## 🐍 Why Serpent?
 There are plenty of other Encoding and Decoding frameworks available. Why should you use Serpent?
 
-* [Performance](https://github.com/nodes-ios/Serpent/wiki/Performance-tests). Serpent is fast, up to 4x faster than similar frameworks.
-* [Features](https://github.com/nodes-ios/Serpent/wiki/Performance-tests#feature-comparison). Serpent can parse anything you throw at it. Nested objects, Enums, URLs, UIColor, you name it!
+* [Performance](https://github.com/nodes-ios/SerpentPerformanceComparison). Serpent is fast, up to 4x faster than similar frameworks.
+* [Features](https://github.com/nodes-ios/SerpentPerformanceComparison#-feature-comparison). Serpent can parse anything you throw at it. Nested objects, Enums, URLs, UIColor, you name it!
 * [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler). Every framework of this kind requires tedious boilerplate code that takes forever to write.  [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/nodes-ios/ModelBoiler) [Model Boiler](https://github.com/nodes-ios/ModelBoiler) generates it for you instantly.
 * [Alamofire Integration](). Using the included Alamofire extensions makes implementing an API call returning parsed model data as simple as doing a one-liner!
 * [Expandability](). Parsing into other datatypes can easily be added.
