@@ -34,16 +34,20 @@ public extension Parser {
                     return .failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Parsing block failed!", "JSONResponse" : value]))
                 }
                 
-            case let .failure(error):
-                if let data = data , data.count != 0 {
-                    //TODO; Find out what to do with error
-//                    var userInfo = error.userInfo
-//                    userInfo["ResponseString"] = String(data: data, encoding: String.Encoding.utf8)
-//                    let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
-                    return .failure(error)
-                }
+            case .failure(_):
+                //                if let data = data , data.count != 0 {
+                //TODO: Find out what to do with error
+                //                    var userInfo = error.userInfo
+                //                    userInfo["ResponseString"] = String(data: data, encoding: String.Encoding.utf8)
+                //                    let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
+                //                    return .failure(error)
+                //                }
                 
-                return .failure(error)
+                var responseDict = [NSLocalizedDescriptionKey : "Serialization failed!"]
+                if let response = response {
+                    responseDict["response"] = "\(response)"
+                }
+                return .failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: responseDict))
             }
         }
     }
