@@ -9,15 +9,11 @@
 import Foundation
 import Alamofire
 
-public protocol Parsable {
-    static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> DataResponseSerializer<T>
-}
-
 public struct Parser {
     public static let APICallSucceededNotification = "APICallSucceededNotification"
 }
 
-extension Parser: Parsable {
+extension Parser {
     
     /**
      Parse any generic object using the parsing handler.
