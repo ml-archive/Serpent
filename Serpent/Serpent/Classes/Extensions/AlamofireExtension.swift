@@ -9,22 +9,23 @@
 import Foundation
 import Alamofire
 
+public protocol Parsable {
+    static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> DataResponseSerializer<T>
+}
+
 public struct Parser {
     public static let APICallSucceededNotification = "APICallSucceededNotification"
 }
 
-public extension Parser {
+extension Parser: Parsable {
     
     /**
      Parse any generic object using the parsing handler.
      */
     
-    internal static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> DataResponseSerializer<T> {
+    public static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> DataResponseSerializer<T> {
         return DataResponseSerializer<T> { (request, response, data, error) -> Result<T> in
-            
-           
             let result = Request.serializeResponseJSON(options: .allowFragments, response: response, data: data, error: error)
-            
             switch result {
             case let .success(value):
                 if let parsedObject: T = parsingHandler?( value ) {
@@ -42,19 +43,16 @@ public extension Parser {
 //                    let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
                     return .failure(error)
                 }
-                
                 return .failure(error)
             }
         }
     }
-    
-    typealias Unwrapper = ((_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?)
-    
+
     /**
-     The default unwrapper. Default implementation just passes data straight through. 
+     Typealias for unwrapping from a dictionary, to be used if your JSON response contains top level object(s)
+     That are not useful in parsing your actual model.
      */
-    
-    public static var defaultUnwrapper: Unwrapper = { $0.0 }
+    public typealias Unwrapper = ((_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?)
 }
 
 
@@ -74,7 +72,7 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
     @discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void, unwrapper:@escaping Parser.Unwrapper) -> Self {
         let serializer = Parser.serializer( {
             ( data: Any? ) -> T? in
             
@@ -103,7 +101,7 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
 	@discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void, unwrapper:@escaping Parser.Unwrapper) -> Self {
         
         let serializer = Parser.serializer( {
             ( data: Any? ) -> [T]? in
