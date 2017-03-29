@@ -1,4 +1,4 @@
 [submodule "Serpent"]
 	path = Serpent
-	url = https://github.com/mariusc/Serpent.git
+	url = https://github.com/nodes-ios/Serpent.git
 	branch = master
