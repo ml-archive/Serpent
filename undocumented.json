@@ -1,0 +1,355 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/AlamofireExtension.swift",
+      "line": null,
+      "symbol": "Parser",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/AlamofireExtension.swift",
+      "line": 12,
+      "symbol": "Parser",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/AlamofireExtension.swift",
+      "line": 13,
+      "symbol": "Parser.APICallSucceededNotification",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": null,
+      "symbol": "Color",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 14,
+      "symbol": "StringInitializable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 15,
+      "symbol": "StringInitializable.fromString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 16,
+      "symbol": "StringInitializable.stringRepresentation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 20,
+      "symbol": "URL.fromString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 24,
+      "symbol": "URL.stringRepresentation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 32,
+      "symbol": "Date.customDateFormats",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 34,
+      "symbol": "Date.fromString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 45,
+      "symbol": "Date.stringRepresentation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 60,
+      "symbol": "HexInitializable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 61,
+      "symbol": "HexInitializable.fromHexString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 66,
+      "symbol": "Color.fromHexString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 100,
+      "symbol": "Sequence.encodableRepresentation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Extensions/Extensions.swift",
+      "line": 108,
+      "symbol": "RawRepresentable.encodableRepresentation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 21,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 25,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 29,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 33,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 37,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 44,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 49,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 55,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 60,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 66,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 71,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 76,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 81,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 87,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 92,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 99,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 104,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 111,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Operators/Operator.swift",
+      "line": 116,
+      "symbol": "<==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Other/BridgingBox.swift",
+      "line": 11,
+      "symbol": "BridgingBox",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Other/BridgingBox.swift",
+      "line": 16,
+      "symbol": "BridgingBox.dictValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Other/BridgingBox.swift",
+      "line": 31,
+      "symbol": "BridgingBox.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Other/BridgingBox.swift",
+      "line": 35,
+      "symbol": "BridgingBox.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Other/BridgingBox.swift",
+      "line": 40,
+      "symbol": "BridgingBox.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": null,
+      "symbol": "Decodable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": null,
+      "symbol": "Keymappable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": 13,
+      "symbol": "Serializable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": 17,
+      "symbol": "Encodable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": 18,
+      "symbol": "Encodable.encodableRepresentation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": 23,
+      "symbol": "Decodable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": 24,
+      "symbol": "Decodable.init(dictionary:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": 28,
+      "symbol": "Decodable.array(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marius/GitHub/Serpent/Serpent/Serpent/Serpent/Classes/Serpent.swift",
+      "line": 44,
+      "symbol": "Keymappable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/marius/GitHub/Serpent/Serpent/Serpent"
+}

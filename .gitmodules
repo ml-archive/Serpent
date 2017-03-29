@@ -1,0 +1,4 @@
+[submodule "Serpent"]
+	path = Serpent
+	url = https://github.com/mariusc/Serpent.git
+	branch = master
