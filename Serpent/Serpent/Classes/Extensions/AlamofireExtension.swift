@@ -66,8 +66,10 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
     @discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void, unwrapper:@escaping Parser.Unwrapper) -> Self {
-        let serializer = Parser.serializer( {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void,
+                                                            unwrapper: @escaping Parser.Unwrapper,
+                                                           serializer: (((_ data: Any?) -> T?)?) -> DataResponseSerializer<T> = Parser.serializer ) -> Self {
+        let serializer = serializer( {
             ( data: Any? ) -> T? in
             
             if let sourceDictionary = data as? NSDictionary {
@@ -93,9 +95,11 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
 	@discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void, unwrapper:@escaping Parser.Unwrapper) -> Self {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void,
+                                                            unwrapper: @escaping Parser.Unwrapper,
+                                                           serializer: (((_ data: Any?) -> [T]?)?) -> DataResponseSerializer<[T]> = Parser.serializer ) -> Self {
         
-        let serializer = Parser.serializer( {
+        let serializer = serializer( {
             ( data: Any? ) -> [T]? in
             
             var finalArray:Any? = data
