@@ -43,7 +43,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		if let url = urlForResource(resource: "NetworkModel") {
-        manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
+            manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
