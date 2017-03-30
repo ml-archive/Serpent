@@ -62,9 +62,7 @@ public extension Alamofire.DataRequest
      - parameter completionHandler:A closure that is invoked when the request is finished
      
      - parameter unwrapper: A closure that extracts the data to be parsed from the JSON response data.
-     The default implementation checks for a "data" field in the JSON response, then checks for a field
-     with the same name as the target model. If not found, it passes the JSON response straight through.
-     
+
      - returns: The request
      */
     @discardableResult
@@ -91,8 +89,6 @@ public extension Alamofire.DataRequest
      - parameter completionHandler:A closure that is invoked when the request is finished
      
      - parameter unwrapper: A closure that extracts the data to be parsed from the JSON response data.
-     The default implementation checks for a "data" field in the JSON response, then checks for a field
-     with the same name as the target model. If not found, it passes the JSON response straight through.
      
      - returns: The request
      */
