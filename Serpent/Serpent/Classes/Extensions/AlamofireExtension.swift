@@ -66,17 +66,15 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
     @discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void, unwrapper: @escaping Parser.Unwrapper) -> Self {
-        let serializer = Parser.serializer( {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void,
+                                                            unwrapper: @escaping Parser.Unwrapper,
+                                                           serializer: (((_ data: Any?) -> T?)?) -> DataResponseSerializer<T> = Parser.serializer ) -> Self {
+        let serializer = serializer( {
             ( data: Any? ) -> T? in
-            
             if let sourceDictionary = data as? NSDictionary {
-                
                 let unwrappedDictionary = unwrapper(sourceDictionary, T.self) as? NSDictionary ?? sourceDictionary
-                
                 return T(dictionary: unwrappedDictionary) as T?
             }
-            
             return nil
         })
         
@@ -92,26 +90,24 @@ public extension Alamofire.DataRequest
      
      - returns: The request
      */
+
 	@discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void, unwrapper: @escaping Parser.Unwrapper) -> Self {
-        
-        let serializer = Parser.serializer( {
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void,
+                                                            unwrapper: @escaping Parser.Unwrapper,
+                                                           serializer: (((_ data: Any?) -> [T]?)?) -> DataResponseSerializer<[T]> = Parser.serializer ) -> Self {        
+        let serializer = serializer( {
             ( data: Any? ) -> [T]? in
-            
             var finalArray:Any? = data
-            
             if let dataDict = data as? NSDictionary {
                 if let unwrappedArray = unwrapper(dataDict, T.self) as? NSArray {
                     finalArray = unwrappedArray
                 }
             }
-            
             if let sourceArray = finalArray as? NSArray {
                 return T.array(sourceArray)
             }
             return nil
         })
-        
         return validate().response(responseSerializer: serializer, completionHandler: completionHandler)
     }
     
