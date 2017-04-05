@@ -35,13 +35,6 @@ public extension Parser {
                 }
                 
             case .failure(_):
-                //                if let data = data , data.count != 0 {
-                //TODO: Find out what to do with error
-                //                    var userInfo = error.userInfo
-                //                    userInfo["ResponseString"] = String(data: data, encoding: String.Encoding.utf8)
-                //                    let newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
-                //                    return .failure(error)
-                //                }
                 
                 var responseDict = [NSLocalizedDescriptionKey : "Serialization failed!"]
                 if let response = response {
