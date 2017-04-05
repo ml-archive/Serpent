@@ -1,4 +1,4 @@
-
+//
 //  AlamofireExtension.swift
 //  Serializable
 //
@@ -34,11 +34,12 @@ public extension Parser {
                     return .failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: [ NSLocalizedDescriptionKey : "Parsing block failed!", "JSONResponse" : value]))
                 }
                 
-            case .failure(_):
-                
+            case .failure(let error):
+                //TODO: Add stubbed request for testing response not being empty
                 var responseDict = [NSLocalizedDescriptionKey : "Serialization failed!"]
                 if let response = response {
                     responseDict["response"] = "\(response)"
+                    responseDict["error"] = "\(error)"
                 }
                 return .failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: responseDict))
             }
