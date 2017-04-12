@@ -29,9 +29,17 @@ extension ConnectionManager {
 
     static func fetchRandomUsers(userCount count: Int = 150, completion: @escaping (DataResponse<[User]>) -> Void) {
         let params: [String: AnyObject] = ["results" : count as AnyObject]
+        
+        let unwrapper : ((_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?) = { (sourceDictionary, type) in
+            if let nestedObject: Any = sourceDictionary.object(forKey: "results") {
+                return nestedObject
+            }
+            
+            return sourceDictionary
+        }
 
         manager.request("https://randomuser.me/api", method: .get,
-                        parameters: params, headers: nil).responseSerializable(completion)
+                        parameters: params, headers: nil).responseSerializable(completion, unwrapper: unwrapper)
     }
 }
 
