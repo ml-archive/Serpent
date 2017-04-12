@@ -1,6 +1,6 @@
 language: objective-c
-osx_image: xcode8.1
-xcode_sdk: iphonesimulator10.1
+osx_image: xcode8.3
+
 branches:
   only:
   - master
@@ -9,19 +9,26 @@ branches:
 env:
   global:
   - SERPENT_PROJECT="Serpent/Serpent.xcodeproj"
+
   - IOS_FRAMEWORK_SCHEME="Serpent iOS"
   - OSX_FRAMEWORK_SCHEME="Serpent OSX"
   - TVOS_FRAMEWORK_SCHEME="Serpent tvOS"
   - WATCHOS_FRAMEWORK_SCHEME="Serpent watchOS"
-  - IOS_SDK=iphonesimulator10.1
+  
+  - IOS_SDK=iphonesimulator10.3
   - OSX_SDK=macosx10.12
-  - TVOS_SDK=appletvsimulator10.0
-  - WATCHOS_SDK=watchsimulator3.1
+  - TVOS_SDK=appletvsimulator10.2
+  - WATCHOS_SDK=watchsimulator3.2
+  
+  - IOS_EXAMPLE_PROJECT="Serpent/Example/SerpentExample.xcodeproj"
+  - EXAMPLE_SCHEME="Serpent Example"
+  
   matrix:
-  - DESTINATION="OS=10.1,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" CARTHAGE_PLATFORM="ios"
-  - DESTINATION="arch=x86_64"                    SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES" CARTHAGE_PLATFORM="osx"
-  - DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" CARTHAGE_PLATFORM="tvos"
-  - DESTINATION="OS=3.1,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO" CARTHAGE_PLATFORM="watchos"
+  - DESTINATION="OS=8.1,name=iPhone 6"            SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"     BUILD_EXAMPLE="YES"   CARTHAGE_PLATFORM="ios"
+  - DESTINATION="OS=10.3,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"     BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="ios"
+  - DESTINATION="arch=x86_64"                     SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES"     BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="osx"
+  - DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES"     BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="tvos"
+  - DESTINATION="OS=3.2,name=Apple Watch - 38mm"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"      BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="watchos"
 
 install:
   # Setup carthage dependencies before build
@@ -39,6 +46,11 @@ script:
 
   # Build in release
   - xcodebuild -project "$SERPENT_PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO clean build | xcpretty;
+
+  # Build example project for iOS
+  - if [ $BUILD_EXAMPLE == "YES" ] && [ $SDK == $IOS_SDK ]; then
+      xcodebuild build -workspace "$IOS_EXAMPLE_PROJECT" -scheme "$EXAMPLE_SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO | xcpretty -c;
+    fi
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
