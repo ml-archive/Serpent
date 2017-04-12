@@ -28,7 +28,7 @@ env:
   - DESTINATION="OS=10.3,name=iPhone 6S Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"     BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="ios"
   - DESTINATION="arch=x86_64"                     SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES"     BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="osx"
   - DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES"     BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="tvos"
-  - DESTINATION="OS=3.2,name=Apple Watch - 38mm"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"      BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="watchos"
+  - DESTINATION="OS=3.2,id=3A12376B-EDE6-48DC-B8E0-CDA704E9D423"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"      BUILD_EXAMPLE="NO"   CARTHAGE_PLATFORM="watchos"
 
 install:
   # Setup carthage dependencies before build
@@ -49,7 +49,7 @@ script:
 
   # Build example project for iOS
   - if [ $BUILD_EXAMPLE == "YES" ] && [ $SDK == $IOS_SDK ]; then
-      xcodebuild build -workspace "$IOS_EXAMPLE_PROJECT" -scheme "$EXAMPLE_SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO | xcpretty -c;
+      xcodebuild build -project "$IOS_EXAMPLE_PROJECT" -scheme "$EXAMPLE_SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO | xcpretty -c;
     fi
 
 after_success:
