@@ -13,6 +13,8 @@ import Alamofire
 class AlamofireExtensionTests: XCTestCase {
 	
     let timeoutDuration = 2.0
+
+    let defaultUnwrapper: Parser.Unwrapper = { $0.0 }
     
 	let manager = SessionManager()
     
@@ -41,7 +43,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		if let url = urlForResource(resource: "NetworkModel") {
-			manager.request(url, method: .get).responseSerializable(handler)
+            manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
@@ -57,7 +59,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		if let url = urlForResource(resource: "NetworkModelBad") {
-			manager.request(url, method: .get).responseSerializable(handler)
+			manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
@@ -74,7 +76,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		if let url = urlForResource(resource: "NetworkModel") {
-			manager.request(url, method: .get).responseSerializable(handler)
+			manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
@@ -89,7 +91,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		if let url = urlForResource(resource: "ArrayTest") {
-			manager.request(url, method: .get).responseSerializable(handler)
+			manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
@@ -104,7 +106,7 @@ class AlamofireExtensionTests: XCTestCase {
 			}
 		}
 		if let url = urlForResource(resource: "Empty") {
-			manager.request(url, method: .get).responseSerializable(handler)
+			manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
@@ -139,7 +141,7 @@ class AlamofireExtensionTests: XCTestCase {
 		}		
 		
 		if let url = urlForResource(resource: "NestedArrayTest") {
-			manager.request(url, method: .get).responseSerializable(handler)
+			manager.request(url, method: .get).responseSerializable(handler, unwrapper: defaultUnwrapper)
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
