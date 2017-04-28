@@ -103,6 +103,7 @@ public extension Keymappable {
 
      - returns: The value of primitive type `T` or `nil` if parsing was unsuccessful.
      */
+    
     public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? {
 
         // Ensure the dictionary is not nil
@@ -111,11 +112,13 @@ public extension Keymappable {
         // Get the value from the dictionary for our key
         let sourceOpt = dict[key]
 
+        // First check to see if the types match
+        if let match = sourceOpt as? T {
+            return match
+        }
+
         // Figure out what type is the value we got and parse accordingly
         switch sourceOpt {
-
-        case (is T):
-            return (sourceOpt as! T)
 
         case (is String) where T.self is Int.Type:
             let source = (sourceOpt as! String)
@@ -140,6 +143,7 @@ public extension Keymappable {
         default:
             return nil
         }
+
     }
 
     /**
