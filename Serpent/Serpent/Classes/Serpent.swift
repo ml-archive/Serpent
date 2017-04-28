@@ -35,10 +35,6 @@ public extension Decodable {
     }
 }
 
-private struct DefaultKeyMappings {
-    fileprivate static let mappings = [String : String]()
-}
-
 public extension Decodable {
     /// Maps the content of value for **key** in **dictionary** to generic type **T**, conforming to **Serializable** protocol.
     ///
