@@ -38,7 +38,6 @@ extension Date: StringInitializable {
                 return date
             }
         }
-
         return nil
     }
 
@@ -62,7 +61,6 @@ public protocol HexInitializable {
 }
 
 extension Color: HexInitializable {
-
     public static func fromHexString<T>(_ hexString: String) -> T? {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt32()
@@ -109,5 +107,3 @@ public extension RawRepresentable {
 		return self.rawValue
 	}
 }
-
-

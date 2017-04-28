@@ -40,15 +40,13 @@ private struct DefaultKeyMappings {
 }
 
 public extension Decodable {
+    /// Maps the content of value for **key** in **dictionary** to generic type **T**, conforming to **Serializable** protocol.
+    ///
+    /// - parameter dictionary: An optional dictionary containing values which should be parsed.
+    /// - parameter key: ValueForKey will be called on the dictionary to extract the value to be parsed
+    ///
+    /// - returns: A mapped object conforming to *Serializable*, or nil if parsing failed
 
-    /**
-     Maps the content of value for **key** in **dictionary** to generic type **T**, conforming to **Serializable** protocol.
-
-     - parameter dictionary: An optional dictionary containing values which should be parsed.
-     - parameter key: ValueForKey will be called on the dictionary to extract the value to be parsed
-
-     - returns: A mapped object conforming to *Serializable*, or nil if parsing failed
-     */
     public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Decodable {
 
         // Ensure the dictionary is not nil
@@ -61,18 +59,16 @@ public extension Decodable {
         if sourceOpt != nil && sourceOpt is NSDictionary {
             return T(dictionary: (sourceOpt as! NSDictionary))
         }
-
         return nil
     }
 
-    /**
-     Maps the content of value for **key** in **dictionary** to an array containing where elements is of generic type **T**, conforming to **Serializable** protocol.
+    /// Maps the content of value for **key** in **dictionary** to an array containing where elements is of generic type **T**, conforming to **Serializable** protocol.
+    ///
+    /// - parameter dictionary: An optional dictionary containing values which should be parsed.
+    /// - parameter key: ValueForKey will be called on the dictionary to extract the value to be parsed.
+    ///
+    /// - returns: An array of mapped objects conforming to *Serializable*, or an empty array if parsing failed.
 
-     - parameter dictionary: An optional dictionary containing values which should be parsed.
-     - parameter key: ValueForKey will be called on the dictionary to extract the value to be parsed.
-
-     - returns: An array of mapped objects conforming to *Serializable*, or an empty array if parsing failed.
-     */
     public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Sequence, T.Iterator.Element: Decodable {
         // Ensure the dictionary is not nil and get the value from the dictionary for our key
         guard let dict = dictionary, let sourceOpt = dict[key] else { return nil }
@@ -82,23 +78,20 @@ public extension Decodable {
             let finalArray = source.map { T.Iterator.Element.init(dictionary: $0) } as? T
             return finalArray
         }
-
         return nil
     }
 
-    /**
-     A generic mapping function that will try to parse primitive types from the provided dictionary.
-     Currently supported types are `Int`, `Float`, `Double`, `Bool`, `Char` and `String`.
-
-     The `key` parameter will be first used to check value in custom input key mappings and if
-     no value is found, then `key` is used as the key to get the value stored in `dictionary`.
-
-     - parameter dictionary: An optional dictionary containing values which should be parsed.
-     - parameter key: The key which will be used to get the actual key from input key mappings
-     or as the actual key for the value being parsed from the dictionary.
-
-     - returns: The value of primitive type `T` or `nil` if parsing was unsuccessful.
-     */
+    /// A generic mapping function that will try to parse primitive types from the provided dictionary.
+    /// Currently supported types are `Int`, `Float`, `Double`, `Bool`, `Char` and `String`.
+    ///
+    /// The `key` parameter will be first used to check value in custom input key mappings and if
+    /// no value is found, then `key` is used as the key to get the value stored in `dictionary`.
+    ///
+    ///  - parameter dictionary: An optional dictionary containing values which should be parsed.
+    ///  - parameter key: The key which will be used to get the actual key from input key mappings
+    ///  or as the actual key for the value being parsed from the dictionary.
+    ///
+    ///  - returns: The value of primitive type `T` or `nil` if parsing was unsuccessful.
     
     public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? {
 
@@ -139,101 +132,89 @@ public extension Decodable {
         default:
             return nil
         }
-
     }
 
-    /**
-     A generic mapping function that will try to parse an object of type `T` from the string
-     value contained in the provided dictionary.
+    /// A generic mapping function that will try to parse an object of type `T` from the string
+    /// value contained in the provided dictionary.
+    ///
+    /// The `key` parameter will be first used to check value in custom input key mappings and if
+    /// no value is found, then `key` is used as the key to get the value stored in `dictionary`.
+    ///
+    /// - parameter dictionary: An optional dictionary containing the array which should be parsed.
+    /// - parameter key: The key which will be used to get the actual key from input key mappings
+    /// or as the actual key for the value being parsed from the dictionary.
+    ///
+    /// - returns: The value of type `T` or `nil` if parsing was unsuccessful.
 
-     The `key` parameter will be first used to check value in custom input key mappings and if
-     no value is found, then `key` is used as the key to get the value stored in `dictionary`.
-
-     - parameter dictionary: An optional dictionary containing the array which should be parsed.
-     - parameter key: The key which will be used to get the actual key from input key mappings
-     or as the actual key for the value being parsed from the dictionary.
-
-     - returns: The value of type `T` or `nil` if parsing was unsuccessful.
-     */
     public func mapped<T:StringInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
         if let dict = dictionary, let source = dict[key] as? String , source.isEmpty == false {
             return T.fromString(source)
         }
-
         return nil
     }
 
-    /**
-     A generic mapping function that will try to parse enumerations with raw value from the
-     provided dictionary.
+    /// A generic mapping function that will try to parse enumerations with raw value from the
+    ///  provided dictionary.
+    ///
+    /// This function internally uses a variant of the generic `mapped()` function used to parse
+    /// primitive types, which means that only enums with raw value of primitive type are supported.
+    ///
+    ///  The `key` parameter will be first used to check value in custom input key mappings and if
+    /// no value is found, then `key` is used as the key to get the value stored in `dictionary`.
+    ///
+    /// - parameter dictionary: An optional dictionary containing values which should be parsed.
+    /// - parameter key: The key which will be used to get the actual key from input key mappings
+    /// or as the actual key for the value being parsed from the dictionary.
+    ///
+    ///  - returns: The enumeration of enum type `T` or `nil` if parsing was unsuccessful or
+    /// enumeration does not exist.
 
-     This function internally uses a variant of the generic `mapped()` function used to parse
-     primitive types, which means that only enums with raw value of primitive type are supported.
-
-     The `key` parameter will be first used to check value in custom input key mappings and if
-     no value is found, then `key` is used as the key to get the value stored in `dictionary`.
-
-     - parameter dictionary: An optional dictionary containing values which should be parsed.
-     - parameter key: The key which will be used to get the actual key from input key mappings
-     or as the actual key for the value being parsed from the dictionary.
-
-     - returns: The enumeration of enum type `T` or `nil` if parsing was unsuccessful or
-     enumeration does not exist.
-     */
     public func mapped<T:RawRepresentable>(_ dictionary: NSDictionary?, key: String) -> T? {
         guard let source: T.RawValue = self.mapped(dictionary, key: key) else {
             return nil
         }
-
         return T(rawValue: source)
     }
 
-    /**
-     A generic mapping function that will try to parse an array of enumerations with raw value from the
-     array contained in the provided dictionary.
+    /// A generic mapping function that will try to parse an array of enumerations with raw value from the
+    /// array contained in the provided dictionary.
+    ///
+    /// The `key` parameter will be first used to check value in custom input key mappings and if
+    /// no value is found, then `key` is used as the key to get the value stored in `dictionary`.
+    ///
+    /// - parameter dictionary: An optional dictionary containing the array which should be parsed.
+    /// - parameter key: The key which will be used to get the actual key from input key mappings
+    /// or as the actual key for the value being parsed from the dictionary.
+    ///
+    ///  - returns: An array of enum type `T` or an empty array if parsing was unsuccessful.
 
-     The `key` parameter will be first used to check value in custom input key mappings and if
-     no value is found, then `key` is used as the key to get the value stored in `dictionary`.
-
-     - parameter dictionary: An optional dictionary containing the array which should be parsed.
-     - parameter key: The key which will be used to get the actual key from input key mappings
-     or as the actual key for the value being parsed from the dictionary.
-
-     - returns: An array of enum type `T` or an empty array if parsing was unsuccessful.
-     */
     public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Sequence, T.Iterator.Element: RawRepresentable {
         if let dict = dictionary, let source = dict[key] as? [T.Iterator.Element.RawValue] {
             let finalArray = source.map { T.Iterator.Element.init(rawValue: $0)! }
             return (finalArray as! T)
         }
-
         return nil
     }
-	
 
+	/// A generic mapping function that will try to parse an object of type `T` from the hex string
+	/// value contained in the provided dictionary.
+    ///
+    ///	The `key` parameter will be first used to check value in custom input key mappings and if
+	/// no value is found, then `key` is used as the key to get the value stored in `dictionary`.
 	
-	/**
-	A generic mapping function that will try to parse an object of type `T` from the hex string
-	value contained in the provided dictionary.
-	
-	The `key` parameter will be first used to check value in custom input key mappings and if
-	no value is found, then `key` is used as the key to get the value stored in `dictionary`.
-	
-	- parameter dictionary: An optional dictionary containing the array which should be parsed.
-	- parameter key: The key which will be used to get the actual key from input key mappings
-	or as the actual key for the value being parsed from the dictionary.
-	
-	- returns: The value of type `T` or `nil` if parsing was unsuccessful.
-	*/
+    ///	- parameter dictionary: An optional dictionary containing the array which should be parsed.
+    ///	- parameter key: The key which will be used to get the actual key from input key mappings
+    ///	or as the actual key for the value being parsed from the dictionary.
+    ///
+    ///	- returns: The value of type `T` or `nil` if parsing was unsuccessful.
+
 	public func mapped<T: HexInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
 		guard let dict = dictionary, let source = dict[key] else {
 			return nil
 		}
-		
 		if let hexString = source as? String , hexString.isEmpty == false {
 			return T.fromHexString(hexString)
 		}
-		
 		return source as? T
 	}	
 }
