@@ -41,79 +41,79 @@ public func <==<T: RawRepresentable>(left: (dict: NSMutableDictionary, key: Stri
 // For Decodable
 
 // Primitive
-public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where S: Keymappable {
+public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where S: Decodable {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
-public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where S: Keymappable {
+public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where S: Decodable {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
 // Serializable
-public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: Decodable, S: Keymappable {
+public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: Decodable, S: Decodable {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
-public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: Decodable, S: Keymappable {
+public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: Decodable, S: Decodable {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
 // Enum
-public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Keymappable {
+public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Decodable {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
-public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Keymappable {
+public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Decodable {
     let value: T? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
-public func <==<T, S>(left: inout [T]?, right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Keymappable {
+public func <==<T, S>(left: inout [T]?, right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Decodable {
     let value: [T]? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
-public func <==<T, S>(left: inout [T], right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Keymappable {
+public func <==<T, S>(left: inout [T], right: (instance: S, dict: NSDictionary?, key: String)) where T: RawRepresentable, S: Decodable {
     let value: [T]? = right.instance.mapped(right.dict, key: right.key)
     left = value ?? left
 }
 
 // [Serializable]
-public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T:Sequence, T.Iterator.Element: Decodable, S: Keymappable {
+public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T:Sequence, T.Iterator.Element: Decodable, S: Decodable {
 	let value: T? = right.instance.mapped(right.dict, key: right.key)
 	left = value ?? left
 }
 
-public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T:Sequence, T.Iterator.Element: Decodable, S: Keymappable {
+public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T:Sequence, T.Iterator.Element: Decodable, S: Decodable {
 	let value: T? = right.instance.mapped(right.dict, key: right.key)
 	left = value ?? left
 }
 
 // StringInitializable
 
-public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: StringInitializable, S: Keymappable {
+public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: StringInitializable, S: Decodable {
 	let value: T? = right.instance.mapped(right.dict, key: right.key)
 	left = value ?? left
 }
 
-public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: StringInitializable, S: Keymappable {
+public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: StringInitializable, S: Decodable {
 	let value: T? = right.instance.mapped(right.dict, key: right.key)
 	left = value ?? left
 }
 
 // HexInitializable
 
-public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: HexInitializable, S: Keymappable {
+public func <==<T, S>(left: inout T?, right: (instance: S, dict: NSDictionary?, key: String)) where T: HexInitializable, S: Decodable {
 	let value: T? = right.instance.mapped(right.dict, key: right.key)
 	left = value ?? left
 }
 
-public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: HexInitializable, S: Keymappable {
+public func <==<T, S>(left: inout T, right: (instance: S, dict: NSDictionary?, key: String)) where T: HexInitializable, S: Decodable {
 	let value: T? = right.instance.mapped(right.dict, key: right.key)
 	left = value ?? left
 }

@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Serializable -
 
-public protocol Serializable: Decodable, Encodable, Keymappable {}
+public protocol Serializable: Decodable, Encodable {}
 
 // MARK: - Encodable -
 
@@ -39,11 +39,7 @@ private struct DefaultKeyMappings {
     fileprivate static let mappings = [String : String]()
 }
 
-// MARK: - Keymappable -
-
-public protocol Keymappable {}
-
-public extension Keymappable {
+public extension Decodable {
 
     /**
      Maps the content of value for **key** in **dictionary** to generic type **T**, conforming to **Serializable** protocol.
