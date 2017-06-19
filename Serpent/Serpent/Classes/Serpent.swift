@@ -136,7 +136,11 @@ public extension Keymappable {
         case (is NSNumber) where T.self is String.Type:
             let source = (sourceOpt as! NSNumber)
 			return String(describing: source) as? T
-
+            
+        case (is Double) where T.self is Float.Type:
+            let source = (sourceOpt as! Double)
+            return Float(source) as? T
+            
         default:
             return nil
         }
