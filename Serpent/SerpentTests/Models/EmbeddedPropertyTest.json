@@ -1,0 +1,8 @@
+{
+    "name": "Your name",
+    "propertyObject": {
+        "embeddedName": "desired name",
+        "embeddedDate": "2017-02-07 15:15:33",
+        "embeddedObject" : { "embeddedProperty" : "embeddedValue" }
+    }
+}
