@@ -14,9 +14,17 @@ public protocol Serializable: Decodable, Encodable, Keymappable {}
 
 //MARK: - EmbeddedMappable
 
-public protocol EmbeddedMappable { }
+public protocol EmbeddedMappable {
+    
+    var containsEmbeddedProperties: Bool { get }
+}
 
-extension EmbeddedMappable {
+public extension EmbeddedMappable {
+    
+    var containsEmbeddedProperties: Bool {
+        return false
+    }
+    
     func embeddedDictAndKey(dict: NSDictionary, key: String) -> (dict: NSDictionary, key: String) {
         
         var dict = dict
@@ -88,7 +96,7 @@ public extension Keymappable {
         
         var key = key
         
-        if key.contains("/") {
+        if containsEmbeddedProperties {
             let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
             key = finalDictAndKey.1
             dict = finalDictAndKey.0
@@ -147,7 +155,7 @@ public extension Keymappable {
         guard var dict = dictionary else { return nil }
         var key = key
         
-        if key.contains("/") {
+        if containsEmbeddedProperties {
             let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
             key = finalDictAndKey.1
             dict = finalDictAndKey.0
@@ -213,7 +221,7 @@ public extension Keymappable {
         
         var key = key
         
-        if key.contains("/") {
+        if containsEmbeddedProperties {
             let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
             key = finalDictAndKey.1
             dict = finalDictAndKey.0

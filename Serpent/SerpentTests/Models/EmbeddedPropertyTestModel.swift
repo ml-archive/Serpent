@@ -34,6 +34,12 @@ extension EmbeddedPropertyTestModel: Serializable {
     }
 }
 
+extension EmbeddedPropertyTestModel {
+    var containsEmbeddedProperties: Bool {
+        return true
+    }
+}
+
 struct EmbeddedObjectType {
     var embeddedProperty: String?
 }
