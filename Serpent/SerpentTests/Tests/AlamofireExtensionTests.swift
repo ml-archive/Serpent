@@ -13,8 +13,8 @@ import Alamofire
 class AlamofireExtensionTests: XCTestCase {
 	
     let timeoutDuration = 2.0
-
-    let defaultUnwrapper: Parser.Unwrapper = { $0.0 }
+    
+    let defaultUnwrapper: Parser.Unwrapper = { sourceDictionary, _ in return sourceDictionary  }
     
 	let manager = SessionManager()
     
@@ -120,7 +120,8 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
+        
+		let unwrapper: Parser.Unwrapper = { dict, _ in return dict["data"] }
 		
 		if let url = urlForResource(resource: "NestedArrayTest") {
 			manager.request(url, method: .get).responseSerializable(handler, unwrapper: unwrapper)
@@ -155,7 +156,8 @@ class AlamofireExtensionTests: XCTestCase {
 				break
 			}
 		}
-		let unwrapper: Parser.Unwrapper = { $0.0["data"] }
+        
+		let unwrapper: Parser.Unwrapper = { dict, _ in return dict["data"] }
 		
 		if let url = urlForResource(resource: "NestedArrayTest") {
 			manager.request(url, method: .get).responseSerializable(handler, unwrapper: unwrapper)

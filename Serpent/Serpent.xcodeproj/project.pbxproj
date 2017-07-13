@@ -163,6 +163,9 @@
 		830175CE1D97037D00B85378 /* NilTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830175CB1D97037D00B85378 /* NilTestModel.swift */; };
 		83F3AFCF1CE92DB300D47725 /* BridgingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */; };
 		83F3AFD01CE92DB300D47725 /* CashierExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */; };
+		BDE622DB1F0A344200F22FE9 /* EmbeddedPropertyTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE622DA1F0A344200F22FE9 /* EmbeddedPropertyTestModel.swift */; };
+		BDE622DD1F0A34F600F22FE9 /* EmbeddedPropertyTest.json in Resources */ = {isa = PBXBuildFile; fileRef = BDE622DC1F0A34F600F22FE9 /* EmbeddedPropertyTest.json */; };
+		BDE622DF1F0A358700F22FE9 /* EmbeddedPropertyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE622DE1F0A358700F22FE9 /* EmbeddedPropertyTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +256,9 @@
 		830175CB1D97037D00B85378 /* NilTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NilTestModel.swift; sourceTree = "<group>"; };
 		83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingBoxTests.swift; sourceTree = "<group>"; };
 		83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierExtensionTests.swift; sourceTree = "<group>"; };
+		BDE622DA1F0A344200F22FE9 /* EmbeddedPropertyTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPropertyTestModel.swift; sourceTree = "<group>"; };
+		BDE622DC1F0A34F600F22FE9 /* EmbeddedPropertyTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmbeddedPropertyTest.json; sourceTree = "<group>"; };
+		BDE622DE1F0A358700F22FE9 /* EmbeddedPropertyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPropertyTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +432,8 @@
 				01C706C81C9BEB0C0024E94A /* DecodableTest.json */,
 				27B05FD11C9C3869004F2CCB /* NetworkTestModel.swift */,
 				830175CB1D97037D00B85378 /* NilTestModel.swift */,
+				BDE622DA1F0A344200F22FE9 /* EmbeddedPropertyTestModel.swift */,
+				BDE622DC1F0A34F600F22FE9 /* EmbeddedPropertyTest.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -446,6 +454,7 @@
 				83F3AFCD1CE92DB300D47725 /* BridgingBoxTests.swift */,
 				830175B71D97007300B85378 /* SerializablePerformanceTest.swift */,
 				83F3AFCE1CE92DB300D47725 /* CashierExtensionTests.swift */,
+				BDE622DE1F0A358700F22FE9 /* EmbeddedPropertyTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -689,16 +698,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Nodes;
 				TargetAttributes = {
 					272F1DC51C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					272F1DCF1C6A392A0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					2732EC8C1C9F21A500BFD4E1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -766,6 +775,7 @@
 				272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */,
 				272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */,
 				01C706D21C9BEB0C0024E94A /* DecodableTest.json in Resources */,
+				BDE622DD1F0A34F600F22FE9 /* EmbeddedPropertyTest.json in Resources */,
 				830175B41D96E9D000B85378 /* NetworkModelBad.json in Resources */,
 				01C706CF1C9BEB0C0024E94A /* SimpleModel.json in Resources */,
 				830175A61D96E44100B85378 /* Empty.json in Resources */,
@@ -868,6 +878,7 @@
 				01C706BD1C9BEAF50024E94A /* DecodableTests.swift in Sources */,
 				830175C51D97008800B85378 /* PerformanceTestModel.swift in Sources */,
 				83F3AFCF1CE92DB300D47725 /* BridgingBoxTests.swift in Sources */,
+				BDE622DF1F0A358700F22FE9 /* EmbeddedPropertyTest.swift in Sources */,
 				272D92741C6DFB7300BCD3B6 /* CustomOperatorsTestModel.swift in Sources */,
 				01C706D01C9BEB0C0024E94A /* SimpleModel.swift in Sources */,
 				272D926A1C6DFB5B00BCD3B6 /* SerializableEnumsTests.swift in Sources */,
@@ -884,6 +895,7 @@
 				830175C81D97008800B85378 /* PerformanceTestSmallModel.swift in Sources */,
 				27B05FD01C9C3842004F2CCB /* AlamofireExtensionTests.swift in Sources */,
 				01C706CE1C9BEB0C0024E94A /* SerializableEntityTestModel.swift in Sources */,
+				BDE622DB1F0A344200F22FE9 /* EmbeddedPropertyTestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,14 +1029,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1073,14 +1091,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1133,6 +1157,8 @@
 				PRODUCT_NAME = Serpent;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1153,6 +1179,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serpent;
 				PRODUCT_NAME = Serpent;
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1166,6 +1194,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerpentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1179,6 +1209,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.SerpentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1313,6 +1345,7 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Debug;
 		};
@@ -1335,6 +1368,7 @@
 				PRODUCT_NAME = Serpent;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Release;
 		};
@@ -1350,6 +1384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serpent-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Debug;
 		};
@@ -1365,6 +1400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nodes.Serpent-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Release;
 		};

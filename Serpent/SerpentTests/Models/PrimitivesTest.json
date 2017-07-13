@@ -27,12 +27,12 @@
     "optional_string" : "optional success",
     "optional_string_with_default_value" : "optional default success",
 	
-	"intString" : "1",
-	"doubleString" : "1.5",
-	"boolString" : "true",
-	"boolIntString" : "1",
+	"int_string" : "1",
+	"double_string" : "1.5",
+	"bool_string" : "true",
+	"bool_int_string" : "1",
 	
-	"stringInt" : 1,
-	"stringDouble" : 1.5,
-	"stringBool" : true
+	"string_int" : 1,
+	"string_double" : 1.5,
+	"string_bool" : true
 }
