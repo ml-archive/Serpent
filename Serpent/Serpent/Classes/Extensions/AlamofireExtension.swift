@@ -21,8 +21,12 @@ public extension Parser {
     
     internal static func serializer<T>(_ parsingHandler: (( _ data: Any? ) -> T?)?) -> DataResponseSerializer<T> {
         return DataResponseSerializer<T> { (request, response, data, error) -> Result<T> in
-            
            
+            //If we have an error here - pass it on
+            if let error = error {
+                return .failure(error)
+            }
+
             let result = Request.serializeResponseJSON(options: .allowFragments, response: response, data: data, error: error)
             
             switch result {
