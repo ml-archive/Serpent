@@ -297,7 +297,18 @@ public extension Keymappable {
 	- returns: The value of type `T` or `nil` if parsing was unsuccessful.
 	*/
 	public func mapped<T: HexInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
-		guard let dict = dictionary, let source = dict[key] else {
+        
+        guard var dict = dictionary else { return nil }
+        
+        var key = key
+        
+        if containsEmbeddedProperties {
+            let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
+            key = finalDictAndKey.1
+            dict = finalDictAndKey.0
+        }
+        
+		guard let source = dict[key] else {
 			return nil
 		}
 		

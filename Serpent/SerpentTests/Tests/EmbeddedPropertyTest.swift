@@ -36,6 +36,9 @@ class EmbeddedPropertyTest: XCTestCase {
         XCTAssert(testModel.embeddedObject != nil, "EmbeddedObject was not parsed")
         XCTAssert(testModel.date != nil, "Date was not parsed")
         XCTAssert(testModel.embeddedName != nil, "EmbeddedName was not parsed")
+        XCTAssert(testModel.embeddedDouble != nil, "embeddedDouble was not parsed")
+        XCTAssert(testModel.embeddedColor != nil, "embeddedColor was not parsed")
+        XCTAssert(testModel.embeddedBool != nil, "embeddedBool was not parsed")
         
     }
     

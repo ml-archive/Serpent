@@ -8,12 +8,16 @@
 
 import Foundation
 import Serpent
+import UIKit
 
 struct EmbeddedPropertyTestModel {
     var name = ""
     var date: Date?                         // <-propertyObject/embeddedDate
     var embeddedName: String?               // <-propertyObject/embeddedName
     var embeddedObject: EmbeddedObjectType? // <-propertyObject/embeddedObject
+    var embeddedDouble: Double?             // <-propertyObject/embeddedDouble
+    var embeddedColor: UIColor?             // <-propertyObject/embeddedColor
+    var embeddedBool: Bool?                 // <-propertyObject/embeddedBool
 }
 
 extension EmbeddedPropertyTestModel: Serializable {
@@ -22,6 +26,9 @@ extension EmbeddedPropertyTestModel: Serializable {
         date           <== (self, dictionary, "propertyObject/embeddedDate")
         embeddedName   <== (self, dictionary, "propertyObject/embeddedName")
         embeddedObject <== (self, dictionary, "propertyObject/embeddedObject")
+        embeddedDouble <== (self, dictionary, "propertyObject/embeddedDouble")
+        embeddedColor  <== (self, dictionary, "propertyObject/embeddedColor")
+        embeddedBool   <== (self, dictionary, "propertyObject/embeddedBool")
     }
     
     func encodableRepresentation() -> NSCoding {
@@ -30,6 +37,9 @@ extension EmbeddedPropertyTestModel: Serializable {
         (dict, "propertyObject/embeddedDate")   <== date
         (dict, "propertyObject/embeddedName")   <== embeddedName
         (dict, "propertyObject/embeddedObject") <== embeddedObject
+        (dict, "propertyObject/embeddedDouble") <== embeddedDouble
+        (dict, "propertyObject/embeddedColor")  <== embeddedColor
+        (dict, "propertyObject/embeddedBool")   <== embeddedBool
         return dict
     }
 }
