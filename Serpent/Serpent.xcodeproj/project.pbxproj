@@ -10,6 +10,9 @@
 		0124E1111F2803CB00FCD29C /* ArrayTestOneObject.json in Resources */ = {isa = PBXBuildFile; fileRef = 0124E1101F2803CB00FCD29C /* ArrayTestOneObject.json */; };
 		0124E1121F2803CB00FCD29C /* ArrayTestOneObject.json in Resources */ = {isa = PBXBuildFile; fileRef = 0124E1101F2803CB00FCD29C /* ArrayTestOneObject.json */; };
 		0124E1131F2803CB00FCD29C /* ArrayTestOneObject.json in Resources */ = {isa = PBXBuildFile; fileRef = 0124E1101F2803CB00FCD29C /* ArrayTestOneObject.json */; };
+		016C12401F28065D00A4FCED /* BadArrayTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 016C123F1F28065D00A4FCED /* BadArrayTest.json */; };
+		016C12411F28065D00A4FCED /* BadArrayTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 016C123F1F28065D00A4FCED /* BadArrayTest.json */; };
+		016C12421F28065D00A4FCED /* BadArrayTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 016C123F1F28065D00A4FCED /* BadArrayTest.json */; };
 		01BBEFD41DE1D52D003AC718 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BBEFD01DE1D50F003AC718 /* Alamofire.framework */; };
 		01BBEFD51DE1D52D003AC718 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BBEFD21DE1D50F003AC718 /* Cashier.framework */; };
 		01BBEFD61DE1D533003AC718 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BBEFCB1DE1D50F003AC718 /* Alamofire.framework */; };
@@ -194,6 +197,7 @@
 
 /* Begin PBXFileReference section */
 		0124E1101F2803CB00FCD29C /* ArrayTestOneObject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ArrayTestOneObject.json; sourceTree = "<group>"; };
+		016C123F1F28065D00A4FCED /* BadArrayTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BadArrayTest.json; sourceTree = "<group>"; };
 		01BBEFB31DE1D50E003AC718 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		01BBEFB61DE1D50F003AC718 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cashier.framework; sourceTree = "<group>"; };
 		01BBEFBE1DE1D50F003AC718 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
@@ -515,6 +519,7 @@
 				830175AD1D96E8A700B85378 /* NetworkModel.json */,
 				830175A01D96E44100B85378 /* ArrayTest.json */,
 				0124E1101F2803CB00FCD29C /* ArrayTestOneObject.json */,
+				016C123F1F28065D00A4FCED /* BadArrayTest.json */,
 				830175A11D96E44100B85378 /* Empty.json */,
 				830175A21D96E44100B85378 /* NestedArrayTest.json */,
 				830175B31D96E9D000B85378 /* NetworkModelBad.json */,
@@ -770,6 +775,7 @@
 				830175BF1D97008800B85378 /* PerformanceSmallTest.json in Resources */,
 				272D92751C6DFB7300BCD3B6 /* EnumsTest.json in Resources */,
 				0124E1111F2803CB00FCD29C /* ArrayTestOneObject.json in Resources */,
+				016C12401F28065D00A4FCED /* BadArrayTest.json in Resources */,
 				272D92771C6DFB7300BCD3B6 /* PrimitivesTest.json in Resources */,
 				01C706D21C9BEB0C0024E94A /* DecodableTest.json in Resources */,
 				830175B41D96E9D000B85378 /* NetworkModelBad.json in Resources */,
@@ -807,6 +813,7 @@
 				830175C11D97008800B85378 /* PerformanceSmallTest.json in Resources */,
 				2732ECD41C9F2A4D00BFD4E1 /* StringInitializableTest.json in Resources */,
 				0124E1131F2803CB00FCD29C /* ArrayTestOneObject.json in Resources */,
+				016C12421F28065D00A4FCED /* BadArrayTest.json in Resources */,
 				2732ECD51C9F2A4D00BFD4E1 /* HexInitializableTest.json in Resources */,
 				2732ECD61C9F2A4D00BFD4E1 /* SerializableEntityTest.json in Resources */,
 				830175B61D96E9D000B85378 /* NetworkModelBad.json in Resources */,
@@ -837,6 +844,7 @@
 				830175B51D96E9D000B85378 /* NetworkModelBad.json in Resources */,
 				2785B5621C9DE9A400E40605 /* PrimitivesTest.json in Resources */,
 				0124E1121F2803CB00FCD29C /* ArrayTestOneObject.json in Resources */,
+				016C12411F28065D00A4FCED /* BadArrayTest.json in Resources */,
 				830175AA1D96E44100B85378 /* NestedArrayTest.json in Resources */,
 				830175C31D97008800B85378 /* PerformanceTest.json in Resources */,
 				2785B5631C9DE9A400E40605 /* StringInitializableTest.json in Resources */,

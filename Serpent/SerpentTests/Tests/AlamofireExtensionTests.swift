@@ -198,6 +198,25 @@ class AlamofireExtensionTests: XCTestCase {
         waitForExpectations(timeout: timeoutDuration, handler: nil)
     }
 
+    func testAlamofireExtensionArrayRootObjectParsingToOneWithWrongUnwrapper() {
+        let expectation = self.expectation(description: "Expected valid object")
+        let handler:(Alamofire.DataResponse<DecodableModel>) -> Void = { result in
+            switch result.result {
+            case .success(let value):
+                XCTAssertEqual(value.id, 1)
+                XCTAssertEqual(value.name, "Hello")
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+        if let url = urlForResource(resource: "ArrayTestOneObject") {
+            manager.request(url, method: .get).responseSerializable(handler,
+                                                                    unwrapper: { return $0.0["nonexistent"] })
+        }
+        waitForExpectations(timeout: timeoutDuration, handler: nil)
+    }
+
     func testAlamofireExtensionArrayRootObjectParsingToMultiple() {
         let expectation = self.expectation(description: "Expected valid array")
         let handler:(Alamofire.DataResponse<[DecodableModel]>) -> Void = { result in

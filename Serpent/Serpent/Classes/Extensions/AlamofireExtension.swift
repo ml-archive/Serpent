@@ -41,10 +41,8 @@ public extension Parser {
             case .failure(let error):
                 //TODO: Add stubbed request for testing response not being empty
                 var responseDict = [NSLocalizedDescriptionKey : "Serialization failed!"]
-                if let response = response {
-                    responseDict["response"] = "\(response)"
-                    responseDict["error"] = "\(error)"
-                }
+                responseDict["error"] = "\(error.localizedDescription)"
+                responseDict["response"] = String(describing: response)
                 return .failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: responseDict))
             }
         }
