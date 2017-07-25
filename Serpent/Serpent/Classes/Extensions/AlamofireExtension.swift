@@ -41,10 +41,8 @@ public extension Parser {
             case .failure(let error):
                 //TODO: Add stubbed request for testing response not being empty
                 var responseDict = [NSLocalizedDescriptionKey : "Serialization failed!"]
-                if let response = response {
-                    responseDict["response"] = "\(response)"
-                    responseDict["error"] = "\(error)"
-                }
+                responseDict["error"] = "\(error.localizedDescription)"
+                responseDict["response"] = String(describing: response)
                 return .failure(NSError(domain: "Serializable.Parser", code: 2048, userInfo: responseDict))
             }
         }
@@ -76,19 +74,20 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
     @discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
-        let serializer = Parser.serializer( {
-            ( data: Any? ) -> T? in
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void,
+                                     unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+        let serializer = Parser.serializer { (data: Any?) -> T? in
             
             if let sourceDictionary = data as? NSDictionary {
-                
                 let unwrappedDictionary = unwrapper(sourceDictionary, T.self) as? NSDictionary ?? sourceDictionary
-                
                 return T(dictionary: unwrappedDictionary) as T?
+            } else if let array = data as? NSArray, array.count == 1, let dictionary = array[0] as? NSDictionary {
+                let unwrapped = unwrapper(dictionary, T.self) as? NSDictionary ?? dictionary
+                return T(dictionary: unwrapped) as T?
             }
             
             return nil
-        })
+        }
         
         return validate().response(responseSerializer: serializer, completionHandler: completionHandler)
     }
@@ -105,24 +104,18 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
 	@discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void, unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
-        
-        let serializer = Parser.serializer( {
-            ( data: Any? ) -> [T]? in
-            
-            var finalArray:Any? = data
-            
-            if let dataDict = data as? NSDictionary {
-                if let unwrappedArray = unwrapper(dataDict, T.self) as? NSArray {
-                    finalArray = unwrappedArray
-                }
+    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void,
+                                     unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
+
+        let serializer = Parser.serializer { (data: Any?) -> [T]? in
+            if let dataDict = data as? NSDictionary, let unwrappedArray = unwrapper(dataDict, T.self) as? NSArray {
+                return T.array(unwrappedArray)
+            } else if let array = data as? NSArray {
+                return T.array(array)
             }
-            
-            if let sourceArray = finalArray as? NSArray {
-                return T.array(sourceArray)
-            }
+
             return nil
-        })
+        }
         
         return validate().response(responseSerializer: serializer, completionHandler: completionHandler)
     }
