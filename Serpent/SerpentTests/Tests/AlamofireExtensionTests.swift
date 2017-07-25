@@ -80,7 +80,8 @@ class AlamofireExtensionTests: XCTestCase {
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
-	func testAlamofireExtensionUnexpectedArrayJSON() {
+
+    func testAlamofireExtensionUnexpectedArrayJSON() {
 		let expectation = self.expectation(description: "Expected array data to single object from response")
 		let handler:(Alamofire.DataResponse<DecodableModel>) -> Void = { result in
 			switch result.result {
@@ -95,6 +96,7 @@ class AlamofireExtensionTests: XCTestCase {
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
+
 	func testAlamofireExtensionEmptyJSON() {
 		let expectation = self.expectation(description: "Expected empty response")
 		let handler:(Alamofire.DataResponse<NetworkTestModel>) -> Void = { result in
@@ -146,6 +148,7 @@ class AlamofireExtensionTests: XCTestCase {
 		}
 		waitForExpectations(timeout: timeoutDuration, handler: nil)
 	}
+
 	func testAlamofireWrongTypeUnwrapper() {
 		let expectation = self.expectation(description: "Expected unwrapped array response")
 		let handler:(Alamofire.DataResponse<DecodableModel>) -> Void = { result in
@@ -178,6 +181,64 @@ class AlamofireExtensionTests: XCTestCase {
 		if let url = urlForResource(resource: "Empty") {
 			manager.request(url, method: .get).responseSerializable(handler)
 		}
+        waitForExpectations(timeout: timeoutDuration, handler: nil)
+    }
+
+    func testAlamofireExtensionArrayRootObjectParsingToOne() {
+        let expectation = self.expectation(description: "Expected valid object")
+        let handler:(Alamofire.DataResponse<DecodableModel>) -> Void = { result in
+            switch result.result {
+            case .success(let value):
+                XCTAssertEqual(value.id, 1)
+                XCTAssertEqual(value.name, "Hello")
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+        if let url = urlForResource(resource: "ArrayTestOneObject") {
+            manager.request(url, method: .get).responseSerializable(handler)
+        }
+        waitForExpectations(timeout: timeoutDuration, handler: nil)
+    }
+
+    func testAlamofireExtensionArrayRootObjectParsingToOneWithWrongUnwrapper() {
+        let expectation = self.expectation(description: "Expected valid object")
+        let handler:(Alamofire.DataResponse<DecodableModel>) -> Void = { result in
+            switch result.result {
+            case .success(let value):
+                XCTAssertEqual(value.id, 1)
+                XCTAssertEqual(value.name, "Hello")
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+        if let url = urlForResource(resource: "ArrayTestOneObject") {
+            manager.request(url, method: .get).responseSerializable(handler,
+                                                                    unwrapper: { return $0.0["nonexistent"] })
+        }
+        waitForExpectations(timeout: timeoutDuration, handler: nil)
+    }
+
+    func testAlamofireExtensionArrayRootObjectParsingToMultiple() {
+        let expectation = self.expectation(description: "Expected valid array")
+        let handler:(Alamofire.DataResponse<[DecodableModel]>) -> Void = { result in
+            switch result.result {
+            case .success(let values):
+                XCTAssertEqual(values.count, 4)
+                XCTAssertEqual(values[0].id, 1)
+                XCTAssertEqual(values[0].name, "Hello")
+                XCTAssertEqual(values[3].id, 4)
+                XCTAssertEqual(values[3].name, "Hello4")
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+        if let url = urlForResource(resource: "ArrayTest") {
+            manager.request(url, method: .get).responseSerializable(handler)
+        }
         waitForExpectations(timeout: timeoutDuration, handler: nil)
     }
 }
