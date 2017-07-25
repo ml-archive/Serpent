@@ -96,8 +96,8 @@ extension PrimitivesTestModel:Serializable {
         dict["optional_bool"]                                = optionalBool
         dict["optional_bool_with_default_value"]             = optionalBoolWithDefaultValue
         dict["char"]                                         = "\(char)"
-        dict["optional_char"]                                = optionalChar != nil ? "\(optionalChar!)" : "\(optionalChar)"
-        dict["optional_char_with_default_value"]             = optionalCharWithDefaultValue != nil ? "\(optionalCharWithDefaultValue!)" : "\(optionalCharWithDefaultValue)"
+        dict["optional_char"]                                = optionalChar != nil ? "\(optionalChar!)" : "\(String(describing: optionalChar))"
+        dict["optional_char_with_default_value"]             = optionalCharWithDefaultValue != nil ? "\(optionalCharWithDefaultValue!)" : "\(String(describing: optionalCharWithDefaultValue))"
         dict["string"]                                       = string
         dict["optional_string"]                              = optionalString
         dict["optional_string_with_default_value"]           = optionalStringWithDefaultValue
