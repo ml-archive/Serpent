@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Serpent"
-  s.version      = "1.0.5"
+  s.version      = "1.1.0"
   s.summary      = "A protocol to serialize Swift structs and classes for encoding and decoding."
   s.homepage     = "https://github.com/nodes-ios/Serpent"
   s.description  = <<-DESC
