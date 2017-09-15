@@ -27,7 +27,11 @@ extension URL: StringInitializable {
 }
 
 extension Date: StringInitializable {
-    static fileprivate let internalDateFormatter = DateFormatter()
+    static fileprivate var internalDateFormatter : DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        return dateFormatter
+    }
     static fileprivate let allowedDateFormats = ["yyyy-MM-dd'T'HH:mm:ssZZZZZ", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd"]
 	static public var customDateFormats: [String] = []
 
