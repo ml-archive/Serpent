@@ -13,38 +13,38 @@ struct PrimitivesTestModel {
     var integer: Int = 0
     var optionalInteger: Int?
     var optionalIntegerWithDefaultValue: Int? = 0
-
+    
     var negativeInteger: Int = -1
     var optionalNegativeInteger: Int?
     var optionalNegativeIntegerWithDefaultValue: Int? = -1
-
+    
     var double: Double = 0.0
     var optionalDouble: Double?
     var optionalDoubleWithDefaultValue: Double? = 0.0
-
+    
     var float: Float = 0.0
     var optionalFloat: Float?
     var optionalFloatWithDefaultValue: Float? = 0.0
-
+    
     var bool: Bool = false
     var optionalBool: Bool?
     var optionalBoolWithDefaultValue: Bool? = false
-
+    
     var char: Character = "A"
     var optionalChar: Character?
     var optionalCharWithDefaultValue: Character? = "A"
-
+    
     var string: String = ""
     var optionalString: String?
     var optionalStringWithDefaultValue: String? = ""
-	
-	var intString: Int = 0
-	var doubleString: Double = 0.0
-	var boolString: Bool = false
-	var boolIntString: Bool = false
-	
-	var stringDouble: String = ""
-	var stringBool: String = ""
+    
+    var intString: Int = 0
+    var doubleString: Double = 0.0
+    var boolString: Bool = false
+    var boolIntString: Bool = false
+    
+    var stringDouble: String = ""
+    var stringBool: String = ""
 }
 
 extension PrimitivesTestModel: Serializable {
@@ -77,7 +77,7 @@ extension PrimitivesTestModel: Serializable {
         stringDouble                            <== (self, dictionary, "string_double")
         stringBool                              <== (self, dictionary, "string_bool")
     }
-
+    
     func encodableRepresentation() -> NSCoding {
         let dict = NSMutableDictionary()
         (dict, "integer")                                      <== integer
