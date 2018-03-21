@@ -19,7 +19,7 @@ extension Alamofire.DataRequest {
                     handler(DataResponse(request: self.request, response: self.response, data: data, result: .success(decodedData)))
                 }
                 catch let error {
-                    handler(DataResponse(request: self.request, response: self.response, data: nil, result: .failure(error)))
+                    handler(DataResponse(request: self.request, response: self.response, data: data, result: .failure(error)))
                 }
             case .failure(let error):
                 handler(DataResponse(request: self.request, response: self.response, data: nil, result: .failure(error)))

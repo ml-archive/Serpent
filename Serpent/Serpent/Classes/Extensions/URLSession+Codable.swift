@@ -11,6 +11,7 @@ import Foundation
 // Decoded Result
 public enum DResult<Value> {
     case success(Value)
+    case successWithError(Value, Error)
     case failure(Error)
 }
 
@@ -24,23 +25,28 @@ public extension URLSession {
      - returns: The Decoded Result (DResult)
      */
     public func decode<Value: Swift.Decodable>(requestCompletion: (Data?, Error?)) -> DResult<Value> {
-        let (data, error) = requestCompletion
-        
-        if let error = error {
-            return .failure(error)
-        }
-        
-        if let data = data {
+        switch requestCompletion {
+        case (.some(let data), .some(let error)):
+            do {
+                let decodedData = try JSONDecoder().decode(Value.self, from: data)
+                return .successWithError(decodedData, error)
+            } catch let decodeError {
+                return .failure(decodeError)
+            }
+        case (.some(let data), .none):
             do {
                 let decodedData = try JSONDecoder().decode(Value.self, from: data)
                 return .success(decodedData)
             } catch let decodeError {
                 return .failure(decodeError)
             }
+        case (.none, .some(let error)):
+            return .failure(error)
+
+        case (.none, .none):
+            let fallBackError = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Data was not retrieved from request"]) as Error
+            return .failure(fallBackError)
         }
-        
-        let fallBackError = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Data was not retrieved from request"]) as Error
-        return .failure(fallBackError)
     }
     
     /**
