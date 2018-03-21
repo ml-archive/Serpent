@@ -238,7 +238,7 @@ Again, the [![ModelBoiler](http://i.imgur.com/V5UzMVk.png)](https://github.com/n
 
 ### Using with Alamofire
 
-Serpent comes integrated with Alamofire out of the box, through an extension on Alamofire's `Request` construct, that adds the function `responseSerializable(completion:unwrapper)`
+Serpent comes integrated with Alamofire out of the box, through an extension on Alamofire's `Request` construct, that adds the function `responseSerializable(completion:unwrapper:)`
 
 The extension uses Alamofire's familiar `Response` type to hold the returned data, and uses its generic associated type to automatically parse the data.
 
@@ -246,9 +246,11 @@ Consider an endpoint returning a single `school` structure matching the struct f
 
 ~~~swift
 func requestSchool(completion: @escaping (DataResponse<School>) -> Void) {
-	request("http://somewhere.com/school/1", method: .get).responseSerializable(completion)
+	request("http://somewhere.com/school/1", method: .get).responseSerializable(completion, unwrapper: defaultUnwrapper)
 }
 ~~~
+
+Note that as of version 1.1, the unwrapper parameter no longer has a default implementation. You will need to create your own default unwrapper. You can read more about this here: https://github.com/nodes-ios/Serpent/issues/124
 
 In the consuming method you use it like this:
 
@@ -295,10 +297,10 @@ static func requestStudents(completion: (DataResponse<[Student]>) -> Void) {
 }
 ~~~
 
-If you need to unwrap the response data in every call, you can install a default unwrapper using
+If you need to unwrap the same response data in every call, you can create a default unwrapper using
 
 ~~~swift
-Parser.defaultWrapper = { sourceDictionary, expectedType in 
+let defaultUnwrapper = { sourceDictionary, expectedType in 
 	// You custom unwrapper here... 
 	return sourceDictionary
 }

@@ -12,9 +12,44 @@ import Foundation
 
 public protocol Serializable: Decodable, Encodable, Keymappable {}
 
+//MARK: - EmbeddedMappable
+
+public protocol EmbeddedMappable {
+    
+    var containsEmbeddedProperties: Bool { get }
+}
+
+public extension EmbeddedMappable {
+    
+    var containsEmbeddedProperties: Bool {
+        return false
+    }
+    
+    func embeddedDictAndKey(dict: NSDictionary, key: String) -> (dict: NSDictionary, key: String) {
+        
+        var dict = dict
+        var key = key
+        let paths = key.split(separator: "/")
+        
+        if paths.count > 1 {
+            
+            for (index, path) in paths.enumerated() {
+                
+                if index < paths.count - 1, let newDict = dict[path] as? NSDictionary {
+                    dict = newDict
+                } else if index == paths.count - 1 {
+                    key = String(path)
+                }
+            }
+            return (dict, key)
+        }
+        return (dict, key)
+    }
+}
+
 // MARK: - Encodable -
 
-public protocol Encodable {
+public protocol Encodable: EmbeddedMappable {
     func encodableRepresentation() -> NSCoding
 }
 
@@ -39,9 +74,10 @@ private struct DefaultKeyMappings {
     fileprivate static let mappings = [String : String]()
 }
 
+
 // MARK: - Keymappable -
 
-public protocol Keymappable {}
+public protocol Keymappable: EmbeddedMappable {}
 
 public extension Keymappable {
 
@@ -56,7 +92,15 @@ public extension Keymappable {
     public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Decodable {
 
         // Ensure the dictionary is not nil
-        guard let dict = dictionary else { return nil }
+        guard var dict = dictionary else { return nil }
+        
+        var key = key
+        
+        if containsEmbeddedProperties {
+            let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
+            key = finalDictAndKey.1
+            dict = finalDictAndKey.0
+        }
 
         // Get the value from the dictionary for our key
         let sourceOpt = dict[key]
@@ -68,6 +112,8 @@ public extension Keymappable {
 
         return nil
     }
+    
+   
 
     /**
      Maps the content of value for **key** in **dictionary** to an array containing where elements is of generic type **T**, conforming to **Serializable** protocol.
@@ -106,7 +152,15 @@ public extension Keymappable {
     public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? {
 
         // Ensure the dictionary is not nil
-        guard let dict = dictionary else { return nil }
+        guard var dict = dictionary else { return nil }
+        var key = key
+        
+        if containsEmbeddedProperties {
+            let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
+            key = finalDictAndKey.1
+            dict = finalDictAndKey.0
+        }
+        
 
         // Get the value from the dictionary for our key
         let sourceOpt = dict[key]
@@ -136,12 +190,18 @@ public extension Keymappable {
         case (is NSNumber) where T.self is String.Type:
             let source = (sourceOpt as! NSNumber)
 			return String(describing: source) as? T
-
+            
+        case (is Double) where T.self is Float.Type:
+            let source = (sourceOpt as! Double)
+            return Float(source) as? T
+            
         default:
             return nil
         }
     }
-
+    
+    
+//    extension StringInitializable: EmbeddedMappable {}
     /**
      A generic mapping function that will try to parse an object of type `T` from the string
      value contained in the provided dictionary.
@@ -156,7 +216,18 @@ public extension Keymappable {
      - returns: The value of type `T` or `nil` if parsing was unsuccessful.
      */
     public func mapped<T:StringInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
-        if let dict = dictionary, let source = dict[key] as? String , source.isEmpty == false {
+        
+        guard var dict = dictionary else { return nil }
+        
+        var key = key
+        
+        if containsEmbeddedProperties {
+            let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
+            key = finalDictAndKey.1
+            dict = finalDictAndKey.0
+        }
+        
+        if let source = dict[key] as? String , source.isEmpty == false {
             return T.fromString(source)
         }
 
@@ -226,7 +297,18 @@ public extension Keymappable {
 	- returns: The value of type `T` or `nil` if parsing was unsuccessful.
 	*/
 	public func mapped<T: HexInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
-		guard let dict = dictionary, let source = dict[key] else {
+        
+        guard var dict = dictionary else { return nil }
+        
+        var key = key
+        
+        if containsEmbeddedProperties {
+            let finalDictAndKey = embeddedDictAndKey(dict: dict, key: key)
+            key = finalDictAndKey.1
+            dict = finalDictAndKey.0
+        }
+        
+		guard let source = dict[key] else {
 			return nil
 		}
 		
