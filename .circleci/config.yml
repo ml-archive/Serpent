@@ -39,3 +39,9 @@ jobs:
       - store_artifacts:
           path: ~/Library/Logs/scan
           destination: scan-logs
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build
