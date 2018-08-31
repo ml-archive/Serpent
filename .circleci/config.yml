@@ -9,8 +9,7 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.4.1"
-	  
-	working_directory: /Users/distiller/project/Serpent
+      working_directory: /Users/distiller/project/Serpent
 
     steps:
       - checkout
@@ -40,8 +39,8 @@ jobs:
           path: ~/Library/Logs/scan
           destination: scan-logs
 
-workflows:
-  version: 2
-  build-and-test:
-    jobs:
-      - build
+# workflows:
+#   version: 2
+#   build-and-test:
+#     jobs:
+#       - build
