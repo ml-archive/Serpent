@@ -9,7 +9,7 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.4.1"
-      working_directory: /Users/distiller/project/Serpent
+      working_directory: /Users/distiller/project/Serpent/Serpent
 
     steps:
       - checkout
