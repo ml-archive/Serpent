@@ -10,12 +10,12 @@ jobs:
     macos:
       xcode: "9.4.1"
 	  
-	 dependencies:
-	   pre:
-	     - brew update
-	     - brew upgrade
-	     - brew install carthage
-	     - carthage bootstrap --no-use-binaries
+    dependencies:
+    pre:
+      - brew update
+      - brew upgrade
+      - brew install carthage
+      - carthage bootstrap --no-use-binaries
 
     steps:
       - checkout
