@@ -15,7 +15,7 @@ jobs:
 
       - run:
           name: Install Carthage
-          command: brew install carthage
+          command: carthage bootstrap --no-use-binaries
 
       # Build the app and run tests
       - run:
