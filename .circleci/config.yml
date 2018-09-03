@@ -9,6 +9,13 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.4.1"
+	  
+	 dependencies:
+	   pre:
+	     - brew update
+	     - brew upgrade
+	     - brew install carthage
+	     - carthage bootstrap --no-use-binaries
 
     steps:
       - checkout
@@ -37,6 +44,8 @@ jobs:
       - store_artifacts:
           path: ~/Library/Logs/scan
           destination: scan-logs
+		  
+
 
 # workflows:
 #   version: 2
