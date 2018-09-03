@@ -9,16 +9,14 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.4.1"
+
+    steps:
+      - checkout
 	  
-    dependencies:
-    pre:
       - brew update
       - brew upgrade
       - brew install carthage
       - carthage bootstrap --no-use-binaries
-
-    steps:
-      - checkout
 
       # Install CocoaPods
       # - run:
