@@ -1,6 +1,6 @@
 <p align="center"><img src="./Serpent_icon.png?raw=true" alt="Serpent"/></p>
 
-[![Travis](https://img.shields.io/travis/nodes-ios/Serpent.svg)](https://travis-ci.org/nodes-ios/Serpent)
+[![CircleCI](https://circleci.com/gh/nodes-ios/Serpent.svg?style=shield)](https://circleci.com/gh/nodes-ios/Serpent)
 [![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Serpent.svg)](https://codecov.io/github/nodes-ios/Serpent)
 [![codebeat badge](https://codebeat.co/badges/bf41edec-511c-405d-9036-a7253492c118)](https://codebeat.co/projects/github-com-nodes-ios-serpent)
 [![Carthage Compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
