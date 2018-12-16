@@ -1,2 +1,2 @@
-github "Alamofire/Alamofire" ~> 4.4
+github "Alamofire/Alamofire" ~> 5.0.0
 github "nodes-ios/Cashier" ~> 1.2.0

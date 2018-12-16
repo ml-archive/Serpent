@@ -16,7 +16,7 @@ class AlamofireExtensionTests: XCTestCase {
     
     let defaultUnwrapper: Parser.Unwrapper = { sourceDictionary, _ in return sourceDictionary  }
     
-	let manager = SessionManager()
+	let manager = Session.init()
     
     override func setUp() {
         super.setUp()
