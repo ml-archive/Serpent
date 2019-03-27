@@ -105,7 +105,7 @@ public extension Sequence where Iterator.Element:Encodable {
 // MARK: RawRepresentable
 
 public extension RawRepresentable {
-	public func encodableRepresentation() -> RawValue {
+    func encodableRepresentation() -> RawValue {
 		return self.rawValue
 	}
 }
