@@ -72,7 +72,7 @@ extension Color: HexInitializable {
             return nil
         }
         
-        switch hex.characters.count {
+        switch hex.count {
         // RGB (12-bit)
         case 3:
             (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)

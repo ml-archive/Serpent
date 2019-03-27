@@ -48,13 +48,13 @@ public extension Parser {
         }
     }
     
-    typealias Unwrapper = ((_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?)
+    typealias Unwrapper = (_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?
     
     /**
      The default unwrapper. Default implementation just passes data straight through. 
      */
     
-    public static var defaultUnwrapper: Unwrapper = { $0.0 }
+    public static var defaultUnwrapper: Unwrapper = { a, b in return a }
 }
 
 
