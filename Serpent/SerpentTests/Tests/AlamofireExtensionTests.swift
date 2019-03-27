@@ -204,7 +204,7 @@ class AlamofireExtensionTests: XCTestCase {
 
     func testAlamofireExtensionArrayRootObjectParsingToOneWithWrongUnwrapper() {
         let expectation = self.expectation(description: "Expected valid object")
-        let handler:(Alamofire.DataResponse<DecodableModel>) -> Void = { result in
+        let handler: (Alamofire.DataResponse<DecodableModel>) -> Void = { result in
             switch result.result {
             case .success(let value):
                 XCTAssertEqual(value.id, 1)
@@ -214,9 +214,12 @@ class AlamofireExtensionTests: XCTestCase {
                 break
             }
         }
+        
+        let unwrapper: (_ sourceDictionary: NSDictionary, _ expectedType: Any) -> Any? = { dict, type in return dict["nonexistent"] }
+        
         if let url = urlForResource(resource: "ArrayTestOneObject") {
             manager.request(url, method: .get).responseSerializable(handler,
-                                                                    unwrapper: { return $0.0["nonexistent"] })
+                                                                    unwrapper: unwrapper)
         }
         waitForExpectations(timeout: timeoutDuration, handler: nil)
     }

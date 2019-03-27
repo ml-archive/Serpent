@@ -83,7 +83,7 @@ class CashierExtensionTests: XCTestCase {
     func testLoadIgnoringMemCaches() {
         let box = BridgingBox(simpleModel)
         Cashier.defaultCache().setObject(box, forKey: "ManualBox")
-        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil) // clear the Cashier mem cache
+        NotificationCenter.default.post(name: UIApplication.didReceiveMemoryWarningNotification, object: nil) // clear the Cashier mem cache
         let loadedModel: SimpleModel? = Cashier.defaultCache().serializableForKey("ManualBox")
         
         XCTAssertNotNil(loadedModel, "Failed to load model direct from cache")
