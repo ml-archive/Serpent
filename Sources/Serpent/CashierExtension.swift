@@ -1,1 +1,0 @@
-../../Serpent/Serpent/Classes/Extensions/CashierExtension.swift
