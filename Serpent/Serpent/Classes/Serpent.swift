@@ -25,7 +25,7 @@ public protocol Decodable {
 }
 
 public extension Decodable {
-    public static func array(_ source: Any?) -> [Self] {
+    static func array(_ source: Any?) -> [Self] {
         guard let source = source as? [NSDictionary] else {
             return [Self]()
         }
@@ -53,7 +53,7 @@ public extension Keymappable {
 
      - returns: A mapped object conforming to *Serializable*, or nil if parsing failed
      */
-    public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Decodable {
+    func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Decodable {
 
         // Ensure the dictionary is not nil
         guard let dict = dictionary else { return nil }
@@ -77,7 +77,7 @@ public extension Keymappable {
 
      - returns: An array of mapped objects conforming to *Serializable*, or an empty array if parsing failed.
      */
-    public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Sequence, T.Iterator.Element: Decodable {
+    func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Sequence, T.Iterator.Element: Decodable {
         // Ensure the dictionary is not nil and get the value from the dictionary for our key
         guard let dict = dictionary, let sourceOpt = dict[key] else { return nil }
 
@@ -103,7 +103,7 @@ public extension Keymappable {
 
      - returns: The value of primitive type `T` or `nil` if parsing was unsuccessful.
      */
-    public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? {
+    func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? {
 
         // Ensure the dictionary is not nil
         guard let dict = dictionary else { return nil }
@@ -136,6 +136,10 @@ public extension Keymappable {
         case (is NSNumber) where T.self is String.Type:
             let source = (sourceOpt as! NSNumber)
 			return String(describing: source) as? T
+            
+        case (is Double) where T.self is Float.Type:
+            let source = (sourceOpt as! Double)
+            return Float(source) as? T
 
         default:
             return nil
@@ -155,7 +159,7 @@ public extension Keymappable {
 
      - returns: The value of type `T` or `nil` if parsing was unsuccessful.
      */
-    public func mapped<T:StringInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
+    func mapped<T:StringInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
         if let dict = dictionary, let source = dict[key] as? String , source.isEmpty == false {
             return T.fromString(source)
         }
@@ -180,7 +184,7 @@ public extension Keymappable {
      - returns: The enumeration of enum type `T` or `nil` if parsing was unsuccessful or
      enumeration does not exist.
      */
-    public func mapped<T:RawRepresentable>(_ dictionary: NSDictionary?, key: String) -> T? {
+    func mapped<T:RawRepresentable>(_ dictionary: NSDictionary?, key: String) -> T? {
         guard let source: T.RawValue = self.mapped(dictionary, key: key) else {
             return nil
         }
@@ -201,7 +205,7 @@ public extension Keymappable {
 
      - returns: An array of enum type `T` or an empty array if parsing was unsuccessful.
      */
-    public func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Sequence, T.Iterator.Element: RawRepresentable {
+    func mapped<T>(_ dictionary: NSDictionary?, key: String) -> T? where T:Sequence, T.Iterator.Element: RawRepresentable {
         if let dict = dictionary, let source = dict[key] as? [T.Iterator.Element.RawValue] {
             let finalArray = source.map { T.Iterator.Element.init(rawValue: $0)! }
             return (finalArray as! T)
@@ -225,7 +229,7 @@ public extension Keymappable {
 	
 	- returns: The value of type `T` or `nil` if parsing was unsuccessful.
 	*/
-	public func mapped<T: HexInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
+    func mapped<T: HexInitializable>(_ dictionary: NSDictionary?, key: String) -> T? {
 		guard let dict = dictionary, let source = dict[key] else {
 			return nil
 		}

@@ -48,13 +48,13 @@ public extension Parser {
         }
     }
     
-    typealias Unwrapper = ((_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?)
+    typealias Unwrapper = (_ sourceDictionary: NSDictionary, _ expectedType:Any) -> Any?
     
     /**
      The default unwrapper. Default implementation just passes data straight through. 
      */
     
-    public static var defaultUnwrapper: Unwrapper = { $0.0 }
+    static var defaultUnwrapper: Unwrapper = { a, b in return a }
 }
 
 
@@ -74,7 +74,7 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
     @discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void,
+    func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<T>) -> Void,
                                      unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
         let serializer = Parser.serializer { (data: Any?) -> T? in
             
@@ -104,7 +104,7 @@ public extension Alamofire.DataRequest
      - returns: The request
      */
 	@discardableResult
-    public func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void,
+    func responseSerializable<T:Decodable>(_ completionHandler: @escaping (DataResponse<[T]>) -> Void,
                                      unwrapper:@escaping Parser.Unwrapper = Parser.defaultUnwrapper) -> Self {
 
         let serializer = Parser.serializer { (data: Any?) -> [T]? in
@@ -129,7 +129,7 @@ public extension Alamofire.DataRequest
      */
     
 	@discardableResult
-    public func responseSerializable(_ completionHandler: @escaping (DataResponse<NilSerializable>) -> Void) -> Self {
+    func responseSerializable(_ completionHandler: @escaping (DataResponse<NilSerializable>) -> Void) -> Self {
         return validate().responseJSON(completionHandler: completionHandler)
     }
     

@@ -18,7 +18,7 @@ public extension Cashier {
 	- object: Generic type which confroms with `Serializable`.
 	- key: Key as a `String`.
 	*/
-	public func setSerializable<T>(_ object: T, forKey key: String) where T: Serializable {
+    func setSerializable<T>(_ object: T, forKey key: String) where T: Serializable {
 		let box = BridgingBox(object)
 		self.setObject(box, forKey: key)
 		BridgingBox.sharedBoxCache[self.id+key] = object
@@ -31,7 +31,7 @@ public extension Cashier {
 	- object: Generic type which confroms with `_ArrayType`.
 	- key: Key as a `String`.
 	*/
-	public func setSerializable<T>(_ object: T, forKey key: String) where T: Sequence, T.Iterator.Element: Serializable {
+    func setSerializable<T>(_ object: T, forKey key: String) where T: Sequence, T.Iterator.Element: Serializable {
 		let boxedArray = object.map { BridgingBox($0) }
 		self.setObject(boxedArray, forKey: key)
 		BridgingBox.sharedBoxCache[self.id+key] = object
@@ -47,7 +47,7 @@ public extension Cashier {
 	- Parameter key: `Key` for `BridgingBox` or `objectForKey` as `String`.
 	- Returns: Generic type stored value/object that conforms with `Serializable` or return `nil`.
 	*/
-	public func serializableForKey<T>(_ key: String) -> T? where T:Serializable {
+    func serializableForKey<T>(_ key: String) -> T? where T:Serializable {
 		if let cachedSerializable = BridgingBox.sharedBoxCache[self.id+key] as? T {
 			return self.object(forKeyIsValid: key) ? cachedSerializable : nil
 		}
@@ -72,7 +72,7 @@ public extension Cashier {
 	- Parameter key: `Key` for `BridgingBox` as `String`.
 	- Returns: Array that holds object that conforms with `Serializable` or return `nil`.
 	*/
-	public func serializableForKey<T>(_ key: String) -> [T]? where T:Serializable {
+    func serializableForKey<T>(_ key: String) -> [T]? where T:Serializable {
 		if let cachedSerializable = BridgingBox.sharedBoxCache[self.id+key] as? [T] {
 			return self.object(forKeyIsValid: key) ? cachedSerializable : nil
 		}
@@ -100,7 +100,7 @@ public extension Cashier {
 	- parameter purgeMemoryCaches: If set to `true`, it will also purge all memory caches, including
 	the shared bridging box cache for objects adhering to `Serializable`.
 	*/
-	public func clearAllData(_ purgeMemoryCaches: Bool) {
+    func clearAllData(_ purgeMemoryCaches: Bool) {
 		self.clearAllData()
 		
 		if purgeMemoryCaches {
@@ -114,7 +114,7 @@ public extension Cashier {
 	- parameter key: `Key` for `BridgingBox` as `String`.
 	- parameter purgeMemoryCache: If set to `true`, it will also purge the memory cache.
 	*/
-	public func deleteSerializableForKey(_ key: String, purgeMemoryCache purge: Bool = true) {
+    func deleteSerializableForKey(_ key: String, purgeMemoryCache purge: Bool = true) {
 		if purge {
 			BridgingBox.sharedBoxCache.removeValue(forKey: self.id+key)
 		}
