@@ -1163,6 +1163,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/../Carthage/Build/iOS\"";
 				INFOPLIST_FILE = "$(SRCROOT)/Serpent/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serpent;
 				PRODUCT_NAME = Serpent;
@@ -1185,6 +1186,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/../Carthage/Build/iOS\"";
 				INFOPLIST_FILE = "$(SRCROOT)/Serpent/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Serpent;
 				PRODUCT_NAME = Serpent;
@@ -1241,6 +1243,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3;
 			};
 			name = Debug;
 		};
@@ -1262,6 +1265,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3;
 			};
 			name = Release;
 		};
@@ -1283,6 +1287,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10;
 			};
 			name = Debug;
 		};
@@ -1304,6 +1309,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10;
 			};
 			name = Release;
 		};
