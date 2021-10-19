@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Serpent"
-  s.version      = "1.1.0"
+  s.version      = "2.0.3"
   s.summary      = "A protocol to serialize Swift structs and classes for encoding and decoding."
   s.homepage     = "https://github.com/nodes-ios/Serpent"
   s.description  = <<-DESC
@@ -25,6 +25,9 @@ Pod::Spec.new do |s|
   Also provides extensions for Alamofire and Cashier.
                    DESC
 
+
+  s.swift_version = '5'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5' }
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
 
