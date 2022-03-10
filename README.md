@@ -1,3 +1,6 @@
+### This library has been deprecated and the repo has been archived. 
+### The code is still here and you can still clone it, however the library will not receive any more updates or support.
+
 <p align="center"><img src="./Serpent_icon.png?raw=true" alt="Serpent"/></p>
 
 [![CircleCI](https://circleci.com/gh/nodes-ios/Serpent.svg?style=shield)](https://circleci.com/gh/nodes-ios/Serpent)
